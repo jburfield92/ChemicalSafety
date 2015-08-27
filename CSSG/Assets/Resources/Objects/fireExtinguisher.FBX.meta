@@ -1,0 +1,162 @@
+fileFormatVersion: 2
+guid: f2caa2edf8ee4054c90a29ab7838fe0e
+timeCreated: 1439154007
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Background
+    100002: Center
+    100004: //RootNode
+    100006: Gauge
+    100008: Gauge Cover
+    100010: Handle bottom
+    100012: Handle top
+    100014: Hose holder
+    100016: Hose nut
+    100018: Hose to valve stem
+    100020: Hose001
+    100022: Needle
+    100024: Pin
+    100026: Pivot left
+    100028: Pivot right
+    100030: Ring
+    100032: Tank
+    100034: Tube001
+    100036: Valve stem
+    400000: Background
+    400002: Center
+    400004: //RootNode
+    400006: Gauge
+    400008: Gauge Cover
+    400010: Handle bottom
+    400012: Handle top
+    400014: Hose holder
+    400016: Hose nut
+    400018: Hose to valve stem
+    400020: Hose001
+    400022: Needle
+    400024: Pin
+    400026: Pivot left
+    400028: Pivot right
+    400030: Ring
+    400032: Tank
+    400034: Tube001
+    400036: Valve stem
+    2300000: Background
+    2300002: Center
+    2300004: Gauge
+    2300006: Gauge Cover
+    2300008: Handle bottom
+    2300010: Handle top
+    2300012: Hose holder
+    2300014: Hose nut
+    2300016: Hose to valve stem
+    2300018: Hose001
+    2300020: Needle
+    2300022: Pin
+    2300024: Pivot left
+    2300026: Pivot right
+    2300028: Ring
+    2300030: Tank
+    2300032: Tube001
+    2300034: Valve stem
+    3300000: Background
+    3300002: Center
+    3300004: Gauge
+    3300006: Gauge Cover
+    3300008: Handle bottom
+    3300010: Handle top
+    3300012: Hose holder
+    3300014: Hose nut
+    3300016: Hose to valve stem
+    3300018: Hose001
+    3300020: Needle
+    3300022: Pin
+    3300024: Pivot left
+    3300026: Pivot right
+    3300028: Ring
+    3300030: Tank
+    3300032: Tube001
+    3300034: Valve stem
+    4300000: Background
+    4300002: Tank
+    4300004: Valve stem
+    4300006: Gauge
+    4300008: Center
+    4300010: Needle
+    4300012: Gauge Cover
+    4300014: Handle top
+    4300016: Handle bottom
+    4300018: Pivot left
+    4300020: Pin
+    4300022: Ring
+    4300024: Hose to valve stem
+    4300026: Hose nut
+    4300028: Hose holder
+    4300030: Hose001
+    4300032: Tube001
+    4300034: Pivot right
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
