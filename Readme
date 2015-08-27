@@ -1,0 +1,33 @@
+once you have the desktop app and you are logged in.
+	1. I need to add you as a collaborator
+	2. Click the plus sign in top left
+	3. You should see 'ChemicalSafety'
+	4. Click 'Clone Repository'
+	5. Choose a location to have your local copy on your PC
+		Changes to this folder won't be automatically committed, so no one will see these changes until you commit them and then "sync" them.
+	6. Make sure, in the desktop app, you have your branch selected. In the top center of the screen, you should see "Master" and a down arrow. Click that and change it to your branch.
+		Your commits will go to the branch you have selected ONLY.
+	7. Once you have made a change and you want to commit them, you should see a list of 'changes' in the app. You should see every file you've modified and a 'diff' window on the right. This shows the changes made.
+	8. Next, you need to commit these changes, at the bottom of the app, you should see a 'Summary' and 'Description' textboxes. Try to put a description at least in the 'Summary' of what you done. If it requires a longer explanation, put a short description in the 'Summary' and the longer version in the 'Description'.
+	9. Press 'Commit to BRANCH'
+		Note: this will be quicker than our dropbox/onedrive updates, since we are not overwriting/updating the whole project each time, rather just the exact changes.
+	10. In the top right, there is a 'Sync' button. Press that once the commit process is done. 
+		This will update everyone that a change was made to one of the branches.
+		
+Pull request:
+	1. In order to get work from another branch, you would want to create a pull request. In the desktop app, this can be done using the button to the left of the Sync button in the top right of the app.
+	2. Before clicking this button, you need to select the branch you want to "pull" changes from using the dropdown near the top left (the branch name with the downward arrow).
+	3. Select the branch you want to pull from.
+	4. Now click the pull request button in the top right.
+	5. In the 'TO_BRANCH' dropdown button in 'from FROM_BRANCH into TO_BRANCH', select the branch you want to pull into (usually this will be your branch).
+	6. The 'Summary' and 'Description' textboxes should be autopopulated with the info from most recent commit to that branch, but you can change this. There should at least be a summary though.
+	7. Click 'Send Pull Request'.
+	8. You now have to go to the github website in the project page and find "Pull Requests"
+	9. Find your pull request, click on it, review any comments, the commits and the files changed.
+	10. Go to the 'Conversation' tab and click 'Merge pull request'. 
+	11. Verify in your project, the changes have been made and the project still works and the changes work.
+		If there is any problems, you may have to "reverse" the change and possibly manually make the changes.
+	
+Notes:
+	Try to commit as much as possible to your branch. (daily if changes are made)
+	Don't commit to other branches (especially the master). Only create pull requests to master (if team approves).
