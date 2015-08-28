@@ -1,0 +1,235 @@
+Initialize engine version: 5.1.2f1 (afd2369b692a)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics Family (ID=0xa16)
+    Vendor:   Intel
+    VRAM:     128 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\jburf_000\Documents\CSSG\run_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\jburf_000\Documents\CSSG\run_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\jburf_000\Documents\CSSG\run_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\jburf_000\Documents\CSSG\run_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\jburf_000\Documents\CSSG\run_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\jburf_000\Documents\CSSG\run_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: C:\Users\jburf_000\Documents\CSSG\run_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\jburf_000\Documents\CSSG\run_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\jburf_000\Documents\CSSG\run_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\jburf_000\Documents\CSSG\run_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\jburf_000\Documents\CSSG\run_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\jburf_000\Documents\CSSG\run_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+Platform assembly: C:\Users\jburf_000\Documents\CSSG\run_Data\Managed\DialogueSystem.dll (this message is harmless)
+Loading C:\Users\jburf_000\Documents\CSSG\run_Data\Managed\DialogueSystem.dll into Unity Child Domain
+Platform assembly: C:\Users\jburf_000\Documents\CSSG\run_Data\Managed\LuaInterpreter.dll (this message is harmless)
+Loading C:\Users\jburf_000\Documents\CSSG\run_Data\Managed\LuaInterpreter.dll into Unity Child Domain
+- Completed reload, in  0.240 seconds
+desktop: 2160x1440 48Hz; virtual: 2160x1440 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\Users\jburf_000\Documents\CSSG\run_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\jburf_000\Documents\CSSG\run_Data\Managed\System.dll (this message is harmless)
+Dialogue System: Lua(Actor = {}; Item = {}; Quest = Item; Location = {}; Conversation = {}; Variable = {}; Variable["Alert"] = "")
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Lua(Actor = {}; Item = {}; Quest = Item; Location = {}; Conversation = {}; Variable = {}; Variable["Alert"] = "")
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Lua(Actor["Player"] = { Status = "", Name = "Player", Pictures = "[]", Description = "Player", IsPlayer = true, })
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Lua(Actor["EmptyRoomObject"] = { Status = "", Name = "EmptyRoomObject", Pictures = "[]", Description = "", IsPlayer = false, })
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Lua(Variable["Alert"] = "")
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Lua(Variable["IntroStarted"] = false)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Lua(Variable["IntroComplete"] = false)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Lua(Variable["ButtonsTutorialStarted"] = false)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Lua(Variable["ButtonsTutorialCompleted"] = false)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Lua(Variable["FireExtinguished"] = false)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Lua(Variable["TestStarted"] = false)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Lua(Variable["TestCompleted"] = false)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Lua(Variable["UserTestScore"] = 0)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Lua(Variable["TotalScorePossible"] = 3)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Lua(Conversation[1] = { Status = "", Title = "IntroductionDialogue", Pictures = "[]", Description = "", Actor = 1, Conversant = 2, Dialog = {}})
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Lua(Conversation[2] = { Status = "", Title = "ButtonTutorial", Pictures = "[]", Description = "", Actor = 1, Conversant = 2, Dialog = {}})
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Lua(Conversation[3] = { Status = "", Title = "TestTutorial", Pictures = "[]", Description = "", Actor = 1, Conversant = 2, Dialog = {}})
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Lua(Conversation[4] = { Status = "", Title = "WarningConvo", Pictures = "[]", Description = "", Actor = 1, Conversant = 2, Dialog = {}})
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Platform assembly: C:\Users\jburf_000\Documents\CSSG\run_Data\Managed\Boo.Lang.dll (this message is harmless)
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 10c0 -> priority: 1 
+Dialogue System: Starting conversation 'IntroductionDialogue', actor=, conversant=EmptyRoomObject (UnityEngine.Transform).
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Lua(Variable["Actor"] = "Player"; Variable["Conversant"] = "EmptyRoomObject")
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Add Link (EmptyRoomObject): ID=1:1 'Hello and welcome to the Chemical Safety Simulation Video Game. In this game, you will be trained on the Hazard Communication Standard, a standard that conforms to the Globally Harmonized System of Classification and Labeling of Chemicals. ' (True)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Player says ''
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Sequencer.Play( None()@0 )
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Add Link (EmptyRoomObject): ID=1:3 'The Hazard Communication Standard provides a common and coherent approach to classifying chemicals and communicating hazard information on labels and safety data sheets. This simulation video game will train you to understand these standards.' (True)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: EmptyRoomObject says 'Hello and welcome to the Chemical Safety Simulation Video Game. In this game, you will be trained on the Hazard Communication Standard, a standard that conforms to the Globally Harmonized System of Classification and Labeling of Chemicals. '
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Sequencer.Play( AudioWait(VoiceOvers/speech_intro1)@0 )
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Sequencer: AudioWait(VoiceOvers/speech_intro1)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Sequencer: AudioWait(): playing 'VoiceOvers/speech_intro1'.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Add Link (EmptyRoomObject): ID=1:4 'For this tutorial you will be familiarized with the controls and some of the basic mechanics you will encounter in the game.' (True)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: EmptyRoomObject says 'The Hazard Communication Standard provides a common and coherent approach to classifying chemicals and communicating hazard information on labels and safety data sheets. This simulation video game will train you to understand these standards.'
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Sequencer.Play( AudioWait(VoiceOvers/speech_intro2)@0 )
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Sequencer: AudioWait(VoiceOvers/speech_intro2)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Sequencer: AudioWait(): playing 'VoiceOvers/speech_intro2'.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Add Link (EmptyRoomObject): ID=1:5 'Let’s begin.' (True)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: EmptyRoomObject says 'For this tutorial you will be familiarized with the controls and some of the basic mechanics you will encounter in the game.'
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Sequencer.Play( AudioWait(VoiceOvers/speech_intro3)@0 )
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Sequencer: AudioWait(VoiceOvers/speech_intro3)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Sequencer: AudioWait(): playing 'VoiceOvers/speech_intro3'.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Add Link (EmptyRoomObject): ID=1:6 'Press W to move forward.' (True)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: EmptyRoomObject says 'Let’s begin.'
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Sequencer.Play( AudioWait(VoiceOvers/speech_intro4)@0 )
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Sequencer: AudioWait(VoiceOvers/speech_intro4)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Sequencer: AudioWait(): playing 'VoiceOvers/speech_intro4'.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Add Link (EmptyRoomObject): ID=1:7 'Press A to move to the left.' (True)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: EmptyRoomObject says 'Press W to move forward.'
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Sequencer.Play( QTE(0, 99999)@0 )
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Sequencer: QTE(0, 99999, , )
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Dialogue System: Lua(Variable[""] = "")
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.Component:get_gameObject ()
+  at PixelCrushers.DialogueSystem.UnityGUI.UnityQTEControls.IsQTEIndicatorVisible (Int32 index) [0x00000] in <filename unknown>:0 
+  at PixelCrushers.DialogueSystem.UnityGUI.UnityQTEControls.HideIndicator (Int32 index) [0x00000] in <filename unknown>:0 
+  at PixelCrushers.DialogueSystem.AbstractDialogueUI.HideQTEIndicator (Int32 index) [0x00000] in <filename unknown>:0 
+  at PixelCrushers.DialogueSystem.SequencerCommands.SequencerCommandQTE.OnDestroy () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
