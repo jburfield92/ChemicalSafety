@@ -1,4 +1,8 @@
 ﻿using UnityEngine;
+<<<<<<< HEAD
+=======
+using System.Collections;
+>>>>>>> David
 
 public class Pickupable : MonoBehaviour
 {

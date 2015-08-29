@@ -8,11 +8,19 @@ public class RandomRoom : MonoBehaviour
 	public GameObject Shall;
 	public GameObject Ehall;
 	public GameObject Whall;
+<<<<<<< HEAD
 	public GameObject room;
 	public GameObject startroom;
     public GameObject CloseDoorArea;
 
     public static bool clearRoom;
+=======
+	public GameObject finalRoom;
+	public GameObject startRoom;
+    public GameObject CloseDoorArea;
+
+	static public bool clearRoom;
+>>>>>>> David
 
     private float x;
 	private float z;
@@ -20,15 +28,25 @@ public class RandomRoom : MonoBehaviour
 	private char tempc;
 	private char[] cor = new char[4];
 	private int random;
+<<<<<<< HEAD
 	private GameObject newRoom;
+=======
+	public static GameObject newRoom;
+>>>>>>> David
     private GameObject newHall;
     private GameObject deleteRoom;
 	private GameObject deleteHall;
     private GameObject deleteArea;
+<<<<<<< HEAD
 
     private GameObject[] roomsList;
     private int roomsListIndex;
     private int currentRoom;
+=======
+	private GameObject[] roomsList;
+	private int roomsListIndex;
+	private int currentRoom;
+>>>>>>> David
 
     private float xMax;
     private float xMin;
@@ -37,21 +55,37 @@ public class RandomRoom : MonoBehaviour
     private bool change;
     private char[] dChange = new char[3];
 
+<<<<<<< HEAD
+=======
+	public static GameObject used;
+
+>>>>>>> David
     /// <summary> Use this for initialization
     /// </summary>
     void Start ()
     {
+<<<<<<< HEAD
         roomsList = RandomRoomsList.GetRooms();
         roomsListIndex = 0;
         clearRoom = false;
 
         x = 0;
+=======
+		roomsList = RandomRoomsList.GetRooms();
+		roomsListIndex = 0;
+		clearRoom = false;
+		used = (GameObject) Instantiate (Resources.Load("itembar/used"));
+		x = 0;
+>>>>>>> David
 		z = 0;
         xMax = 0;
         xMin = 0;
         zMax = 0;
         zMin = 0;
+<<<<<<< HEAD
 
+=======
+>>>>>>> David
         roomSpawnDistance = 17.6f;
         dChange[0] = 'S';
         change = true;
@@ -59,15 +93,32 @@ public class RandomRoom : MonoBehaviour
 		cor[1] = 'S';
 		cor[2] = 'W';
 		cor[3] = 'N';
+<<<<<<< HEAD
 
 		newRoom = startroom;
 	}
     
     /// <summary> Generates the room at random
+=======
+		newRoom = startRoom;
+	}
+
+
+
+    
+    /// <summary> Generates the room at random
+    /// TODO: This will choose from a pool of possible premade rooms instead of a blank room. 
+    /// The scene will have a single room by default, the education/starting room, and then followed by series of activity rooms
+    /// then folowed by a final testing room. The first and last rooms will be the same no matter the play through.
+>>>>>>> David
     /// </summary>
 	public void Generate()
     {
         deleteRoom = newRoom;
+<<<<<<< HEAD
+=======
+		char RoomDirection = dChange [0];
+>>>>>>> David
 
         if (change)
         {
@@ -94,6 +145,10 @@ public class RandomRoom : MonoBehaviour
             dChange[2] = dChange[1];
             dChange[1] = dChange[0];
             dChange[0] = cor[random];
+<<<<<<< HEAD
+=======
+			RoomDirection = dChange [0];
+>>>>>>> David
         }
 
         switch (cor [random])
@@ -114,7 +169,11 @@ public class RandomRoom : MonoBehaviour
 			    newHall = (GameObject)Instantiate(Shall,new Vector3(x,0,z),Quaternion.identity);
                 deleteArea = (GameObject)Instantiate(CloseDoorArea, new Vector3(x, 0, z- 12), Quaternion.Euler(new Vector3(90, 0, 90)));
 
+<<<<<<< HEAD
                 z = z - roomSpawnDistance;
+=======
+                z = z- roomSpawnDistance;
+>>>>>>> David
 
                 if (z < zMin)
                 {
@@ -166,6 +225,7 @@ public class RandomRoom : MonoBehaviour
 			cor[0] = cor[3];
 			cor[3] =  tempc;
 		}
+<<<<<<< HEAD
 
         if (roomsListIndex < roomsList.Count())
         {
@@ -191,6 +251,48 @@ public class RandomRoom : MonoBehaviour
         }
 
 
+=======
+		if(roomsListIndex < roomsList.Count() )
+		{
+			if(clearRoom)
+			{
+				currentRoom = Random.Range(0,(roomsList.Count()- roomsListIndex));
+				newRoom = (GameObject)Instantiate(roomsList[currentRoom],new Vector3(x,0,z),Quaternion.Euler(-90,0,0));
+				GameObject temp = roomsList[roomsList.Count() - roomsListIndex - 1 ];
+				roomsList[roomsList.Count() - roomsListIndex - 1] = roomsList[currentRoom];
+				roomsList[currentRoom] = temp;
+				roomsListIndex++;
+			}
+			else
+			{
+				currentRoom = Random.Range(0,(roomsList.Count()- roomsListIndex + 1));
+				newRoom = (GameObject)Instantiate(roomsList[currentRoom],new Vector3(x,0,z),Quaternion.Euler(-90,0,0));
+			}
+
+		}
+		else
+		{
+			switch (RoomDirection)
+			{
+			case 'N':
+				newRoom = (GameObject)Instantiate(finalRoom,new Vector3(x,0,z),Quaternion.Euler(0,180,0));
+				break;
+			case 'S':
+				newRoom = (GameObject)Instantiate(finalRoom,new Vector3(x,0,z),Quaternion.Euler(0,0,0));
+				break;
+			case 'E':
+				newRoom = (GameObject)Instantiate(finalRoom,new Vector3(x,0,z),Quaternion.Euler(0,270,0));
+				break;
+			case 'W':
+				newRoom = (GameObject)Instantiate(finalRoom,new Vector3(x,0,z),Quaternion.Euler(0,-270,0));
+				break;
+			}
+			roomsListIndex++;
+		}
+		//clearRoom = true;
+		Items.SetItems ();
+		PickupObject.carriedObject.tag = "ToDelete";
+>>>>>>> David
         deleteHall = newHall;
         deleteHall.tag = "ToDelete";
         deleteRoom.tag = "ToDelete";
@@ -206,6 +308,10 @@ public class RandomRoom : MonoBehaviour
             doorAnimation.open = true;
         }
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> David
     
     /// <summary> Gets the two door GameObjects closes to the hall generated
     /// </summary>
@@ -221,6 +327,12 @@ public class RandomRoom : MonoBehaviour
         return new GameObject[] { list[0], list[1] };
     }
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> David
     /// <summary> Delegate to help sort the doors.
     /// </summary>
     /// <param name="a"></param>
@@ -234,6 +346,7 @@ public class RandomRoom : MonoBehaviour
     }
 
     /// <summary> Update is called once per frame
+<<<<<<< HEAD
     /// </summary>
     void Update ()
     {
@@ -249,4 +362,18 @@ public class RandomRoom : MonoBehaviour
         clearRoom = true;
         Generate();
     }
+=======
+    /// TODO: This will instead contain a bool that will generate a new room.
+    /// </summary>
+    void Update ()
+    {
+		if (Input.GetKeyUp (KeyCode.L) && roomsListIndex <= roomsList.Count())
+        {
+
+			clearRoom = true;
+			PickupObject.carryBlock = true;
+			Generate();
+		}
+	}
+>>>>>>> David
 }
