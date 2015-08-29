@@ -6,6 +6,10 @@ using System.Collections;
 public class CloseDoorBehind : MonoBehaviour
 {
 	private Animator anim;
+<<<<<<< HEAD
+=======
+    private List<GameObject> doors;
+>>>>>>> David
     private float timer;
     private bool isTiming;
     private bool firstEnter;
@@ -20,6 +24,10 @@ public class CloseDoorBehind : MonoBehaviour
     {
         source = gameObject.AddComponent<AudioSource>();
         source.clip = clip;
+<<<<<<< HEAD
+=======
+        doors = GameObject.FindGameObjectsWithTag("door").ToList();
+>>>>>>> David
     }
 
     /// <summary> Update is called once per frame
@@ -34,6 +42,10 @@ public class CloseDoorBehind : MonoBehaviour
         if (timer > NumberOfSecondsToWait)
         {
             DestroyOldStuffAfterDoorClose(GameObject.FindGameObjectsWithTag("ToDelete"));
+<<<<<<< HEAD
+=======
+			Items.DestroyItems();
+>>>>>>> David
             isTiming = false;
         }
 	}
@@ -45,7 +57,10 @@ public class CloseDoorBehind : MonoBehaviour
     {
         if (!firstEnter)
         {
+<<<<<<< HEAD
             other.isTrigger = false;
+=======
+>>>>>>> David
             firstEnter = true;
             GameObject[] doors = GameObject.FindGameObjectsWithTag("door");
             GameObject closestDoor = null;
@@ -67,7 +82,13 @@ public class CloseDoorBehind : MonoBehaviour
             GameObject door = closestDoor.transform.Find("DoorPart").gameObject;
             anim = door.GetComponent<Animator>();
             anim.SetBool("Close", true);
+<<<<<<< HEAD
 
+=======
+			PickupObject.carryBlock = false;
+			Destroy(RandomRoom.used);
+			RandomRoom.used = (GameObject) Instantiate (Resources.Load("itembar/used"));
+>>>>>>> David
             StartCoroutine(DelaySound());
 
             BeginTimer();
