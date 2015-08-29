@@ -39,13 +39,11 @@ public class TakeLaptopTest : MonoBehaviour {
 	/// <param name="o"></param>
 	void UseLaptop()
 	{
-		//o.transform.position = Vector3.Lerp(o.transform.position, mainCamera.transform.position + mainCamera.transform.forward * distance - new Vector3(0, 0.75f), Time.deltaTime * smooth);
-		//o.transform.rotation = mainCamera.transform.rotation * Quaternion.Euler(0, 180, 0);
-		//mainCamera.transform.parent.GetComponent<Animation>().Play ();
-
-		if (Input.GetKeyDown (KeyCode.Space) && !UsingLaptop) {
+		if (!UsingLaptop) {
 			carriedLaptop.GetComponent<Animation>().Play("GrabLaptop");
 			UsingLaptop = true;
+
+			// add script to call laptop overlay canvas here
 		}
 	}
 	
@@ -60,16 +58,17 @@ public class TakeLaptopTest : MonoBehaviour {
 			
 			Ray ray = mainCamera.GetComponent<Camera>().ScreenPointToRay(new Vector3(x, y));
 			RaycastHit hit;
+
 			
 			if (Physics.Raycast(ray, out hit))
 			{
-				if (hit.collider.gameObject.tag == "IsLaptop"){
+				float distance = Vector3.Distance (hit.collider.gameObject.transform.position, mainCamera.transform.position);
+				if (hit.collider.gameObject.tag == "IsLaptop" && distance <= 3){
 					carriedLaptop = hit.collider.gameObject;
 					mainCamera.transform.parent.gameObject.transform.parent = carriedLaptop.transform;
 					CanSit = false;
 					StartCoroutine(DoAnimation());
-					//mainCamera.transform.parent.GetComponent<Animation>().Play ("SitDown");
-					//yield return new WaitForSeconds(2f);
+
 
 					mainCamera.GetComponent<MouseLook>().enabled = false;
 					if (GameObject.Find("Player").GetComponent<CharacterMotor>()) {
@@ -77,7 +76,6 @@ public class TakeLaptopTest : MonoBehaviour {
 						GameObject.Find("Player").GetComponent<MouseLook>().enabled = false;
 
 					}
-					//mainCamera.transform.parent.gameObject.transform.parent = null;
 
 					carriedLaptop.gameObject.GetComponent<Rigidbody>().useGravity = false;
 					carriedLaptop.gameObject.GetComponent<Rigidbody>().isKinematic = true;
@@ -106,7 +104,7 @@ public class TakeLaptopTest : MonoBehaviour {
 	void DropObject()
 	{
 		carryingLaptop = false;
-		carriedLaptop.GetComponent<Animation> ().Play ("ReturnLaptop");
+		if (UsingLaptop) carriedLaptop.GetComponent<Animation> ().Play ("ReturnLaptop");
 		UsingLaptop = false;
 		carriedLaptop = null;
 		mainCamera.transform.parent.gameObject.transform.Translate (Vector3.up * .3f);
@@ -121,7 +119,7 @@ public class TakeLaptopTest : MonoBehaviour {
 	IEnumerator DoAnimation()
 	{
 		mainCamera.transform.parent.GetComponent<Animation>().Play ("SitDown");
-		yield return new WaitForSeconds(2f);
+		yield return new WaitForSeconds(1.5f);
 		mainCamera.transform.parent.gameObject.transform.parent = null;
 		carryingLaptop = true;
 	}
