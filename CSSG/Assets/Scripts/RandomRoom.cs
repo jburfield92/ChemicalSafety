@@ -212,7 +212,8 @@ public class RandomRoom : MonoBehaviour
 		}
 		//clearRoom = true;
 		Items.SetItems ();
-		PickupObject.carriedObject.tag = "ToDelete";
+		Items.DestroyItems ();
+		used.SetActive (!used.activeSelf);
         deleteHall = newHall;
         deleteHall.tag = "ToDelete";
         deleteRoom.tag = "ToDelete";

@@ -101,7 +101,7 @@ public class PickupObject : MonoBehaviour
 					SetArms();
 					carriedObject.transform.position = rightHandPosition.transform.position;
 					carriedObject.transform.SetParent(rightHand.transform.parent);
-					carriedObject.transform.rotation = mainCamera.transform.rotation * Quaternion.Euler(0,180,0);
+					//carriedObject.transform.rotation = mainCamera.transform.rotation * Quaternion.Euler(0,180,0);
 					p.gameObject.GetComponent<Rigidbody>().useGravity = false;
 				}
 			}
@@ -111,8 +111,8 @@ public class PickupObject : MonoBehaviour
 	/// Sets the Arms location.
 	/// </summary>
 	public static void SetArms(){
-
 		Transform RightHandPlacment = carriedObject.transform.Find ("RightSpot");
+		carriedObject.transform.rotation = RightHandPlacment.transform.rotation;
 		rightHandPosition.transform.position = rightHandPositionLocation.transform.position;
 		float x = ( rightHandPosition.transform.position.x + (carriedObject.transform.position.x  - RightHandPlacment.transform.position.x));
 		float y = ( rightHandPosition.transform.position.y +  (carriedObject.transform.position.y  - RightHandPlacment.transform.position.y));

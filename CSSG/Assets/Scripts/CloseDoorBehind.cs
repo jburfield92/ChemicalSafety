@@ -36,7 +36,7 @@ public class CloseDoorBehind : MonoBehaviour
         if (timer > NumberOfSecondsToWait)
         {
             DestroyOldStuffAfterDoorClose(GameObject.FindGameObjectsWithTag("ToDelete"));
-			Items.DestroyItems();
+			//Items.DestroyItems();
             isTiming = false;
         }
 	}

@@ -11,18 +11,17 @@ public class Items : MonoBehaviour
 	private bool over;
     private bool overA;
     private int itembarIndex;
+	private int itembarIndexSelect;
 	private GameObject mainCamera;
+	private float countSec;
+	private int count;
 
 	public GameObject main;
 	public GameObject blank;
 	public GameObject pickup;
-	
-	public Image itemImageOne;
-	public Image itemImageTwo;
-	public Image itemImageThree;
-	public Image itemImageFour;
-	public Image itemImageFive;
-	public Image itemImageSix;
+	public GameObject picked;
+
+	public Image[] itemImage =  new Image[6];
 
 
 
@@ -36,6 +35,9 @@ public class Items : MonoBehaviour
 
 		storedItems = (GameObject) Instantiate (Resources.Load("itembar/empty"));
 		mainCamera = GameObject.FindWithTag ("MainCamera");
+		itembarIndexSelect = 0;
+		countSec = 1.0f;
+		count = 6;
 
 		for (int i = 0; i < itemsList.Count(); i++)
         {
@@ -80,30 +82,60 @@ public class Items : MonoBehaviour
     /// </summary>
 	public void OnGUI()
 	{
-        if (Event.current.type == EventType.ScrollWheel)
-        {
-            if (Event.current.delta.y < 0)
-            {
-                if ((itembarIndex) < 1)
-                {
-                    itembarIndex++;
-                }
-            }
-        }
+        if (Event.current.type == EventType.ScrollWheel) 
+		{
+			if (Event.current.delta.y < 0) {
+				if ((itembarIndexSelect) < itemImage.Count ()) {
+					int temp = itembarIndexSelect;
+					itembarIndexSelect++;
+					while(itembarIndexSelect < itemImage.Count () ){
+						if(itemsList[itembarIndexSelect] != null){
+							temp = itembarIndexSelect;
+							Debug.Log(itembarIndexSelect);
+							itembarIndexSelect = itemImage.Count ();
+						}
+						itembarIndexSelect++;
+						//Debug.Log(itembarIndexSelect);
+					}
+					itembarIndexSelect = temp;
+					picked.transform.position = itemImage[itembarIndexSelect].transform.position;
+				}
+			}
+        
 
-		if (Event.current.delta.y > 0)
-        {
-			if((itembarIndex) > 0 )
-            {
-				itembarIndex--;
+			if (Event.current.delta.y > 0) {
+				if ((itembarIndexSelect) > 0) {
+					int temp = itembarIndexSelect;
+					while(itembarIndexSelect > 0 ){
+						itembarIndexSelect--;
+						if(itemsList[itembarIndexSelect] != null){
+							temp = itembarIndexSelect;
+							Debug.Log(itembarIndexSelect);
+							itembarIndexSelect = 0;
+						}
+					}
+					itembarIndexSelect = temp;
+					picked.transform.position = itemImage[itembarIndexSelect].transform.position;
+				}
 			}
 		}
-
+		 count = 0;
 		for (int i = 0; i < itemsList.Count(); i++)
 		{
-			if(itemsList[i] == null)
+
+			if(itemsList[i] == null){
 				itemsList[i] = (GameObject) Resources.Load("itembar/empty");
-			
+				count++;
+			}
+
+		}
+
+		if (count == itemsList.Count ()) {
+			picked.SetActive(false);
+		} 
+		else 
+		{
+			picked.SetActive(true);
 		}
 
 
@@ -115,12 +147,12 @@ public class Items : MonoBehaviour
 		GameObject itemSix = itemsList[itembarIndex+5];
 
 
-		itemImageOne.overrideSprite = GetSprite (itemOne);
-		itemImageTwo.overrideSprite = GetSprite (itemTwo);
-		itemImageThree.overrideSprite = GetSprite (itemThree);
-		itemImageFour.overrideSprite = GetSprite (itemFour);
-		itemImageFive.overrideSprite = GetSprite (itemFive);
-		itemImageSix.overrideSprite = GetSprite (itemSix);
+		itemImage[0].overrideSprite = GetSprite (itemOne);
+		itemImage[1].overrideSprite = GetSprite (itemTwo);
+		itemImage[2].overrideSprite = GetSprite (itemThree);
+		itemImage[3].overrideSprite = GetSprite (itemFour);
+		itemImage[4].overrideSprite = GetSprite (itemFive);
+		itemImage[5].overrideSprite = GetSprite (itemSix);
 
 
 		for (int i = 0; i < itemsList.Count(); i++)
@@ -162,7 +194,7 @@ public class Items : MonoBehaviour
 		int i = 0;
 		bool outA = true;
 
-		while(i < itemsList.Count() && outA != false)
+		while(i < itemsList.Count() && outA && !PickupObject.carryBlock)
         {
 		    if (spotFull [i] == false)
             {
@@ -245,12 +277,11 @@ public class Items : MonoBehaviour
             GameObject temp = PickupObject.carriedObject;
 			temp.transform.SetParent(storedItems.transform);
 			temp.transform.position = storedItems.transform.position;
-			PickupObject.carriedObject = (GameObject)Instantiate( itemsList[itemIndex],main.transform.position + main.transform.forward * 1.5f,Quaternion.identity);
+			PickupObject.carriedObject = (GameObject)Instantiate( itemsList[itemIndex],mainCamera.transform.position + mainCamera.transform.forward * 1.5f,Quaternion.identity);
 			PickupObject.carriedObject.transform.rotation = mainCamera.transform.rotation;
 			PickupObject.SetArms();
 			PickupObject.carriedObject.gameObject.GetComponent<Rigidbody>().isKinematic = true;
 			PickupObject.carriedObject.transform.SetParent (PickupObject.leftArmTemp.transform.parent);
-			PickupObject.carriedObject.transform.rotation = mainCamera.transform.rotation * Quaternion.Euler(0,180,0);
 			Destroy(itemsList[itemIndex]);
 			PickupObject.carriedObject.name = saveName;
 			itemsList[itemIndex] = temp;
@@ -258,12 +289,11 @@ public class Items : MonoBehaviour
         }
         else
         {
-			PickupObject.carriedObject = (GameObject)Instantiate( itemsList[itemIndex],main.transform.position + main.transform.forward * 1.5f,Quaternion.identity);
+			PickupObject.carriedObject = (GameObject)Instantiate( itemsList[itemIndex],mainCamera.transform.position + mainCamera.transform.forward * 1.5f,Quaternion.identity);
 			PickupObject.carriedObject.transform.rotation = mainCamera.transform.rotation;
 			PickupObject.SetArms();
 			PickupObject.carriedObject.gameObject.GetComponent<Rigidbody>().isKinematic = true;
 			PickupObject.carriedObject.transform.SetParent (PickupObject.leftArmTemp.transform.parent);
-			PickupObject.carriedObject.transform.rotation = mainCamera.transform.rotation * Quaternion.Euler(0,180,0);
 			Destroy(itemsList[itemIndex]);
 			PickupObject.carriedObject.name = saveName;
 			itemsList[itemIndex] = null;
@@ -279,7 +309,7 @@ public class Items : MonoBehaviour
 		int x = Screen.width / 2;
 		int y = Screen.height / 2;
 
-		Ray ray = main.GetComponent<Camera>().ScreenPointToRay(new Vector3(x,y));
+		Ray ray = mainCamera.GetComponent<Camera>().ScreenPointToRay(new Vector3(x,y));
 		RaycastHit hit;
 
 		if (Physics.Raycast (ray, out hit))
@@ -305,16 +335,40 @@ public class Items : MonoBehaviour
     {
 		if (canRun)
         {
+			bool held = false;
+			if(Input.GetKey (Key.q)){
+				countSec -= Time.deltaTime;
+			}
+			else
+			{
+				if(countSec <= 0){
+					held = true;
+					countSec = 1.0f;
+				}
+				else
+				{
+					held = false;
+					countSec = 1.0f;
+				}
+			}
+
 			if (Input.GetKeyUp (Key.q))
             {
+				if(held){
 				Collect ();
 				if (over == true)
                 {
 					Add (pickup);
 				}
+				}else{
+					if(picked.activeSelf && itemsList[itembarIndexSelect] != null){
+					CarryObject(itembarIndexSelect);
+					}
+				}
 			}
 
-			if (Input.GetKeyUp (Key.one) || Input.GetKeyUp (Key.two) || Input.GetKeyUp (Key.three))
+			if (Input.GetKeyUp (Key.one) || Input.GetKeyUp (Key.two) || Input.GetKeyUp (Key.three) 
+			    || Input.GetKeyUp (Key.four) || Input.GetKeyUp (Key.five) ||Input.GetKeyUp (Key.six))
             {
 				Remove ();
 			}
