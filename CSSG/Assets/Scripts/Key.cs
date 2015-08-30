@@ -1,9 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-<<<<<<< HEAD
-=======
 using System.Collections;
->>>>>>> David
 
 public class Key : MonoBehaviour
 {
@@ -17,14 +14,10 @@ public class Key : MonoBehaviour
     public static KeyCode one;
     public static KeyCode two;
     public static KeyCode three;
-<<<<<<< HEAD
-    public static KeyCode enter;
-=======
 	public static KeyCode four;
 	public static KeyCode five;
 	public static KeyCode six;
 	public static KeyCode enter;
->>>>>>> David
     public static KeyCode q;
 	
 	public Text keyOne;
@@ -42,16 +35,11 @@ public class Key : MonoBehaviour
         one = KeyCode.Alpha1;
         two = KeyCode.Alpha2;
         three = KeyCode.Alpha3;
-<<<<<<< HEAD
-
-        keyOne = keyOne.gameObject.GetComponent<Text> ();
-=======
 		four = KeyCode.Alpha4;
 		five = KeyCode.Alpha5;
 		six = KeyCode.Alpha6;
 		
 		keyOne = keyOne.gameObject.GetComponent<Text> ();
->>>>>>> David
 		keyTwo = keyTwo.gameObject.GetComponent<Text> ();
 		keyThree = keyThree.gameObject.GetComponent<Text> ();
 		keyEnter = keyEnter.gameObject.GetComponent<Text> ();
@@ -123,7 +111,6 @@ public class Key : MonoBehaviour
     /// </summary>
 	void OnGUI()
     {
-<<<<<<< HEAD
         Event e = Event.current;
 
         if (e.isKey)
@@ -188,69 +175,4 @@ public class Key : MonoBehaviour
             }
         }
     }
-=======
-		Event e = Event.current;
-
-		if (e.isKey)
-        {
-			temp = e.keyCode;
-
-			if(enterkey == 1 && Input.anyKeyDown)
-            {
-				if(!(temp == one || temp == two || temp == three || temp == q 
-				     || temp == KeyCode.W|| temp == KeyCode.A|| temp == KeyCode.S|| temp == KeyCode.D)){
-				enter = temp;
-				keyEnter.text = Input.inputString;
-				}
-				enterkey = 0;
-				
-			}
-
-			if(qkey == 1 && Input.anyKeyDown)
-            {
-				if(!(temp == one || temp == two || temp == three || temp == enter 
-				     || temp == KeyCode.W|| temp == KeyCode.A|| temp == KeyCode.S|| temp == KeyCode.D))
-                {
-                    q = temp;
-                    qEnter.text = Input.inputString;
-				}
-                qkey = 0;
-				
-			}
-
-			if(hotkeyOne == 1 && Input.anyKeyDown)
-            {
-				if(!(temp == enter || temp == two || temp == three || temp == q 
-				     || temp == KeyCode.W|| temp == KeyCode.A|| temp == KeyCode.S|| temp == KeyCode.D))
-                {
-				    one = temp;
-				    keyOne.text = Input.inputString;
-				}
-				hotkeyOne = 0;
-			}
-			
-			
-			if(hotkeyTwo ==1 && Input.anyKeyDown)
-            {
-				if(!(temp == one || temp == enter || temp == three|| temp == q 
-				     || temp == KeyCode.W|| temp == KeyCode.A|| temp == KeyCode.S|| temp == KeyCode.D))
-                {
-				    two = temp;
-				    keyTwo.text = Input.inputString;
-				}
-				hotkeyTwo = 0;
-			}
-			if(hotkeyThree == 1 && Input.anyKeyDown)
-            {
-				if(!(temp == one || temp == two || temp == three || temp == q 
-				     || temp == KeyCode.W|| temp == KeyCode.A|| temp == KeyCode.S|| temp == KeyCode.D))
-                {
-				    three = temp;
-				    keyThree.text = Input.inputString;
-				}
-				hotkeyThree = 0;
-			}
-		}
-	}
->>>>>>> David
 }

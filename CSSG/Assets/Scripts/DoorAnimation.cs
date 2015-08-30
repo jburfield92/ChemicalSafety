@@ -4,10 +4,7 @@ public class DoorAnimation : MonoBehaviour
 {
 	private Animator anim;
     public bool open;
-<<<<<<< HEAD
-=======
     private GameObject mainCamera;
->>>>>>> David
     public GameObject door;
 
     public AudioClip clip;
@@ -19,10 +16,7 @@ public class DoorAnimation : MonoBehaviour
     {
         source = gameObject.AddComponent<AudioSource>();
         source.clip = clip;
-<<<<<<< HEAD
-=======
         mainCamera = GameObject.FindWithTag ("MainCamera");
->>>>>>> David
 	}
 
     /// <summary> Update is called once per frame
