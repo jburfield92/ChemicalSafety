@@ -40,6 +40,8 @@ public class TakeLaptopTest : MonoBehaviour {
 	void UseLaptop()
 	{
 		if (!UsingLaptop) {
+			//carriedLaptop.transform.parent = mainCamera.transform.parent.gameObject.transform;
+			carriedLaptop.gameObject.transform.parent = mainCamera.transform.parent.transform;
 			carriedLaptop.GetComponent<Animation>().Play("GrabLaptop");
 			UsingLaptop = true;
 
@@ -67,7 +69,7 @@ public class TakeLaptopTest : MonoBehaviour {
 					carriedLaptop = hit.collider.gameObject;
 					mainCamera.transform.parent.gameObject.transform.parent = carriedLaptop.transform;
 					CanSit = false;
-					StartCoroutine(DoAnimation());
+					StartCoroutine(DoSitAnimation());
 
 
 					mainCamera.GetComponent<MouseLook>().enabled = false;
@@ -104,9 +106,27 @@ public class TakeLaptopTest : MonoBehaviour {
 	void DropObject()
 	{
 		carryingLaptop = false;
-		if (UsingLaptop) carriedLaptop.GetComponent<Animation> ().Play ("ReturnLaptop");
-		UsingLaptop = false;
+		if (UsingLaptop) {
+			StartCoroutine(DoReturnAnimation());
+		}
+	}
+
+	IEnumerator DoSitAnimation()
+	{
+		mainCamera.transform.parent.GetComponent<Animation>().Play ("SitDown");
+		yield return new WaitForSeconds(1.5f);
+		mainCamera.transform.parent.gameObject.transform.parent = null;
+		carryingLaptop = true;
+	}
+
+	IEnumerator DoReturnAnimation()
+	{
+		carriedLaptop.GetComponent<Animation> ().Play ("ReturnLaptop");
+		yield return new WaitForSeconds (1.5f);
+		carriedLaptop.gameObject.transform.parent = null;
 		carriedLaptop = null;
+		UsingLaptop = false;
+		
 		mainCamera.transform.parent.gameObject.transform.Translate (Vector3.up * .3f);
 		mainCamera.GetComponent<MouseLook>().enabled = true;
 		if (GameObject.Find("Player").GetComponent<CharacterMotor>()) {
@@ -114,14 +134,6 @@ public class TakeLaptopTest : MonoBehaviour {
 			GameObject.Find("Player").GetComponent<MouseLook>().enabled = true;
 			
 		}
-	}
-
-	IEnumerator DoAnimation()
-	{
-		mainCamera.transform.parent.GetComponent<Animation>().Play ("SitDown");
-		yield return new WaitForSeconds(1.5f);
-		mainCamera.transform.parent.gameObject.transform.parent = null;
-		carryingLaptop = true;
 	}
 	
 }
