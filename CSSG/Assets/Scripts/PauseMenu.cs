@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using PixelCrushers.DialogueSystem;
 using PixelCrushers.DialogueSystem.UnityGUI;
-using System.Collections;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -32,43 +31,57 @@ public class PauseMenu : MonoBehaviour
 			Items.canRun = !Items.canRun;
 		}
 
-        if (Items.canRun) {
-			if (!source.isPlaying) {
-				source.UnPause ();
-			}
+        if (Items.canRun)
+        {
+            if (!source.isPlaying)
+            {
+                source.UnPause();
+            }
 
-			if (guiRoot != null) {
-				guiRoot.visible = true;
-			} else {
-				guiRoot = DialogueManager.DisplaySettings.dialogueUI.GetComponentInChildren<GUIRoot> ();
-			}
+            if (guiRoot != null)
+            {
+                guiRoot.visible = true;
+            }
+            else
+            {
+                guiRoot = DialogueManager.DisplaySettings.dialogueUI.GetComponentInChildren<GUIRoot>();
+            }
 
-			if (DialogueManager.IsConversationActive) {
-				DialogueManager.Unpause ();
-			}
+            if (DialogueManager.IsConversationActive)
+            {
+                DialogueManager.Unpause();
+            }
 
-			if (Time.timeScale == 0f) {
-				Time.timeScale = 1.0f;
-			}
-		} 
-		else {
-			if (source.isPlaying) {
-				source.Pause ();
-			}
+            if (Time.timeScale == 0f)
+            {
+                Time.timeScale = 1.0f;
+            }
+        }
+        else
+        {
+            if (source.isPlaying)
+            {
+                source.Pause();
+            }
 
-			if (guiRoot != null) {
-				guiRoot.visible = false;
-			} else {
-				guiRoot = DialogueManager.DisplaySettings.dialogueUI.GetComponentInChildren<GUIRoot> ();
-			}
+            if (guiRoot != null)
+            {
+                guiRoot.visible = false;
+            }
+            else
+            {
+                guiRoot = DialogueManager.DisplaySettings.dialogueUI.GetComponentInChildren<GUIRoot>();
+            }
 
-			if (DialogueManager.IsConversationActive) {
-				DialogueManager.Pause ();
-			}
+            if (DialogueManager.IsConversationActive)
+            {
+                DialogueManager.Pause();
+            }
 
-			if (Time.timeScale == 1.0f) {
-				Time.timeScale = 0f;
-			}
+            if (Time.timeScale == 1.0f)
+            {
+                Time.timeScale = 0f;
+            }
 		}
 	}
 

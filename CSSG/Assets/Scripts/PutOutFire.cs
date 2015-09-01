@@ -29,6 +29,7 @@ public class PutOutFire : MonoBehaviour
         }
         else
         {
+            Debug.Log("Collision");
             IsActive = true;
         }
 	}

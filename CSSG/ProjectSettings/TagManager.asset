@@ -12,6 +12,7 @@ TagManager:
   - FireExtinguisher
   - GUI
   - NPC
+  - IsLaptop
   layers:
   - Default
   - TransparentFX

@@ -22,7 +22,6 @@ public class LockThing : MonoBehaviour
         {
             GUI.DrawTexture(new Rect(Screen.width / 2 - cursorSizeX / 2, Screen.height / 2 - cursorSizeY / 2, cursorSizeX, cursorSizeY), texture);
         }
-        GUI.DrawTexture(new Rect(Screen.width/2 - cursorSizeX/2, Screen.height/2 - cursorSizeY/2, cursorSizeX, cursorSizeY), texture);
     }
 
     /// <summary> Update is called once per frame

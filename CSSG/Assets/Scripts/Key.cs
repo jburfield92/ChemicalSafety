@@ -1,29 +1,28 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 
 public class Key : MonoBehaviour
 {
-	private int hotkeyOne;
-	private int hotkeyTwo;
-	private int hotkeyThree;
-	private int qkey;
-	private int enterkey;
+    private int hotkeyOne;
+    private int hotkeyTwo;
+    private int hotkeyThree;
+    private int qkey;
+    private int enterkey;
     private KeyCode temp;
 
     public static KeyCode one;
     public static KeyCode two;
     public static KeyCode three;
-	public static KeyCode four;
-	public static KeyCode five;
-	public static KeyCode six;
-	public static KeyCode enter;
+    public static KeyCode four;
+    public static KeyCode five;
+    public static KeyCode six;
+    public static KeyCode enter;
     public static KeyCode q;
-	
-	public Text keyOne;
-	public Text keyTwo;
-	public Text keyThree;
-	public Text keyEnter;
+
+    public Text keyOne;
+    public Text keyTwo;
+    public Text keyThree;
+    public Text keyEnter;
     public Text qEnter;
 
     /// <summary> Use this for initialization
@@ -35,11 +34,11 @@ public class Key : MonoBehaviour
         one = KeyCode.Alpha1;
         two = KeyCode.Alpha2;
         three = KeyCode.Alpha3;
-		four = KeyCode.Alpha4;
-		five = KeyCode.Alpha5;
-		six = KeyCode.Alpha6;
-		
-		keyOne = keyOne.gameObject.GetComponent<Text> ();
+        four = KeyCode.Alpha4;
+        five = KeyCode.Alpha5;
+        six = KeyCode.Alpha6;
+
+        keyOne = keyOne.gameObject.GetComponent<Text> ();
 		keyTwo = keyTwo.gameObject.GetComponent<Text> ();
 		keyThree = keyThree.gameObject.GetComponent<Text> ();
 		keyEnter = keyEnter.gameObject.GetComponent<Text> ();
@@ -50,61 +49,6 @@ public class Key : MonoBehaviour
 		hotkeyTwo = 0;
 		hotkeyThree = 0;
 		qkey = 0;
-	}
-
-    /// <summary> Sets the key for first inventory spot
-    /// </summary>
-	public void SetKeyInventoryOne()
-    {       
-		hotkeyOne = 1;
-		hotkeyTwo = 0;
-		hotkeyThree = 0;
-		enterkey = 0;
-		qkey = 0;
-	}
-
-    /// <summary> Sets the key for second inventory spot
-    /// </summary>
-	public void SetKeyInventoryTwo()
-    {
-		hotkeyOne = 0;
-		hotkeyTwo = 1;
-		hotkeyThree = 0;
-		enterkey = 0;
-		qkey = 0;
-	}
-
-    /// <summary> Sets the key for third inventory spot
-    /// </summary>
-	public void SetKeyInventoryThree()
-    {
-		hotkeyOne = 0;
-		hotkeyTwo = 0;
-		hotkeyThree = 1;
-		enterkey = 0;
-		qkey = 0;
-	}
-
-    /// <summary> Sets the key for the interaction key
-    /// </summary>
-	public void SetInteractionKey()
-    {
-		hotkeyOne = 0;
-		hotkeyTwo = 0;
-		hotkeyThree = 0;
-		enterkey = 1;
-		qkey = 0;
-	}
-
-    /// <summary> Sets the key for the collect key
-    /// </summary>
-	public void SetCollectKey()
-    {
-		hotkeyOne = 0;
-		hotkeyTwo = 0;
-		hotkeyThree = 0;
-		enterkey = 0;
-		qkey = 1;
 	}
 
     /// <summary> Draws the keys

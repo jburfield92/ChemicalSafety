@@ -15,7 +15,7 @@ namespace PixelCrushers.DialogueSystem.SequencerCommands {
 	public class SequencerCommandLoadLevel : SequencerCommand {
 		
 		public void Start() {
-			string levelName = GetParameter(0, null);
+			string levelName = GetParameter(0);
 			if (string.IsNullOrEmpty(levelName)) {
 				if (DialogueDebug.LogWarnings) Debug.LogWarning(string.Format("{0}: Sequencer: LoadLevel() level name is an empty string", DialogueDebug.Prefix));
 			} else {
