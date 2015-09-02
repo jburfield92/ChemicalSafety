@@ -40,7 +40,6 @@ public class PutOutFire : MonoBehaviour
     {
         if (gameobject.tag == "extinguisherEmission")
         {
-			Debug.Log (fireParticles.emissionRate);
             ParticleSystem ps = gameobject.GetComponent<ParticleSystem>();
 
             int safeLength = ps.GetSafeCollisionEventSize();

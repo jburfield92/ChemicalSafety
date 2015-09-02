@@ -48,12 +48,12 @@ public class TutorialScripts : MonoBehaviour
 				}
 			}
 
-			if (!fireBarrelNearby && Vector3.Distance (fireBarrel.transform.position, player.transform.position) < 4f) {
+			if (!fireBarrelNearby && Vector3.Distance (fireBarrel.transform.position, player.transform.position) < 3) {
 				DialogueManager.Instance.SendMessage ("OnSequencerMessage", "NearFireBarrel");
 				fireBarrelNearby = true;
 			}
 
-			if (fireBarrelNearby == true && !fireExtinguished && !PutOutFire.IsActive) {
+			if (fireBarrelNearby && !fireExtinguished && !PutOutFire.IsActive) {
 				DialogueManager.Instance.SendMessage ("OnSequencerMessage", "FireExtinguished");
 				fireExtinguished = true;
 			}

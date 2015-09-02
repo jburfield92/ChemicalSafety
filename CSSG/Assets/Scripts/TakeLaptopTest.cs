@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using PixelCrushers.DialogueSystem;
 
 public class TakeLaptopTest : MonoBehaviour 
 {
@@ -54,7 +55,6 @@ public class TakeLaptopTest : MonoBehaviour
 			carriedLaptop.GetComponent<Animation>().Play("GrabLaptop");
 			UsingLaptop = true;
 			TurnLaptopOn();
-
 			// add script to call laptop overlay canvas here
 		}
 	}
