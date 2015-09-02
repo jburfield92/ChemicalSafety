@@ -29,7 +29,6 @@ public class PutOutFire : MonoBehaviour
         }
         else
         {
-            Debug.Log("Collision");
             IsActive = true;
         }
 	}
@@ -41,6 +40,7 @@ public class PutOutFire : MonoBehaviour
     {
         if (gameobject.tag == "extinguisherEmission")
         {
+			Debug.Log (fireParticles.emissionRate);
             ParticleSystem ps = gameobject.GetComponent<ParticleSystem>();
 
             int safeLength = ps.GetSafeCollisionEventSize();
@@ -52,8 +52,8 @@ public class PutOutFire : MonoBehaviour
 
             for (int i = 0; i < collisionEvents.Length; i++)
             {
-                fireParticles.emissionRate -= 2;
-                smokeParticles.emissionRate -= 2;
+                fireParticles.emissionRate -= 0.01f;
+                smokeParticles.emissionRate -= 0.01f;
             }
         }
     }

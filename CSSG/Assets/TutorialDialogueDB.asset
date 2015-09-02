@@ -2374,7 +2374,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: None()
+        value: 
         type: 0
         typeString: 
       conversationID: 3
@@ -2442,7 +2442,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speec_testing2)
+        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speech_testing2);
         type: 0
         typeString: 
       conversationID: 3
@@ -2510,7 +2510,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: WaitForMessage(NearTable); AudioWait(Sounds/VoiceOvers/testingVoiceOver/speec_testing3);
+        value: WaitForMessage(LaptopTableNearby); AudioWait(Sounds/VoiceOvers/testingVoiceOver/speech_testing3);
         type: 0
         typeString: 
       conversationID: 3
@@ -2531,7 +2531,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 120
+        x: 119
         y: 170
         width: 160
         height: 30
@@ -2578,7 +2578,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: WaitForMessage(TestStarted); AudioWait(Sounds/VoiceOvers/testingVoiceOver/speec_testing4)
+        value: WaitForMessage(TestStarted); AudioWait(Sounds/VoiceOvers/testingVoiceOver/speech_testing4)
         type: 0
         typeString: 
       conversationID: 3
@@ -2595,7 +2595,7 @@ MonoBehaviour:
         destinationDialogueID: 4
         isConnector: 0
         priority: 2
-      conditionsString: Variable["TestStarted"] == true
+      conditionsString: 
       userScript: 
       canvasRect:
         serializedVersion: 2
@@ -2647,7 +2647,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speec_testing5);
+        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speech_testing5);
         type: 0
         typeString: 
       conversationID: 3
@@ -2715,7 +2715,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speec_testing6);
+        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speech_testing6);
         type: 0
         typeString: 
       - title: Response Menu Sequence
@@ -2787,7 +2787,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: WaitForMessage(Submit); AudioWait(Sounds/VoiceOvers/testingVoiceOver/speec_testing7);
+        value: WaitForMessage(Submit); AudioWait(Sounds/VoiceOvers/testingVoiceOver/speech_testing7);
         type: 0
         typeString: 
       conversationID: 3
@@ -3015,7 +3015,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speec_testing8a);
+        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speech_testing8a);
         type: 0
         typeString: 
       conversationID: 3
@@ -3083,7 +3083,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speec_testing9a);
+        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speech_testing9a);
         type: 0
         typeString: 
       conversationID: 3
@@ -3151,7 +3151,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speec_testing9b);
+        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speech_testing9b);
         type: 0
         typeString: 
       conversationID: 3
@@ -3221,7 +3221,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speec_testing10);
+        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speech_testing10);
         type: 0
         typeString: 
       conversationID: 3
@@ -3283,7 +3283,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speec_testing1)
+        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speech_testing1)
         type: 0
         typeString: 
       conversationID: 3
@@ -3351,7 +3351,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speec_testing8b);
+        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speech_testing8b);
         type: 0
         typeString: 
       conversationID: 3
@@ -3419,7 +3419,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speec_testing8c);
+        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speech_testing8c);
         type: 0
         typeString: 
       conversationID: 3
@@ -3487,7 +3487,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speec_testing8d);
+        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speech_testing8d);
         type: 0
         typeString: 
       conversationID: 3

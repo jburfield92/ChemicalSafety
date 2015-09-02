@@ -10,11 +10,15 @@ public class TutorialScripts : MonoBehaviour
     private bool fireExtinguisherNearBy;
     private bool fireExtinguished;
     private bool fireBarrelNearby;
+	private bool laptopTableNearby;
+	private bool testStarted;
+	private bool testCompleted;
+
     private GameObject fireExtinguisher;
     private GameObject fireBarrel;
 
-    private bool testStarted;
-    private bool testCompleted;
+	private GameObject laptopTable;
+
     private int testScore;
     private int testTotalScore = 3;
 
@@ -52,6 +56,23 @@ public class TutorialScripts : MonoBehaviour
 			if (fireBarrelNearby == true && !fireExtinguished && !PutOutFire.IsActive) {
 				DialogueManager.Instance.SendMessage ("OnSequencerMessage", "FireExtinguished");
 				fireExtinguished = true;
+			}
+		}
+
+		if (laptopTable == null) {
+			laptopTable = GameObject.Find ("glassTable");
+		} 
+		else 
+		{
+			if (!laptopTableNearby && Vector3.Distance (laptopTable.transform.position, player.transform.position) < 2)
+			{
+				DialogueManager.Instance.SendMessage ("OnSequencerMessage", "LaptopTableNearby");
+				laptopTableNearby = true;
+			}
+
+			if (!testStarted && TakeLaptopTest.UsingLaptop == true)
+			{
+				DialogueManager.Instance.SendMessage ("OnSequencerMessage", "TestStarted");
 			}
 		}
     }

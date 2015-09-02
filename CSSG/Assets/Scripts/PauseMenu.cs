@@ -5,7 +5,7 @@ using PixelCrushers.DialogueSystem.UnityGUI;
 public class PauseMenu : MonoBehaviour
 {
 	public GameObject onOff;
-	public GameObject itembar;
+	public static GameObject itembar;
 	public GameObject settings;
     private GameObject npc;
     private GUIRoot guiRoot;
@@ -18,6 +18,7 @@ public class PauseMenu : MonoBehaviour
     {
         npc = GameObject.FindGameObjectWithTag("NPC");
         source = (AudioSource)npc.GetComponent("AudioSource");
+		itembar = GameObject.FindGameObjectWithTag ("ItemBarPanel");
     }
     /// <summary> Update is called once per frame
     /// </summary>
