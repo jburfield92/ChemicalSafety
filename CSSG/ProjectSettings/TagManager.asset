@@ -13,6 +13,10 @@ TagManager:
   - GUI
   - NPC
   - IsLaptop
+  - ItemBarPanel
+  - LeftArm
+  - RightArm
+  - Test
   layers:
   - Default
   - TransparentFX
@@ -22,8 +26,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Player
+  - GameItems
   - 
   - 
   - 

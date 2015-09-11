@@ -204,9 +204,7 @@ public class RandomRoom : MonoBehaviour
             }
             roomsListIndex++;
         }
-
-        Items.SetItemsToDelete();
-        Items.DestroyItems();
+		
         used.SetActive(!used.activeSelf);
         deleteHall = newHall;
         deleteHall.tag = "ToDelete";
