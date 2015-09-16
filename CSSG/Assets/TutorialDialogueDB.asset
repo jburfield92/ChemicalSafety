@@ -210,10 +210,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: 'Hello and welcome to the Chemical Safety Simulation Video Game. In
-          this game, you will be trained on the Hazard Communication Standard, a standard
-          that conforms to the Globally Harmonized System of Classification and Labeling
-          of Chemicals. '
+        value: Hello and welcome to the Chemical Safety Simulation Game.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -229,7 +226,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/introVoiceOver/speech_intro1)
+        value: AudioWait(Sounds/VoiceOvers/Intro/intro1)
         type: 0
         typeString: CustomFieldType_Text
       - title: Response Menu Sequence
@@ -254,7 +251,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 28
+        x: 29
         y: 69
         width: 160
         height: 30
@@ -285,10 +282,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: The Hazard Communication Standard provides a common and coherent approach
-          to classifying chemicals and communicating hazard information on labels
-          and safety data sheets. This simulation video game will train you to understand
-          these standards.
+        value: 'You are currently participating in the tutorial for this game. '
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -304,7 +298,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/introVoiceOver/speech_intro2)
+        value: AudioWait(Sounds/VoiceOvers/Intro/intro2)
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 1
@@ -356,8 +350,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: For this tutorial you will be familiarized with the controls and some
-          of the basic mechanics you will encounter in the game.
+        value: In this tutorial, you will be familiarized with the controls and some
+          of the basic mechanics you will encounter in this game.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -373,7 +367,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/introVoiceOver/speech_intro3)
+        value: AudioWait(Sounds/VoiceOvers/Intro/intro3)
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 1
@@ -425,7 +419,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "Let\u2019s begin."
+        value: By playing the Chemical Safety Simulation Game, you will be trained
+          on the content of the Hazard Communication Standard, a standard that conforms
+          to the Globally Harmonized System of Classification and Labeling of Chemicals.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -441,7 +437,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/introVoiceOver/speech_intro4)
+        value: AudioWait(Sounds/VoiceOvers/Intro/intro4)
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 1
@@ -455,15 +451,15 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 5
         destinationConversationID: 1
-        destinationDialogueID: 6
+        destinationDialogueID: 33
         isConnector: 0
         priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 28
-        y: 219
+        x: 27
+        y: 218
         width: 160
         height: 30
     - id: 6
@@ -509,8 +505,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/buttonVoiceOver/speech_button1); QTE(0,
-          99999)
+        value: AudioWait(Sounds/VoiceOvers/Intro/intro17); QTE(0, 99999)
         type: 0
         typeString: 
       conversationID: 1
@@ -531,8 +526,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 250
-        y: 223
+        x: 239
+        y: 819
         width: 160
         height: 30
     - id: 7
@@ -578,8 +573,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/buttonVoiceOver/speech_button2); QTE(2,
-          99999)
+        value: AudioWait(Sounds/VoiceOvers/Intro/intro18); QTE(2, 99999)
         type: 0
         typeString: 
       conversationID: 1
@@ -600,8 +594,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 254
-        y: 269
+        x: 243
+        y: 865
         width: 160
         height: 30
     - id: 8
@@ -647,8 +641,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/buttonVoiceOver/speech_button3); QTE(3,
-          99999)
+        value: AudioWait(Sounds/VoiceOvers/Intro/intro19); QTE(3, 99999)
         type: 0
         typeString: 
       conversationID: 1
@@ -669,8 +662,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 253
-        y: 310
+        x: 244
+        y: 906
         width: 160
         height: 30
     - id: 9
@@ -700,7 +693,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Notice the inventory bar at the top of the screen.
+        value: Using your mouse or touch pad, look down.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -716,7 +709,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/buttonVoiceOver/speech_button8);
+        value: AudioWait(Sounds/VoiceOvers/Intro/intro23); WaitForMessage(LookedDown)
         type: 0
         typeString: 
       conversationID: 1
@@ -737,8 +730,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 249
-        y: 552
+        x: 238
+        y: 1149
         width: 160
         height: 30
     - id: 10
@@ -768,7 +761,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: This is where all of the items you collected in each room will be stored.
+        value: Good job.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -784,7 +777,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/buttonVoiceOver/speech_button9);
+        value: AudioWait(Sounds/VoiceOvers/Intro/intro24)
         type: 0
         typeString: 
       conversationID: 1
@@ -805,8 +798,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 250
-        y: 603
+        x: 245
+        y: 1200
         width: 160
         height: 30
     - id: 11
@@ -852,8 +845,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/buttonVoiceOver/speech_button4); QTE(1,
-          99999)
+        value: AudioWait(Sounds/VoiceOvers/Intro/intro20); QTE(1, 99999); SendMessage(StartMouseTutorial,
+          true, );
         type: 0
         typeString: 
       conversationID: 1
@@ -874,8 +867,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 251
-        y: 361
+        x: 240
+        y: 956
         width: 160
         height: 30
     - id: 12
@@ -905,7 +898,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Press E to pick up the fire extinguisher.
+        value: Using your mouse or touch pad, look to the right.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -921,8 +914,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/buttonVoiceOver/speech_button6); QTE(4,
-          99999)
+        value: AudioWait(Sounds/VoiceOvers/Intro/intro21); WaitForMessage(LookedRight)
         type: 0
         typeString: 
       conversationID: 1
@@ -943,8 +935,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 246
-        y: 459
+        x: 236
+        y: 1053
         width: 160
         height: 30
     - id: 13
@@ -974,7 +966,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Press Q to store the item in your inventory.
+        value: Using your mouse or touch pad, look up.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -990,8 +982,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/buttonVoiceOver/speech_button7); QTE(5,
-          99999)
+        value: AudioWait(Sounds/VoiceOvers/Intro/intro22); WaitForMessage(LookedUp)
         type: 0
         typeString: 
       conversationID: 1
@@ -1012,8 +1003,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 253
-        y: 507
+        x: 245
+        y: 1102
         width: 160
         height: 30
     - id: 14
@@ -1043,7 +1034,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Now, go up to the fire extinguisher near the dumpster.
+        value: Using your mouse or touch pad, look to the left.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -1059,7 +1050,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/buttonVoiceOver/speech_button5); WaitForMessage(NearFireExtinguisher);
+        value: AudioWait(Sounds/VoiceOvers/Intro/intro20); WaitForMessage(LookedLeft)
         type: 0
         typeString: 
       conversationID: 1
@@ -1080,8 +1071,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 250
-        y: 412
+        x: 238
+        y: 1009
         width: 160
         height: 30
     - id: 15
@@ -1111,9 +1102,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: When you store multiple items in your inventory, you can use your scroll
-          wheel, or the number keys to select an item. Pressing Q will bring the selected
-          item out and into your hands.
+        value: If at any point you missed a dialogue or need help, you can go to the
+          Help page in the main menu.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -1129,7 +1119,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/buttonVoiceOver/speech_button10);
+        value: AudioWait(Sounds/VoiceOvers/Intro/intro25)
         type: 0
         typeString: 
       conversationID: 1
@@ -1150,8 +1140,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 250
-        y: 650
+        x: 241
+        y: 1243
         width: 160
         height: 30
     - id: 16
@@ -1181,7 +1171,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Followed by the testing section, which will be in a single room.
+        value: Press E to place the container on the table.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -1197,7 +1187,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/buttonVoiceOver/speech_button16);
+        value: AudioWait(Sounds/VoiceOvers/Intro/intro31)
         type: 0
         typeString: 
       conversationID: 1
@@ -1211,15 +1201,15 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 16
         destinationConversationID: 1
-        destinationDialogueID: 21
+        destinationDialogueID: 25
         isConnector: 0
         priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 238
-        y: 931
+        x: 417
+        y: 1502
         width: 160
         height: 30
     - id: 17
@@ -1249,7 +1239,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: An educational section, which will be the first room.
+        value: Press E to pick up the container.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -1265,7 +1255,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/buttonVoiceOver/speech_button14);
+        value: AudioWait(Sounds/VoiceOvers/Intro/intro29);
         type: 0
         typeString: 
       conversationID: 1
@@ -1286,8 +1276,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 242
-        y: 845
+        x: 415
+        y: 1405
         width: 160
         height: 30
     - id: 18
@@ -1317,7 +1307,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: This game will have a series of modules, each with a series of rooms.
+        value: "You can get to the main menu by pressing Escape (Esc) on your keyboard
+          at any time while you\u2019re playing."
         type: 0
         typeString: 
       - title: Parenthetical
@@ -1333,7 +1324,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/buttonVoiceOver/speech_button11);
+        value: AudioWait(Sounds/VoiceOvers/Intro/intro26)
         type: 0
         typeString: 
       conversationID: 1
@@ -1354,8 +1345,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 247
-        y: 699
+        x: 236
+        y: 1294
         width: 160
         height: 30
     - id: 19
@@ -1385,8 +1376,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: In each room, you may have to collect items, but you cannot take these
-          items from room to room.
+        value: "Let\u2019s perform a basic exercise."
         type: 0
         typeString: 
       - title: Parenthetical
@@ -1402,7 +1392,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/buttonVoiceOver/speech_button12);
+        value: AudioWait(Sounds/VoiceOvers/Intro/intro27); SendMessage(StartExerciseTutorial,
+          true, );
         type: 0
         typeString: 
       conversationID: 1
@@ -1423,8 +1414,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 264
-        y: 746
+        x: 419
+        y: 1299
         width: 160
         height: 30
     - id: 20
@@ -1454,7 +1445,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Followed by the activities section that will be a series of 3-5 rooms.
+        value: Using your W,A,S,D keys and your mouse or track pad, with the container
+          in your hands, walk up to the table on the other side of the room.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -1470,7 +1462,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/buttonVoiceOver/speech_button15);
+        value: AudioWait(Sounds/VoiceOvers/Intro/intro30)
         type: 0
         typeString: 
       conversationID: 1
@@ -1491,76 +1483,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 239
-        y: 889
-        width: 160
-        height: 30
-    - id: 21
-      fields:
-      - title: Title
-        value: New Dialogue Entry
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: 
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: 
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Let's simulate an activity.
-        type: 0
-        typeString: 
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/buttonVoiceOver/speech_button17);
-        type: 0
-        typeString: 
-      conversationID: 1
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 1
-        originDialogueID: 21
-        destinationConversationID: 1
-        destinationDialogueID: 25
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      canvasRect:
-        serializedVersion: 2
-        x: 239
-        y: 975
+        x: 415
+        y: 1454
         width: 160
         height: 30
     - id: 22
@@ -1590,7 +1514,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Use the Left Click on your Mouse to start putting out the fire.
+        value: "Let\u2019s simulate the testing section."
         type: 0
         typeString: 
       - title: Parenthetical
@@ -1606,7 +1530,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/buttonVoiceOver/speech_button20); WaitForMessage(FireExtinguished);
+        value: AudioWait(Sounds/VoiceOvers/Intro/intro35)
         type: 0
         typeString: 
       conversationID: 1
@@ -1627,487 +1551,11 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 250
-        y: 1155
+        x: 414
+        y: 1681
         width: 160
         height: 30
     - id: 23
-      fields:
-      - title: Title
-        value: New Dialogue Entry
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: 
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: 
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Go up to it with your fire extinguisher equipped, and put out the fire.
-        type: 0
-        typeString: 
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/buttonVoiceOver/speech_button19);
-        type: 0
-        typeString: 
-      conversationID: 1
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 1
-        originDialogueID: 23
-        destinationConversationID: 1
-        destinationDialogueID: 22
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      canvasRect:
-        serializedVersion: 2
-        x: 246
-        y: 1114
-        width: 160
-        height: 30
-    - id: 24
-      fields:
-      - title: Title
-        value: New Dialogue Entry
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: 
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: 
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: "Oh, look, a fire in a barrel. That\u2019s not safe."
-        type: 0
-        typeString: 
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/buttonVoiceOver/speech_button18);
-        type: 0
-        typeString: 
-      conversationID: 1
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 1
-        originDialogueID: 24
-        destinationConversationID: 1
-        destinationDialogueID: 23
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      canvasRect:
-        serializedVersion: 2
-        x: 241
-        y: 1064
-        width: 160
-        height: 30
-    - id: 25
-      fields:
-      - title: Title
-        value: New Dialogue Entry
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: 
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: 
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: SendMessage(StartFire,,FireObject);
-        type: 0
-        typeString: 
-      conversationID: 1
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 1
-        originDialogueID: 25
-        destinationConversationID: 1
-        destinationDialogueID: 24
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      canvasRect:
-        serializedVersion: 2
-        x: 241
-        y: 1020
-        width: 160
-        height: 30
-    - id: 26
-      fields:
-      - title: Title
-        value: New Dialogue Entry
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: 
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: 
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: "Phew. That fire in a barrel could have hurt someone. Let\u2019s continue."
-        type: 0
-        typeString: 
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/buttonVoiceOver/speech_button21);
-        type: 0
-        typeString: 
-      conversationID: 1
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 1
-        originDialogueID: 26
-        destinationConversationID: 1
-        destinationDialogueID: 27
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      canvasRect:
-        serializedVersion: 2
-        x: 265
-        y: 1205
-        width: 160
-        height: 30
-    - id: 27
-      fields:
-      - title: Title
-        value: New Dialogue Entry
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: 
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: 
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: "Let\u2019s simulate a testing section."
-        type: 0
-        typeString: 
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/buttonVoiceOver/speech_button22);
-        type: 0
-        typeString: 
-      conversationID: 1
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 1
-        originDialogueID: 27
-        destinationConversationID: 1
-        destinationDialogueID: 28
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      canvasRect:
-        serializedVersion: 2
-        x: 269
-        y: 1251
-        width: 160
-        height: 30
-    - id: 28
-      fields:
-      - title: Title
-        value: New Dialogue Entry
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: 
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: 
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: SendMessage(NextRoom,,EmptyRoomObject);
-        type: 0
-        typeString: 
-      conversationID: 1
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 1
-        originDialogueID: 28
-        destinationConversationID: 1
-        destinationDialogueID: 29
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      canvasRect:
-        serializedVersion: 2
-        x: 276
-        y: 1296
-        width: 160
-        height: 30
-    - id: 29
-      fields:
-      - title: Title
-        value: New Dialogue Entry
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: 
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: 
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Notice that one of the doors has opened.
-        type: 0
-        typeString: 
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/buttonVoiceOver/speech_button23);
-        type: 0
-        typeString: 
-      conversationID: 1
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 1
-        originDialogueID: 29
-        destinationConversationID: 1
-        destinationDialogueID: 30
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      canvasRect:
-        serializedVersion: 2
-        x: 281
-        y: 1341
-        width: 160
-        height: 30
-    - id: 30
       fields:
       - title: Title
         value: New Dialogue Entry
@@ -2151,7 +1599,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/buttonVoiceOver/speech_button24);
+        value: AudioWait(Sounds/VoiceOvers/Intro/intro34)
         type: 0
         typeString: 
       conversationID: 1
@@ -2163,20 +1611,20 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks:
       - originConversationID: 1
-        originDialogueID: 30
+        originDialogueID: 23
         destinationConversationID: 1
-        destinationDialogueID: 32
+        destinationDialogueID: 22
         isConnector: 0
         priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 281
-        y: 1385
+        x: 417
+        y: 1636
         width: 160
         height: 30
-    - id: 31
+    - id: 24
       fields:
       - title: Title
         value: New Dialogue Entry
@@ -2203,8 +1651,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Each module will cover a different subject, and in each module, there
-          will be 3 sections.
+        value: In the future, you will be using your E key to pick up and drop objects,
+          and also interact with objects.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -2220,7 +1668,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/buttonVoiceOver/speech_button13);
+        value: AudioWait(Sounds/VoiceOvers/Intro/intro33)
         type: 0
         typeString: 
       conversationID: 1
@@ -2232,20 +1680,156 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks:
       - originConversationID: 1
-        originDialogueID: 31
+        originDialogueID: 24
         destinationConversationID: 1
-        destinationDialogueID: 17
+        destinationDialogueID: 23
         isConnector: 0
         priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 246
-        y: 796
+        x: 422
+        y: 1590
         width: 160
         height: 30
-    - id: 32
+    - id: 25
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Good job.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: AudioWait(Sounds/VoiceOvers/Intro/intro32)
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 25
+        destinationConversationID: 1
+        destinationDialogueID: 24
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 419
+        y: 1547
+        width: 160
+        height: 30
+    - id: 26
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Notice that one of the doors has opened.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: AudioWait(Sounds/VoiceOvers/Intro/intro36); SendMessage(NextRoom,,EmptyRoomObject);
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 26
+        destinationConversationID: 1
+        destinationDialogueID: 27
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 404
+        y: 1728
+        width: 160
+        height: 30
+    - id: 27
       fields:
       - title: Title
         value: New Dialogue Entry
@@ -2288,7 +1872,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/buttonVoiceOver/speech_button25);
+        value: AudioWait(Sounds/VoiceOvers/Intro/intro37)
         type: 0
         typeString: 
       conversationID: 1
@@ -2303,8 +1887,900 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 273
-        y: 1430
+        x: 409
+        y: 1782
+        width: 160
+        height: 30
+    - id: 31
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Using your W,A,S,D keys and your mouse or touch pad, find the container
+          of flammable liquid in one of the corners of the room and walk up to it.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: AudioWait(Sounds/VoiceOvers/Intro/intro28); WaitForMessage(NearContainer);
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 31
+        destinationConversationID: 1
+        destinationDialogueID: 17
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 418
+        y: 1352
+        width: 160
+        height: 30
+    - id: 33
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: The Hazard Communication Standard conforms to the Globally Harmonized
+          System of Classification and Labeling of Chemicals.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: AudioWait(Sounds/VoiceOvers/Intro/intro5)
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 33
+        destinationConversationID: 1
+        destinationDialogueID: 34
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 30
+        y: 269
+        width: 160
+        height: 30
+    - id: 34
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: The Hazard Communication Standard provides a common and coherent approach
+          to classifying chemicals and communicating hazard information on labels
+          and safety data sheets.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: AudioWait(Sounds/VoiceOvers/Intro/intro6)
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 34
+        destinationConversationID: 1
+        destinationDialogueID: 35
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 30
+        y: 319
+        width: 160
+        height: 30
+    - id: 35
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: This simulation video game will train you to understand these standards.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: AudioWait(Sounds/VoiceOvers/Intro/intro7)
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 35
+        destinationConversationID: 1
+        destinationDialogueID: 36
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 30
+        y: 370
+        width: 160
+        height: 30
+    - id: 36
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: This game has a series of modules, each with a series of rooms.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: AudioWait(Sounds/VoiceOvers/Intro/intro8)
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 36
+        destinationConversationID: 1
+        destinationDialogueID: 37
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 30
+        y: 420
+        width: 160
+        height: 30
+    - id: 37
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Each module will cover a different subject, and in each module there
+          will be 3 sections.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: AudioWait(Sounds/VoiceOvers/Intro/intro9)
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 37
+        destinationConversationID: 1
+        destinationDialogueID: 38
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 30
+        y: 470
+        width: 160
+        height: 30
+    - id: 38
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: An educational section, which will be the first room.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: AudioWait(Sounds/VoiceOvers/Intro/intro10)
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 38
+        destinationConversationID: 1
+        destinationDialogueID: 39
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 30
+        y: 515
+        width: 160
+        height: 30
+    - id: 39
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Followed by the activities section that will be a series of 5 rooms.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: AudioWait(Sounds/VoiceOvers/Intro/intro11)
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 39
+        destinationConversationID: 1
+        destinationDialogueID: 40
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 29
+        y: 570
+        width: 160
+        height: 30
+    - id: 40
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Followed by the testing section, which will be in a single room.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: AudioWait(Sounds/VoiceOvers/Intro/intro12)
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 40
+        destinationConversationID: 1
+        destinationDialogueID: 41
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 29
+        y: 620
+        width: 160
+        height: 30
+    - id: 41
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: In the educational section, you will be given the material necessary
+          to complete the module.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: AudioWait(Sounds/VoiceOvers/Intro/intro13)
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 41
+        destinationConversationID: 1
+        destinationDialogueID: 42
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 30
+        y: 670
+        width: 160
+        height: 30
+    - id: 42
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: In the activities section, you will have to participate in a series
+          of exercises or activities to help enforce the material presented.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: AudioWait(Sounds/VoiceOvers/Intro/intro14)
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 42
+        destinationConversationID: 1
+        destinationDialogueID: 43
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 28
+        y: 720
+        width: 160
+        height: 30
+    - id: 43
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: In the testing section, you will then be tested on the material presented
+          in that module.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: AudioWait(Sounds/VoiceOvers/Intro/intro15)
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 43
+        destinationConversationID: 1
+        destinationDialogueID: 44
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 31
+        y: 770
+        width: 160
+        height: 30
+    - id: 44
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: "Let\u2019s begin learning the controls for the game."
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: AudioWait(Sounds/VoiceOvers/Intro/intro16)
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 44
+        destinationConversationID: 1
+        destinationDialogueID: 6
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 31
+        y: 820
         width: 160
         height: 30
   - id: 3
@@ -2374,7 +2850,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: None()
+        value: 
         type: 0
         typeString: 
       conversationID: 3
@@ -2442,7 +2918,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speec_testing2)
+        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speech_testing2);
         type: 0
         typeString: 
       conversationID: 3
@@ -2510,7 +2986,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: WaitForMessage(NearTable); AudioWait(Sounds/VoiceOvers/testingVoiceOver/speec_testing3);
+        value: WaitForMessage(LaptopTableNearby); AudioWait(Sounds/VoiceOvers/testingVoiceOver/speech_testing3);
         type: 0
         typeString: 
       conversationID: 3
@@ -2531,7 +3007,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 120
+        x: 119
         y: 170
         width: 160
         height: 30
@@ -2578,7 +3054,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: WaitForMessage(TestStarted); AudioWait(Sounds/VoiceOvers/testingVoiceOver/speec_testing4)
+        value: WaitForMessage(TestStarted); AudioWait(Sounds/VoiceOvers/testingVoiceOver/speech_testing4)
         type: 0
         typeString: 
       conversationID: 3
@@ -2595,7 +3071,7 @@ MonoBehaviour:
         destinationDialogueID: 4
         isConnector: 0
         priority: 2
-      conditionsString: Variable["TestStarted"] == true
+      conditionsString: 
       userScript: 
       canvasRect:
         serializedVersion: 2
@@ -2647,7 +3123,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speec_testing5);
+        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speech_testing5);
         type: 0
         typeString: 
       conversationID: 3
@@ -2715,7 +3191,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speec_testing6);
+        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speech_testing6);
         type: 0
         typeString: 
       - title: Response Menu Sequence
@@ -2787,7 +3263,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: WaitForMessage(Submit); AudioWait(Sounds/VoiceOvers/testingVoiceOver/speec_testing7);
+        value: WaitForMessage(Submit); AudioWait(Sounds/VoiceOvers/testingVoiceOver/speech_testing7);
         type: 0
         typeString: 
       conversationID: 3
@@ -3015,7 +3491,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speec_testing8a);
+        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speech_testing8a);
         type: 0
         typeString: 
       conversationID: 3
@@ -3067,7 +3543,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Sorry, did I say congratulations? I meant, better luck next time.
+        value: That concludes the tutorial module.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -3083,7 +3559,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speec_testing9a);
+        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speech_testing9a);
         type: 0
         typeString: 
       conversationID: 3
@@ -3104,76 +3580,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 140
-        y: 572
-        width: 160
-        height: 30
-    - id: 11
-      fields:
-      - title: Title
-        value: New Dialogue Entry
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: 
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: 
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: You did great.
-        type: 0
-        typeString: 
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speec_testing9b);
-        type: 0
-        typeString: 
-      conversationID: 3
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 3
-        originDialogueID: 11
-        destinationConversationID: 3
-        destinationDialogueID: 12
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      canvasRect:
-        serializedVersion: 2
-        x: 511
-        y: 569
+        x: 301
+        y: 545
         width: 160
         height: 30
     - id: 12
@@ -3203,9 +3611,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: That concludes the tutorial module. You have been given credit for
-          completing the tutorial and you may now continue with the rest of the training
-          modules.
+        value: You have been given credit for completing the tutorial and you may
+          now continue with the rest of the training modules.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -3221,7 +3628,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speec_testing10);
+        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speech_testing10);
         type: 0
         typeString: 
       conversationID: 3
@@ -3236,8 +3643,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 321
-        y: 692
+        x: 299
+        y: 589
         width: 160
         height: 30
     - id: 13
@@ -3283,7 +3690,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speec_testing1)
+        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speech_testing1)
         type: 0
         typeString: 
       conversationID: 3
@@ -3351,7 +3758,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speec_testing8b);
+        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speech_testing8b);
         type: 0
         typeString: 
       conversationID: 3
@@ -3372,7 +3779,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 178
+        x: 179
         y: 466
         width: 160
         height: 30
@@ -3419,7 +3826,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speec_testing8c);
+        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speech_testing8c);
         type: 0
         typeString: 
       conversationID: 3
@@ -3487,7 +3894,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speec_testing8d);
+        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speech_testing8d);
         type: 0
         typeString: 
       conversationID: 3
@@ -3501,7 +3908,7 @@ MonoBehaviour:
       - originConversationID: 3
         originDialogueID: 16
         destinationConversationID: 3
-        destinationDialogueID: 11
+        destinationDialogueID: 10
         isConnector: 0
         priority: 2
       conditionsString: Variable["UserTestScore"] == 3

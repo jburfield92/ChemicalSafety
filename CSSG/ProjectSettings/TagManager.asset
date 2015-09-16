@@ -12,6 +12,11 @@ TagManager:
   - FireExtinguisher
   - GUI
   - NPC
+  - IsLaptop
+  - ItemBarPanel
+  - LeftArm
+  - RightArm
+  - Test
   layers:
   - Default
   - TransparentFX

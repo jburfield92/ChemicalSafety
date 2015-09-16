@@ -21,7 +21,7 @@ public class MouseLook : MonoBehaviour
     /// </summary>
 	void Update ()
 	{
-		if (Items.canRun) {
+		if (PickupObject.canRun) {
 			if (axes == RotationAxes.MouseXAndY)
             {
 				float rotationX = transform.localEulerAngles.y + Input.GetAxis ("Mouse X") * sensitivityX;

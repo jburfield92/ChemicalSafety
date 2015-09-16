@@ -1,12 +1,15 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class Pickupable : MonoBehaviour
 {
+
+	public string Name;
+	public static string NameObject;
     /// <summary> Use this for initialization
     /// </summary>
     void Start ()
     {
+		Name = NameObject;
 	
 	}
 

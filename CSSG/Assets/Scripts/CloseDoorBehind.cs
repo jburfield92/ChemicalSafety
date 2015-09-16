@@ -36,7 +36,6 @@ public class CloseDoorBehind : MonoBehaviour
         if (timer > NumberOfSecondsToWait)
         {
             DestroyOldStuffAfterDoorClose(GameObject.FindGameObjectsWithTag("ToDelete"));
-			//Items.DestroyItems();
             isTiming = false;
         }
 	}
@@ -48,6 +47,7 @@ public class CloseDoorBehind : MonoBehaviour
     {
         if (!firstEnter)
         {
+            other.isTrigger = false;
             firstEnter = true;
             GameObject[] doors = GameObject.FindGameObjectsWithTag("door");
             GameObject closestDoor = null;
@@ -69,9 +69,9 @@ public class CloseDoorBehind : MonoBehaviour
             GameObject door = closestDoor.transform.Find("DoorPart").gameObject;
             anim = door.GetComponent<Animator>();
             anim.SetBool("Close", true);
-			PickupObject.carryBlock = false;
-			Destroy(RandomRoom.used);
-			RandomRoom.used = (GameObject) Instantiate (Resources.Load("itembar/used"));
+            PickupObject.carryBlock = false;
+            Destroy(RandomRoom.used);
+            RandomRoom.used = (GameObject)Instantiate(Resources.Load("itembar/used"));
             StartCoroutine(DelaySound());
 
             BeginTimer();

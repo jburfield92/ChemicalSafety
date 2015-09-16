@@ -18,14 +18,17 @@ public class LockThing : MonoBehaviour
     /// </summary>
     void OnGUI()
     {
-        GUI.DrawTexture(new Rect(Screen.width/2 - cursorSizeX/2, Screen.height/2 - cursorSizeY/2, cursorSizeX, cursorSizeY), texture);
+        if (Cursor.lockState == CursorLockMode.Locked)
+        {
+            GUI.DrawTexture(new Rect(Screen.width / 2 - cursorSizeX / 2, Screen.height / 2 - cursorSizeY / 2, cursorSizeX, cursorSizeY), texture);
+        }
     }
 
     /// <summary> Update is called once per frame
     /// </summary>
     void Update ()
     {
-		if (Items.canRun == true)
+		if (PickupObject.canRun == true)
         {
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
