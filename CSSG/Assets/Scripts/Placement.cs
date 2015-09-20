@@ -4,23 +4,67 @@ using System.Linq;
 
 public class Placement : MonoBehaviour {
 	private static GameObject mainCamera;
+	public GameObject Ghost;
+
 	private int i;
 	// Use this for initialization
 	void Start () {
 
 		mainCamera = GameObject.FindWithTag ("MainCamera");
-
+		Ghost = (GameObject)Instantiate(Resources.Load("itembar/used"));
 	
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		Place ();
+		//if (PickupObject.carrying) {
+		
+		//	Debug.Log ("working");
+		//}
+
 		GameObject [] GhostItems = GameObject.FindGameObjectsWithTag("items");
+
 		for(i = 0 ; i < GhostItems.Count () ; i++)
 		{
+			GhostItems[i].transform.SetParent(Ghost.transform);
+		}
+		bool test = false;
 
+		int j = Ghost.transform.childCount;
+		for(i = 0 ; i < j ; i++)
+		{
+			Placing one = Ghost.transform.GetChild(i).GetComponent<Placing>();
+			if(PickupObject.carrying){
+
+			Pickupable two = PickupObject.carriedObject.GetComponent<Pickupable>();
+
+				if(string.Compare(one.Name , two.Name) == 1 || string.Compare(one.Name ,"default")==1)
+					test = true; 
+				else 
+					test = false;
+			
+			}
+
+			if(test)
+				Ghost.transform.GetChild(i).gameObject.SetActive(true);
+			else 
+				Ghost.transform.GetChild(i).gameObject.SetActive(false);
+
+			int l =  RandomRoom.used.transform.childCount;
+			int r;
+
+			for(r = 0; r<l ; r++){
+			if(Ghost.transform.GetChild(i).position != RandomRoom.used.transform.GetChild(r).position){
+			if(test)
+				Ghost.transform.GetChild(i).gameObject.SetActive(true);
+			else 
+				Ghost.transform.GetChild(i).gameObject.SetActive(false);
+				}else{
+					Ghost.transform.GetChild(i).gameObject.SetActive(false) ;
+					r=l;
+				}
+			}
 
 		}
 
@@ -30,7 +74,7 @@ public class Placement : MonoBehaviour {
 
 	public static void Place()
 	{
-		if(Input.GetKeyUp(KeyCode.E))
+		if(Input.GetKeyDown(KeyCode.E))
 		{
 			int x = Screen.width / 2;
 			int y = Screen.height / 2;
@@ -46,7 +90,6 @@ public class Placement : MonoBehaviour {
 				if(p != null && Vector3.Distance(mainCamera.transform.position, p.transform.position) < 3.0f)
 				{
 					p.gameObject.SetActive(!p.gameObject.activeSelf);
-					Debug.Log("working");
 					PickupObject.carriedObject.GetComponent<Collider>().enabled = true;
 					PickupObject.carriedObject.tag = "ToDelete";
 					PickupObject.carriedObject.transform.SetParent (RandomRoom.used.transform);

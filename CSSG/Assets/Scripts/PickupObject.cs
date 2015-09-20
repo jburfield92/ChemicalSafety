@@ -47,6 +47,7 @@ public class PickupObject : MonoBehaviour
 		{
 			if(!carryBlock)
 			{
+				//Debug.Log("working");
 				CheckDrop();
 			}
 			else
@@ -136,8 +137,10 @@ public class PickupObject : MonoBehaviour
 	/// </summary>
 	void CheckDrop()
 	{
+
 		if (Input.GetKeyDown (Key.enter))
 		{
+			//Debug.Log("working");
 			int x = Screen.width / 2;
 			int y = Screen.height / 2;
 			
@@ -151,6 +154,8 @@ public class PickupObject : MonoBehaviour
 				{
 					carriedObject.GetComponent<Collider>().enabled = true;
 					DropObject ();
+				}else{
+					Placement.Place();
 				}
 			}
 		}

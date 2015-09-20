@@ -17,6 +17,7 @@ TagManager:
   - LeftArm
   - RightArm
   - Test
+  - items
   layers:
   - Default
   - TransparentFX
