@@ -4,28 +4,27 @@ using System.Linq;
 
 public class RandomRoom : MonoBehaviour
 {
-	public GameObject Nhall;
-	public GameObject Shall;
-	public GameObject Ehall;
-	public GameObject Whall;
-	public GameObject room;
-	public GameObject startroom;
+    public GameObject Nhall;
+    public GameObject Shall;
+    public GameObject Ehall;
+    public GameObject Whall;
+    public GameObject finalRoom;
+    public GameObject startRoom;
     public GameObject CloseDoorArea;
 
-    public static bool clearRoom;
+    static public bool clearRoom;
 
     private float x;
-	private float z;
-	private float roomSpawnDistance;
-	private char tempc;
-	private char[] cor = new char[4];
-	private int random;
-	private GameObject newRoom;
+    private float z;
+    private float roomSpawnDistance;
+    private char tempc;
+    private char[] cor = new char[4];
+    private int random;
+    public static GameObject newRoom;
     private GameObject newHall;
     private GameObject deleteRoom;
-	private GameObject deleteHall;
+    private GameObject deleteHall;
     private GameObject deleteArea;
-
     private GameObject[] roomsList;
     private int roomsListIndex;
     private int currentRoom;
@@ -37,37 +36,38 @@ public class RandomRoom : MonoBehaviour
     private bool change;
     private char[] dChange = new char[3];
 
+    public static GameObject used;
+
     /// <summary> Use this for initialization
     /// </summary>
-    void Start ()
+    void Start()
     {
         roomsList = RandomRoomsList.GetRooms();
         roomsListIndex = 0;
         clearRoom = false;
-
+        used = (GameObject)Instantiate(Resources.Load("itembar/used"));
         x = 0;
-		z = 0;
+        z = 0;
         xMax = 0;
         xMin = 0;
         zMax = 0;
         zMin = 0;
-
         roomSpawnDistance = 17.6f;
         dChange[0] = 'S';
         change = true;
         cor[0] = 'E';
-		cor[1] = 'S';
-		cor[2] = 'W';
-		cor[3] = 'N';
+        cor[1] = 'S';
+        cor[2] = 'W';
+        cor[3] = 'N';
+        newRoom = startRoom;
+    }
 
-		newRoom = startroom;
-	}
-    
     /// <summary> Generates the room at random
     /// </summary>
-	public void Generate()
+    public void Generate()
     {
         deleteRoom = newRoom;
+        char RoomDirection = dChange[0];
 
         if (change)
         {
@@ -94,13 +94,14 @@ public class RandomRoom : MonoBehaviour
             dChange[2] = dChange[1];
             dChange[1] = dChange[0];
             dChange[0] = cor[random];
+            RoomDirection = dChange[0];
         }
 
-        switch (cor [random])
+        switch (cor[random])
         {
-		    case 'N':
-			    newHall = (GameObject)Instantiate(Nhall,new Vector3(x,0,z),Quaternion.identity);
-                deleteArea = (GameObject)Instantiate(CloseDoorArea, new Vector3(x, 0, z+12), Quaternion.Euler(new Vector3(90, 0, 90)));
+            case 'N':
+                newHall = (GameObject)Instantiate(Nhall, new Vector3(x, 0, z), Quaternion.identity);
+                deleteArea = (GameObject)Instantiate(CloseDoorArea, new Vector3(x, 0, z + 14), Quaternion.Euler(new Vector3(90, 0, 90)));
 
                 z = z + roomSpawnDistance;
 
@@ -110,9 +111,9 @@ public class RandomRoom : MonoBehaviour
                     change = true;
                 }
                 break;
-		    case 'S':
-			    newHall = (GameObject)Instantiate(Shall,new Vector3(x,0,z),Quaternion.identity);
-                deleteArea = (GameObject)Instantiate(CloseDoorArea, new Vector3(x, 0, z- 12), Quaternion.Euler(new Vector3(90, 0, 90)));
+            case 'S':
+                newHall = (GameObject)Instantiate(Shall, new Vector3(x, 0, z), Quaternion.identity);
+                deleteArea = (GameObject)Instantiate(CloseDoorArea, new Vector3(x, 0, z - 14), Quaternion.Euler(new Vector3(90, 0, 90)));
 
                 z = z - roomSpawnDistance;
 
@@ -123,9 +124,9 @@ public class RandomRoom : MonoBehaviour
 
                 }
                 break;
-		    case 'E':
-			    newHall = (GameObject)Instantiate(Ehall,new Vector3(x,0,z),Quaternion.identity);
-                deleteArea = (GameObject)Instantiate(CloseDoorArea, new Vector3(x+12, 0, z), Quaternion.identity);
+            case 'E':
+                newHall = (GameObject)Instantiate(Ehall, new Vector3(x, 0, z), Quaternion.identity);
+                deleteArea = (GameObject)Instantiate(CloseDoorArea, new Vector3(x + 14, 0, z), Quaternion.identity);
 
                 x = x + roomSpawnDistance;
 
@@ -135,9 +136,9 @@ public class RandomRoom : MonoBehaviour
                     change = true;
                 }
                 break;
-		    case 'W':
-			    newHall = (GameObject)Instantiate(Whall,new Vector3(x,0,z),Quaternion.identity);
-                deleteArea = (GameObject)Instantiate(CloseDoorArea, new Vector3(x-12, 0, z), Quaternion.identity);
+            case 'W':
+                newHall = (GameObject)Instantiate(Whall, new Vector3(x, 0, z), Quaternion.identity);
+                deleteArea = (GameObject)Instantiate(CloseDoorArea, new Vector3(x - 14, 0, z), Quaternion.identity);
 
                 x = x - roomSpawnDistance;
 
@@ -147,32 +148,31 @@ public class RandomRoom : MonoBehaviour
 
                 }
                 break;
-		}
+        }
 
-		if (random == 2)
+        if (random == 2)
         {
-			tempc = cor[0];
-			cor[0] = cor[1];
-			cor[1] = cor[2];
-			cor[2] = cor[3];
-			cor[3] =  tempc;
-		}
+            tempc = cor[0];
+            cor[0] = cor[1];
+            cor[1] = cor[2];
+            cor[2] = cor[3];
+            cor[3] = tempc;
+        }
 
-		if (random == 0)
+        if (random == 0)
         {
-			tempc = cor[2];
-			cor[2] = cor[1];
-			cor[1] = cor[0];
-			cor[0] = cor[3];
-			cor[3] =  tempc;
-		}
-
+            tempc = cor[2];
+            cor[2] = cor[1];
+            cor[1] = cor[0];
+            cor[0] = cor[3];
+            cor[3] = tempc;
+        }
         if (roomsListIndex < roomsList.Count())
         {
             if (clearRoom)
             {
                 currentRoom = Random.Range(0, (roomsList.Count() - roomsListIndex));
-                newRoom = (GameObject)Instantiate(roomsList[currentRoom], new Vector3(x, 0, z), Quaternion.Euler(0, 0, 0));
+                newRoom = (GameObject)Instantiate(roomsList[currentRoom], new Vector3(x, 0, z), Quaternion.identity);
                 GameObject temp = roomsList[roomsList.Count() - roomsListIndex - 1];
                 roomsList[roomsList.Count() - roomsListIndex - 1] = roomsList[currentRoom];
                 roomsList[currentRoom] = temp;
@@ -181,21 +181,36 @@ public class RandomRoom : MonoBehaviour
             else
             {
                 currentRoom = Random.Range(0, (roomsList.Count() - roomsListIndex + 1));
-                newRoom = (GameObject)Instantiate(roomsList[currentRoom], new Vector3(x, 0, z), Quaternion.Euler(-90, 0, 0));
+                newRoom = (GameObject)Instantiate(roomsList[currentRoom], new Vector3(x, 0, z), Quaternion.identity);
             }
+
         }
         else
         {
-            newRoom = (GameObject)Instantiate(room, new Vector3(x, 0, z), Quaternion.Euler(0, 0, 0));
+            switch (RoomDirection)
+            {
+                case 'N':
+                    newRoom = (GameObject)Instantiate(finalRoom, new Vector3(x, 0, z), Quaternion.Euler(0, 180, 0));
+                    break;
+                case 'S':
+                    newRoom = (GameObject)Instantiate(finalRoom, new Vector3(x, 0, z), Quaternion.Euler(0, 0, 0));
+                    break;
+                case 'E':
+                    newRoom = (GameObject)Instantiate(finalRoom, new Vector3(x, 0, z), Quaternion.Euler(0, 270, 0));
+                    break;
+                case 'W':
+                    newRoom = (GameObject)Instantiate(finalRoom, new Vector3(x, 0, z), Quaternion.Euler(0, -270, 0));
+                    break;
+            }
             roomsListIndex++;
         }
-
-
+		
+        used.SetActive(!used.activeSelf);
         deleteHall = newHall;
         deleteHall.tag = "ToDelete";
         deleteRoom.tag = "ToDelete";
         deleteArea.tag = "ToDelete";
-        
+
         GameObject[] doors = GetHallDoors();
 
         foreach (GameObject door in doors)
@@ -206,7 +221,7 @@ public class RandomRoom : MonoBehaviour
             doorAnimation.open = true;
         }
     }
-    
+
     /// <summary> Gets the two door GameObjects closes to the hall generated
     /// </summary>
     /// <returns></returns>
@@ -226,7 +241,7 @@ public class RandomRoom : MonoBehaviour
     /// <param name="a"></param>
     /// <param name="b"></param>
     /// <returns></returns>
-    int ByDistance (GameObject a, GameObject b)
+    int ByDistance(GameObject a, GameObject b)
     {
         float distanceToA = Vector3.Distance((newHall.transform.position + deleteArea.transform.position) / 2, a.transform.position);
         float distanceToB = Vector3.Distance((newHall.transform.position + deleteArea.transform.position) / 2, b.transform.position);
@@ -235,18 +250,29 @@ public class RandomRoom : MonoBehaviour
 
     /// <summary> Update is called once per frame
     /// </summary>
-    void Update ()
+    void Update()
     {
-		/*if (Input.GetKeyUp (KeyCode.L) && roomsListIndex <= roomsList.Count())
-        {
-            clearRoom = true;
-			Generate();
-		}*/
-	}
 
+    }
+
+    /// <summary> Spawns the next room
+    /// </summary>
     void NextRoom()
     {
         clearRoom = true;
+        PickupObject.carryBlock = true;
         Generate();
+    }
+
+    /// <summary> Removes the temporary invisible wall
+    /// </summary>
+    void LetUserThrough()
+    {
+        GameObject[] invisibleWalls = GameObject.FindGameObjectsWithTag("InvisibleWall");
+
+        foreach (GameObject go in invisibleWalls)
+        {
+            go.SetActive(false);
+        }
     }
 }

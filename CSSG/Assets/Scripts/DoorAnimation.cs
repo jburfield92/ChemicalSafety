@@ -15,7 +15,7 @@ public class DoorAnimation : MonoBehaviour
     {
         source = gameObject.AddComponent<AudioSource>();
         source.clip = clip;
-	}
+    }
 
     /// <summary> Update is called once per frame
     /// </summary>

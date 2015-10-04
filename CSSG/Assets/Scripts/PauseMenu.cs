@@ -1,16 +1,17 @@
 ﻿using UnityEngine;
 using PixelCrushers.DialogueSystem;
 using PixelCrushers.DialogueSystem.UnityGUI;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
 	public GameObject onOff;
-	public GameObject itembar;
+	public static GameObject itembar;
 	public GameObject settings;
+
     private GameObject npc;
     private GUIRoot guiRoot;
     private AudioSource source;
-    private GUILabel subtitles;
 
     /// <summary> Use this for initialization
     /// </summary>
@@ -18,20 +19,21 @@ public class PauseMenu : MonoBehaviour
     {
         npc = GameObject.FindGameObjectWithTag("NPC");
         source = (AudioSource)npc.GetComponent("AudioSource");
+		itembar = GameObject.FindGameObjectWithTag ("ItemBarPanel");
     }
     /// <summary> Update is called once per frame
     /// </summary>
     void Update ()
     { 
-        if (Input.GetKeyUp(KeyCode.Escape) && ((onOff.activeSelf)|| Items.canRun))
+		if (Input.GetKeyUp(KeyCode.Escape) && ((onOff.activeSelf)|| PickupObject.canRun))
         {
             onOff.SetActive(!onOff.activeSelf);
 		
 			itembar.SetActive(!itembar.activeSelf);
-			Items.canRun = !Items.canRun;
+			PickupObject.canRun = !PickupObject.canRun;
 		}
 
-        if (Items.canRun)
+		if (PickupObject.canRun)
         {
             if (!source.isPlaying)
             {
@@ -83,12 +85,14 @@ public class PauseMenu : MonoBehaviour
                 Time.timeScale = 0f;
             }
 		}
+
+
 	}
 
     /// <summary> handles switching our running state
     /// </summary>
 	public void Running()
     {
-		Items.canRun = !Items.canRun;
+		PickupObject.canRun = !PickupObject.canRun;
 	}
 }
