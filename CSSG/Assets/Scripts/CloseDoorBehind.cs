@@ -47,6 +47,13 @@ public class CloseDoorBehind : MonoBehaviour
     {
         if (!firstEnter)
         {
+            GameObject[] invisibleWalls = GameObject.FindGameObjectsWithTag("InvisibleWall");
+
+            foreach (GameObject go in invisibleWalls)
+            {
+                go.SetActive(true);
+            }
+
             other.isTrigger = false;
             firstEnter = true;
             GameObject[] doors = GameObject.FindGameObjectsWithTag("door");

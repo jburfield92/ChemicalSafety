@@ -1,16 +1,17 @@
 ﻿using UnityEngine;
 using PixelCrushers.DialogueSystem;
 using PixelCrushers.DialogueSystem.UnityGUI;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
 	public GameObject onOff;
 	public static GameObject itembar;
 	public GameObject settings;
+
     private GameObject npc;
     private GUIRoot guiRoot;
     private AudioSource source;
-    private GUILabel subtitles;
 
     /// <summary> Use this for initialization
     /// </summary>
@@ -84,6 +85,8 @@ public class PauseMenu : MonoBehaviour
                 Time.timeScale = 0f;
             }
 		}
+
+
 	}
 
     /// <summary> handles switching our running state

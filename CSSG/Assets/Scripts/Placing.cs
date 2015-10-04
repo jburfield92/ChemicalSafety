@@ -5,6 +5,8 @@ public class Placing : MonoBehaviour {
 
 	public string Name;
 	public static string NameObject;
+	public bool Check;
+	public string Value;
 
 	// Use this for initialization
 	void Start () {

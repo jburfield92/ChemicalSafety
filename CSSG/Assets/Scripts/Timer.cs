@@ -5,7 +5,7 @@ using System.Collections;
 public class Timer : MonoBehaviour 
 {
 	public Text timerLabel;
-	private float time;
+	public static float time = 0f;
 
 	/// <summary> Use this for initialization
 	/// </summary>
