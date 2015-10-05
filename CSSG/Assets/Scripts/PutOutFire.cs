@@ -29,7 +29,6 @@ public class PutOutFire : MonoBehaviour
         }
         else
         {
-            Debug.Log("Collision");
             IsActive = true;
         }
 	}
@@ -52,8 +51,8 @@ public class PutOutFire : MonoBehaviour
 
             for (int i = 0; i < collisionEvents.Length; i++)
             {
-                fireParticles.emissionRate -= 2;
-                smokeParticles.emissionRate -= 2;
+                fireParticles.emissionRate -= 0.01f;
+                smokeParticles.emissionRate -= 0.01f;
             }
         }
     }

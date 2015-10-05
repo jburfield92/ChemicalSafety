@@ -1195,8 +1195,8 @@ MonoBehaviour:
   m_CustomStyles:
   - m_Name: Text
     m_Normal:
-      m_Background: {fileID: 2800000, guid: b9e5d153e0e945042a76833852473dfb, type: 3}
-      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      m_Background: {fileID: 2800000, guid: eed99bb30a0a97d4b8854ccc4ec833a8, type: 3}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
       m_Background: {fileID: 0}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}

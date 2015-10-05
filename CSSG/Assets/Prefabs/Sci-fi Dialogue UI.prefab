@@ -1838,7 +1838,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100022}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1413299683, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
   m_Name: 
@@ -2121,7 +2121,7 @@ MonoBehaviour:
       value: 0
     y:
       scale: 1
-      value: .174999997
+      value: .200000003
     width:
       scale: 1
       value: 1
@@ -2232,25 +2232,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: scaledRect.y.value
-      value: .174999997
+      value: .200000003
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: scaledRect.y.scale
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: scaledRect.alignment
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: guiSkin
-      value: 
-      objectReference: {fileID: 11400000, guid: 8674f6c2c39b03e46827dcac4369d13d,
-        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100030}
