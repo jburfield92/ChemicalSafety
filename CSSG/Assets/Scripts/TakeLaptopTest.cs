@@ -84,9 +84,7 @@ public class TakeLaptopTest : MonoBehaviour
 					
 					leftArm.SetActive(!leftArm.activeSelf);
 					rightArm.SetActive(!rightArm.activeSelf);
-
 					StartCoroutine(DoSitAnimation());
-
 					mainCamera.GetComponent<MouseLook>().enabled = false;
 					if (GameObject.Find("Player").GetComponent<CharacterMotor>()) 
 					{
@@ -149,10 +147,10 @@ public class TakeLaptopTest : MonoBehaviour
 		
 		mainCamera.transform.parent.gameObject.transform.Translate (Vector3.up * .3f);
 		mainCamera.GetComponent<MouseLook>().enabled = true;
-		if (GameObject.Find("Player").GetComponent<CharacterMotor>())
-        {
+		if (GameObject.Find("Player").GetComponent<CharacterMotor>()) {
 			GameObject.Find("Player").GetComponent<CharacterMotor>().enabled = true;
 			GameObject.Find("Player").GetComponent<MouseLook>().enabled = true;
+			
 		}
 
 		leftArm.SetActive(!leftArm.activeSelf);

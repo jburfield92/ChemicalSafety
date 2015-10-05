@@ -123,6 +123,23 @@ public class TutorialScripts : MonoBehaviour
                 testStarted = true;
 			}
 		}
+
+		if (laptopTable == null) {
+			laptopTable = GameObject.Find ("glassTable");
+		} 
+		else 
+		{
+			if (!laptopTableNearby && Vector3.Distance (laptopTable.transform.position, player.transform.position) < 2)
+			{
+				DialogueManager.Instance.SendMessage ("OnSequencerMessage", "LaptopTableNearby");
+				laptopTableNearby = true;
+			}
+
+			if (!testStarted && TakeLaptopTest.UsingLaptop == true)
+			{
+				DialogueManager.Instance.SendMessage ("OnSequencerMessage", "TestStarted");
+			}
+		}
     }
 
 	void StartMouseTutorial(string boolean)
