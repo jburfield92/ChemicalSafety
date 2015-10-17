@@ -52,7 +52,7 @@ public class RandomRoom : MonoBehaviour
         xMin = 0;
         zMax = 0;
         zMin = 0;
-        roomSpawnDistance = 17.6f;
+		roomSpawnDistance = 17.6f;
         dChange[0] = 'S';
         change = true;
         cor[0] = 'E';

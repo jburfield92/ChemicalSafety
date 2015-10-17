@@ -544,7 +544,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 238
-        y: 819
+        y: 820
         width: 160
         height: 30
     - id: 7
@@ -622,49 +622,49 @@ MonoBehaviour:
       - title: Title
         value: New Dialogue Entry
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Pictures
         value: '[]'
         type: 3
-        typeString: 
+        typeString: CustomFieldType_Files
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 2
         type: 5
-        typeString: 
+        typeString: CustomFieldType_Actor
       - title: Conversant
         value: 1
         type: 5
-        typeString: 
+        typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: Press D to move to the right.
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Parenthetical
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Audio Files
         value: '[]'
         type: 3
-        typeString: 
+        typeString: CustomFieldType_Files
       - title: Video File
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
         value: 'AudioWait(Sounds/VoiceOvers/Intro/intro19); QTE(3, 99999);
 
           SendMessage(SaveDialogue, Press D to move to the right., );'
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       conversationID: 1
       isRoot: 0
       isGroup: 0
@@ -833,49 +833,49 @@ MonoBehaviour:
       - title: Title
         value: New Dialogue Entry
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Pictures
         value: '[]'
         type: 3
-        typeString: 
+        typeString: CustomFieldType_Files
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 2
         type: 5
-        typeString: 
+        typeString: CustomFieldType_Actor
       - title: Conversant
         value: 1
         type: 5
-        typeString: 
+        typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: Press S to move backward.
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Parenthetical
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Audio Files
         value: '[]'
         type: 3
-        typeString: 
+        typeString: CustomFieldType_Files
       - title: Video File
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
         value: 'AudioWait(Sounds/VoiceOvers/Intro/intro20); QTE(1, 99999);
 
           SendMessage(SaveDialogue, Press S to move backward., );'
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       conversationID: 1
       isRoot: 0
       isGroup: 0
@@ -903,51 +903,51 @@ MonoBehaviour:
       - title: Title
         value: New Dialogue Entry
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Pictures
         value: '[]'
         type: 3
-        typeString: 
+        typeString: CustomFieldType_Files
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 2
         type: 5
-        typeString: 
+        typeString: CustomFieldType_Actor
       - title: Conversant
         value: 1
         type: 5
-        typeString: 
+        typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: Using your mouse or touch pad, look to the right. (Point your cursor
           at the R on the wall)
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Parenthetical
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Audio Files
         value: '[]'
         type: 3
-        typeString: 
+        typeString: CustomFieldType_Files
       - title: Video File
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
         value: 'AudioWait(Sounds/VoiceOvers/Intro/intro22); WaitForMessage(LookedRight);
 
           SendMessage(SaveDialogue, Using your mouse or touch pad, look to the right.,
           );'
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       conversationID: 1
       isRoot: 0
       isGroup: 0
@@ -1046,44 +1046,44 @@ MonoBehaviour:
       - title: Title
         value: New Dialogue Entry
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Pictures
         value: '[]'
         type: 3
-        typeString: 
+        typeString: CustomFieldType_Files
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 2
         type: 5
-        typeString: 
+        typeString: CustomFieldType_Actor
       - title: Conversant
         value: 1
         type: 5
-        typeString: 
+        typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: Using your mouse or touch pad, look to the left. (Point your cursor
           at the L on the wall)
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Parenthetical
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Audio Files
         value: '[]'
         type: 3
-        typeString: 
+        typeString: CustomFieldType_Files
       - title: Video File
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
         value: 'SendMessage(StartMouseTutorial, true, ); AudioWait(Sounds/VoiceOvers/Intro/intro21);
           WaitForMessage(LookedLeft);
@@ -1091,7 +1091,7 @@ MonoBehaviour:
           SendMessage(SaveDialogue, Using your mouse or touch pad, look to the left.,
           );'
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       conversationID: 1
       isRoot: 0
       isGroup: 0
@@ -2764,51 +2764,51 @@ MonoBehaviour:
       - title: Title
         value: New Dialogue Entry
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Pictures
         value: '[]'
         type: 3
-        typeString: 
+        typeString: CustomFieldType_Files
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 2
         type: 5
-        typeString: 
+        typeString: CustomFieldType_Actor
       - title: Conversant
         value: 1
         type: 5
-        typeString: 
+        typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: In the testing section, you will then be tested on the material presented
           in that module.
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Parenthetical
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Audio Files
         value: '[]'
         type: 3
-        typeString: 
+        typeString: CustomFieldType_Files
       - title: Video File
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
         value: 'AudioWait(Sounds/VoiceOvers/Intro/intro15);
 
           SendMessage(SaveDialogue, In the testing section, you will then be tested
           on the material presented in that module., );'
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       conversationID: 1
       isRoot: 0
       isGroup: 0
@@ -2836,48 +2836,48 @@ MonoBehaviour:
       - title: Title
         value: New Dialogue Entry
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Pictures
         value: '[]'
         type: 3
-        typeString: 
+        typeString: CustomFieldType_Files
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 2
         type: 5
-        typeString: 
+        typeString: CustomFieldType_Actor
       - title: Conversant
         value: 1
         type: 5
-        typeString: 
+        typeString: CustomFieldType_Actor
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: "Let\u2019s begin learning the controls for the game."
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Parenthetical
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Audio Files
         value: '[]'
         type: 3
-        typeString: 
+        typeString: CustomFieldType_Files
       - title: Video File
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
         value: "AudioWait(Sounds/VoiceOvers/Intro/intro16);\nSendMessage(SaveDialogue,
           Let\u2019s begin learning the controls for the game., );"
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       conversationID: 1
       isRoot: 0
       isGroup: 0

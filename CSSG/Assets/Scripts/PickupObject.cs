@@ -98,6 +98,7 @@ public class PickupObject : MonoBehaviour
 				Pickupable p = hit.collider.GetComponent<Pickupable>();
 				if(p != null && Vector3.Distance(mainCamera.transform.position, p.transform.position) < 3.0f)
 				{
+					p.Check = false;
 					carrying = true;
 					carriedObject = p.gameObject;
 					carriedObject.transform.rotation = mainCamera.transform.rotation;

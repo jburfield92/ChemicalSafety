@@ -5,7 +5,9 @@ public class Pickupable : MonoBehaviour
 
 	public string Name;
 	public static string NameObject;
+	public bool Check;
 	public string Value;
+
     /// <summary> Use this for initialization
     /// </summary>
     void Start ()

@@ -95,8 +95,10 @@ public class Placement : MonoBehaviour {
 				if(p != null && Vector3.Distance(mainCamera.transform.position, p.transform.position) < 3.0f)
 				{
 					p.gameObject.SetActive(!p.gameObject.activeSelf);
-					if(string.Compare(p.Value,PickupObject.carriedObject.GetComponent<Pickupable>().Value)==0)
+					if(string.Compare(p.Value,PickupObject.carriedObject.GetComponent<Pickupable>().Value)==0){
 					p.Check = true;
+					PickupObject.carriedObject.GetComponent<Pickupable>().Check = true;
+					}
 					PickupObject.carriedObject.GetComponent<Collider>().enabled = true;
 					PickupObject.carriedObject.tag = "ToDelete";
 					PickupObject.carriedObject.transform.SetParent (RandomRoom.used.transform);
