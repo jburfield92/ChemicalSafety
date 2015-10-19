@@ -93,6 +93,7 @@ namespace PixelCrushers.DialogueSystem {
 					if (dialogue.responseMenu.buttons.Length == 0 && dialogue.responseMenu.buttonTemplate == null) Debug.LogWarning(string.Format("{0}: UnityUIDialogueUI Response buttons need to be assigned.", DialogueDebug.Prefix));
 					if (alert.line == null) Debug.LogWarning(string.Format("{0}: UnityUIDialogueUI Alert Line needs to be assigned.", DialogueDebug.Prefix));
 				}
+                dialogue.npcSubtitle.line.rectTransform.localPosition = new Vector3(0, -0.15f);
 			}
 		}
 

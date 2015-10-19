@@ -15,16 +15,15 @@ public class PickupObject : MonoBehaviour
 	private static GameObject leftHandPositionLocation;
 	public static GameObject leftArmTemp;
 	private static GameObject leftDiff;
-	private static Vector3 dropping;
-	
+
 	public static bool carrying;
 	public static bool carryBlock;
 	public static GameObject carriedObject;
 	public float distance;
 	public float smooth;
-
+	
 	public static bool canRun;
-
+	
 	/// <summary> Use this for initialization
 	/// </summary>
 	void Start ()
@@ -55,8 +54,6 @@ public class PickupObject : MonoBehaviour
 				carrying = false;
 				carriedObject.gameObject.GetComponent<Rigidbody>().useGravity = true;
 				carriedObject.transform.SetParent (RandomRoom.used.transform);
-				carriedObject.transform.position = dropping;
-				carriedObject.gameObject.GetComponent<Rigidbody>().AddForce(carriedObject.transform.forward * Time.deltaTime);
 				carriedObject = null;
 			}
 		}
@@ -85,21 +82,30 @@ public class PickupObject : MonoBehaviour
 			
 			if(Physics.Raycast(ray, out hit))
 			{
-				Pickupable p = hit.collider.GetComponent<Pickupable>();
-				if(p != null)
+				Placement l = hit.collider.GetComponent<Placement>();
+				
+				if(l != null)
 				{
-					carrying = true;
-					carriedObject = p.gameObject;
-					carriedObject.transform.rotation = mainCamera.transform.rotation;
-					SetArms();
-					carriedObject.transform.position = rightHandPosition.transform.position;
-					carriedObject.transform.SetParent(rightHand.transform.parent);
-					carriedObject.transform.rotation = mainCamera.transform.rotation * Quaternion.Euler(0,180,0);
-					p.gameObject.GetComponent<Rigidbody>().useGravity = false;
+					
 				}
+				else
+				{
+					Pickupable p = hit.collider.GetComponent<Pickupable>();
+					if(p != null && Vector3.Distance(mainCamera.transform.position, p.transform.position) < 3.0f)
+					{
+						carrying = true;
+						carriedObject = p.gameObject;
+						carriedObject.transform.rotation = mainCamera.transform.rotation;
+						SetArms();
+						carriedObject.transform.position = rightHandPosition.transform.position;
+						carriedObject.transform.SetParent(rightHand.transform.parent);
+						p.gameObject.GetComponent<Rigidbody>().useGravity = false;
+						carriedObject.GetComponent<Collider>().enabled = false;
+					}}
 			}
 		}
 	}
+
 	/// <summary>
 	/// Sets the Arms location.
 	/// </summary>
@@ -127,9 +133,26 @@ public class PickupObject : MonoBehaviour
 	/// </summary>
 	void CheckDrop()
 	{
+		
 		if (Input.GetKeyDown (Key.enter))
 		{
-			DropObject ();
+			int x = Screen.width / 2;
+			int y = Screen.height / 2;
+			
+			Ray ray = mainCamera.GetComponent<Camera>().ScreenPointToRay(new Vector3(x,y));
+			RaycastHit hit;
+			
+			if(Physics.Raycast(ray, out hit))
+			{
+				Placing p = hit.collider.GetComponent<Placing>();
+				if(p == null)
+				{
+					carriedObject.GetComponent<Collider>().enabled = true;
+					DropObject ();
+				}else{
+					Placement.Place();
+				}
+			}
 		}
 	}
 	

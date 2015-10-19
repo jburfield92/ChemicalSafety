@@ -420,7 +420,7 @@ MonoBehaviour:
     m_RichText: 1
     m_TextClipping: 1
     m_ImagePosition: 0
-    m_ContentOffset: {x: 0, y: -18}
+    m_ContentOffset: {x: 0, y: 0}
     m_FixedWidth: 0
     m_FixedHeight: 0
     m_StretchWidth: 1
@@ -1182,7 +1182,7 @@ MonoBehaviour:
     m_Font: {fileID: 0}
     m_FontSize: 0
     m_FontStyle: 0
-    m_Alignment: 0
+    m_Alignment: 3
     m_WordWrap: 0
     m_RichText: 1
     m_TextClipping: 1
@@ -1195,7 +1195,7 @@ MonoBehaviour:
   m_CustomStyles:
   - m_Name: Text
     m_Normal:
-      m_Background: {fileID: 2800000, guid: eed99bb30a0a97d4b8854ccc4ec833a8, type: 3}
+      m_Background: {fileID: 0}
       m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     m_Hover:
       m_Background: {fileID: 0}
@@ -1219,10 +1219,10 @@ MonoBehaviour:
       m_Background: {fileID: 0}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Border:
-      m_Left: 18
-      m_Right: 18
-      m_Top: 18
-      m_Bottom: 18
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
     m_Margin:
       m_Left: 0
       m_Right: 0
@@ -1241,7 +1241,7 @@ MonoBehaviour:
     m_Font: {fileID: 0}
     m_FontSize: 22
     m_FontStyle: 0
-    m_Alignment: 3
+    m_Alignment: 4
     m_WordWrap: 1
     m_RichText: 1
     m_TextClipping: 0
@@ -1253,7 +1253,7 @@ MonoBehaviour:
     m_StretchHeight: 0
   - m_Name: Response Button
     m_Normal:
-      m_Background: {fileID: 2800000, guid: e1f5c732e55d15c499a815cf5fda4d40, type: 3}
+      m_Background: {fileID: 2800000, guid: 0e017519fa06aad4999310de35f8f5e7, type: 3}
       m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     m_Hover:
       m_Background: {fileID: 2800000, guid: 1298c95d7258a0547b2d43a2ff6788bf, type: 3}

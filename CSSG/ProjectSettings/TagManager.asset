@@ -17,6 +17,12 @@ TagManager:
   - LeftArm
   - RightArm
   - Test
+  - InvisibleWall
+  - items
+  - TestButton
+  - LargeText
+  - MediumText
+  - SmallText
   layers:
   - Default
   - TransparentFX

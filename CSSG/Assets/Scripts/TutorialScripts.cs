@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using PixelCrushers.DialogueSystem;
 
 public class TutorialScripts : MonoBehaviour
@@ -16,134 +17,169 @@ public class TutorialScripts : MonoBehaviour
 
     private GameObject container;
     private GameObject table;
-
 	private GameObject laptopTable;
+    private GameObject tutorialCanvas;
 
-    private int testScore;
-    private int testTotalScore = 3;
+    private CharacterMotor motor;
 
 	private bool startMouseTutorial;
-	private bool lookedUp;
-	private bool lookedDown;
-	private bool lookedRight;
-	private bool lookedLeft;
+    private bool startExerciseTutorial;
+    private bool startTestTutorial;
 
+    private bool mouseTutorialInitial;
+    private bool exerciseTutorialInitial;
+
+	public GameObject containerGhost;
 
     /// <summary> Use this for initialization
     /// </summary>
     void Start()
     {
+        mouseTutorialInitial = true;
+        exerciseTutorialInitial = true;
+
         container = GameObject.Find("container");
         player = GameObject.FindGameObjectWithTag("Player");
-        table = GameObject.FindGameObjectWithTag("Table");
+        table = GameObject.Find("Table");
+        tutorialCanvas = GameObject.Find("TutorialStuff");
+
+        motor = (CharacterMotor)player.GetComponent("CharacterMotor");
     }
 
     /// <summary> Update is called once per frame
     /// </summary>
     void Update()
     {
-		if (container != null) 
-		{
-			if (startMouseTutorial)
-			{
-				if (!lookedLeft)
-				{
-					// user looked to the left
-					if (Input.GetAxis ("Mouse X") < 0)
-					{
-						lookedLeft = true;
-						DialogueManager.Instance.SendMessage ("OnSequencerMessage", "LookedLeft");
-					}
-				}
-				else if (lookedLeft && !lookedRight)
-				{
-					// user looked to the right
-					if (Input.GetAxis ("Mouse X") > 0)
-					{
-						lookedRight = true;
-						DialogueManager.Instance.SendMessage ("OnSequencerMessage", "LookedRight");
-					}
-				}
-				else if (lookedRight && !lookedUp)
-				{
-					// user looked up
-					if (Input.GetAxis ("Mouse Y") > 0)
-					{
-						lookedUp = true;
-						DialogueManager.Instance.SendMessage ("OnSequencerMessage", "LookedUp");
-					}
-				}
-				else if (lookedUp && !lookedDown)
-				{
-					// user looked up
-					if (Input.GetAxis ("Mouse Y") < 0)
-					{
-						lookedUp = true;
-						DialogueManager.Instance.SendMessage ("OnSequencerMessage", "LookedDown");
-					}
-				}
-			}
-			if (!containerNearby && Vector3.Distance (container.transform.position, player.transform.position) < 2) {
-				DialogueManager.Instance.SendMessage ("OnSequencerMessage", "NearContainer");
-				containerNearby = true;
-			}
+        if (container != null)
+        {
+            if (startMouseTutorial)
+            {
+                if (mouseTutorialInitial)
+                {
+                    mouseTutorialInitial = false;
 
-			if (!containerPickup && PickupObject.carriedObject != null) {
-				if (PickupObject.carriedObject.tag == "FireExtinguisher") {
-					DialogueManager.Instance.SendMessage ("OnSequencerMessage", "ContainerPickedUp");
-					containerPickup = true;
-				}
-			}
+                    // teleport user to spot for doing the mouse look part of the tutorial
+                    player.transform.rotation = Quaternion.Euler(0, 0, 0);
+                    player.transform.position = new Vector3(0, 1.5f, 0);
 
-			if (!tableNearby && Vector3.Distance (table.transform.position, player.transform.position) < 3) {
-				DialogueManager.Instance.SendMessage ("OnSequencerMessage", "NearTable");
-				tableNearby = true;
-			}
+                    // restrict movement
+                    motor.enabled = false;
+                }
 
-			if (tableNearby && !containerPlaced) {
-				DialogueManager.Instance.SendMessage ("OnSequencerMessage", "ContainerPlaced");
-				containerPlaced = true;
-			}
-		}
+                tutorialCanvas.transform.position = new Vector3(0, 2.5f, 5f);
 
-		if (containerPlaced && laptopTable == null) {
-			laptopTable = GameObject.Find ("glassTable");
-		} 
-		else 
-		{
-			if (!laptopTableNearby && Vector3.Distance (laptopTable.transform.position, player.transform.position) < 2)
-			{
-				DialogueManager.Instance.SendMessage ("OnSequencerMessage", "LaptopTableNearby");
-				laptopTableNearby = true;
-			}
+                int x = Screen.width / 2;
+                int y = Screen.height / 2;
+                string objectName = null;
 
-			if (!testStarted && TakeLaptopTest.UsingLaptop == true)
-			{
-				DialogueManager.Instance.SendMessage ("OnSequencerMessage", "TestStarted");
-                testStarted = true;
-			}
-		}
+                Ray ray = Camera.main.GetComponent<Camera>().ScreenPointToRay(new Vector3(x, y));
+                RaycastHit hit;
 
-		if (laptopTable == null) {
-			laptopTable = GameObject.Find ("glassTable");
-		} 
-		else 
-		{
-			if (!laptopTableNearby && Vector3.Distance (laptopTable.transform.position, player.transform.position) < 2)
-			{
-				DialogueManager.Instance.SendMessage ("OnSequencerMessage", "LaptopTableNearby");
-				laptopTableNearby = true;
-			}
+                if (Physics.Raycast(ray, out hit))
+                {
+                    objectName = hit.transform.gameObject.name;
+                }
 
-			if (!testStarted && TakeLaptopTest.UsingLaptop == true)
-			{
-				DialogueManager.Instance.SendMessage ("OnSequencerMessage", "TestStarted");
-			}
-		}
+                if (objectName == "LeftImage")
+                {
+                    // user looked to the left
+                    DialogueManager.Instance.SendMessage("OnSequencerMessage", "LookedLeft");
+                }
+                else if (objectName == "RightImage")
+                {
+                    // user looked to the right
+                    DialogueManager.Instance.SendMessage("OnSequencerMessage", "LookedRight");
+                }
+                else if (objectName == "TopImage")
+                {
+                    // user looked up
+                    DialogueManager.Instance.SendMessage("OnSequencerMessage", "LookedUp");
+                }
+                else if (objectName == "BottomImage")
+                {
+                    // user looked down
+                    DialogueManager.Instance.SendMessage("OnSequencerMessage", "LookedDown");
+                }
+            }
+            else if (startExerciseTutorial)
+            {
+                if (exerciseTutorialInitial)
+                {
+                    // restore movement
+                    motor.enabled = true;
+
+                    Destroy(tutorialCanvas);
+                    exerciseTutorialInitial = false;
+                }
+
+                if (Vector3.Distance(container.transform.position, player.transform.position) < 3)
+                {
+                    DialogueManager.Instance.SendMessage("OnSequencerMessage", "NearContainer");
+                }
+                if (PickupObject.carriedObject != null && PickupObject.carriedObject.name == "container")
+                {
+                    DialogueManager.Instance.SendMessage("OnSequencerMessage", "ContainerPickedUp");
+                }
+                if (Vector3.Distance(table.transform.position, player.transform.position) < 2)
+                {
+                    DialogueManager.Instance.SendMessage("OnSequencerMessage", "NearTable");
+                }
+				if (containerGhost.GetComponent<Placing>().Placed == true)
+                {
+                    DialogueManager.Instance.SendMessage("OnSequencerMessage", "ContainerPlaced");
+                }
+            }
+        }
+        else if (startTestTutorial)
+        {
+            if (laptopTable == null)
+            {
+                laptopTable = GameObject.Find("glassTable");
+            }
+            else
+            {
+                if (Vector3.Distance(laptopTable.transform.position, player.transform.position) < 4)
+                {
+                    DialogueManager.Instance.SendMessage("OnSequencerMessage", "LaptopTableNearby");
+                }
+
+                if (TakeLaptopTest.UsingLaptop == true)
+                {
+                    DialogueManager.Instance.SendMessage("OnSequencerMessage", "TestStarted");
+                    testStarted = true;
+                }
+
+                if (testStarted)
+                {
+                    TakeLaptopTest.CanReturn = false;
+                }
+            }
+        }
     }
 
-	void StartMouseTutorial(string boolean)
+	void StartMouseTutorial()
 	{
-		startMouseTutorial = bool.Parse (boolean);
+        startMouseTutorial = true;
+    }
+
+    void StartExerciseTutorial()
+    {
+		startMouseTutorial = false;
+        startExerciseTutorial = true;
+    }
+
+    void StartTestTutorial()
+    {
+        startExerciseTutorial = false;
+        startTestTutorial = true;
+    }
+
+	void EndGame()
+	{
+		#if UNITY_EDITOR
+		UnityEditor.EditorApplication.isPlaying = false;
+		#else
+		Application.Quit();
+		#endif
 	}
 }

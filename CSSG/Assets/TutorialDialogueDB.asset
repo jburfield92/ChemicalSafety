@@ -226,7 +226,10 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Intro/intro1)
+        value: 'AudioWait(Sounds/VoiceOvers/Intro/intro1)
+
+          SendMessage(SaveDialogue, Hello and welcome to the Chemical Safety Simulation
+          Game, );'
         type: 0
         typeString: CustomFieldType_Text
       - title: Response Menu Sequence
@@ -298,7 +301,10 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Intro/intro2)
+        value: 'AudioWait(Sounds/VoiceOvers/Intro/intro2);
+
+          SendMessage(SaveDialogue, You are currently participating in the tutorial
+          for this game., );'
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 1
@@ -367,7 +373,11 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Intro/intro3)
+        value: 'AudioWait(Sounds/VoiceOvers/Intro/intro3);
+
+          SendMessage(SaveDialogue, In this tutorial, you will be familiarized with
+          the controls and some of the basic mechanics you will encounter in this
+          game., );'
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 1
@@ -437,7 +447,12 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Intro/intro4)
+        value: 'AudioWait(Sounds/VoiceOvers/Intro/intro4);
+
+          SendMessage(SaveDialogue, By playing the Chemical Safety Simulation Game,
+          you will be trained on the content of the Hazard Communication Standard,
+          a standard that conforms to the Globally Harmonized System of Classification
+          and Labeling of Chemicals., );'
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 1
@@ -505,7 +520,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Intro/intro17); QTE(0, 99999)
+        value: 'AudioWait(Sounds/VoiceOvers/Intro/intro17); QTE(0, 99999);
+
+          SendMessage(SaveDialogue, Press W to move forward., );'
         type: 0
         typeString: 
       conversationID: 1
@@ -526,7 +543,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 239
+        x: 238
         y: 819
         width: 160
         height: 30
@@ -573,7 +590,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Intro/intro18); QTE(2, 99999)
+        value: 'AudioWait(Sounds/VoiceOvers/Intro/intro18); QTE(2, 99999);
+
+          SendMessage(SaveDialogue, Press A to move to the left., );'
         type: 0
         typeString: 
       conversationID: 1
@@ -625,7 +644,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Press D to move to the right
+        value: Press D to move to the right.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -641,7 +660,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Intro/intro19); QTE(3, 99999)
+        value: 'AudioWait(Sounds/VoiceOvers/Intro/intro19); QTE(3, 99999);
+
+          SendMessage(SaveDialogue, Press D to move to the right., );'
         type: 0
         typeString: 
       conversationID: 1
@@ -693,7 +714,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Using your mouse or touch pad, look down.
+        value: Using your mouse or touch pad, look down. (Point your cursor at the
+          D on the wall)
         type: 0
         typeString: 
       - title: Parenthetical
@@ -709,7 +731,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Intro/intro23); WaitForMessage(LookedDown)
+        value: 'AudioWait(Sounds/VoiceOvers/Intro/intro24); WaitForMessage(LookedDown);
+
+          SendMessage(SaveDialogue, Using your mouse or touch pad, look down., );'
         type: 0
         typeString: 
       conversationID: 1
@@ -730,7 +754,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 238
+        x: 237
         y: 1149
         width: 160
         height: 30
@@ -777,7 +801,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Intro/intro24)
+        value: 'AudioWait(Sounds/VoiceOvers/Intro/intro25);
+
+          SendMessage(SaveDialogue, Good job., );'
         type: 0
         typeString: 
       conversationID: 1
@@ -798,7 +824,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 245
+        x: 244
         y: 1200
         width: 160
         height: 30
@@ -845,8 +871,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Intro/intro20); QTE(1, 99999); SendMessage(StartMouseTutorial,
-          true, listener);
+        value: 'AudioWait(Sounds/VoiceOvers/Intro/intro20); QTE(1, 99999);
+
+          SendMessage(SaveDialogue, Press S to move backward., );'
         type: 0
         typeString: 
       conversationID: 1
@@ -898,7 +925,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Using your mouse or touch pad, look to the right.
+        value: Using your mouse or touch pad, look to the right. (Point your cursor
+          at the R on the wall)
         type: 0
         typeString: 
       - title: Parenthetical
@@ -914,7 +942,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Intro/intro21); WaitForMessage(LookedRight)
+        value: 'AudioWait(Sounds/VoiceOvers/Intro/intro22); WaitForMessage(LookedRight);
+
+          SendMessage(SaveDialogue, Using your mouse or touch pad, look to the right.,
+          );'
         type: 0
         typeString: 
       conversationID: 1
@@ -935,7 +966,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 236
+        x: 237
         y: 1053
         width: 160
         height: 30
@@ -966,7 +997,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Using your mouse or touch pad, look up.
+        value: Using your mouse or touch pad, look up. (Point your cursor at the U
+          on the wall)
         type: 0
         typeString: 
       - title: Parenthetical
@@ -982,7 +1014,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Intro/intro22); WaitForMessage(LookedUp)
+        value: 'AudioWait(Sounds/VoiceOvers/Intro/intro23); WaitForMessage(LookedUp);
+
+          SendMessage(SaveDialogue, Using your mouse or touch pad, look up., );'
         type: 0
         typeString: 
       conversationID: 1
@@ -1034,7 +1068,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Using your mouse or touch pad, look to the left.
+        value: Using your mouse or touch pad, look to the left. (Point your cursor
+          at the L on the wall)
         type: 0
         typeString: 
       - title: Parenthetical
@@ -1050,7 +1085,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Intro/intro20); WaitForMessage(LookedLeft)
+        value: 'SendMessage(StartMouseTutorial, , ); AudioWait(Sounds/VoiceOvers/Intro/intro21);
+          WaitForMessage(LookedLeft);
+
+          SendMessage(SaveDialogue, Using your mouse or touch pad, look to the left.,
+          );'
         type: 0
         typeString: 
       conversationID: 1
@@ -1071,7 +1110,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 238
+        x: 237
         y: 1009
         width: 160
         height: 30
@@ -1119,7 +1158,14 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Intro/intro25)
+        value: 'AudioWait(Sounds/VoiceOvers/Intro/intro26);
+
+          SendMessage(SaveDialogue, If at any point you missed a dialogue or need
+          help, you can go to the Help page in the main menu., );'
+        type: 0
+        typeString: 
+      - title: Response Menu Sequence
+        value: 
         type: 0
         typeString: 
       conversationID: 1
@@ -1187,7 +1233,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Intro/intro31)
+        value: 'AudioWait(Sounds/VoiceOvers/Intro/intro34);  WaitForMessage(ContainerPlaced);
+
+          SendMessage(SaveDialogue, Press E to place the container on the table.,
+          );'
         type: 0
         typeString: 
       conversationID: 1
@@ -1208,8 +1257,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 417
-        y: 1502
+        x: 429
+        y: 1640
         width: 160
         height: 30
     - id: 17
@@ -1255,7 +1304,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Intro/intro29);
+        value: 'AudioWait(Sounds/VoiceOvers/Intro/intro32); WaitForMessage(ContainerPickedUp);
+
+          SendMessage(SaveDialogue, Press E to pick up the container., );'
         type: 0
         typeString: 
       conversationID: 1
@@ -1276,8 +1327,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 415
-        y: 1405
+        x: 428
+        y: 1542
         width: 160
         height: 30
     - id: 18
@@ -1324,7 +1375,13 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Intro/intro26)
+        value: "AudioWait(Sounds/VoiceOvers/Intro/intro27);\nSendMessage(SaveDialogue,
+          You can get to the main menu by pressing Escape (Esc) on your keyboard at
+          any time while you\u2019re playing., );"
+        type: 0
+        typeString: 
+      - title: Response Menu Sequence
+        value: 
         type: 0
         typeString: 
       conversationID: 1
@@ -1338,15 +1395,15 @@ MonoBehaviour:
       - originConversationID: 1
         originDialogueID: 18
         destinationConversationID: 1
-        destinationDialogueID: 19
+        destinationDialogueID: 46
         isConnector: 0
         priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 236
-        y: 1294
+        x: 239
+        y: 1313
         width: 160
         height: 30
     - id: 19
@@ -1392,7 +1449,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Intro/intro27)
+        value: "AudioWait(Sounds/VoiceOvers/Intro/intro30); SendMessage(StartExerciseTutorial,
+          , );\nSendMessage(SaveDialogue, Let\u2019s perform a basic exercise., );"
         type: 0
         typeString: 
       conversationID: 1
@@ -1413,8 +1471,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 420
-        y: 1300
+        x: 431
+        y: 1437
         width: 160
         height: 30
     - id: 20
@@ -1461,7 +1519,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Intro/intro30)
+        value: 'AudioWait(Sounds/VoiceOvers/Intro/intro33);  WaitForMessage(NearTable);
+
+          SendMessage(SaveDialogue, Using your W,A,S,D keys and your mouse or track
+          pad, with the container in your hands, walk up to the table on the other
+          side of the room., );'
         type: 0
         typeString: 
       conversationID: 1
@@ -1482,8 +1544,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 415
-        y: 1454
+        x: 428
+        y: 1587
         width: 160
         height: 30
     - id: 22
@@ -1529,7 +1591,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Intro/intro35)
+        value: "AudioWait(Sounds/VoiceOvers/Intro/intro38);\nSendMessage(SaveDialogue,
+          Let\u2019s simulate the testing section., );"
         type: 0
         typeString: 
       conversationID: 1
@@ -1550,8 +1613,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 414
-        y: 1681
+        x: 429
+        y: 1816
         width: 160
         height: 30
     - id: 23
@@ -1598,7 +1661,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Intro/intro34)
+        value: 'AudioWait(Sounds/VoiceOvers/Intro/intro37);
+
+          SendMessage(SaveDialogue, In each room in the modules, once you complete
+          the necessary objectives, one of the four doors will randomly open, leading
+          to the next room., );'
         type: 0
         typeString: 
       conversationID: 1
@@ -1619,8 +1686,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 417
-        y: 1636
+        x: 430
+        y: 1775
         width: 160
         height: 30
     - id: 24
@@ -1667,7 +1734,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Intro/intro33)
+        value: AudioWait(Sounds/VoiceOvers/Intro/intro36); SendMessage(SaveDialogue,
+          In the future, you will be using your E key to pick up and drop objects,
+          and also interact with objects., );
         type: 0
         typeString: 
       conversationID: 1
@@ -1688,8 +1757,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 422
-        y: 1590
+        x: 436
+        y: 1726
         width: 160
         height: 30
     - id: 25
@@ -1735,7 +1804,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Intro/intro32)
+        value: 'AudioWait(Sounds/VoiceOvers/Intro/intro35);
+
+          SendMessage(SaveDialogue, Good job., );'
         type: 0
         typeString: 
       conversationID: 1
@@ -1756,8 +1827,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 419
-        y: 1547
+        x: 431
+        y: 1682
         width: 160
         height: 30
     - id: 26
@@ -1803,7 +1874,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Intro/intro36); SendMessage(NextRoom,,EmptyRoomObject);
+        value: 'AudioWait(Sounds/VoiceOvers/Intro/intro39); SendMessage(NextRoom,,EmptyRoomObject);
+
+          SendMessage(SaveDialogue, Notice that one of the doors has opened., );'
         type: 0
         typeString: 
       conversationID: 1
@@ -1824,8 +1897,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 404
-        y: 1728
+        x: 419
+        y: 1864
         width: 160
         height: 30
     - id: 27
@@ -1871,7 +1944,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Intro/intro37)
+        value: "AudioWait(Sounds/VoiceOvers/Intro/intro40); \nSendMessage(SaveDialogue,
+          Please proceed to the next room., );"
         type: 0
         typeString: 
       conversationID: 1
@@ -1881,13 +1955,19 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 27
+        destinationConversationID: 1
+        destinationDialogueID: 45
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 409
-        y: 1782
+        x: 424
+        y: 1918
         width: 160
         height: 30
     - id: 31
@@ -1918,7 +1998,7 @@ MonoBehaviour:
         typeString: 
       - title: Dialogue Text
         value: Using your W,A,S,D keys and your mouse or touch pad, find the container
-          of flammable liquid in one of the corners of the room and walk up to it.
+          of liquid in one of the corners of the room and walk up to it.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -1934,7 +2014,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Intro/intro28); WaitForMessage(NearContainer);
+        value: 'AudioWait(Sounds/VoiceOvers/Intro/intro31); WaitForMessage(NearContainer);
+
+          SendMessage(SaveDialogue, Using your W,A,S,D keys and your mouse or touch
+          pad, find the container of liquid in one of the corners of the room and
+          walk up to it., );'
         type: 0
         typeString: 
       conversationID: 1
@@ -1955,8 +2039,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 418
-        y: 1352
+        x: 431
+        y: 1488
         width: 160
         height: 30
     - id: 33
@@ -2003,7 +2087,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Intro/intro5)
+        value: 'AudioWait(Sounds/VoiceOvers/Intro/intro5);
+
+          SendMessage(SaveDialogue, The Hazard Communication Standard conforms to
+          the Globally Harmonized System of Classification and Labeling of Chemicals.,
+          );'
         type: 0
         typeString: 
       conversationID: 1
@@ -2073,7 +2161,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Intro/intro6)
+        value: 'AudioWait(Sounds/VoiceOvers/Intro/intro6);
+
+          SendMessage(SaveDialogue, The Hazard Communication Standard provides a common
+          and coherent approach to classifying chemicals and communicating hazard
+          information on labels and safety data sheets., );'
         type: 0
         typeString: 
       conversationID: 1
@@ -2141,7 +2233,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Intro/intro7)
+        value: 'AudioWait(Sounds/VoiceOvers/Intro/intro7);
+
+          SendMessage(SaveDialogue, This simulation video game will train you to understand
+          these standards., );'
         type: 0
         typeString: 
       conversationID: 1
@@ -2209,7 +2304,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Intro/intro8)
+        value: 'AudioWait(Sounds/VoiceOvers/Intro/intro8);
+
+          SendMessage(SaveDialogue, This game has a series of modules, each with a
+          series of rooms., );'
         type: 0
         typeString: 
       conversationID: 1
@@ -2278,7 +2376,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Intro/intro9)
+        value: 'AudioWait(Sounds/VoiceOvers/Intro/intro9);
+
+          SendMessage(SaveDialogue, Each module will cover a different subject, and
+          in each module there will be 3 sections., );'
         type: 0
         typeString: 
       conversationID: 1
@@ -2346,7 +2447,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Intro/intro10)
+        value: 'AudioWait(Sounds/VoiceOvers/Intro/intro10);
+
+          SendMessage(SaveDialogue, An educational section, which will be the first
+          room., );'
         type: 0
         typeString: 
       conversationID: 1
@@ -2414,7 +2518,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Intro/intro11)
+        value: 'AudioWait(Sounds/VoiceOvers/Intro/intro11);
+
+          SendMessage(SaveDialogue, Followed by the activities section that will be
+          a series of 5 rooms., );'
         type: 0
         typeString: 
       conversationID: 1
@@ -2482,7 +2589,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Intro/intro12)
+        value: 'AudioWait(Sounds/VoiceOvers/Intro/intro12);
+
+          SendMessage(SaveDialogue, Followed by the testing section, which will be
+          in a single room., );'
         type: 0
         typeString: 
       conversationID: 1
@@ -2551,7 +2661,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Intro/intro13)
+        value: 'AudioWait(Sounds/VoiceOvers/Intro/intro13);
+
+          SendMessage(SaveDialogue, In the educational section, you will be given
+          the material necessary to complete the module., );'
         type: 0
         typeString: 
       conversationID: 1
@@ -2620,7 +2733,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Intro/intro14)
+        value: 'AudioWait(Sounds/VoiceOvers/Intro/intro14);
+
+          SendMessage(SaveDialogue, In the activities section, you will have to participate
+          in a series of exercises or activities to help enforce the material presented.,
+          );'
         type: 0
         typeString: 
       conversationID: 1
@@ -2689,7 +2806,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Intro/intro15)
+        value: 'AudioWait(Sounds/VoiceOvers/Intro/intro15);
+
+          SendMessage(SaveDialogue, In the testing section, you will then be tested
+          on the material presented in that module., );'
         type: 0
         typeString: 
       conversationID: 1
@@ -2757,7 +2877,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Intro/intro16)
+        value: "AudioWait(Sounds/VoiceOvers/Intro/intro16);\nSendMessage(SaveDialogue,
+          Let\u2019s begin learning the controls for the game., );"
         type: 0
         typeString: 
       conversationID: 1
@@ -2778,8 +2899,216 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 31
-        y: 820
+        x: 239
+        y: 775
+        width: 160
+        height: 30
+    - id: 45
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'SendMessage(LetUserThrough,,EmptyRoomObject);
+
+          SendMessage(StartTestTutorial,,);'
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 425
+        y: 1968
+        width: 160
+        height: 30
+    - id: 46
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: If you want to change any of the settings, you may do so at any time
+          in the Settings page in the main menu.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'AudioWait(Sounds/VoiceOvers/Intro/intro28);
+
+          SendMessage(SaveDialogue, If you want to change any of the settings, you
+          may do so at any time in the Settings page in the main menu.,);'
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 46
+        destinationConversationID: 1
+        destinationDialogueID: 47
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 238
+        y: 1376
+        width: 160
+        height: 30
+    - id: 47
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: The settings you can change are the mouse sensitivity, the game brightness,
+          the font size, and the game volume.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'AudioWait(Sounds/VoiceOvers/Intro/intro29);
+
+          SaveDialogue(SaveDialogue, The settings you can change are the mouse sensitivity,
+          the game brightness, the font size, and the game volume.,)'
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 47
+        destinationConversationID: 1
+        destinationDialogueID: 19
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 233
+        y: 1433
         width: 160
         height: 30
   - id: 3
@@ -2917,7 +3246,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speech_testing2);
+        value: AudioWait(Sounds/VoiceOvers/testing/testing2);WaitForMessage(LaptopTableNearby);
+          SendMessage(SaveDialogue, Go up to the table., );
         type: 0
         typeString: 
       conversationID: 3
@@ -2969,7 +3299,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: This laptop is where you will complete your tests.
+        value: You have two options to complete the test. Either with a tablet or
+          a laptop.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -2985,7 +3316,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: WaitForMessage(LaptopTableNearby); AudioWait(Sounds/VoiceOvers/testingVoiceOver/speech_testing3);
+        value: AudioWait(Sounds/VoiceOvers/testing/testing3); SendMessage(SaveDialogue,
+          You have two options to complete the test. Either with a tablet or a laptop.,
+          );
         type: 0
         typeString: 
       conversationID: 3
@@ -3037,7 +3370,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Press E while looking at the laptop to start the test.
+        value: Press E while looking at one of the devices to start the test.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -3053,7 +3386,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: WaitForMessage(TestStarted); AudioWait(Sounds/VoiceOvers/testingVoiceOver/speech_testing4)
+        value: WaitForMessage(TestStarted); AudioWait(Sounds/VoiceOvers/testing/testing4);
+          SendMessage(SaveDialogue, Press E while looking at one of the devices to
+          start the test., );
         type: 0
         typeString: 
       conversationID: 3
@@ -3075,7 +3410,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 120
-        y: 220
+        y: 222
         width: 160
         height: 30
     - id: 4
@@ -3122,7 +3457,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speech_testing5);
+        value: AudioWait(Sounds/VoiceOvers/testing/testing5); SendMessage(SaveDialogue,
+          Please answer the following questions based on what you have done so far.,
+          );
         type: 0
         typeString: 
       conversationID: 3
@@ -3190,7 +3527,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speech_testing6);
+        value: 'AudioWait(Sounds/VoiceOvers/testing/testing6);
+
+          WaitForMessage(Submit); SendMessage(SaveDialogue, Press Submit at the bottom
+          of the page once you are done., );'
         type: 0
         typeString: 
       - title: Response Menu Sequence
@@ -3262,7 +3602,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: WaitForMessage(Submit); AudioWait(Sounds/VoiceOvers/testingVoiceOver/speech_testing7);
+        value: AudioWait(Sounds/VoiceOvers/testing/testing7); SendMessage(SaveDialogue,
+          Are you sure?, );
         type: 0
         typeString: 
       conversationID: 3
@@ -3290,7 +3631,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 120
-        y: 370
+        y: 369
         width: 160
         height: 30
     - id: 7
@@ -3316,11 +3657,11 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
-        value: 
+        value: Yes.
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Yes.
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -3402,11 +3743,11 @@ MonoBehaviour:
         type: 5
         typeString: 
       - title: Menu Text
-        value: 
+        value: No.
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: No.
+        value: 
         type: 0
         typeString: 
       - title: Parenthetical
@@ -3490,7 +3831,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speech_testing8a);
+        value: AudioWait(Sounds/VoiceOvers/testing/testing8a); SendMessage(SaveDialogue,
+          Congratulations, you scored a 0 out of 3., );
         type: 0
         typeString: 
       conversationID: 3
@@ -3558,7 +3900,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speech_testing9a);
+        value: AudioWait(Sounds/VoiceOvers/testing/testing9); SendMessage(SaveDialogue,
+          That concludes the tutorial module., );
         type: 0
         typeString: 
       conversationID: 3
@@ -3579,7 +3922,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 301
+        x: 300
         y: 545
         width: 160
         height: 30
@@ -3627,7 +3970,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speech_testing10);
+        value: AudioWait(Sounds/VoiceOvers/testing/testing10); SendMessage(SaveDialogue,
+          You have been given credit for completing the tutorial and you may now continue
+          with the rest of the training modules., );
         type: 0
         typeString: 
       conversationID: 3
@@ -3637,12 +3982,18 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 3
+        originDialogueID: 12
+        destinationConversationID: 3
+        destinationDialogueID: 17
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 299
+        x: 298
         y: 589
         width: 160
         height: 30
@@ -3689,7 +4040,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speech_testing1)
+        value: AudioWait(Sounds/VoiceOvers/testing/testing1); SendMessage(SaveDialogue,
+          This is what a testing room might look like., );
         type: 0
         typeString: 
       conversationID: 3
@@ -3757,7 +4109,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speech_testing8b);
+        value: AudioWait(Sounds/VoiceOvers/testing/testing8b); SendMessage(SaveDialogue,
+          Congratulations, you scored a 1 out of 3., );
         type: 0
         typeString: 
       conversationID: 3
@@ -3778,7 +4131,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 179
+        x: 178
         y: 466
         width: 160
         height: 30
@@ -3825,7 +4178,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speech_testing8c);
+        value: AudioWait(Sounds/VoiceOvers/testing/testing8c); SendMessage(SaveDialogue,
+          Congratulations, you scored a 2 out of 3., );
         type: 0
         typeString: 
       conversationID: 3
@@ -3847,7 +4201,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 349
-        y: 466
+        y: 468
         width: 160
         height: 30
     - id: 16
@@ -3893,7 +4247,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testingVoiceOver/speech_testing8d);
+        value: AudioWait(Sounds/VoiceOvers/testing/testing8d); SendMessage(SaveDialogue,
+          Congratulations, you scored a 3 out of 3., );
         type: 0
         typeString: 
       conversationID: 3
@@ -3916,6 +4271,68 @@ MonoBehaviour:
         serializedVersion: 2
         x: 543
         y: 464
+        width: 160
+        height: 30
+    - id: 17
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: SendMessage(EndGame, ,)
+        type: 0
+        typeString: 
+      conversationID: 3
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 297
+        y: 637
         width: 160
         height: 30
   syncInfo:
