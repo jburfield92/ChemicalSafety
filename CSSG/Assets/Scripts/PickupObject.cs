@@ -99,6 +99,7 @@ public class PickupObject : MonoBehaviour
 				if(p != null && Vector3.Distance(mainCamera.transform.position, p.transform.position) < 3.0f)
 				{
 					p.Check = false;
+					p.TriggerCheck = false;
 					carrying = true;
 					carriedObject = p.gameObject;
 					carriedObject.transform.rotation = mainCamera.transform.rotation;

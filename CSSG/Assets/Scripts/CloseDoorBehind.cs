@@ -78,6 +78,8 @@ public class CloseDoorBehind : MonoBehaviour
             anim.SetBool("Close", true);
             PickupObject.carryBlock = false;
             Destroy(RandomRoom.used);
+			Destroy (Placement.Ghost);
+			Placement.Ghost = (GameObject)Instantiate (Resources.Load ("itembar/used"));
             RandomRoom.used = (GameObject)Instantiate(Resources.Load("itembar/used"));
             StartCoroutine(DelaySound());
 

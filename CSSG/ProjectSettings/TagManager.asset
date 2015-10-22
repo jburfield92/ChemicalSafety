@@ -18,6 +18,9 @@ TagManager:
   - RightArm
   - Test
   - InvisibleWall
+  - items
+  - PickupItems
+  - IsTablet
   layers:
   - Default
   - TransparentFX
@@ -29,7 +32,7 @@ TagManager:
   - 
   - Player
   - GameItems
-  - 
+  - banner
   - 
   - 
   - 

@@ -23,8 +23,10 @@ public class Banner : MonoBehaviour {
 			RaycastHit hit;
 			
 			
-			
-			if(Physics.Raycast(ray, out hit))
+		int layerMask = 1 << 10;
+		//layerMask = ~layerMask;
+		    
+		if(Physics.Raycast(ray,out hit,3.0f,layerMask))
 			{
 				BannerView p = hit.collider.GetComponent<BannerView>();
 				if(p != null && Vector3.Distance(MainCam.transform.position, p.transform.position) < 3.0f)

@@ -4,15 +4,14 @@ using System.Linq;
 
 public class Placement : MonoBehaviour {
 	private static GameObject mainCamera;
-	public GameObject Ghost;
+	public static GameObject Ghost;
 
 	private int i;
 	// Use this for initialization
 	void Start () {
 
 		mainCamera = GameObject.FindWithTag ("MainCamera");
-		Ghost = (GameObject)Instantiate(Resources.Load("itembar/used"));
-	
+		Ghost = (GameObject)Instantiate (Resources.Load ("itembar/used"));
 	}
 	
 	// Update is called once per frame
@@ -99,6 +98,7 @@ public class Placement : MonoBehaviour {
 					p.Check = true;
 					PickupObject.carriedObject.GetComponent<Pickupable>().Check = true;
 					}
+					PickupObject.carriedObject.GetComponent<Pickupable>().TriggerCheck = true;
 					PickupObject.carriedObject.GetComponent<Collider>().enabled = true;
 					PickupObject.carriedObject.tag = "ToDelete";
 					PickupObject.carriedObject.transform.SetParent (RandomRoom.used.transform);
