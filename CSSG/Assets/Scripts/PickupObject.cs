@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using PixelCrushers.DialogueSystem;
 
 public class PickupObject : MonoBehaviour
 {
@@ -83,9 +84,13 @@ public class PickupObject : MonoBehaviour
 			
 			Ray ray = mainCamera.GetComponent<Camera>().ScreenPointToRay(new Vector3(x,y));
 			RaycastHit hit;
+			int layerMask = 1 << 10;
+			layerMask = ~layerMask;
 			
-			if(Physics.Raycast(ray, out hit))
+			if(Physics.Raycast(ray,out hit,3.0f,layerMask))
 			{
+
+
 
 				Placement l = hit.collider.GetComponent<Placement>();
 
@@ -96,6 +101,7 @@ public class PickupObject : MonoBehaviour
 
 
 				Pickupable p = hit.collider.GetComponent<Pickupable>();
+						if(p.Check != true){
 				if(p != null && Vector3.Distance(mainCamera.transform.position, p.transform.position) < 3.0f)
 				{
 					p.Check = false;
@@ -108,7 +114,7 @@ public class PickupObject : MonoBehaviour
 					carriedObject.transform.SetParent(rightHand.transform.parent);
 					p.gameObject.GetComponent<Rigidbody>().useGravity = false;
 						carriedObject.GetComponent<Collider>().enabled = false;
-					}}
+						}}}
 			}
 		}
 	}

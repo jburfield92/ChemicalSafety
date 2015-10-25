@@ -7,9 +7,10 @@ public class RandomRoomsList : MonoBehaviour
     /// <summary> Gets the list of rooms
     /// </summary>
     /// <returns></returns>
+	public static string RoomName;
 	public static GameObject[] GetRooms()
 	{
-		GameObject[] rooms =  Resources.LoadAll<GameObject> ("Rooms");
+		GameObject[] rooms =  Resources.LoadAll<GameObject> ("Rooms"+RoomName);
 		List<GameObject> list = rooms.ToList();
 		
 		for(int i = 0 ; i < list.Count ; i ++)

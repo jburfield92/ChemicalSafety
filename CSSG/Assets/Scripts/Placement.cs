@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
+using PixelCrushers.DialogueSystem;
 
 public class Placement : MonoBehaviour {
 	private static GameObject mainCamera;
 	public static GameObject Ghost;
+	public static List <GameObject> GhostItems;
 
 	private int i;
 	// Use this for initialization
@@ -12,6 +14,13 @@ public class Placement : MonoBehaviour {
 
 		mainCamera = GameObject.FindWithTag ("MainCamera");
 		Ghost = (GameObject)Instantiate (Resources.Load ("itembar/used"));
+		//GhostItems = GameObject.FindGameObjectsWithTag("items").ToList();
+	}
+
+	public static void ClearList(){
+
+		GhostItems.Clear();
+
 	}
 	
 	// Update is called once per frame
@@ -22,7 +31,7 @@ public class Placement : MonoBehaviour {
 		//	Debug.Log ("working");
 		//}
 
-		GameObject [] GhostItems = GameObject.FindGameObjectsWithTag("items");
+		GhostItems = GameObject.FindGameObjectsWithTag("items").ToList();
 
 		for(i = 0 ; i < GhostItems.Count () ; i++)
 		{
@@ -97,7 +106,7 @@ public class Placement : MonoBehaviour {
 					if(string.Compare(p.Value,PickupObject.carriedObject.GetComponent<Pickupable>().Value)==0){
 					p.Check = true;
 					PickupObject.carriedObject.GetComponent<Pickupable>().Check = true;
-					}
+					
 					PickupObject.carriedObject.GetComponent<Pickupable>().TriggerCheck = true;
 					PickupObject.carriedObject.GetComponent<Collider>().enabled = true;
 					PickupObject.carriedObject.tag = "ToDelete";
@@ -108,7 +117,11 @@ public class Placement : MonoBehaviour {
 					PickupObject.carriedObject.transform.SetParent (RandomRoom.used.transform);
 					PickupObject.carrying = false;
 					PickupObject.carriedObject = null;
-
+						GhostItems.Remove(p.gameObject);
+						Destroy(p.gameObject);
+					}else{
+						DialogueManager.Instance.SendMessage("OnSequencerMessage", "end");
+					}
 
 				}
 			}
