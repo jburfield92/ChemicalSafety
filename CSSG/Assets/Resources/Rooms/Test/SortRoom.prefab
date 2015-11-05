@@ -14529,7 +14529,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 11499066}
   m_HandleRect: {fileID: 22406688}
   m_Direction: 2
-  m_Value: 1
+  m_Value: .999995828
   m_Size: .133352503
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -15784,7 +15784,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   once: 1
-  conversation: testing
+  conversation: room4
   condition:
     luaConditions: []
     questConditions: []
@@ -18051,7 +18051,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .0492534637, y: .0816830024}
   m_AnchorMax: {x: .881000042, y: .841607213}
-  m_AnchoredPosition: {x: -.0983829498, y: -437.286713}
+  m_AnchoredPosition: {x: -.0983829498, y: -437.270905}
   m_SizeDelta: {x: -8.24220943, y: 917.713562}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22453672

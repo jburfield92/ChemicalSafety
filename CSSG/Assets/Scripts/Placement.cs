@@ -120,7 +120,7 @@ public class Placement : MonoBehaviour {
 						GhostItems.Remove(p.gameObject);
 						Destroy(p.gameObject);
 					}else{
-						DialogueManager.Instance.SendMessage("OnSequencerMessage", "end");
+						//DialogueManager.Instance.SendMessage("OnSequencerMessage", "end");
 					}
 
 				}

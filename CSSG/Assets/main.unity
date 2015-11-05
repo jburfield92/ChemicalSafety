@@ -9021,7 +9021,7 @@ Prefab:
       objectReference: {fileID: 4494698}
     - target: {fileID: 22479936, guid: bbf3333c9719e6c49949fff1dbbb4db7, type: 2}
       propertyPath: m_AnchorMin.y
-      value: .866647482
+      value: .866643906
       objectReference: {fileID: 0}
     - target: {fileID: 22479936, guid: bbf3333c9719e6c49949fff1dbbb4db7, type: 2}
       propertyPath: m_AnchorMax.x
@@ -9029,11 +9029,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22479936, guid: bbf3333c9719e6c49949fff1dbbb4db7, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: .999996424
       objectReference: {fileID: 0}
     - target: {fileID: 194536, guid: bbf3333c9719e6c49949fff1dbbb4db7, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11496666, guid: bbf3333c9719e6c49949fff1dbbb4db7, type: 2}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22492774, guid: bbf3333c9719e6c49949fff1dbbb4db7, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -437.286652
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bbf3333c9719e6c49949fff1dbbb4db7, type: 2}
@@ -22683,7 +22691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   once: 1
-  conversation: testing
+  conversation: TestTutorial
   condition:
     luaConditions: []
     questConditions: []

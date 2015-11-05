@@ -102,21 +102,25 @@ public class ClearAndRandom : MonoBehaviour {
 			}
 		}
 
-		if(TriggerClear)
+		if(TriggerClear){
 			if(ClearEnd == ClearEnding){
 			GameObject[] delete = list.ToArray ();
-		for(i = 0 ; i < delete.Count() ; i++ ){
-			list.Remove(delete[i]);
-			Destroy(delete[i]);
-			}
+		//for(i = 0 ; i < delete.Count() ; i++ ){
+		//	list.Remove(delete[i]);
+		//	Destroy(delete[i]);
+		//	}
+
 
 		
 				if(end){
+				Debug.Log("end");
 				DialogueLua.SetVariable("Reset", true);
 				DialogueManager.Instance.SendMessage("OnSequencerMessage", "end");
 				list.Clear();
 				end = false;
 				}
+			}
+
 
 		}}}
 
