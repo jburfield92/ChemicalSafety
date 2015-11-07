@@ -1,0 +1,122 @@
+fileFormatVersion: 2
+guid: 564ba941eb7d31f409b2f7aa6064c626
+timeCreated: 1443056424
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Cabinet
+    100002: Handle
+    100004: LeftDoor
+    100006: LeftHing
+    100008: LeftHingInner
+    100010: LowerShelf
+    100012: RightDoor
+    100014: RightHing
+    100016: RightHingInner
+    100018: UpperShelf
+    100020: //RootNode
+    400000: Cabinet
+    400002: Handle
+    400004: LeftDoor
+    400006: LeftHing
+    400008: LeftHingInner
+    400010: LowerShelf
+    400012: RightDoor
+    400014: RightHing
+    400016: RightHingInner
+    400018: UpperShelf
+    400020: //RootNode
+    2300000: Cabinet
+    2300002: Handle
+    2300004: LeftDoor
+    2300006: LeftHing
+    2300008: LeftHingInner
+    2300010: LowerShelf
+    2300012: RightDoor
+    2300014: RightHing
+    2300016: RightHingInner
+    2300018: UpperShelf
+    3300000: Cabinet
+    3300002: Handle
+    3300004: LeftDoor
+    3300006: LeftHing
+    3300008: LeftHingInner
+    3300010: LowerShelf
+    3300012: RightDoor
+    3300014: RightHing
+    3300016: RightHingInner
+    3300018: UpperShelf
+    4300000: Cabinet
+    4300002: LeftDoor
+    4300004: RightDoor
+    4300006: RightHingInner
+    4300008: RightHing
+    4300010: LeftHingInner
+    4300012: LeftHing
+    4300014: LowerShelf
+    4300016: UpperShelf
+    4300018: Handle
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

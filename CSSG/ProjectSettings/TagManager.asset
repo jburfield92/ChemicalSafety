@@ -18,6 +18,14 @@ TagManager:
   - RightArm
   - Test
   - InvisibleWall
+  - MediumText
+  - TabletText
+  - TabletSpawn
+  - TabletSideButton
+  - TabletCenterButton
+  - SDSButton
+  - Room2Arrow
+  - SDSTablet
   layers:
   - Default
   - TransparentFX
@@ -29,7 +37,7 @@ TagManager:
   - 
   - Player
   - GameItems
-  - 
+  - DialogueTrigger
   - 
   - 
   - 

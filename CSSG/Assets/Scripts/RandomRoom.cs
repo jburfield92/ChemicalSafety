@@ -204,6 +204,16 @@ public class RandomRoom : MonoBehaviour
             }
             roomsListIndex++;
         }
+
+		GameObject[] doors = GetHallDoors();
+		
+		foreach (GameObject door in doors)
+		{
+			GameObject doorPart = door.transform.Find("DoorPart").gameObject;
+			DoorAnimation doorAnimation = (DoorAnimation)doorPart.GetComponent(typeof(DoorAnimation));
+			
+			doorAnimation.open = true;
+		}
 		
         used.SetActive(!used.activeSelf);
         deleteHall = newHall;
@@ -211,15 +221,7 @@ public class RandomRoom : MonoBehaviour
         deleteRoom.tag = "ToDelete";
         deleteArea.tag = "ToDelete";
 
-        GameObject[] doors = GetHallDoors();
 
-        foreach (GameObject door in doors)
-        {
-            GameObject doorPart = door.transform.Find("DoorPart").gameObject;
-            DoorAnimation doorAnimation = (DoorAnimation)doorPart.GetComponent(typeof(DoorAnimation));
-
-            doorAnimation.open = true;
-        }
     }
 
     /// <summary> Gets the two door GameObjects closes to the hall generated
@@ -233,7 +235,7 @@ public class RandomRoom : MonoBehaviour
         list.Sort(ByDistance);
 
         // this will return the two closest doors
-        return new GameObject[] { list[0], list[1] };
+		return new GameObject[] { list[0], list[1] };
     }
 
     /// <summary> Delegate to help sort the doors.
@@ -252,7 +254,11 @@ public class RandomRoom : MonoBehaviour
     /// </summary>
     void Update()
     {
-
+		if (Input.GetKeyDown (KeyCode.J)) {
+			NextRoom ();
+		}
+		if (Input.GetKeyDown (KeyCode.K))
+			LetUserThrough ();
     }
 
     /// <summary> Spawns the next room

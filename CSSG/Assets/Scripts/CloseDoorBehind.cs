@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Collections;
+using PixelCrushers.DialogueSystem;
 
 public class CloseDoorBehind : MonoBehaviour
 {
@@ -45,7 +46,7 @@ public class CloseDoorBehind : MonoBehaviour
     /// <param name="other"></param>
 	void OnTriggerEnter (Collider other)
     {
-        if (!firstEnter)
+		if (other.gameObject.transform.name == "Player")
         {
             GameObject[] invisibleWalls = GameObject.FindGameObjectsWithTag("InvisibleWall");
 

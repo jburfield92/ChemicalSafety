@@ -28,7 +28,7 @@ public class LockThing : MonoBehaviour
     /// </summary>
     void Update ()
     {
-		if (PickupObject.canRun == true)
+		if (PickupObject.canRun == true && PickupObject.UsingTablet == false)
         {
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;

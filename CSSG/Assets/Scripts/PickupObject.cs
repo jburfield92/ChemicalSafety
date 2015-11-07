@@ -1,4 +1,8 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
+using System.Linq;
+using PixelCrushers.DialogueSystem;
+
 
 public class PickupObject : MonoBehaviour
 {
@@ -23,6 +27,9 @@ public class PickupObject : MonoBehaviour
 	public float smooth;
 
 	public static bool canRun;
+	public static bool UsingTablet;
+
+	public Room2SDSPickup Room2Call;
 
 	/// <summary> Use this for initialization
 	/// </summary>
@@ -36,6 +43,7 @@ public class PickupObject : MonoBehaviour
 		leftHandPositionLocation = leftHandPosition;
 		carryBlock = false;
 		canRun = true;
+		UsingTablet = false;
 	}
 	
 	/// <summary> Update is called once per frame
@@ -84,7 +92,42 @@ public class PickupObject : MonoBehaviour
 			if(Physics.Raycast(ray, out hit))
 			{
 				Pickupable p = hit.collider.GetComponent<Pickupable>();
-				if(p != null && Vector3.Distance(mainCamera.transform.position, p.transform.position) < 3.0f)
+				if(p.gameObject.transform.name == "Tablet" || p.gameObject.CompareTag("SDSTablet")) {
+					if(mainCamera.GetComponent<MouseLook>().enabled){
+						carriedObject = p.gameObject;
+						carriedObject.GetComponent<Rigidbody>().isKinematic = true;
+						carriedObject.transform.position = mainCamera.transform.position + mainCamera.transform.forward * .45f;
+						carriedObject.transform.rotation = mainCamera.transform.rotation;
+						carriedObject.transform.Rotate(90,90,90);
+						mainCamera.GetComponent<MouseLook>().enabled = false;
+						if (GameObject.Find("Player").GetComponent<CharacterMotor>()) 
+						{
+							GameObject.Find("Player").GetComponent<CharacterMotor>().enabled = false;
+							GameObject.Find("Player").GetComponent<MouseLook>().enabled = false;
+						}
+						UsingTablet = true;
+						DialogueManager.Instance.SendMessage("OnSequencerMessage", "pickup");
+
+						if(carriedObject.CompareTag("SDSTablet")){
+							Room2Call = carriedObject.GetComponent("Room2SDSPickup") as Room2SDSPickup;
+							Room2Call.RemoveSideButtons();
+							Room2Call.ShowSideButtons();
+						}
+
+
+
+						
+					}
+					else {
+						// ReturnTablet();
+					}
+
+				}
+
+
+
+
+				else if(p != null && Vector3.Distance(mainCamera.transform.position, p.transform.position) < 3.0f)
 				{
 					carrying = true;
 					carriedObject = p.gameObject;
@@ -140,5 +183,31 @@ public class PickupObject : MonoBehaviour
 		carriedObject.gameObject.GetComponent<Rigidbody>().isKinematic = false;
 		carriedObject.gameObject.GetComponent<Rigidbody>().AddForce(carriedObject.transform.forward);
 		carriedObject = null;
+		carriedObject.gameObject.transform.name = null;
 	}
+
+	int ByDistance(GameObject a, GameObject b)
+	{
+		float distanceToA = Vector3.Distance(mainCamera.transform.position, a.transform.position);
+		float distanceToB = Vector3.Distance(mainCamera.transform.position, b.transform.position);
+		return distanceToA.CompareTo(distanceToB);
+	}
+
+	public void ReturnTablet() {
+		GameObject[] TabletSpawnLoc = GameObject.FindGameObjectsWithTag("TabletSpawn");
+		List<GameObject> list = TabletSpawnLoc.ToList();
+		list.Sort(ByDistance);
+		carriedObject.transform.position = list[0].transform.position;
+		carriedObject.transform.rotation = list[0].transform.rotation;
+		mainCamera.GetComponent<MouseLook>().enabled = true;
+		if (GameObject.Find("Player").GetComponent<CharacterMotor>()) 
+		{
+			GameObject.Find("Player").GetComponent<CharacterMotor>().enabled = true;
+			GameObject.Find("Player").GetComponent<MouseLook>().enabled = true;
+		}
+		carriedObject = null;
+		UsingTablet = false;
+		
+	}
+	
 }
