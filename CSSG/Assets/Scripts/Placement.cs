@@ -109,7 +109,7 @@ public class Placement : MonoBehaviour {
 					
 					PickupObject.carriedObject.GetComponent<Pickupable>().TriggerCheck = true;
 					PickupObject.carriedObject.GetComponent<Collider>().enabled = true;
-					PickupObject.carriedObject.tag = "ToDelete";
+					//PickupObject.carriedObject.tag = "ToDelete";
 					PickupObject.carriedObject.transform.SetParent (RandomRoom.used.transform);
 					PickupObject.carriedObject.transform.position = p.transform.position;
 					PickupObject.carriedObject.transform.rotation = p.transform.rotation;
@@ -119,8 +119,6 @@ public class Placement : MonoBehaviour {
 					PickupObject.carriedObject = null;
 						GhostItems.Remove(p.gameObject);
 						Destroy(p.gameObject);
-					}else{
-						//DialogueManager.Instance.SendMessage("OnSequencerMessage", "end");
 					}
 
 				}

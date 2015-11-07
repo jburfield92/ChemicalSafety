@@ -104,7 +104,7 @@ public class ClearAndRandom : MonoBehaviour {
 
 		if(TriggerClear){
 			if(ClearEnd == ClearEnding){
-			GameObject[] delete = list.ToArray ();
+		//	GameObject[] delete = list.ToArray ();
 		//for(i = 0 ; i < delete.Count() ; i++ ){
 		//	list.Remove(delete[i]);
 		//	Destroy(delete[i]);

@@ -2129,7 +2129,7 @@ GameObject:
   - 4: {fileID: 427994}
   - 114: {fileID: 11400382}
   m_Layer: 0
-  m_Name: ClearRoom1
+  m_Name: ClearRoom4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

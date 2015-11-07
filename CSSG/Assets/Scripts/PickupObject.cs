@@ -101,9 +101,20 @@ public class PickupObject : MonoBehaviour
 
 
 				Pickupable p = hit.collider.GetComponent<Pickupable>();
-						if(p.Check != true){
+						
 				if(p != null && Vector3.Distance(mainCamera.transform.position, p.transform.position) < 3.0f)
 				{
+							if(p.Check != true){
+							Transform[] ts = p.GetComponentsInChildren<Transform>();
+							foreach(Transform t in ts){
+
+							if(t.GetComponent<Collider>() != null){
+								t.GetComponent<Collider>().enabled = false;
+									//break;
+							}
+
+							}
+
 					p.Check = false;
 					p.TriggerCheck = false;
 					carrying = true;
@@ -173,6 +184,15 @@ public class PickupObject : MonoBehaviour
 	/// </summary>
 	void DropObject()
 	{
+		Transform[] ts = carriedObject.GetComponentsInChildren<Transform>();
+		foreach(Transform t in ts){
+			
+			if(t.name == "Read"){
+				t.GetComponent<Collider>().enabled = true;
+				//break;
+			}
+			
+		}
 		carrying = false;
 		carriedObject.gameObject.GetComponent<Rigidbody>().useGravity = true;
 		carriedObject.transform.SetParent (RandomRoom.used.transform);
