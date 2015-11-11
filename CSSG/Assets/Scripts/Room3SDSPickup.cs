@@ -76,7 +76,7 @@ public class Room3SDSPickup : MonoBehaviour {
 	}
 
 	public void MoveArrow(){
-		GameObject arrow = GameObject.Find ("arrow1");
+		GameObject arrow = GameObject.Find ("arrow3");
 		if (!moved) {
 			arrow.gameObject.transform.position = new Vector3 (arrow.gameObject.transform.position.x, 3f, arrow.gameObject.transform.position.z);
 			moved = true;

@@ -2,28 +2,28 @@
 using System.Collections;
 using PixelCrushers.DialogueSystem;
 
-
-public class Room4SDSPickup : MonoBehaviour {
+public class Room5SDSPickup : MonoBehaviour {
 
 	Vector3 currentPosition;
 	Vector3 startPosition;
 	Quaternion startRotation;
-	public static GameObject[] SDSRoom4Buttons;
-	public static bool moved2;
+	public static GameObject[] SDSRoom5Buttons;
 	public static GameObject arrow;
 	public static GameObject arrow2;
+	public static GameObject container;
+	public static bool moved3;
 	public static bool readyToStore;
-	
+
+
 	// Use this for initialization
 	void Start () {
 		startPosition = this.gameObject.transform.position;
 		startRotation = this.gameObject.transform.rotation;
-		moved2 = false;
+		container = GameObject.Find("box1");
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
 		currentPosition = this.gameObject.transform.position;
 		if (currentPosition != startPosition) {
 			ShowSideButtons();
@@ -43,7 +43,7 @@ public class Room4SDSPickup : MonoBehaviour {
 		}
 		PickupObject.UsingTablet = false;
 		PickupObject.carriedObject.transform.name=" ";
-		GetButtons ();
+		// GetButtons ();
 		RemoveSideButtons ();
 		
 	}
@@ -56,12 +56,12 @@ public class Room4SDSPickup : MonoBehaviour {
 	}
 	
 	public void GetButtons() {
-		SDSRoom4Buttons = GameObject.FindGameObjectsWithTag("SDSButton");
+		SDSRoom5Buttons = GameObject.FindGameObjectsWithTag("SDSButton");
 	}
 	
 	
 	public void ShowSideButtons(){
-		foreach (GameObject button in SDSRoom4Buttons) {
+		foreach (GameObject button in SDSRoom5Buttons) {
 			if(button.transform.parent.gameObject.transform.parent.gameObject.transform.parent.gameObject.transform.name == PickupObject.carriedObject.transform.name
 			   || button.transform.name == "ReturnSDS"){
 				
@@ -72,44 +72,46 @@ public class Room4SDSPickup : MonoBehaviour {
 	
 	
 	public void RemoveSideButtons(){
-		foreach (GameObject button in SDSRoom4Buttons) {
+		foreach (GameObject button in SDSRoom5Buttons) {
 			button.SetActive(false);
 		}	
 	}
 
-	public void MoveArrow(){
-		arrow = GameObject.Find ("arrow4");
-		if (!moved2) {
-			arrow.gameObject.transform.position = new Vector3 (arrow.gameObject.transform.position.x, 2.5f, arrow.gameObject.transform.position.z);
-			moved2 = true;
-		} else if (moved2) {
-			arrow.gameObject.transform.position = new Vector3 (arrow.gameObject.transform.position.x, 9.5f, arrow.gameObject.transform.position.z);
-		}
-	}
-	
 	public void GetPos(){
 		startPosition = this.gameObject.transform.position;
 		startRotation = this.gameObject.transform.rotation;
-		moved2 = false;
-		readyToStore = false;
+		moved3 = false;
+		container = GameObject.Find("box1");
+		//readyToStore = false;
+		
+	}
 
+	public void MoveArrow(){
+		arrow = GameObject.Find ("arrow6");
+		if (!moved3) {
+			arrow.gameObject.transform.position = new Vector3 (arrow.gameObject.transform.position.x, 2.5f, arrow.gameObject.transform.position.z);
+			moved3 = true;
+		} else if (moved3) {
+			arrow.gameObject.transform.position = new Vector3 (arrow.gameObject.transform.position.x, 9.5f, arrow.gameObject.transform.position.z);
+			moved3 = false;
+		}
 	}
 
 	public void MoveArrowStorage(){
-		arrow2 = GameObject.Find ("arrow5");
-		if (!moved2) {
+		arrow2 = GameObject.Find ("arrow7");
+		if (!moved3) {
 			arrow2.gameObject.transform.position = new Vector3 (arrow2.gameObject.transform.position.x, 3f, arrow2.gameObject.transform.position.z);
-			moved2 = true;
-		} else if (moved2) {
+			moved3 = true;
+		} else if (moved3) {
 			arrow2.gameObject.transform.position = new Vector3 (arrow2.gameObject.transform.position.x, 6f, arrow2.gameObject.transform.position.z);
-			moved2 = false;
+			moved3 = false;
 		}
 		// arrow.SetActive (true);
 	}
 
 	void OnTriggerStay(Collider other){
-
-		if (other.gameObject.transform.name == "container1" && this.gameObject.transform.name == "AtStorageTrigger4") {
+		
+		if (other.gameObject.transform.name == "box1" && this.gameObject.transform.name == "AtStorageTrigger5") {
 			DialogueManager.Instance.SendMessage ("OnSequencerMessage", "Storage1");
 			if(PickupObject.carriedObject == null && readyToStore){
 				other.gameObject.SetActive(false);
@@ -124,5 +126,8 @@ public class Room4SDSPickup : MonoBehaviour {
 	public void ReadyToStore(){
 		readyToStore = true;
 	}
-	
+
+	public void MoveBox(){
+		container.gameObject.transform.position = new Vector3 (container.gameObject.transform.position.x, 1.411f, container.gameObject.transform.position.z);
+	}
 }

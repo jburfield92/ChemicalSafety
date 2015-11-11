@@ -1,7 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using PixelCrushers.DialogueSystem;
 
 public class TriggerThis : MonoBehaviour {
+
+	public static bool trigger4;
+	GameObject pickupObj;
+
 
 	// Use this for initialization
 	void Start () {
@@ -14,6 +19,18 @@ public class TriggerThis : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other){
-		Destroy(this.gameObject);
+		if (trigger4 && other.gameObject.transform.name == "container1") {
+			trigger4 = false;
+			DialogueManager.Instance.SendMessage("OnSequencerMessage", "dropped");
+			pickupObj.GetComponent<PickupObject> ().DropObject ();
+
+		}
+	}
+
+	void ActivateTrigger(){
+		trigger4 = true;
+		pickupObj = GameObject.Find("EmptyPickupObject");
+		Room4SDSPickup.moved2 = false;
+
 	}
 }

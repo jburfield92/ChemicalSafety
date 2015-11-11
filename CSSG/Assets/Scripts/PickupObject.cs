@@ -175,7 +175,7 @@ public class PickupObject : MonoBehaviour
 	
 	/// <summary> Handles droping the object
 	/// </summary>
-	void DropObject()
+	public void DropObject()
 	{
 		carrying = false;
 		carriedObject.gameObject.GetComponent<Rigidbody>().useGravity = true;
@@ -183,7 +183,7 @@ public class PickupObject : MonoBehaviour
 		carriedObject.gameObject.GetComponent<Rigidbody>().isKinematic = false;
 		carriedObject.gameObject.GetComponent<Rigidbody>().AddForce(carriedObject.transform.forward);
 		carriedObject = null;
-		carriedObject.gameObject.transform.name = null;
+		// carriedObject.gameObject.transform.name = null;
 	}
 
 	int ByDistance(GameObject a, GameObject b)
