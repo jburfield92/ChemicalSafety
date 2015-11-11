@@ -1,10 +1,7 @@
 ﻿using UnityEngine;
-using PixelCrushers.DialogueSystem;
 
 public class PickupObject : MonoBehaviour
 {
-	private GameObject mainCamera;
-	
 	public GameObject rightHand;
 	public GameObject rightHandTemp;
 	public static GameObject rightHandPosition;
@@ -16,21 +13,21 @@ public class PickupObject : MonoBehaviour
 	private static GameObject leftHandPositionLocation;
 	public static GameObject leftArmTemp;
 	private static GameObject leftDiff;
-	//private static Vector3 dropping;
-	
+
 	public static bool carrying;
 	public static bool carryBlock;
 	public static GameObject carriedObject;
 	public float distance;
 	public float smooth;
-
+	
 	public static bool canRun;
+	public static bool UsingTablet;
 
+	public Room2SDSPickup Room2Call;
 	/// <summary> Use this for initialization
 	/// </summary>
 	void Start ()
 	{
-		mainCamera = GameObject.FindWithTag ("MainCamera");
 		rightHandPosition = rightHandTemp;
 		rightHandPositionLocation = rightHand;
 		leftArmTemp = leftArm;
@@ -38,7 +35,9 @@ public class PickupObject : MonoBehaviour
 		leftHandPositionLocation = leftHandPosition;
 		carryBlock = false;
 		canRun = true;
-	}
+        carriedObject = null;
+        carrying = false;
+    }
 	
 	/// <summary> Update is called once per frame
 	/// </summary>
@@ -48,7 +47,6 @@ public class PickupObject : MonoBehaviour
 		{
 			if(!carryBlock)
 			{
-				//Debug.Log("working");
 				CheckDrop();
 			}
 			else
@@ -57,8 +55,6 @@ public class PickupObject : MonoBehaviour
 				carrying = false;
 				carriedObject.gameObject.GetComponent<Rigidbody>().useGravity = true;
 				carriedObject.transform.SetParent (RandomRoom.used.transform);
-				//carriedObject.transform.position = dropping;
-				//carriedObject.gameObject.GetComponent<Rigidbody>().AddForce(carriedObject.transform.forward * Time.deltaTime);
 				carriedObject = null;
 			}
 		}
@@ -82,53 +78,54 @@ public class PickupObject : MonoBehaviour
 			int x = Screen.width / 2;
 			int y = Screen.height / 2;
 			
-			Ray ray = mainCamera.GetComponent<Camera>().ScreenPointToRay(new Vector3(x,y));
+			Ray ray = Camera.main.GetComponent<Camera>().ScreenPointToRay(new Vector3(x,y));
 			RaycastHit hit;
-			int layerMask = 1 << 10;
-			layerMask = ~layerMask;
-			
-			if(Physics.Raycast(ray,out hit,3.0f,layerMask))
-			{
+            int layerMask = 1 << 10;
+            layerMask = ~layerMask;
 
-
-
+            if (Physics.Raycast(ray, out hit, 3.0f, layerMask))
+            {
 				Placement l = hit.collider.GetComponent<Placement>();
-
-				if(l != null){
-
-
-				}else{
-
-
-				Pickupable p = hit.collider.GetComponent<Pickupable>();
-						
-				if(p != null && Vector3.Distance(mainCamera.transform.position, p.transform.position) < 3.0f)
+				
+				if(l != null)
 				{
-							if(p.Check != true){
-							Transform[] ts = p.GetComponentsInChildren<Transform>();
-							foreach(Transform t in ts){
+					
+				}
+                else
+                {
+                    Pickupable p = hit.collider.GetComponent<Pickupable>();
 
-							if(t.GetComponent<Collider>() != null){
-								t.GetComponent<Collider>().enabled = false;
-									//break;
-							}
+                    if (p != null && Vector3.Distance(Camera.main.transform.position, p.transform.position) < 3.0f)
+                    {
+                        if (p.Check != true)
+                        {
+                            Transform[] ts = p.GetComponentsInChildren<Transform>();
+                            foreach (Transform t in ts)
+                            {
+                                if (t.GetComponent<Collider>() != null)
+                                {
+                                    t.GetComponent<Collider>().enabled = false;
+                                    //break;
+                                }
+                            }
 
-							}
-
-					p.Check = false;
-					p.TriggerCheck = false;
-					carrying = true;
-					carriedObject = p.gameObject;
-					carriedObject.transform.rotation = mainCamera.transform.rotation;
-					SetArms();
-					carriedObject.transform.position = rightHandPosition.transform.position;
-					carriedObject.transform.SetParent(rightHand.transform.parent);
-					p.gameObject.GetComponent<Rigidbody>().useGravity = false;
-						carriedObject.GetComponent<Collider>().enabled = false;
-						}}}
-			}
+                            p.Check = false;
+                            p.TriggerCheck = false;
+                            carrying = true;
+                            carriedObject = p.gameObject;
+                            carriedObject.transform.rotation = Camera.main.transform.rotation;
+                            SetArms();
+                            carriedObject.transform.position = rightHandPosition.transform.position;
+                            carriedObject.transform.SetParent(rightHand.transform.parent);
+                            p.gameObject.GetComponent<Rigidbody>().useGravity = false;
+                            carriedObject.GetComponent<Collider>().enabled = false;
+                        }
+                    }
+                }
+            }
 		}
 	}
+
 	/// <summary>
 	/// Sets the Arms location.
 	/// </summary>
@@ -156,16 +153,15 @@ public class PickupObject : MonoBehaviour
 	/// </summary>
 	void CheckDrop()
 	{
-
+		
 		if (Input.GetKeyDown (Key.enter))
 		{
-			//Debug.Log("working");
 			int x = Screen.width / 2;
 			int y = Screen.height / 2;
 			
-			Ray ray = mainCamera.GetComponent<Camera>().ScreenPointToRay(new Vector3(x,y));
+			Ray ray = Camera.main.GetComponent<Camera>().ScreenPointToRay(new Vector3(x,y));
 			RaycastHit hit;
-
+			
 			if(Physics.Raycast(ray, out hit))
 			{
 				Placing p = hit.collider.GetComponent<Placing>();
@@ -184,16 +180,21 @@ public class PickupObject : MonoBehaviour
 	/// </summary>
 	void DropObject()
 	{
-		Transform[] ts = carriedObject.GetComponentsInChildren<Transform>();
-		foreach(Transform t in ts){
-			
-			if(t.name == "Read"){
-				t.GetComponent<Collider>().enabled = true;
-				//break;
-			}
-			
-		}
-		carrying = false;
+
+        Transform[] ts = carriedObject.GetComponentsInChildren<Transform>();
+        foreach (Transform t in ts)
+        {
+
+            if (t.name == "Read")
+            {
+                t.GetComponent<Collider>().enabled = true;
+                //break;
+            }
+
+        }
+
+
+        carrying = false;
 		carriedObject.gameObject.GetComponent<Rigidbody>().useGravity = true;
 		carriedObject.transform.SetParent (RandomRoom.used.transform);
 		carriedObject.gameObject.GetComponent<Rigidbody>().isKinematic = false;

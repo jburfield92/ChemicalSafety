@@ -6,4 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/main.unity
+    path: Assets/MainMenu.unity
+  - enabled: 1
+    path: Assets/TutorialLoadingScreen.unity
+  - enabled: 1
+    path: Assets/Tutorial.unity
+  - enabled: 1
+    path: Assets/HazardsLoadingScreen.unity
+  - enabled: 1
+    path: Assets/Hazards.unity
+  - enabled: 1
+    path: Assets/SDSLoadingScreen.unity

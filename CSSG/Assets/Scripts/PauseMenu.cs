@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using PixelCrushers.DialogueSystem;
 using PixelCrushers.DialogueSystem.UnityGUI;
-using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -9,23 +8,28 @@ public class PauseMenu : MonoBehaviour
 	public static GameObject itembar;
 	public GameObject settings;
 
-    private GameObject npc;
     private GUIRoot guiRoot;
-    private AudioSource source;
+
+    private bool paused;
 
     /// <summary> Use this for initialization
     /// </summary>
     void Start ()
     {
-        npc = GameObject.FindGameObjectWithTag("NPC");
-        source = (AudioSource)npc.GetComponent("AudioSource");
 		itembar = GameObject.FindGameObjectWithTag ("ItemBarPanel");
+        Time.timeScale = 1.0f;
+        DialogueManager.Unpause();
     }
     /// <summary> Update is called once per frame
     /// </summary>
     void Update ()
     { 
-		if (Input.GetKeyUp(KeyCode.Escape) && ((onOff.activeSelf)|| PickupObject.canRun))
+        if (guiRoot == null)
+        {
+            guiRoot = DialogueManager.DisplaySettings.dialogueUI.GetComponentInChildren<GUIRoot>();
+        }
+
+        if (Input.GetKeyUp(KeyCode.Escape) && ((onOff.activeSelf)|| PickupObject.canRun))
         {
             onOff.SetActive(!onOff.activeSelf);
 		
@@ -33,60 +37,26 @@ public class PauseMenu : MonoBehaviour
 			PickupObject.canRun = !PickupObject.canRun;
 		}
 
-		if (PickupObject.canRun)
+		if (PickupObject.canRun && paused)
         {
-            if (!source.isPlaying)
-            {
-                source.UnPause();
-            }
+            paused = false;
 
-            if (guiRoot != null)
-            {
-                guiRoot.visible = true;
-            }
-            else
-            {
-                guiRoot = DialogueManager.DisplaySettings.dialogueUI.GetComponentInChildren<GUIRoot>();
-            }
+            guiRoot.visible = true;
 
-            if (DialogueManager.IsConversationActive)
-            {
-                DialogueManager.Unpause();
-            }
+            DialogueManager.Unpause();
 
-            if (Time.timeScale == 0f)
-            {
-                Time.timeScale = 1.0f;
-            }
+            Time.timeScale = 1.0f;      
         }
-        else
+        else if (!PickupObject.canRun && !paused)
         {
-            if (source.isPlaying)
-            {
-                source.Pause();
-            }
+            paused = true;
 
-            if (guiRoot != null)
-            {
-                guiRoot.visible = false;
-            }
-            else
-            {
-                guiRoot = DialogueManager.DisplaySettings.dialogueUI.GetComponentInChildren<GUIRoot>();
-            }
+            guiRoot.visible = false;
 
-            if (DialogueManager.IsConversationActive)
-            {
-                DialogueManager.Pause();
-            }
+            DialogueManager.Pause();
 
-            if (Time.timeScale == 1.0f)
-            {
-                Time.timeScale = 0f;
-            }
+            Time.timeScale = 0f;
 		}
-
-
 	}
 
     /// <summary> handles switching our running state

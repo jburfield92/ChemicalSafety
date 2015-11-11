@@ -3,12 +3,13 @@
 --- !u!55 &1
 PhysicsManager:
   m_ObjectHideFlags: 0
+  serializedVersion: 2
   m_Gravity: {x: 0, y: -9.81000042, z: 0}
   m_DefaultMaterial: {fileID: 0}
   m_BounceThreshold: 2
   m_SleepThreshold: .00499999989
   m_DefaultContactOffset: .00999999978
   m_SolverIterationCount: 6
-  m_RaycastsHitTriggers: 1
+  m_QueriesHitTriggers: 1
   m_EnableAdaptiveForce: 0
-  m_LayerCollisionMatrix: fff3fffffff3fffffff7fffffffffffffff3fffffff3fffffffffffffffffffffff9fffffff2ffffccf0ffffc8f9ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+  m_LayerCollisionMatrix: fff3fffffff3fffffff3fffffffffffffff3fffffff3fffffffffffffffffffffff9fffffff2ffffc8f0ffffc8f1ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff

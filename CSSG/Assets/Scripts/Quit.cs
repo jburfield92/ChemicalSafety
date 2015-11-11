@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 public class Quit : MonoBehaviour
 {
@@ -11,4 +10,14 @@ public class Quit : MonoBehaviour
 		Application.Quit();
 		#endif
 	}
+
+	public void QuitModule () 
+	{
+        Application.LoadLevel("MainMenu");
+    }
+
+    public void RestartModule()
+    {
+        Application.LoadLevel(Application.loadedLevelName);
+    }
 }

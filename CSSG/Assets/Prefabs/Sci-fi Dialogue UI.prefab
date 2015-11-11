@@ -1593,8 +1593,8 @@ MonoBehaviour:
   depth: 0
   depthSortChildren: 0
   scaledRect:
-    origin: 7
-    alignment: 7
+    origin: 4
+    alignment: 4
     x:
       scale: 0
       value: 0
@@ -1870,7 +1870,7 @@ MonoBehaviour:
       value: 32
     width:
       scale: 1
-      value: .75
+      value: .899999976
     height:
       scale: 0
       value: 112
@@ -1914,7 +1914,7 @@ MonoBehaviour:
   localizedText: {fileID: 0}
   text: NPC Subtitle
   guiStyleName: Text
-  textStyle: 0
+  textStyle: 2
   textStyleColor: {r: 0, g: 0, b: 0, a: 1}
   imageColor: {r: 1, g: 1, b: 1, a: 1}
   image: {fileID: 0}
@@ -2114,14 +2114,14 @@ MonoBehaviour:
   depth: 0
   depthSortChildren: 0
   scaledRect:
-    origin: 3
-    alignment: 0
+    origin: 7
+    alignment: 4
     x:
       scale: 0
       value: 0
     y:
       scale: 1
-      value: .174999997
+      value: .150000006
     width:
       scale: 1
       value: 1
@@ -2131,8 +2131,8 @@ MonoBehaviour:
     minPixelWidth: 0
     minPixelHeight: 0
   autoSize:
-    autoSizeWidth: 0
-    autoSizeHeight: 0
+    autoSizeWidth: 1
+    autoSizeHeight: 1
     maxWidth:
       scale: 1
       value: 1
@@ -2228,11 +2228,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: scaledRect.origin
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: scaledRect.y.value
-      value: .174999997
+      value: .150000006
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: scaledRect.y.scale
@@ -2244,13 +2244,61 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: scaledRect.alignment
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: guiSkin
       value: 
       objectReference: {fileID: 11400000, guid: 8674f6c2c39b03e46827dcac4369d13d,
         type: 2}
+    - target: {fileID: 0}
+      propertyPath: autoSize.autoSizeWidth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: autoSize.autoSizeHeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: scaledRect.height.value
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: scaledRect.width.value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: autoSize.maxWidth.value
+      value: .800000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: autoSize.maxHeight.value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: autoSize.maxHeight.scale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: autoSize.maxWidth.scale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: scaledRect.minPixelWidth
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: scaledRect.minPixelHeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: fit.expandToFit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: clipChildren
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100030}

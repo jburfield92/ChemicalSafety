@@ -85,6 +85,8 @@ public class ClearAndRandom : MonoBehaviour {
 			Destroy(delete[i]);
 
 		}
+        list.Clear();
+        Destroy(GameObject.FindGameObjectWithTag("IsTablet"));
 		
 	}
 
@@ -116,7 +118,6 @@ public class ClearAndRandom : MonoBehaviour {
 				Debug.Log("end");
 				DialogueLua.SetVariable("Reset", true);
 				DialogueManager.Instance.SendMessage("OnSequencerMessage", "end");
-				list.Clear();
 				end = false;
 				}
 			}

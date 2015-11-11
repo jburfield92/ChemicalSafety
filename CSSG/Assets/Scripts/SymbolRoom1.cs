@@ -5,7 +5,6 @@ public class SymbolRoom1 : MonoBehaviour {
 
 	private bool pointOne; 
 	private bool pointTwo;
-	public GameObject mainCamera;
 	private bool[] BannersCheck =  new bool[9];
 	public GameObject[] Banners = new GameObject[9];
 	public GameObject TempArm;
@@ -20,7 +19,6 @@ public class SymbolRoom1 : MonoBehaviour {
 		pointOne = false;
 		pointTwo = false;
 		int i = 0;
-		mainCamera = GameObject.FindWithTag ("MainCamera");
 		for (i = 0; i < 9; i++)
 			BannersCheck [i] = false;
 	}
@@ -28,12 +26,15 @@ public class SymbolRoom1 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		int i;
+
+
+
 		if (pointOne) {
 
-			Vector3 posi = mainCamera.transform.position - PointTwoSign.transform.position;
+			Vector3 posi = Camera.main.transform.position - PointTwoSign.transform.position;
 			PointTwoSign.transform.rotation = Quaternion.LookRotation (posi);
 			PointTwoSign.transform.Rotate (0.0f,90.0f,0.0f);
-			posi = mainCamera.transform.position - PointTwoSign2.transform.position;
+			posi = Camera.main.transform.position - PointTwoSign2.transform.position;
 			PointTwoSign2.transform.rotation = Quaternion.LookRotation (posi);
 			PointTwoSign2.transform.Rotate (0.0f,90.0f,0.0f);
 			for (i = 0; i < 9; i++){
@@ -55,10 +56,17 @@ public class SymbolRoom1 : MonoBehaviour {
 			
 		}
 
-		if (pointTwo) {
-			Vector3 posi = mainCamera.transform.position - PointOneSign.transform.position;
+        if (PointOneSign.activeSelf == true)
+        {
+
+           Vector3 posi = Camera.main.transform.position - PointOneSign.transform.position;
 			PointOneSign.transform.rotation = Quaternion.LookRotation (posi);
 			PointOneSign.transform.Rotate (0.0f,90.0f,0.0f);
+
+        }
+
+        if (pointTwo) {
+			
 			if(TempArm.activeSelf){
 				PointOneSign.SetActive(!PointOneSign.activeSelf);
 				DialogueManager.Instance.SendMessage("OnSequencerMessage", "InfoEnd");
@@ -77,6 +85,11 @@ public class SymbolRoom1 : MonoBehaviour {
 	}
 	void PointTwo(){
 		pointTwo = true;
-		PointOneSign.SetActive(!PointOneSign.activeSelf);
 	}
+
+    void Point()
+    {
+        PointOneSign.SetActive(!PointOneSign.activeSelf);
+
+    }
 }

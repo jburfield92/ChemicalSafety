@@ -6,7 +6,6 @@ using System.Collections;
 public class CloseDoorBehind : MonoBehaviour
 {
 	private Animator anim;
-    private List<GameObject> doors;
     private float timer;
     private bool isTiming;
     private bool firstEnter;
@@ -21,7 +20,6 @@ public class CloseDoorBehind : MonoBehaviour
     {
         source = gameObject.AddComponent<AudioSource>();
         source.clip = clip;
-        doors = GameObject.FindGameObjectsWithTag("door").ToList();
     }
 
     /// <summary> Update is called once per frame
@@ -78,9 +76,7 @@ public class CloseDoorBehind : MonoBehaviour
             anim.SetBool("Close", true);
             PickupObject.carryBlock = false;
             Destroy(RandomRoom.used);
-			//Destroy (Placement.Ghost);
-			//Placement.Ghost = (GameObject)Instantiate (Resources.Load ("itembar/used"));
-            RandomRoom.used = (GameObject)Instantiate(Resources.Load("itembar/used"));
+            RandomRoom.used = (GameObject)Instantiate(Resources.Load("used"));
             StartCoroutine(DelaySound());
 
             BeginTimer();

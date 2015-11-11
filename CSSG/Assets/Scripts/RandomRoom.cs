@@ -11,7 +11,7 @@ public class RandomRoom : MonoBehaviour
     public GameObject finalRoom;
     public GameObject startRoom;
     public GameObject CloseDoorArea;
-	public string RoomName;
+    public string RoomName;
 
     static public bool clearRoom;
 
@@ -43,18 +43,19 @@ public class RandomRoom : MonoBehaviour
     /// </summary>
     void Start()
     {
-		RandomRoomsList.RoomName = RoomName;
+        RandomRoomsList.RoomName = RoomName;
+
         roomsList = RandomRoomsList.GetRooms();
         roomsListIndex = 0;
         clearRoom = false;
-        used = (GameObject)Instantiate(Resources.Load("itembar/used"));
+        used = (GameObject)Instantiate(Resources.Load("used"));
         x = 0;
         z = 0;
         xMax = 0;
         xMin = 0;
         zMax = 0;
         zMin = 0;
-		roomSpawnDistance = 17.6f * startRoom.transform.localScale.x;
+        roomSpawnDistance = 17.6f * startRoom.transform.localScale.x;
         dChange[0] = 'S';
         change = true;
         cor[0] = 'E';
@@ -70,9 +71,10 @@ public class RandomRoom : MonoBehaviour
     {
         deleteRoom = newRoom;
         char RoomDirection = dChange[0];
-		Destroy (Placement.Ghost);
-		Placement.Ghost = (GameObject)Instantiate (Resources.Load ("itembar/used"));
-		Placement.ClearList ();
+
+        Destroy(Placement.Ghost);
+        Placement.Ghost = (GameObject)Instantiate(Resources.Load("used"));
+        Placement.ClearList();
 
         if (change)
         {
@@ -106,7 +108,7 @@ public class RandomRoom : MonoBehaviour
         {
             case 'N':
                 newHall = (GameObject)Instantiate(Nhall, new Vector3(x, 0, z), Quaternion.identity);
-			deleteArea = (GameObject)Instantiate(CloseDoorArea, new Vector3(x, 0, z + 14* deleteRoom.transform.localScale.x), Quaternion.Euler(new Vector3(90, 0, 90)));
+                deleteArea = (GameObject)Instantiate(CloseDoorArea, new Vector3(x, 0, z + 13 * deleteRoom.transform.localScale.x), Quaternion.Euler(new Vector3(90, 0, 90)));
 
                 z = z + roomSpawnDistance;
 
@@ -118,7 +120,7 @@ public class RandomRoom : MonoBehaviour
                 break;
             case 'S':
                 newHall = (GameObject)Instantiate(Shall, new Vector3(x, 0, z), Quaternion.identity);
-			deleteArea = (GameObject)Instantiate(CloseDoorArea, new Vector3(x, 0, z - 14* deleteRoom.transform.localScale.x), Quaternion.Euler(new Vector3(90, 0, 90)));
+                deleteArea = (GameObject)Instantiate(CloseDoorArea, new Vector3(x, 0, z - 13 * deleteRoom.transform.localScale.x), Quaternion.Euler(new Vector3(90, 0, 90)));
 
                 z = z - roomSpawnDistance;
 
@@ -131,7 +133,7 @@ public class RandomRoom : MonoBehaviour
                 break;
             case 'E':
                 newHall = (GameObject)Instantiate(Ehall, new Vector3(x, 0, z), Quaternion.identity);
-			deleteArea = (GameObject)Instantiate(CloseDoorArea, new Vector3(x + 14* deleteRoom.transform.localScale.x, 0, z), Quaternion.identity);
+                deleteArea = (GameObject)Instantiate(CloseDoorArea, new Vector3(x + 13 * deleteRoom.transform.localScale.x, 0, z), Quaternion.identity);
 
                 x = x + roomSpawnDistance;
 
@@ -143,7 +145,7 @@ public class RandomRoom : MonoBehaviour
                 break;
             case 'W':
                 newHall = (GameObject)Instantiate(Whall, new Vector3(x, 0, z), Quaternion.identity);
-			deleteArea = (GameObject)Instantiate(CloseDoorArea, new Vector3(x - 14* deleteRoom.transform.localScale.x, 0, z), Quaternion.identity);
+                deleteArea = (GameObject)Instantiate(CloseDoorArea, new Vector3(x - 13 * deleteRoom.transform.localScale.x, 0, z), Quaternion.identity);
 
                 x = x - roomSpawnDistance;
 

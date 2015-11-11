@@ -19,8 +19,12 @@ TagManager:
   - Test
   - InvisibleWall
   - items
-  - PickupItems
+  - TestButton
+  - LargeText
+  - MediumText
+  - SmallText
   - IsTablet
+  - PickupItems
   layers:
   - Default
   - TransparentFX
@@ -32,8 +36,8 @@ TagManager:
   - 
   - Player
   - GameItems
-  - banner
-  - Conversation
+  - Banner
+  - Room
   - 
   - 
   - 
