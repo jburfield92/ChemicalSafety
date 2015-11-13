@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class BannerView : MonoBehaviour {
@@ -24,7 +25,18 @@ public class BannerView : MonoBehaviour {
 			Target.transform.rotation = MainCam.transform.rotation;
 		}
 
-		Target.SetActive(hit);
+        if (Target.activeSelf)
+        {
+
+            Target.GetComponent<Image>().enabled = hit;
+            foreach (Image a in Target.GetComponentsInChildren<Image>())
+            {
+                a.enabled = hit;
+
+            }
+        }
+
+		//Target.SetActive(hit);
 		hit = false;
 }
 }

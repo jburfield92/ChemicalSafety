@@ -1,22 +1,9 @@
-
-
-
-
-
-
-What is this pictogram mean? { Using your Any key | By Pressing W,A,S, or D | Using your mouse or trackpad | All of the Above } 3
-
-
-
-
-
-
-What is this pictogram mean? { The Safety Game | Chemical Safety Simulation Game | The Game | Hazard Game } 2
-
-
-
-
-
-
-
-What is this pictogram mean? { Chemical Communication Standard | Occupational Safety and Health Standard | Standard Deviation | Hazard Communication Standard } 4
+[Symbol1]What is this pictogram mean?{ Environmental Toxicity and Aquatic Toxicity | Gas Under Pressure | Acute Toxicity (fatal or toxic) | Explosives, Self-Reactives and Organic Peroxides | Oxidizers | Corrosive, Skin Corrosion/Burns, Eye Damage and Corrosive to Metals | Carcinogen, Muteagenicity, Reproductive Toxicity, Respiratory Senitizer, Target Organ Toxicity and Aspiration Toxicity | Flammables, Pyrophorics, Self-Heating, Emits Flammable Gas, Self-Reactives and Organic Peroxides | Irritant (skin and eye), Skin Sensitizer, Acute Toxicity (harmful), Respiratory Tract Irritant and Hazardous to Ozone Layer } 5
+[Symbol2]What is this pictogram mean?{ Acute Toxicity (fatal or toxic) | Explosives, Self-Reactives and Organic Peroxides | Gas Under Pressure | Environmental Toxicity and Aquatic Toxicity | Oxidizers | Corrosive, Skin Corrosion/Burns, Eye Damage and Corrosive to Metals | Carcinogen, Muteagenicity, Reproductive Toxicity, Respiratory Senitizer, Target Organ Toxicity and Aspiration Toxicity | Irritant (skin and eye), Skin Sensitizer, Acute Toxicity (harmful), Respiratory Tract Irritant and Hazardous to Ozone Layer | Flammables, Pyrophorics, Self-Heating, Emits Flammable Gas, Self-Reactives and Organic Peroxides } 9
+[Symbol3]What is this pictogram mean?{ Acute Toxicity (fatal or toxic) | Gas Under Pressure | Explosives, Self-Reactives and Organic Peroxides | Oxidizers | Environmental Toxicity and Aquatic Toxicity | Carcinogen, Muteagenicity, Reproductive Toxicity, Respiratory Senitizer, Target Organ Toxicity and Aspiration Toxicity | Corrosive, Skin Corrosion/Burns, Eye Damage and Corrosive to Metals | Irritant (skin and eye), Skin Sensitizer, Acute Toxicity (harmful), Respiratory Tract Irritant and Hazardous to Ozone Layer | Flammables, Pyrophorics, Self-Heating, Emits Flammable Gas, Self-Reactives and Organic Peroxides } 3
+[Symbol4]What is this pictogram mean?{ Gas Under Pressure | Acute Toxicity (fatal or toxic) | Explosives, Self-Reactives and Organic Peroxides | Oxidizers | Environmental Toxicity and Aquatic Toxicity | Carcinogen, Muteagenicity, Reproductive Toxicity, Respiratory Senitizer, Target Organ Toxicity and Aspiration Toxicity | Corrosive, Skin Corrosion/Burns, Eye Damage and Corrosive to Metals | Flammables, Pyrophorics, Self-Heating, Emits Flammable Gas, Self-Reactives and Organic Peroxides | Irritant (skin and eye), Skin Sensitizer, Acute Toxicity (harmful), Respiratory Tract Irritant and Hazardous to Ozone Layer } 2
+[Symbol5]What is this pictogram mean?{ Acute Toxicity (fatal or toxic) | Explosives, Self-Reactives and Organic Peroxides | Oxidizers | Environmental Toxicity and Aquatic Toxicity | Carcinogen, Muteagenicity, Reproductive Toxicity, Respiratory Senitizer, Target Organ Toxicity and Aspiration Toxicity | Corrosive, Skin Corrosion/Burns, Eye Damage and Corrosive to Metals | Flammables, Pyrophorics, Self-Heating, Emits Flammable Gas, Self-Reactives and Organic Peroxides | Irritant (skin and eye), Skin Sensitizer, Acute Toxicity (harmful), Respiratory Tract Irritant and Hazardous to Ozone Layer | Gas Under Pressure } 6
+[Symbol6]What is this pictogram mean?{ Irritant (skin and eye), Skin Sensitizer, Acute Toxicity (harmful), Respiratory Tract Irritant and Hazardous to Ozone Layer | Gas Under Pressure | Acute Toxicity (fatal or toxic) | Explosives, Self-Reactives and Organic Peroxides | Oxidizers | Environmental Toxicity and Aquatic Toxicity | Carcinogen, Muteagenicity, Reproductive Toxicity, Respiratory Senitizer, Target Organ Toxicity and Aspiration Toxicity | Corrosive, Skin Corrosion/Burns, Eye Damage and Corrosive to Metals | Flammables, Pyrophorics, Self-Heating, Emits Flammable Gas, Self-Reactives and Organic Peroxides } 2
+[Symbol7]What is this pictogram mean?{ Flammables, Pyrophorics, Self-Heating, Emits Flammable Gas, Self-Reactives and Organic Peroxides | Gas Under Pressure | Acute Toxicity (fatal or toxic) | Explosives, Self-Reactives and Organic Peroxides | Oxidizers | Environmental Toxicity and Aquatic Toxicity | Carcinogen, Muteagenicity, Reproductive Toxicity, Respiratory Senitizer, Target Organ Toxicity and Aspiration Toxicity | Corrosive, Skin Corrosion/Burns, Eye Damage and Corrosive to Metals | Irritant (skin and eye), Skin Sensitizer, Acute Toxicity (harmful), Respiratory Tract Irritant and Hazardous to Ozone Layer } 7
+[Symbol8]What is this pictogram mean?{ Oxidizers | Gas Under Pressure | Acute Toxicity (fatal or toxic) | Explosives, Self-Reactives and Organic Peroxides | Environmental Toxicity and Aquatic Toxicity | Carcinogen, Muteagenicity, Reproductive Toxicity, Respiratory Senitizer, Target Organ Toxicity and Aspiration Toxicity | Corrosive, Skin Corrosion/Burns, Eye Damage and Corrosive to Metals | Flammables, Pyrophorics, Self-Heating, Emits Flammable Gas, Self-Reactives and Organic Peroxides | Irritant (skin and eye), Skin Sensitizer, Acute Toxicity (harmful), Respiratory Tract Irritant and Hazardous to Ozone Layer } 5
+[Symbol9]What is this pictogram mean?{ Explosives, Self-Reactives and Organic Peroxides | Gas Under Pressure | Acute Toxicity (fatal or toxic) | Oxidizers | Environmental Toxicity and Aquatic Toxicity | Carcinogen, Muteagenicity, Reproductive Toxicity, Respiratory Senitizer, Target Organ Toxicity and Aspiration Toxicity | Corrosive, Skin Corrosion/Burns, Eye Damage and Corrosive to Metals | Flammables, Pyrophorics, Self-Heating, Emits Flammable Gas, Self-Reactives and Organic Peroxides | Irritant (skin and eye), Skin Sensitizer, Acute Toxicity (harmful), Respiratory Tract Irritant and Hazardous to Ozone Layer } 9

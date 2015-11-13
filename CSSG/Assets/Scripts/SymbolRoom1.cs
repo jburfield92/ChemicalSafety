@@ -80,10 +80,16 @@ public class SymbolRoom1 : MonoBehaviour {
 
 	void PointOne(){
 		pointOne = true;
-		PointTwoSign2.SetActive(!PointTwoSign2.activeSelf);
-		PointTwoSign.SetActive(!PointTwoSign.activeSelf);
 	}
-	void PointTwo(){
+
+    void Pointer()
+    {
+        PointTwoSign2.SetActive(!PointTwoSign2.activeSelf);
+        PointTwoSign.SetActive(!PointTwoSign.activeSelf);
+    }
+
+
+    void PointTwo(){
 		pointTwo = true;
 	}
 
@@ -92,4 +98,21 @@ public class SymbolRoom1 : MonoBehaviour {
         PointOneSign.SetActive(!PointOneSign.activeSelf);
 
     }
+    void noPickUp()
+    {
+        TabletSymbol.Run = false;
+        PickupObject.carryBlock = true;
+
+    }
+
+    void pickUpOne()
+    {
+        TabletSymbol.Run = true;
+    }
+
+    void pickUpTwo()
+    {
+        PickupObject.carryBlock = false;
+    }
+
 }

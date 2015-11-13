@@ -7,7 +7,7 @@ public class TabletSymbol : MonoBehaviour {
 	public GameObject mainCamera;
 	private Vector3 x;
 	private Quaternion Rx;
-	private bool Run;
+	public static bool Run;
 	public GameObject TempArm;
 
 	public static GameObject leftArm;

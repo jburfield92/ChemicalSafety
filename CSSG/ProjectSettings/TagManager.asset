@@ -25,6 +25,7 @@ TagManager:
   - SmallText
   - IsTablet
   - PickupItems
+  - ScreenImage
   layers:
   - Default
   - TransparentFX
@@ -61,4 +62,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: top
+    uniqueID: 1325015293
     locked: 0
