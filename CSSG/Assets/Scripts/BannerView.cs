@@ -25,7 +25,7 @@ public class BannerView : MonoBehaviour {
 			Target.transform.rotation = MainCam.transform.rotation;
 		}
 
-        if (Target.activeSelf)
+        if (Target.GetComponent<Image>() != null)
         {
 
             Target.GetComponent<Image>().enabled = hit;
@@ -36,7 +36,9 @@ public class BannerView : MonoBehaviour {
             }
         }
 
-		//Target.SetActive(hit);
+        if (Target.GetComponent<Image>() == null)
+            Target.SetActive(hit);
+
 		hit = false;
 }
 }

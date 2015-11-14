@@ -1054,6 +1054,14 @@ Prefab:
       propertyPath: Banners.Array.data[8]
       value: 
       objectReference: {fileID: 585460213}
+    - target: {fileID: 143864, guid: f1a204adcb163c9458348d150130d94b, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118278, guid: f1a204adcb163c9458348d150130d94b, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f1a204adcb163c9458348d150130d94b, type: 2}
   m_IsPrefabParent: 0

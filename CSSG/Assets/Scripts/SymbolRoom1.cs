@@ -32,19 +32,23 @@ public class SymbolRoom1 : MonoBehaviour {
 
 		if (pointOne) {
 
-			Vector3 posi = Camera.main.transform.position - PointTwoSign.transform.position;
+           
+
+            Vector3 posi = Camera.main.transform.position - PointTwoSign.transform.position;
 			PointTwoSign.transform.rotation = Quaternion.LookRotation (posi);
 			PointTwoSign.transform.Rotate (0.0f,90.0f,0.0f);
 			posi = Camera.main.transform.position - PointTwoSign2.transform.position;
 			PointTwoSign2.transform.rotation = Quaternion.LookRotation (posi);
 			PointTwoSign2.transform.Rotate (0.0f,90.0f,0.0f);
+
 			for (i = 0; i < 9; i++){
-                if (Banners[i].GetComponent<BannerView>().hit == true)
+                if (Banners[i].activeSelf)
                 {
                     BannersCheck[i] = true;
-                    Debug.Log(Banners[i]);
+                    
                 }
-			}
+                  
+			} 
 			bool Ban = true;
 			for (i = 0; i < 9 && Ban ; i++){
 				if(!BannersCheck[i])
