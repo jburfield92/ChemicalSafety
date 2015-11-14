@@ -2014,9 +2014,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Welcome to the Label and Symbol Module of the Chemical Hazarded Game.   In
-          this portion of the game you will be learning how to recognize up to 9 symbols
-          and what each symbols represents.
+        value: Welcome to the Label and Symbol Module of the Chemical Hazarded Game.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -2037,8 +2035,7 @@ MonoBehaviour:
           SendMessage(noPickUp,,BannerCheck);
 
           SendMessage(SaveDialogue,Welcome to the Label and Symbol Module of the Chemical
-          Hazarded Game.   In this portion of the game you will be learning how to
-          recognize up to 9 symbols and what each symbols represents. , );'
+          Hazarded Game. , );'
         type: 0
         typeString: 
       conversationID: 4
@@ -2052,15 +2049,15 @@ MonoBehaviour:
       - originConversationID: 4
         originDialogueID: 4
         destinationConversationID: 4
-        destinationDialogueID: 19
+        destinationDialogueID: 27
         isConnector: 0
         priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 21
-        y: 136
+        x: 19
+        y: 126
         width: 160
         height: 30
     - id: 5
@@ -2131,8 +2128,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 26
-        y: 224
+        x: 18
+        y: 264
         width: 160
         height: 30
     - id: 6
@@ -2204,7 +2201,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 20
-        y: 268
+        y: 311
         width: 160
         height: 30
     - id: 7
@@ -2280,8 +2277,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 16
-        y: 317
+        x: 23
+        y: 362
         width: 160
         height: 30
     - id: 8
@@ -2350,8 +2347,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 201
-        y: 364
+        x: 207
+        y: 315
         width: 160
         height: 30
     - id: 9
@@ -2422,8 +2419,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 202
-        y: 283
+        x: 209
+        y: 231
         width: 160
         height: 30
     - id: 10
@@ -2494,8 +2491,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 200
-        y: 232
+        x: 209
+        y: 187
         width: 160
         height: 30
     - id: 11
@@ -2566,8 +2563,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 206
-        y: 138
+        x: 209
+        y: 100
         width: 160
         height: 30
     - id: 12
@@ -2640,8 +2637,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 397
-        y: 138
+        x: 392
+        y: 214
         width: 160
         height: 30
     - id: 13
@@ -2714,8 +2711,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 400
-        y: 311
+        x: 396
+        y: 358
         width: 160
         height: 30
     - id: 14
@@ -2787,8 +2784,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 403
-        y: 355
+        x: 590
+        y: 352
         width: 160
         height: 30
     - id: 15
@@ -2861,8 +2858,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 581
-        y: 356
+        x: 583
+        y: 305
         width: 160
         height: 30
     - id: 16
@@ -3149,8 +3146,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 22
-        y: 181
+        x: 18
+        y: 219
         width: 160
         height: 30
     - id: 20
@@ -3225,8 +3222,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 16
-        y: 364
+        x: 200
+        y: 362
         width: 160
         height: 30
     - id: 21
@@ -3299,8 +3296,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 204
-        y: 321
+        x: 208
+        y: 275
         width: 160
         height: 30
     - id: 22
@@ -3371,8 +3368,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 207
-        y: 185
+        x: 209
+        y: 144
         width: 160
         height: 30
     - id: 23
@@ -3447,8 +3444,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 397
-        y: 92
+        x: 391
+        y: 166
         width: 160
         height: 30
     - id: 24
@@ -3519,8 +3516,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 210
-        y: 91
+        x: 390
+        y: 97
         width: 160
         height: 30
     - id: 25
@@ -3594,8 +3591,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 395
-        y: 193
+        x: 392
+        y: 261
         width: 160
         height: 30
     - id: 26
@@ -3666,8 +3663,80 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 396
-        y: 245
+        x: 393
+        y: 310
+        width: 160
+        height: 30
+    - id: 27
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: In this portion of the game you will be learning how to recognize up
+          to 9 symbols and what each symbols represents.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'Delay(6);
+
+          SendMessage(SaveDialogue,In this portion of the game you will be learning
+          how to recognize up to 9 symbols and what each symbols represents. , );'
+        type: 0
+        typeString: 
+      conversationID: 4
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 27
+        destinationConversationID: 4
+        destinationDialogueID: 19
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 21
+        y: 175
         width: 160
         height: 30
   - id: 5

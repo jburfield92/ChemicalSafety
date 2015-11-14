@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using PixelCrushers.DialogueSystem;
 
 public class SymbolRoom1 : MonoBehaviour {
@@ -38,8 +39,11 @@ public class SymbolRoom1 : MonoBehaviour {
 			PointTwoSign2.transform.rotation = Quaternion.LookRotation (posi);
 			PointTwoSign2.transform.Rotate (0.0f,90.0f,0.0f);
 			for (i = 0; i < 9; i++){
-				if(Banners[i].activeSelf)
-					BannersCheck[i] = true;
+                if (Banners[i].GetComponent<BannerView>().hit == true)
+                {
+                    BannersCheck[i] = true;
+                    Debug.Log(Banners[i]);
+                }
 			}
 			bool Ban = true;
 			for (i = 0; i < 9 && Ban ; i++){
@@ -50,6 +54,7 @@ public class SymbolRoom1 : MonoBehaviour {
 			if(Ban){
 				PointTwoSign2.SetActive(!PointTwoSign2.activeSelf);
 				PointTwoSign.SetActive(!PointTwoSign.activeSelf);
+                Debug.Log("done");
 				DialogueManager.Instance.SendMessage("OnSequencerMessage", "BannerEnd");
 				pointOne = false;
 			}
