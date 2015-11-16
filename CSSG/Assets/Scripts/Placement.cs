@@ -1,7 +1,7 @@
-﻿using UnityEngine;
-using System.Collections;
-using System.Linq;
+﻿using PixelCrushers.DialogueSystem;
 using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
 
 public class Placement : MonoBehaviour 
 {
@@ -100,15 +100,15 @@ public class Placement : MonoBehaviour
 			if(Physics.Raycast(ray, out hit))
 			{
 				Placing p = hit.collider.GetComponent<Placing>();
+
 				if(p != null && Vector3.Distance(Camera.main.transform.position, p.transform.position) < 3.0f)
 				{
-					p.gameObject.SetActive(!p.gameObject.activeSelf);
+                    p.gameObject.SetActive(!p.gameObject.activeSelf);
                     if (string.Compare(p.Value, PickupObject.carriedObject.GetComponent<Pickupable>().Value) == 0)
                     {
                         p.Placed = true;
                         PickupObject.carriedObject.GetComponent<Pickupable>().Check = true;
                         PickupObject.carriedObject.GetComponent<Collider>().enabled = true;
-                       // PickupObject.carriedObject.tag = "ToDelete";
                         PickupObject.carriedObject.transform.SetParent(RandomRoom.used.transform);
                         PickupObject.carriedObject.transform.position = p.transform.position;
                         PickupObject.carriedObject.transform.rotation = p.transform.rotation;
@@ -118,9 +118,18 @@ public class Placement : MonoBehaviour
                         PickupObject.carriedObject = null;
                         GhostItems.Remove(p.gameObject);
                         Destroy(p.gameObject);
+                        GameObject.Find("CorrectVoice").GetComponent<AudioSource>().Play();
                     }
-				}
-			}
-		}
+                    else
+                    {
+                        GameObject.Find("IncorrectVoice").GetComponent<AudioSource>().Play();
+                    }
+                }
+                else
+                {
+                    DialogueManager.Instance.SendMessage("OnSequencerMessage", "end");
+                }
+            }
+        }
 	}
 }

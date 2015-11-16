@@ -1,6 +1,6 @@
-﻿using UnityEngine;
-using PixelCrushers.DialogueSystem;
+﻿using PixelCrushers.DialogueSystem;
 using PixelCrushers.DialogueSystem.UnityGUI;
+using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -52,7 +52,7 @@ public class PauseMenu : MonoBehaviour
             paused = true;
 
             guiRoot.visible = false;
-
+            
             DialogueManager.Pause();
 
             Time.timeScale = 0f;

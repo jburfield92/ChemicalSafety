@@ -1,10 +1,10 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
-using System.Collections.Generic;
-using System.Text;
+﻿using PixelCrushers.DialogueSystem;
 using System;
+using System.Collections.Generic;
 using System.Linq;
-using PixelCrushers.DialogueSystem;
+using System.Text;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class Test : MonoBehaviour 
 {
@@ -46,7 +46,6 @@ public class Test : MonoBehaviour
 		for (int i = 0; i < text.Length; i+=2) 
 		{
             StringBuilder newQuestion = new StringBuilder();
-
             StringBuilder NewImage = new StringBuilder();
             List<string> newAnswers = new List<string>();
             int newCorrectAnswer;
@@ -54,17 +53,15 @@ public class Test : MonoBehaviour
             if (text[i] == '[')
             {
                 i++;
-                 
+
                 while (text[i] != ']')
                 {
                     NewImage.Append(text[i]);
                     i++;
                 }
-                Debug.Log(NewImage.ToString());
                 i++;
             }
-            
-            
+
             while (text[i] != '{')
             {
                 newQuestion.Append(text[i]);
@@ -99,7 +96,7 @@ public class Test : MonoBehaviour
 
             newCorrectAnswer = Convert.ToInt32(text[i])-48;
 
-            questions.Add(new Question { question = newQuestion.ToString(),Image = NewImage.ToString() , answers = newAnswers, correctAnswer = newCorrectAnswer });
+            questions.Add(new Question { question = newQuestion.ToString(), answers = newAnswers, correctAnswer = newCorrectAnswer });
 
             i++;
 		}
@@ -156,9 +153,6 @@ public class Test : MonoBehaviour
 
 		foreach(Question q in questions)
         {
-
-           
-
 			GameObject questionObject = Instantiate(Resources.Load ("questionText")) as GameObject;
 			questionObject.name = "question" + questionCount;
 			questionObject.GetComponent <Text>().text = "\n" + questionCount + ". " + q.question;
@@ -175,10 +169,8 @@ public class Test : MonoBehaviour
 			questionObject.GetComponent <Text>().rectTransform.localRotation = Quaternion.Euler(0, 0, 0);
 			questionObject.GetComponent <Text>().rectTransform.localScale = new Vector3(1, 1, 1);
 
-            if (q.Image != "")
+            if (!string.IsNullOrEmpty(q.Image))
             {
-
-                //Debug.Log(q.Image);
                 GameObject imageObject = Instantiate(Resources.Load("SymbolImage/" + q.Image)) as GameObject;
 
                 imageObject.transform.SetParent(testPanel.transform, false);
@@ -190,7 +182,6 @@ public class Test : MonoBehaviour
 
                 imageObject.GetComponent<Text>().rectTransform.localRotation = Quaternion.Euler(0, 0, 0);
                 imageObject.GetComponent<Text>().rectTransform.localScale = new Vector3(1, 1, 1);
-
             }
 
             int answerCount = 1;

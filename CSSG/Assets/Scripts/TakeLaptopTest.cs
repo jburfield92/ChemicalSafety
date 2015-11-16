@@ -1,6 +1,6 @@
-﻿using UnityEngine;
+﻿using PixelCrushers.DialogueSystem.UnityGUI;
 using System.Collections;
-using PixelCrushers.DialogueSystem.UnityGUI;
+using UnityEngine;
 
 public class TakeLaptopTest : MonoBehaviour
 {

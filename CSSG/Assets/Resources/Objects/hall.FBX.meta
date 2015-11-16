@@ -9,19 +9,39 @@ ModelImporter:
     100002: //RootNode
     100004: Window1
     100006: Window2
+    100008: Floor
+    100010: Roof
+    100012: Wall
+    100014: Wall001
     400000: Hall
     400002: //RootNode
     400004: Window1
     400006: Window2
+    400008: Floor
+    400010: Roof
+    400012: Wall
+    400014: Wall001
     2300000: Hall
     2300002: Window1
     2300004: Window2
+    2300006: Floor
+    2300008: Roof
+    2300010: Wall
+    2300012: Wall001
     3300000: Hall
     3300002: Window1
     3300004: Window2
+    3300006: Floor
+    3300008: Roof
+    3300010: Wall
+    3300012: Wall001
     4300000: Hall
     4300002: Window1
     4300004: Window2
+    4300006: Floor
+    4300008: Wall
+    4300010: Wall001
+    4300012: Roof
     9500000: //RootNode
   materials:
     importMaterials: 1

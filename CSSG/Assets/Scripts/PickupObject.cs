@@ -105,7 +105,6 @@ public class PickupObject : MonoBehaviour
                                 if (t.GetComponent<Collider>() != null)
                                 {
                                     t.GetComponent<Collider>().enabled = false;
-                                    //break;
                                 }
                             }
 
@@ -146,14 +145,12 @@ public class PickupObject : MonoBehaviour
 		y = ( LeftHandPlacment.transform.position.y + leftArmTemp.transform.position.y - leftDiff.transform.position.y);
 		z = ( LeftHandPlacment.transform.position.z + leftArmTemp.transform.position.z - leftDiff.transform.position.z);
 		leftArmTemp.transform.position = new Vector3(x,y,z);
-		
 	}
 	
 	/// <summary> Detects if the player wants to drop the object
 	/// </summary>
 	void CheckDrop()
 	{
-		
 		if (Input.GetKeyDown (Key.enter))
 		{
 			int x = Screen.width / 2;
@@ -169,7 +166,9 @@ public class PickupObject : MonoBehaviour
 				{
 					carriedObject.GetComponent<Collider>().enabled = true;
 					DropObject ();
-				}else{
+				}
+                else
+                {
 					Placement.Place();
 				}
 			}
@@ -180,19 +179,14 @@ public class PickupObject : MonoBehaviour
 	/// </summary>
 	void DropObject()
 	{
-
         Transform[] ts = carriedObject.GetComponentsInChildren<Transform>();
         foreach (Transform t in ts)
         {
-
             if (t.name == "Read")
             {
                 t.GetComponent<Collider>().enabled = true;
-                //break;
             }
-
         }
-
 
         carrying = false;
 		carriedObject.gameObject.GetComponent<Rigidbody>().useGravity = true;

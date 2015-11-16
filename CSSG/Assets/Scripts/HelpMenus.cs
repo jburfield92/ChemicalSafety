@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class HelpMenus : MonoBehaviour 
 {
@@ -18,12 +17,14 @@ public class HelpMenus : MonoBehaviour
     public GameObject TestResultsPanel;
 
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
 	
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 	
 	}
 

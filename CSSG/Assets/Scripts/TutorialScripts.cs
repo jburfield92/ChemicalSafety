@@ -1,6 +1,5 @@
-using UnityEngine;
-using UnityEngine.EventSystems;
 using PixelCrushers.DialogueSystem;
+using UnityEngine;
 
 public class TutorialScripts : MonoBehaviour
 {

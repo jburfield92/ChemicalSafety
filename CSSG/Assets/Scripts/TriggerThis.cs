@@ -1,19 +1,21 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class TriggerThis : MonoBehaviour {
-
+public class TriggerThis : MonoBehaviour
+{
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
 	
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 	
 	}
 
-	void OnTriggerEnter(Collider other){
+	void OnTriggerEnter(Collider other)
+    {
 		Destroy(this.gameObject);
 	}
 }

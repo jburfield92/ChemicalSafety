@@ -1,23 +1,12 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
-using PixelCrushers.DialogueSystem.UnityGUI;
+﻿using PixelCrushers.DialogueSystem.UnityGUI;
 using System;
-using System.Collections;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class SQL : MonoBehaviour 
 {
-    /* 
-    Test User Info:
-	    Username: cssg
-	    First Name: cssg
-	    Last Name: admin
-	    Password: 123
-	    Email: cssg@admin.com
-	    SaveInfoId: 9
-    */
-
 	/// <summary> The user that is currently playing
 	/// </summary>
 	public static string UserName;
@@ -44,9 +33,11 @@ public class SQL : MonoBehaviour
     public Text HSTestScoreText;
     public Text SDSCompleteText;
     public Text SDSTestScoreText;
-    public Text SPCompleteText;
-    public Text SPTestScoreText;
+    public Text FCompleteText;
     public Text FTestScoreText;
+
+    public Button ContinueButton;
+    public Button GetCertificateButton;
 
     /// <summary> Update is called once per frame
     /// </summary>
@@ -127,12 +118,21 @@ public class SQL : MonoBehaviour
 
 		if (Application.loadedLevelName == "MainMenu") 
 		{
-	        TCompleteText.text = (string.IsNullOrEmpty(userProgress.Rows[0]["TutorialExamScore"].ToString())) ? "No" : "Yes";
-	        HSCompleteText.text = (string.IsNullOrEmpty(userProgress.Rows[0]["HazardExamScore"].ToString())) ? "No" : "Yes";
-	        SDSCompleteText.text = (string.IsNullOrEmpty(userProgress.Rows[0]["SDSExamScore"].ToString())) ? "No" : "Yes";
-	        SPCompleteText.text = (string.IsNullOrEmpty(userProgress.Rows[0]["SafetyExamScore"].ToString())) ? "No" : "Yes";
+	        TCompleteText.text = (string.IsNullOrEmpty(userProgress.Rows[0]["TutorialExamDate"].ToString())) ? "No" : "Yes";
+	        HSCompleteText.text = (string.IsNullOrEmpty(userProgress.Rows[0]["HazardExamDate"].ToString())) ? "No" : "Yes";
+	        SDSCompleteText.text = (string.IsNullOrEmpty(userProgress.Rows[0]["SDSExamDate"].ToString())) ? "No" : "Yes";
+	        FCompleteText.text = (string.IsNullOrEmpty(userProgress.Rows[0]["FinalExamDate"].ToString())) ? "No" : "Yes";
 
-	        if (TCompleteText.text == "Yes")
+            if (TCompleteText.text == "No" && TCompleteText.text == "No" && TCompleteText.text == "No" && TCompleteText.text == "No")
+            {
+                ContinueButton.interactable = false;
+            }
+            else
+            {
+                ContinueButton.interactable = true;
+            }
+
+            if (TCompleteText.text == "Yes")
 	        {
 	            TTestScoreText.text = userProgress.Rows[0]["TutorialExamScore"].ToString();
 	        }
@@ -159,16 +159,28 @@ public class SQL : MonoBehaviour
 	            SDSTestScoreText.text = "N/A";
 	        }
 
-	        if (SPCompleteText.text == "Yes")
+	        if (FCompleteText.text == "Yes")
 	        {
-	            SPTestScoreText.text = userProgress.Rows[0]["SafetyExamScore"].ToString();
+                FTestScoreText.text = userProgress.Rows[0]["FinalExamScore"].ToString();
 	        }
 	        else
 	        {
-	            SPTestScoreText.text = "N/A";
+                FTestScoreText.text = "N/A";
 	        }
 
-        	FTestScoreText.text = (string.IsNullOrEmpty(userProgress.Rows[0]["FinalExamScore"].ToString())) ? "N/A" : userProgress.Rows[0]["FinalExamScore"].ToString();
+            if (FTestScoreText.text != "N/A")
+            {
+                int score = Convert.ToInt32(FTestScoreText.text);
+
+                if (score > 70)
+                {
+                    GetCertificateButton.interactable = true;
+                }
+                else
+                {
+                    GetCertificateButton.interactable = false;
+                }
+            }
 		}
 	}
 
@@ -244,16 +256,6 @@ public class SQL : MonoBehaviour
                     ON U.SaveInfoId = SI.SaveInfoId
                     WHERE U.UserName = @userName";
             }
-            else if (module == "Safety")
-            {
-                command.CommandText =
-                    @"UPDATE SaveInfo 
-                    SET SafetyExamScore = @score, SafetyExamDate = @date
-                    FROM SaveInfo SI
-                    INNER JOIN Users U
-                    ON U.SaveInfoId = SI.SaveInfoId
-                    WHERE U.UserName = @userName";
-            }
             else if (module == "FinalExam")
             {
                 command.CommandText =
@@ -283,10 +285,10 @@ public class SQL : MonoBehaviour
             command.CommandText =
                  @"UPDATE SaveInfo 
                     SET 
-                        TutorialExamScore = NULL, TutorialExamDate = NULL
-                        HazardExamScore = NULL, HazardExamDate = NULL
-                        SDSExamScore = NULL, SDSExamDate = NULL
-                        SafetyExamScore = NULL, SafetyExamDate = NULL
+                        TutorialExamDate = NULL,
+                        HazardExamDate = NULL,
+                        SDSExamDate = NULL,
+                        FinalExamDate = NULL
                     FROM SaveInfo SI
                     INNER JOIN Users U
                     ON U.SaveInfoId = SI.SaveInfoId

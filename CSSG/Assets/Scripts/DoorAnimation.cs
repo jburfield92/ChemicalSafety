@@ -37,7 +37,7 @@ public class DoorAnimation : MonoBehaviour
         if (p != null)
         {
             anim = GetComponent<Animator>();
-            anim.SetBool("Open", true);
+            anim.SetTrigger("Open");
 
             source.time = 2.5f;
             source.Play();

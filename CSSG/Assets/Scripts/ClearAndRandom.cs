@@ -1,9 +1,10 @@
-﻿using UnityEngine;
+﻿using PixelCrushers.DialogueSystem;
 using System.Collections.Generic;
 using System.Linq;
-using PixelCrushers.DialogueSystem;
+using UnityEngine;
 
-public class ClearAndRandom : MonoBehaviour {
+public class ClearAndRandom : MonoBehaviour
+{
 	public List<GameObject> list;
 	public List<GameObject> list2;
 	public float[] x;
@@ -16,8 +17,8 @@ public class ClearAndRandom : MonoBehaviour {
 	public int ClearEnding;
 
 	// Use this for initialization
-	void Start () {
-
+	void Start ()
+    {
 		list = GameObject.FindGameObjectsWithTag("PickupItems").ToList();
 		list2 = GameObject.FindGameObjectsWithTag("items").ToList();
 		int i = 0;
@@ -30,14 +31,15 @@ public class ClearAndRandom : MonoBehaviour {
 		end = true;
 		TriggerClear = false;
 
-		for(i = 0 ; i < list.Count ; i++ ){
+		for(i = 0; i < list.Count; i++ )
+        {
 			x[i] =  list[i].transform.position.x;
 			y[i] =  list[i].transform.position.y;
 			z[i] =  list[i].transform.position.z;
 			Rx[i] =  list[i].transform.rotation;
 		}
 
-		for( i = 0 ; i < list.Count ; i ++)
+		for(i = 0; i < list.Count; i ++)
 		{	
 			GameObject temp = list[i];
 			int random = Random.Range(i,list.Count);
@@ -45,84 +47,70 @@ public class ClearAndRandom : MonoBehaviour {
 			list[random] = temp;
 		}
 
-
-
-		for(i = 0 ; i < list.Count() ; i++ ){
+		for(i = 0; i < list.Count(); i++ )
+        {
 			list[i].transform.position = new Vector3(x[i],y[i],z[i]);
 		}
-
-		
-		
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	
-
-			Clear ();
-	
-					}
-
-	void SetClear(){
-
-		TriggerClear = true;
-
+	void Update ()
+    {
+		Clear();
 	}
 
-	
-	void NewRoom(){
-		
+	void SetClear()
+    {
+		TriggerClear = true;
+	}
+
+	void NewRoom()
+    {
 		list = GameObject.FindGameObjectsWithTag("PickupItems").ToList();
 		list2 = GameObject.FindGameObjectsWithTag("items").ToList();
-		
-	}
+        DialogueLua.SetVariable("Reset", false);
+    }
 
-	void DestroyAll(){
+	void DestroyAll()
+    {
 		int i;
 		GameObject[] delete = list.ToArray ();
-		for(i = 0 ; i < delete.Count() ; i++ ){
+
+		for(i = 0; i < delete.Count(); i++)
+        {
 			list.Remove(delete[i]);
 			Destroy(delete[i]);
-
 		}
+
         list.Clear();
         Destroy(GameObject.FindGameObjectWithTag("IsTablet"));
-		
-	}
+    }
 
-	void Clear(){
+    void Clear()
+    {
 		int i;
-		//int ClearRoomEnd = 0;
-		for(i = 0 ; i < list.Count() ; i++ ){
-			if((list[i].GetComponent<Pickupable>().Check)){
-				//Debug.Log("test");
-				GameObject Temp =  list[i];
-				list.Remove(list[i]);
-				Temp.GetComponent<Pickupable>().enabled = false;
-				ClearEnd++;
-				Debug.Log(ClearEnd);
-			}
+		for(i = 0; i < list.Count() ; i++)
+        {
+			if((list[i].GetComponent<Pickupable>().Check))
+            {
+                GameObject Temp = list[i];
+                list.Remove(list[i]);
+                Temp.GetComponent<Pickupable>().enabled = false;
+                ClearEnd++;
+            }
 		}
 
-		if(TriggerClear){
-			if(ClearEnd == ClearEnding){
-		//	GameObject[] delete = list.ToArray ();
-		//for(i = 0 ; i < delete.Count() ; i++ ){
-		//	list.Remove(delete[i]);
-		//	Destroy(delete[i]);
-		//	}
-
-
-		
-				if(end){
-				Debug.Log("end");
-				DialogueLua.SetVariable("Reset", true);
-				DialogueManager.Instance.SendMessage("OnSequencerMessage", "end");
-				end = false;
-				}
+		if(TriggerClear)
+        {
+			if(ClearEnd == ClearEnding)
+            {
+				if(end)
+                {
+                    DialogueLua.SetVariable("Reset", true);
+                    DialogueManager.Instance.SendMessage("OnSequencerMessage", "end");
+                    end = false;
+                }
 			}
-
-
-		}}}
-
-
+		}
+    }
+}

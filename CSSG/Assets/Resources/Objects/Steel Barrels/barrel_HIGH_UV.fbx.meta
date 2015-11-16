@@ -1,37 +1,22 @@
 fileFormatVersion: 2
 guid: ea72b2cdb19064ef2a4b3dc855b0c5f7
+timeCreated: 1447566232
+licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
     100000: barrel
     100002: //RootNode
     100004: BarrelCollider
-    100006: bend
-    100008: bulged
-    100010: Correction
-    100012: dented_1
-    100014: dented_2
-    100016: dented_3
-    100018: flat
-    100020: Melt
     400000: barrel
     400002: //RootNode
     400004: BarrelCollider
-    400006: bend
-    400008: bulged
-    400010: Correction
-    400012: dented_1
-    400014: dented_2
-    400016: dented_3
-    400018: flat
-    400020: Melt
     2300000: barrel
     2300002: BarrelCollider
     3300000: barrel
     3300002: BarrelCollider
     4300000: barrel
     4300002: BarrelCollider
-    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -55,7 +40,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .00999999978
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -69,7 +54,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 0
+    useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
@@ -88,9 +73,11 @@ ModelImporter:
     legStretch: .0500000007
     feetSpacing: 0
     rootMotionBoneName: 
+    hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
-  additionalBone: 1
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

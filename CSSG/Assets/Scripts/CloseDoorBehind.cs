@@ -1,7 +1,5 @@
-﻿using UnityEngine;
-using System.Collections.Generic;
-using System.Linq;
-using System.Collections;
+﻿using System.Collections;
+using UnityEngine;
 
 public class CloseDoorBehind : MonoBehaviour
 {
@@ -71,9 +69,8 @@ public class CloseDoorBehind : MonoBehaviour
                 }
             }
 
-            GameObject door = closestDoor.transform.Find("DoorPart").gameObject;
-            anim = door.GetComponent<Animator>();
-            anim.SetBool("Close", true);
+            anim = closestDoor.GetComponentInChildren<Animator>();
+            anim.SetTrigger("Close");
             PickupObject.carryBlock = false;
             Destroy(RandomRoom.used);
             RandomRoom.used = (GameObject)Instantiate(Resources.Load("used"));

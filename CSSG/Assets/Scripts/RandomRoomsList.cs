@@ -16,7 +16,6 @@ public class RandomRoomsList : MonoBehaviour
 		
 		for(int i = 0 ; i < list.Count ; i ++)
         {
-			
 			GameObject temp = list[i];
 			int random = Random.Range(i,list.Count);
 			list[i] = list[random];

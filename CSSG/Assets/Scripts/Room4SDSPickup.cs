@@ -10,6 +10,9 @@ public class Room4SDSPickup : MonoBehaviour {
 	Quaternion startRotation;
 	public static GameObject[] SDSRoom4Buttons;
 	public static bool moved2;
+	public static GameObject arrow;
+	public static GameObject arrow2;
+	public static bool readyToStore;
 	
 	// Use this for initialization
 	void Start () {
@@ -75,18 +78,51 @@ public class Room4SDSPickup : MonoBehaviour {
 	}
 
 	public void MoveArrow(){
-		GameObject arrow = GameObject.Find ("arrow1");
+		arrow = GameObject.Find ("arrow4");
 		if (!moved2) {
 			arrow.gameObject.transform.position = new Vector3 (arrow.gameObject.transform.position.x, 2.5f, arrow.gameObject.transform.position.z);
 			moved2 = true;
 		} else if (moved2) {
-			arrow.SetActive(false);
+			arrow.gameObject.transform.position = new Vector3 (arrow.gameObject.transform.position.x, 9.5f, arrow.gameObject.transform.position.z);
 		}
 	}
 	
-	void GetPos(){
+	public void GetPos(){
 		startPosition = this.gameObject.transform.position;
 		startRotation = this.gameObject.transform.rotation;
 		moved2 = false;
+		readyToStore = false;
+
 	}
+
+	public void MoveArrowStorage(){
+		arrow2 = GameObject.Find ("arrow5");
+		if (!moved2) {
+			arrow2.gameObject.transform.position = new Vector3 (arrow2.gameObject.transform.position.x, 3f, arrow2.gameObject.transform.position.z);
+			moved2 = true;
+		} else if (moved2) {
+			arrow2.gameObject.transform.position = new Vector3 (arrow2.gameObject.transform.position.x, 6f, arrow2.gameObject.transform.position.z);
+			moved2 = false;
+		}
+		// arrow.SetActive (true);
+	}
+
+	void OnTriggerStay(Collider other){
+
+		if (other.gameObject.transform.name == "container1" && this.gameObject.transform.name == "AtStorageTrigger4") {
+			DialogueManager.Instance.SendMessage ("OnSequencerMessage", "Storage1");
+			if(PickupObject.carriedObject == null && readyToStore){
+				other.gameObject.SetActive(false);
+				if (arrow2 != null) {
+					arrow2.SetActive(false);
+				}
+				DialogueManager.Instance.SendMessage ("OnSequencerMessage", "cont");
+			}
+		}
+	}
+
+	public void ReadyToStore(){
+		readyToStore = true;
+	}
+	
 }
