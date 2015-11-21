@@ -31,24 +31,6 @@ namespace CollegeEventManager {
         protected global::System.Web.UI.WebControls.Label EventNameTextLabel;
         
         /// <summary>
-        /// twitterButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor twitterButton;
-        
-        /// <summary>
-        /// facebookButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl facebookButton;
-        
-        /// <summary>
         /// ModalDetailsEventId control.
         /// </summary>
         /// <remarks>

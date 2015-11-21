@@ -11,8 +11,8 @@
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                             <h4 class="modal-title"><asp:Label ID="EventNameTextLabel" runat="server"/></h4>
-                            <a href="https://twitter.com/intent/tweet" id="twitterButton" class="twitter-hashtag-button" data-text="Look at this text" runat="server">Tweet</a>
-                            <div id="facebookButton" runat="server" class="fb-share-button" data-href="https://google.com" data-layout="button" style="vertical-align:top;"></div>
+                            <a href="https://twitter.com/intent/tweet" id="twitterButton" class="twitter-hashtag-button" data-text="">Tweet</a>
+                            <div id="facebookButton" class="fb-share-button" data-href="https://google.com" data-layout="button" style="vertical-align:top;"></div>
 
                             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
@@ -468,6 +468,7 @@
                                <div class="panel panel-default">
                                     <div class="panel-heading">
                                         <asp:Label runat="server" ID="EventHeading" Text='<%# Eval("EventName") %>' />
+                                        <input id ="nameStuff" type="button" value='<%# Eval("EventName") %>' hidden></input>
                                         <asp:HiddenField runat="server" ID="EventIDField" Value='<%# Eval("EventID") %>' />
                                     </div>
                                     <div class="panel-body">
@@ -479,6 +480,7 @@
                                                 <div class="col-md-8">
                                                     <asp:Label runat="server" ID="DateHeader" CssClass="control-label" AssociatedControlID="DateLbl" Text="Event Date:" />
                                                     <asp:Label runat="server" ID="DateLbl" CssClass="control-label" Text='<%# Eval("EventDate") %>'/>
+                                                    <input id ="dateStuff" type="button" value='<%# Eval("EventDate") %>' hidden></input>
                                                     <br />
                                                     <asp:Label runat="server" ID="LocationHeader" CssClass="control-label" AssociatedControlID="LocationLbl" Text="Location:" />
                                                     <asp:Label runat="server" ID="LocationLbl" CssClass="control-label" Text='<%# DatabaseCommunicationMethods.Sql.GetLocationById((int)Eval("LocationID")).Address %>' />
