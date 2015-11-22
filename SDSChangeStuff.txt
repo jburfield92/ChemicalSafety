@@ -1,0 +1,13 @@
+CSSG notes
+update to scripts:
+	TutorialScripts
+	TakeLaptopTest
+	Room(x)SDSPickup - changed things in a couple of these but forget which
+	LockThing
+	PickupObject
+	TriggerThis
+
+Update to dialogue: Both the SDSDialogueDB and TutorialDialogueDB have updates
+
+folder containing images of what objects need components/scripts added: "sdschanges"
+	
