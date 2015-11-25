@@ -35,7 +35,7 @@ public class TabletSymbol : MonoBehaviour
 
                 if (Physics.Raycast(ray, out hit))
                 {
-                    if (hit.collider.gameObject.tag == "IsTablet" && Vector3.Distance(Camera.main.transform.position, hit.collider.gameObject.transform.position) < 3.0f)
+                    if (hit.collider.gameObject.tag == "IsTablet" && !PickupObject.carrying && Vector3.Distance(Camera.main.transform.position, hit.collider.gameObject.transform.position) < 3.0f)
                     {
                         PauseMenu.itembar.SetActive(!PauseMenu.itembar.activeSelf);
                         leftArm.SetActive(!leftArm.activeSelf);

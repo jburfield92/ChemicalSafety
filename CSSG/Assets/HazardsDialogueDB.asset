@@ -197,78 +197,6 @@ MonoBehaviour:
         y: 20
         width: 160
         height: 30
-    - id: 1
-      fields:
-      - title: Title
-        value: New Dialogue Entry
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: 
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: 
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Go up to the table.
-        type: 0
-        typeString: 
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 'Delay(5);
-
-          WaitForMessage(NearTable);
-
-          SendMessage(SaveDialogue,Go up to the table. , );'
-        type: 0
-        typeString: 
-      conversationID: 3
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 3
-        originDialogueID: 1
-        destinationConversationID: 3
-        destinationDialogueID: 2
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      canvasRect:
-        serializedVersion: 2
-        x: 120
-        y: 120
-        width: 160
-        height: 30
     - id: 2
       fields:
       - title: Title
@@ -312,7 +240,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Delay(5);
+        value: 'AudioWait(Sounds/VoiceOvers/Hazards/TestingSection/testing3);
 
           SendMessage(SaveDialogue,This laptop is where you will complete your test.
           , );'
@@ -336,8 +264,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 117
-        y: 173
+        x: 116
+        y: 179
         width: 160
         height: 30
     - id: 4
@@ -384,7 +312,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Delay(5);
+        value: 'AudioWait(Sounds/VoiceOvers/Hazards/TestingSection/testing4);
 
           SendMessage(SaveDialogue,Please answer the following questions based on
           what you have done so far. , );'
@@ -409,7 +337,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 118
-        y: 211
+        y: 225
         width: 160
         height: 30
     - id: 5
@@ -455,7 +383,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Delay(5);
+        value: 'AudioWait(Sounds/VoiceOvers/Hazards/TestingSection/testing5);
 
           WaitForMessage(Submit);
 
@@ -532,7 +460,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: Delay(1);
+        value: AudioWait(Sounds/VoiceOvers/Hazards/TestingSection/testing6);
         type: 0
         typeString: CustomFieldType_Text
       conversationID: 3
@@ -780,7 +708,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Congratulations, you scored a 0 out of 9.
+        value: You scored a 0 out of 9.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -796,7 +724,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: Delay(5);
+        value: AudioWait(Sounds/VoiceOvers/Hazards/TestingSection/testing7a);
         type: 0
         typeString: 
       conversationID: 3
@@ -864,7 +792,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Delay(5);
+        value: 'AudioWait(Sounds/VoiceOvers/Hazards/TestingSection/testing8);
 
           SendMessage(SaveDialogue,That concludes the Hazard Symbols module. , );'
         type: 0
@@ -888,7 +816,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 110
-        y: 572
+        y: 573
         width: 160
         height: 30
     - id: 12
@@ -935,7 +863,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Delay(5);
+        value: 'AudioWait(Sounds/VoiceOvers/Hazards/TestingSection/testing9);
 
           SendMessage(SaveDialogue,You have been given credit for completing the Hazard
           Symbol module and you may now continue with the rest of the training modules.
@@ -960,8 +888,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 106
-        y: 650
+        x: 110
+        y: 637
         width: 160
         height: 30
     - id: 13
@@ -1007,7 +935,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Delay(5);
+        value: 'AudioWait(Sounds/VoiceOvers/Hazards/TestingSection/testing1);
 
           SendMessage(SaveDialogue,This is the testing room. , );'
         type: 0
@@ -1023,15 +951,15 @@ MonoBehaviour:
       - originConversationID: 3
         originDialogueID: 13
         destinationConversationID: 3
-        destinationDialogueID: 1
+        destinationDialogueID: 2
         isConnector: 0
         priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 120
-        y: 71
+        x: 115
+        y: 123
         width: 160
         height: 30
     - id: 14
@@ -1061,7 +989,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Congratulations, you scored a 1 out of 9.
+        value: You scored a 1 out of 9.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -1077,7 +1005,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: Delay(5);
+        value: AudioWait(Sounds/VoiceOvers/Hazards/TestingSection/testing7b);
         type: 0
         typeString: 
       conversationID: 3
@@ -1099,7 +1027,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 598
-        y: 370
+        y: 369
         width: 160
         height: 30
     - id: 15
@@ -1129,7 +1057,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Congratulations, you scored a 2 out of 9.
+        value: You scored a 2 out of 9.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -1145,7 +1073,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: Delay(5);
+        value: AudioWait(Sounds/VoiceOvers/Hazards/TestingSection/testing7c);
         type: 0
         typeString: 
       conversationID: 3
@@ -1197,7 +1125,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Congratulations, you scored a 3 out of 9.
+        value: You scored a 3 out of 9.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -1213,7 +1141,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: Delay(5);
+        value: AudioWait(Sounds/VoiceOvers/Hazards/TestingSection/testing7d);
         type: 0
         typeString: 
       conversationID: 3
@@ -1265,7 +1193,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Congratulations, you scored a 3 out of 9.
+        value: You scored a 3 out of 9.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -1281,7 +1209,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: Delay(5);
+        value: AudioWait(Sounds/VoiceOvers/Hazards/TestingSection/testing7e);
         type: 0
         typeString: 
       conversationID: 3
@@ -1303,7 +1231,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 682
-        y: 510
+        y: 509
         width: 160
         height: 30
     - id: 18
@@ -1333,7 +1261,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Congratulations, you scored a 5 out of 9.
+        value: You scored a 5 out of 9.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -1349,7 +1277,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: Delay(5);
+        value: AudioWait(Sounds/VoiceOvers/Hazards/TestingSection/testing7f);
         type: 0
         typeString: 
       conversationID: 3
@@ -1401,7 +1329,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Congratulations, you scored a 6 out of 9.
+        value: You scored a 6 out of 9.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -1417,7 +1345,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: Delay(5);
+        value: AudioWait(Sounds/VoiceOvers/Hazards/TestingSection/testing7g);
         type: 0
         typeString: 
       conversationID: 3
@@ -1469,7 +1397,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Congratulations, you scored a 7 out of 9.
+        value: You scored a 7 out of 9.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -1485,7 +1413,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: Delay(5);
+        value: AudioWait(Sounds/VoiceOvers/Hazards/TestingSection/testing7h);
         type: 0
         typeString: 
       conversationID: 3
@@ -1537,7 +1465,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Congratulations, you scored a 8 out of 9.
+        value: You scored a 8 out of 9.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -1553,7 +1481,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: Delay(5);
+        value: AudioWait(Sounds/VoiceOvers/Hazards/TestingSection/testing7i);
         type: 0
         typeString: 
       conversationID: 3
@@ -1605,7 +1533,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Congratulations, you scored a 9 out of 9.
+        value: You scored a 9 out of 9.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -1621,7 +1549,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: Delay(5);
+        value: AudioWait(Sounds/VoiceOvers/Hazards/TestingSection/testing7j);
         type: 0
         typeString: 
       conversationID: 3
@@ -1689,7 +1617,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SendMessage(EndGame, ,)
+        value: SendMessage(EndHazards, ,)
         type: 0
         typeString: 
       conversationID: 3
@@ -1704,8 +1632,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 105
-        y: 700
+        x: 117
+        y: 685
         width: 160
         height: 30
   - id: 4
@@ -1827,7 +1755,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Please proceed to the next room.
+        value: 
         type: 0
         typeString: 
       - title: Parenthetical
@@ -1843,15 +1771,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AudioWait(Sounds/VoiceOvers/Hazards/EducationSection/education20);
-
-          SendMessage(DestroyAll,,ClearRoom);
-
-          SendMessage(NextRoom,,EmptyRoomObject);
-
-          SendMessage(LetUserThrough,,EmptyRoomObject);
-
-          SendMessage(SaveDialogue,Please proceed to the next room.,);'
+        value: Delay(2); SendMessage(DestroyAll,,ClearRoom);
         type: 0
         typeString: 
       - title: Response Menu Sequence
@@ -1865,13 +1785,19 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 4
+        originDialogueID: 1
+        destinationConversationID: 4
+        destinationDialogueID: 28
+        isConnector: 0
+        priority: 2
       conditionsString: Variable["Reset"] == true
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 776
-        y: 312
+        x: 756
+        y: 303
         width: 160
         height: 30
     - id: 4
@@ -2678,86 +2604,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 576
-        y: 359
-        width: 160
-        height: 30
-    - id: 16
-      fields:
-      - title: Title
-        value: New Dialogue Entry
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: 
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: 
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Sorry, that is incorrect.
-        type: 0
-        typeString: 
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Hazards/EducationSection/education19);
-        type: 0
-        typeString: 
-      - title: Response Menu Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 4
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 4
-        originDialogueID: 16
-        destinationConversationID: 4
-        destinationDialogueID: 17
-        isConnector: 0
-        priority: 2
-      - originConversationID: 4
-        originDialogueID: 16
-        destinationConversationID: 4
-        destinationDialogueID: 1
-        isConnector: 0
-        priority: 2
-      conditionsString: Variable["Reset"] == false
-      userScript: 
-      canvasRect:
-        serializedVersion: 2
-        x: 574
-        y: 221
+        x: 591
+        y: 370
         width: 160
         height: 30
     - id: 17
@@ -2826,8 +2674,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 582
-        y: 307
+        x: 587
+        y: 310
         width: 160
         height: 30
     - id: 18
@@ -2887,13 +2735,13 @@ MonoBehaviour:
       - originConversationID: 4
         originDialogueID: 18
         destinationConversationID: 4
-        destinationDialogueID: 16
+        destinationDialogueID: 1
         isConnector: 0
         priority: 2
       - originConversationID: 4
         originDialogueID: 18
         destinationConversationID: 4
-        destinationDialogueID: 1
+        destinationDialogueID: 17
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -3116,7 +2964,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 216
+        x: 217
         y: 214
         width: 160
         height: 30
@@ -3342,7 +3190,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 395
+        x: 396
         y: 213
         width: 160
         height: 30
@@ -3488,6 +3336,74 @@ MonoBehaviour:
         y: 175
         width: 160
         height: 30
+    - id: 28
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Good job, Please proceed to the next room.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 'AudioWait(Sounds/VoiceOvers/Hazards/EducationSection/education20);
+
+          SendMessage(NextRoom,,EmptyRoomObject);
+
+          SendMessage(LetUserThrough,,EmptyRoomObject);
+
+          SendMessage(SaveDialogue,Good job, Please proceed to the next room.,);'
+        type: 0
+        typeString: 
+      conversationID: 4
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 763
+        y: 362
+        width: 160
+        height: 30
   - id: 5
     fields:
     - title: Title
@@ -3576,8 +3492,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 23
-        y: 109
+        x: 24
+        y: 112
         width: 160
         height: 30
     - id: 2
@@ -3642,12 +3558,12 @@ MonoBehaviour:
         destinationDialogueID: 18
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Reset"] == false
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 404
-        y: 150
+        x: 403
+        y: 149
         width: 160
         height: 30
     - id: 3
@@ -3693,9 +3609,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(DestroyAll,,ClearRoom1);
+        value: 'AudioWait(Sounds/VoiceOvers/Hazards/Room1/activity11);
 
-          Delay(10);
+          SendMessage(NextRoom,,EmptyRoomObject);
+
+          SendMessage(LetUserThrough,,EmptyRoomObject);
 
           SendMessage(SaveDialogue, Good job, please proceed to the next room. , );'
         type: 0
@@ -3707,19 +3625,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 5
-        originDialogueID: 3
-        destinationConversationID: 5
-        destinationDialogueID: 19
-        isConnector: 0
-        priority: 2
-      conditionsString: Variable["Reset"] == true
+      outgoingLinks: []
+      conditionsString: 
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 407
-        y: 246
+        x: 406
+        y: 322
         width: 160
         height: 30
     - id: 6
@@ -3765,7 +3677,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Delay(10);
+        value: 'AudioWait(Sounds/VoiceOvers/Hazards/Room1/activity1);
 
           SendMessage(SaveDialogue,In this Activity Room there are unlabeled containers.
           , );
@@ -3791,8 +3703,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 29
-        y: 163
+        x: 28
+        y: 161
         width: 160
         height: 30
     - id: 7
@@ -3839,7 +3751,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Delay(10);
+        value: 'AudioWait(Sounds/VoiceOvers/Hazards/Room1/activity2);
 
           SendMessage(SaveDialogue,When you are near the container and are looking
           directly at the container, the label that the container needs will appear.
@@ -3912,7 +3824,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Delay(10);
+        value: 'AudioWait(Sounds/VoiceOvers/Hazards/Room1/activity3);
 
           SendMessage(SaveDialogue,You will need to take the item to the correct list
           of hazards the container''s label represents. , );'
@@ -3936,8 +3848,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 25
-        y: 247
+        x: 26
+        y: 244
         width: 160
         height: 30
     - id: 9
@@ -3967,7 +3879,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Here are the containers to be labeled, marked by the green arrow.
+        value: This is the location of the containers to be labeled, marked by the
+          green arrow.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -3985,10 +3898,10 @@ MonoBehaviour:
       - title: Sequence
         value: 'SendMessage(Point,,SymbolTrigger1);
 
-          Delay(10);
+          AudioWait(Sounds/VoiceOvers/Hazards/Room1/activity4);
 
-          SendMessage(SaveDialogue,Here are the containers to be labeled, marked by
-          the green arrow. , );'
+          SendMessage(SaveDialogue,This is the location of the containers to be labeled,
+          marked by the green arrow. , );'
         type: 0
         typeString: 
       conversationID: 5
@@ -4059,7 +3972,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'SendMessage(Point,,SymbolTrigger2);
 
-          Delay(10);
+          AudioWait(Sounds/VoiceOvers/Hazards/Room1/activity6);
 
           SendMessage(SaveDialogue,This is the location of where you need to take
           these containers, marked by a green arrow. , );'
@@ -4133,7 +4046,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'SendMessage(Point,,SymbolTrigger3);
 
-          Delay(10);
+          AudioWait(Sounds/VoiceOvers/Hazards/Room1/activity8);
 
           SendMessage(SaveDialogue,This is the location of the tablet if you need
           to review the Hazard Symbols, marked by the green arrow. , );'
@@ -4158,7 +4071,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 204
-        y: 243
+        y: 242
         width: 160
         height: 30
     - id: 12
@@ -4204,7 +4117,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: Delay(10);
+        value: AudioWait(Sounds/VoiceOvers/Hazards/Room1/activity10);
         type: 0
         typeString: 
       conversationID: 5
@@ -4225,7 +4138,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 224
+        x: 225
         y: 145
         width: 160
         height: 30
@@ -4256,7 +4169,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: Please go up to this table.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -4274,7 +4187,11 @@ MonoBehaviour:
       - title: Sequence
         value: 'SendMessage(TCheck,,SymbolTrigger1);
 
-          WaitForMessage(trigger);'
+          WaitForMessage(trigger);
+
+          SendMessage(SaveDialogue,Please go up to this table. , );
+
+          AudioWait(Sounds/VoiceOvers/Hazards/Room1/activity5);'
         type: 0
         typeString: 
       - title: Response Menu Sequence
@@ -4330,7 +4247,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: Please go up to this table.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -4348,7 +4265,11 @@ MonoBehaviour:
       - title: Sequence
         value: 'SendMessage(TCheck,,SymbolTrigger2);
 
-          WaitForMessage(trigger);'
+          WaitForMessage(trigger);
+
+          SendMessage(SaveDialogue,Please go up to this table. , );
+
+          AudioWait(Sounds/VoiceOvers/Hazards/Room1/activity7);'
         type: 0
         typeString: 
       conversationID: 5
@@ -4400,7 +4321,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: Please go up to this table.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -4418,7 +4339,11 @@ MonoBehaviour:
       - title: Sequence
         value: 'SendMessage(TCheck,,SymbolTrigger3);
 
-          WaitForMessage(trigger);'
+          WaitForMessage(trigger);
+
+          SendMessage(SaveDialogue,Please go up to this table. , );
+
+          AudioWait(Sounds/VoiceOvers/Hazards/Room1/activity9);'
         type: 0
         typeString: 
       conversationID: 5
@@ -4439,76 +4364,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 219
-        y: 196
-        width: 160
-        height: 30
-    - id: 17
-      fields:
-      - title: Title
-        value: New Dialogue Entry
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: 
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: 
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Sorry, that is incorrect.
-        type: 0
-        typeString: 
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: Delay(5);
-        type: 0
-        typeString: 
-      conversationID: 5
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 5
-        originDialogueID: 17
-        destinationConversationID: 5
-        destinationDialogueID: 2
-        isConnector: 0
-        priority: 2
-      conditionsString: Variable["Reset"] == false
-      userScript: 
-      canvasRect:
-        serializedVersion: 2
-        x: 601
-        y: 166
+        x: 213
+        y: 195
         width: 160
         height: 30
     - id: 18
@@ -4568,21 +4425,21 @@ MonoBehaviour:
       - originConversationID: 5
         originDialogueID: 18
         destinationConversationID: 5
-        destinationDialogueID: 17
+        destinationDialogueID: 2
         isConnector: 0
         priority: 2
       - originConversationID: 5
         originDialogueID: 18
         destinationConversationID: 5
-        destinationDialogueID: 3
+        destinationDialogueID: 19
         isConnector: 0
         priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 415
-        y: 201
+        x: 400
+        y: 220
         width: 160
         height: 30
     - id: 19
@@ -4628,9 +4485,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(NextRoom,,EmptyRoomObject);
-
-          Delay(1);'
+        value: Delay(2);SendMessage(DestroyAll,,ClearRoom1);
         type: 0
         typeString: 
       conversationID: 5
@@ -4644,77 +4499,15 @@ MonoBehaviour:
       - originConversationID: 5
         originDialogueID: 19
         destinationConversationID: 5
-        destinationDialogueID: 20
+        destinationDialogueID: 3
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Reset"] == true
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 408
-        y: 295
-        width: 160
-        height: 30
-    - id: 20
-      fields:
-      - title: Title
-        value: New Dialogue Entry
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: 
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: 
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: SendMessage(LetUserThrough,,EmptyRoomObject);
-        type: 0
-        typeString: 
-      conversationID: 5
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: 
-      userScript: 
-      canvasRect:
-        serializedVersion: 2
-        x: 408
-        y: 348
+        x: 405
+        y: 269
         width: 160
         height: 30
   - id: 6
@@ -4852,9 +4645,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'WaitForMessage(end);
-
-          SendMessage(SetClear,,ClearRoom2);'
+        value: WaitForMessage(end);
         type: 0
         typeString: 
       conversationID: 6
@@ -4871,12 +4662,12 @@ MonoBehaviour:
         destinationDialogueID: 17
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Reset"] == false
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 233
-        y: 174
+        x: 232
+        y: 167
         width: 160
         height: 30
     - id: 4
@@ -4922,10 +4713,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Delay(10);
+        value: 'AudioWait(Sounds/VoiceOvers/Hazards/Room2/activity9);
 
+          SendMessage(NextRoom,,EmptyRoomObject);
 
-          SendMessage(DestroyAll,,ClearRoom2);
+          SendMessage(LetUserThrough,,EmptyRoomObject);
 
           SendMessage(SaveDialogue,Good job, please proceed to the next room. , );'
         type: 0
@@ -4937,19 +4729,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 6
-        originDialogueID: 4
-        destinationConversationID: 6
-        destinationDialogueID: 18
-        isConnector: 0
-        priority: 2
+      outgoingLinks: []
       conditionsString: 
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 230
-        y: 72
+        x: 414
+        y: 76
         width: 160
         height: 30
     - id: 6
@@ -4996,7 +4782,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Delay(10);
+        value: 'AudioWait(Sounds/VoiceOvers/Hazards/Room2/activity1);
 
           SendMessage(NewRoom,,ClearRoom2);
 
@@ -5022,8 +4808,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 51
-        y: 122
+        x: 50
+        y: 121
         width: 160
         height: 30
     - id: 7
@@ -5072,7 +4858,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'SendMessage(Point,,SymbolTrigger12);
 
-          Delay(10);
+          AudioWait(Sounds/VoiceOvers/Hazards/Room2/activity2);
 
           SendMessage(SaveDialogue,This is the location where you will find the labels,
           marked by a green arrow. , );'
@@ -5150,7 +4936,7 @@ MonoBehaviour:
 
           SendMessage(Point,,SymbolTrigger222);
 
-          Delay(10);
+          AudioWait(Sounds/VoiceOvers/Hazards/Room2/activity4);
 
           SendMessage(SaveDialogue,This is the location of the barrels to be labeled,
           marked by a green arrow. , );'
@@ -5175,7 +4961,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 58
-        y: 264
+        y: 265
         width: 160
         height: 30
     - id: 9
@@ -5230,7 +5016,7 @@ MonoBehaviour:
 
           SendMessage(TOff,,SymbolTrigger222);
 
-          Delay(10);
+          AudioWait(Sounds/VoiceOvers/Hazards/Room2/activity6);
 
           SendMessage(SaveDialogue,This is the location of the tablet if you need
           to review the Hazard Symbols, marked by the green arrow. , );'
@@ -5301,7 +5087,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: Delay(10);
+        value: 'AudioWait(Sounds/VoiceOvers/Hazards/Room2/activity8);
+
+          SendMessage(SetClear,,ClearRoom2);'
         type: 0
         typeString: 
       conversationID: 6
@@ -5322,8 +5110,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 239
-        y: 218
+        x: 238
+        y: 219
         width: 160
         height: 30
     - id: 12
@@ -5353,7 +5141,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: Please go up to this table.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -5370,6 +5158,8 @@ MonoBehaviour:
         typeString: 
       - title: Sequence
         value: 'SendMessage(TCheck,,SymbolTrigger12);
+
+          AudioWait(Sounds/VoiceOvers/Hazards/Room2/activity3);
 
           WaitForMessage(trigger);'
         type: 0
@@ -5392,8 +5182,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 56
-        y: 218
+        x: 55
+        y: 217
         width: 160
         height: 30
     - id: 13
@@ -5423,7 +5213,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: Please go up to one of these barrels.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -5444,6 +5234,8 @@ MonoBehaviour:
           SendMessage(TCheck,,SymbolTrigger221);
 
           SendMessage(TCheck,,SymbolTrigger222);
+
+          AudioWait(Sounds/VoiceOvers/Hazards/Room2/activity5);
 
           WaitForMessage(trigger);'
         type: 0
@@ -5497,7 +5289,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: Please go up to this table.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -5514,6 +5306,8 @@ MonoBehaviour:
         typeString: 
       - title: Sequence
         value: 'SendMessage(TCheck,,SymbolTrigger32);
+
+          AudioWait(Sounds/VoiceOvers/Hazards/Room2/activity7);
 
           WaitForMessage(trigger);'
         type: 0
@@ -5538,74 +5332,6 @@ MonoBehaviour:
         serializedVersion: 2
         x: 242
         y: 261
-        width: 160
-        height: 30
-    - id: 16
-      fields:
-      - title: Title
-        value: New Dialogue Entry
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: 
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: 
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Sorry, that is incorrect.
-        type: 0
-        typeString: 
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 6
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 6
-        originDialogueID: 16
-        destinationConversationID: 6
-        destinationDialogueID: 2
-        isConnector: 0
-        priority: 2
-      conditionsString: Variable["Reset"] == false
-      userScript: 
-      canvasRect:
-        serializedVersion: 2
-        x: 401
-        y: 136
         width: 160
         height: 30
     - id: 17
@@ -5665,21 +5391,21 @@ MonoBehaviour:
       - originConversationID: 6
         originDialogueID: 17
         destinationConversationID: 6
-        destinationDialogueID: 16
+        destinationDialogueID: 2
         isConnector: 0
         priority: 2
       - originConversationID: 6
         originDialogueID: 17
         destinationConversationID: 6
-        destinationDialogueID: 4
+        destinationDialogueID: 18
         isConnector: 0
         priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 230
-        y: 123
+        x: 229
+        y: 121
         width: 160
         height: 30
     - id: 18
@@ -5725,9 +5451,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(NextRoom,,EmptyRoomObject);
-
-          Delay(1);'
+        value: Delay(2);SendMessage(DestroyAll,,ClearRoom2);
         type: 0
         typeString: 
       conversationID: 6
@@ -5741,77 +5465,15 @@ MonoBehaviour:
       - originConversationID: 6
         originDialogueID: 18
         destinationConversationID: 6
-        destinationDialogueID: 19
+        destinationDialogueID: 4
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["Reset"] == true
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 453
+        x: 227
         y: 74
-        width: 160
-        height: 30
-    - id: 19
-      fields:
-      - title: Title
-        value: New Dialogue Entry
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: 
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: 
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: SendMessage(LetUserThrough,,EmptyRoomObject);
-        type: 0
-        typeString: 
-      conversationID: 6
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: 
-      userScript: 
-      canvasRect:
-        serializedVersion: 2
-        x: 632
-        y: 78
         width: 160
         height: 30
   - id: 0
@@ -5951,7 +5613,9 @@ MonoBehaviour:
       - title: Sequence
         value: 'SendMessage(SetClear,,ClearRoom3);
 
-          WaitForMessage(end);'
+          WaitForMessage(end);
+
+          Variable["Reset"] == false'
         type: 0
         typeString: 
       conversationID: 0
@@ -6019,9 +5683,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(DestroyAll,,ClearRoom3);
-
-'
+        value: SendMessage(DestroyAll,,ClearRoom3);Delay(2);
         type: 0
         typeString: 
       conversationID: 0
@@ -6042,8 +5704,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 574
-        y: 23
+        x: 395
+        y: 22
         width: 160
         height: 30
     - id: 4
@@ -6089,9 +5751,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Delay(10);
+        value: 'AudioWait(Sounds/VoiceOvers/Hazards/Room3/activity10);
 
-          SendMessage(DestroyAll,,ClearRoom3);
+          SendMessage(NextRoom,,EmptyRoomObject);
+
+          SendMessage(LetUserThrough,,EmptyRoomObject);
 
           SendMessage(SaveDialogue,Good job, please proceed to the next room. , );'
         type: 0
@@ -6103,19 +5767,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 0
-        originDialogueID: 4
-        destinationConversationID: 0
-        destinationDialogueID: 19
-        isConnector: 0
-        priority: 2
+      outgoingLinks: []
       conditionsString: 
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 570
-        y: 72
+        x: 410
+        y: 65
         width: 160
         height: 30
     - id: 6
@@ -6162,7 +5820,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Delay(10);
+        value: 'AudioWait(Sounds/VoiceOvers/Hazards/Room3/activity1);
 
           SendMessage(NewRoom,,ClearRoom3);
 
@@ -6236,7 +5894,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Delay(10);
+        value: 'AudioWait(Sounds/VoiceOvers/Hazards/Room3/activity2);
 
           SendMessage(SaveDialogue,Then you will go throughout the room and find all
           the containers with the matching symbols to these hazard lists. , );'
@@ -6261,7 +5919,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 22
-        y: 110
+        y: 107
         width: 160
         height: 30
     - id: 9
@@ -6310,7 +5968,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'SendMessage(Point,,SymbolTrigger13);
 
-          Delay(10);
+          AudioWait(Sounds/VoiceOvers/Hazards/Room3/activity3);
 
           SendMessage(SaveDialogue,Here is the table with the hazard lists, marked
           by the green arrow. , );'
@@ -6334,8 +5992,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 20
-        y: 165
+        x: 19
+        y: 157
         width: 160
         height: 30
     - id: 10
@@ -6387,7 +6045,7 @@ MonoBehaviour:
 
           SendMessage(Point,,SymbolTrigger232);
 
-          Delay(10);'
+          AudioWait(Sounds/VoiceOvers/Hazards/Room3/activity5);'
         type: 0
         typeString: 
       conversationID: 0
@@ -6408,7 +6066,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 36
+        x: 37
         y: 251
         width: 160
         height: 30
@@ -6464,7 +6122,7 @@ MonoBehaviour:
 
           SendMessage(TOff,,SymbolTrigger232);
 
-          Delay(10);
+          AudioWait(Sounds/VoiceOvers/Hazards/Room3/activity7);
 
           SendMessage(SaveDialogue,This is the location of the tablet if you need
           to review the Hazard Symbols, marked by the green arrow. , );'
@@ -6535,7 +6193,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: Delay(7);
+        value: AudioWait(Sounds/VoiceOvers/Hazards/Room3/activity9);
         type: 0
         typeString: 
       conversationID: 0
@@ -6557,7 +6215,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 202
-        y: 119
+        y: 118
         width: 160
         height: 30
     - id: 13
@@ -6587,7 +6245,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: Please go up to one of these tables.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -6609,7 +6267,9 @@ MonoBehaviour:
 
           SendMessage(TCheck,,SymbolTrigger232);
 
-          WaitForMessage(trigger);'
+          WaitForMessage(trigger);
+
+          AudioWait(Sounds/VoiceOvers/Hazards/Room3/activity6);'
         type: 0
         typeString: 
       conversationID: 0
@@ -6630,7 +6290,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 212
+        x: 208
         y: 252
         width: 160
         height: 30
@@ -6661,7 +6321,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: Please go up to this table.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -6679,7 +6339,9 @@ MonoBehaviour:
       - title: Sequence
         value: 'SendMessage(TCheck,,SymbolTrigger13);
 
-          WaitForMessage(trigger);'
+          WaitForMessage(trigger);
+
+          AudioWait(Sounds/VoiceOvers/Hazards/Room3/activity4);'
         type: 0
         typeString: 
       conversationID: 0
@@ -6700,8 +6362,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 27
-        y: 211
+        x: 26
+        y: 203
         width: 160
         height: 30
     - id: 15
@@ -6731,7 +6393,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: Please go up to this table.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -6749,7 +6411,9 @@ MonoBehaviour:
       - title: Sequence
         value: 'SendMessage(TCheck,,SymbolTrigger33);
 
-          WaitForMessage(trigger);'
+          WaitForMessage(trigger);
+
+          AudioWait(Sounds/VoiceOvers/Hazards/Room3/activity8);'
         type: 0
         typeString: 
       conversationID: 0
@@ -6770,76 +6434,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 209
+        x: 208
         y: 161
-        width: 160
-        height: 30
-    - id: 17
-      fields:
-      - title: Title
-        value: New Dialogue Entry
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: 
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: 
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Sorry, that is incorrect.
-        type: 0
-        typeString: 
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: Delay(5)
-        type: 0
-        typeString: 
-      conversationID: 0
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 0
-        originDialogueID: 17
-        destinationConversationID: 0
-        destinationDialogueID: 2
-        isConnector: 0
-        priority: 2
-      conditionsString: Variable["Reset"] == false
-      userScript: 
-      canvasRect:
-        serializedVersion: 2
-        x: 385
-        y: 46
         width: 160
         height: 30
     - id: 18
@@ -6899,13 +6495,13 @@ MonoBehaviour:
       - originConversationID: 0
         originDialogueID: 18
         destinationConversationID: 0
-        destinationDialogueID: 17
+        destinationDialogueID: 3
         isConnector: 0
         priority: 2
       - originConversationID: 0
         originDialogueID: 18
         destinationConversationID: 0
-        destinationDialogueID: 3
+        destinationDialogueID: 2
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -6914,138 +6510,6 @@ MonoBehaviour:
         serializedVersion: 2
         x: 210
         y: 26
-        width: 160
-        height: 30
-    - id: 19
-      fields:
-      - title: Title
-        value: New Dialogue Entry
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: 
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: 
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 'SendMessage(NextRoom,,EmptyRoomObject);
-
-          Delay(1);'
-        type: 0
-        typeString: 
-      conversationID: 0
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 0
-        originDialogueID: 19
-        destinationConversationID: 0
-        destinationDialogueID: 20
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      canvasRect:
-        serializedVersion: 2
-        x: 571
-        y: 119
-        width: 160
-        height: 30
-    - id: 20
-      fields:
-      - title: Title
-        value: New Dialogue Entry
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: 
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: 
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: SendMessage(LetUserThrough,,EmptyRoomObject);
-        type: 0
-        typeString: 
-      conversationID: 0
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: 
-      userScript: 
-      canvasRect:
-        serializedVersion: 2
-        x: 571
-        y: 169
         width: 160
         height: 30
   - id: 2
@@ -7185,7 +6649,9 @@ MonoBehaviour:
       - title: Sequence
         value: 'SendMessage(SetClear,,ClearRoom4);
 
-          WaitForMessage(end);'
+          WaitForMessage(end);
+
+          Variable["Reset"] == false'
         type: 0
         typeString: 
       conversationID: 2
@@ -7207,7 +6673,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 235
-        y: 124
+        y: 120
         width: 160
         height: 30
     - id: 3
@@ -7274,8 +6740,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 608
-        y: 85
+        x: 429
+        y: 75
         width: 160
         height: 30
     - id: 4
@@ -7321,8 +6787,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Delay(10);
+        value: 'AudioWait(Sounds/VoiceOvers/Hazards/Room4/activity9);
 
+          SendMessage(NextRoom,,EmptyRoomObject);
+
+          SendMessage(LetUserThrough,,EmptyRoomObject);
 
           SendMessage(SaveDialogue,Good job, please proceed to the next room. , );'
         type: 0
@@ -7334,19 +6803,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 2
-        originDialogueID: 4
-        destinationConversationID: 2
-        destinationDialogueID: 18
-        isConnector: 0
-        priority: 2
+      outgoingLinks: []
       conditionsString: 
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 606
-        y: 136
+        x: 427
+        y: 122
         width: 160
         height: 30
     - id: 7
@@ -7376,7 +6839,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: This is the location of the container, marked by a green arrow.
+        value: This is the location of the containers, marked by a green arrow.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -7394,7 +6857,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'SendMessage(Point,,SymbolTrigger14);
 
-          Delay(10);
+          AudioWait(Sounds/VoiceOvers/Hazards/Room4/activity2);
 
           SendMessage(SaveDialogue,This is the location of the container, marked by
           a green arrow. , );'
@@ -7419,7 +6882,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 30
-        y: 120
+        y: 118
         width: 160
         height: 30
     - id: 8
@@ -7467,7 +6930,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'SendMessage(Point,,SymbolTrigger24);
 
-          Delay(10);
+          AudioWait(Sounds/VoiceOvers/Hazards/Room4/activity4);
 
           SendMessage(SaveDialogue,This is the location of the hazard lists, marked
           by the green arrow. , );'
@@ -7543,7 +7006,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Delay(10);
+        value: 'AudioWait(Sounds/VoiceOvers/Hazards/Room4/activity1);
 
           SendMessage(NewRoom,,ClearRoom4);
 
@@ -7601,7 +7064,7 @@ MonoBehaviour:
         typeString: 
       - title: Dialogue Text
         value: This is the location of the tablet if you need to review the Hazard
-          Symbols, marked by the green arrow.
+          Symbols, marked by a green arrow.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -7619,7 +7082,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'SendMessage(Point,,SymbolTrigger34);
 
-          Delay(10);
+          AudioWait(Sounds/VoiceOvers/Hazards/Room4/activity6);
 
           SendMessage(SaveDialogue,This is the location of the tablet if you need
           to review the Hazard Symbols, marked by the green arrow. , );'
@@ -7690,7 +7153,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: Delay(10);
+        value: AudioWait(Sounds/VoiceOvers/Hazards/Room4/activity8);
         type: 0
         typeString: 
       conversationID: 2
@@ -7742,7 +7205,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: Please go up to one of these tables.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -7759,6 +7222,8 @@ MonoBehaviour:
         typeString: 
       - title: Sequence
         value: 'SendMessage(TCheck,,SymbolTrigger24);
+
+          AudioWait(Sounds/VoiceOvers/Hazards/Room4/activity5);
 
           WaitForMessage(trigger);'
         type: 0
@@ -7812,7 +7277,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: Please go up to this table.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -7829,6 +7294,8 @@ MonoBehaviour:
         typeString: 
       - title: Sequence
         value: 'SendMessage(TCheck,,SymbolTrigger14);
+
+          AudioWait(Sounds/VoiceOvers/Hazards/Room4/activity3);
 
           WaitForMessage(trigger);'
         type: 0
@@ -7882,7 +7349,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: Please go up to this table.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -7899,6 +7366,8 @@ MonoBehaviour:
         typeString: 
       - title: Sequence
         value: 'SendMessage(TCheck,,SymbolTrigger34);
+
+          AudioWait(Sounds/VoiceOvers/Hazards/Room4/activity7);
 
           WaitForMessage(trigger);'
         type: 0
@@ -7923,74 +7392,6 @@ MonoBehaviour:
         serializedVersion: 2
         x: 228
         y: 223
-        width: 160
-        height: 30
-    - id: 16
-      fields:
-      - title: Title
-        value: New Dialogue Entry
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: 
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: 
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: Sorry, that is incorrect.
-        type: 0
-        typeString: 
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 2
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 2
-        originDialogueID: 16
-        destinationConversationID: 2
-        destinationDialogueID: 2
-        isConnector: 0
-        priority: 2
-      conditionsString: Variable["Reset"] == false
-      userScript: 
-      canvasRect:
-        serializedVersion: 2
-        x: 411
-        y: 121
         width: 160
         height: 30
     - id: 17
@@ -8050,13 +7451,13 @@ MonoBehaviour:
       - originConversationID: 2
         originDialogueID: 17
         destinationConversationID: 2
-        destinationDialogueID: 16
+        destinationDialogueID: 3
         isConnector: 0
         priority: 2
       - originConversationID: 2
         originDialogueID: 17
         destinationConversationID: 2
-        destinationDialogueID: 3
+        destinationDialogueID: 2
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -8065,138 +7466,6 @@ MonoBehaviour:
         serializedVersion: 2
         x: 236
         y: 75
-        width: 160
-        height: 30
-    - id: 18
-      fields:
-      - title: Title
-        value: New Dialogue Entry
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: 
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: 
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 'SendMessage(NextRoom,,EmptyRoomObject);
-
-          Delay(1;)'
-        type: 0
-        typeString: 
-      conversationID: 2
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 2
-        originDialogueID: 18
-        destinationConversationID: 2
-        destinationDialogueID: 19
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      canvasRect:
-        serializedVersion: 2
-        x: 606
-        y: 186
-        width: 160
-        height: 30
-    - id: 19
-      fields:
-      - title: Title
-        value: New Dialogue Entry
-        type: 0
-        typeString: 
-      - title: Pictures
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 2
-        type: 5
-        typeString: 
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: 
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Parenthetical
-        value: 
-        type: 0
-        typeString: 
-      - title: Audio Files
-        value: '[]'
-        type: 3
-        typeString: 
-      - title: Video File
-        value: 
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: SendMessage(LetUserThrough,,EmptyRoomObject);
-        type: 0
-        typeString: 
-      conversationID: 2
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: 
-      userScript: 
-      canvasRect:
-        serializedVersion: 2
-        x: 606
-        y: 236
         width: 160
         height: 30
   - id: 7

@@ -90,6 +90,20 @@ MonoBehaviour:
       value: 
       type: 0
       typeString: 
+  - id: 2
+    fields:
+    - title: Name
+      value: UserTestScore
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
   conversations:
   - id: 1
     fields:
@@ -166,7 +180,7 @@ MonoBehaviour:
       isGroup: 0
       nodeColor: 
       delaySimStatus: 0
-      falseConditionAction: 
+      falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
       - originConversationID: 1
@@ -226,7 +240,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Final/f1);
+        value: 'AudioWait(Sounds/VoiceOvers/Final/f1);
+
+          SendMessage(SaveDialogue, Hello and welcome to the Final Exam Module., );'
         type: 0
         typeString: 
       conversationID: 1
@@ -247,7 +263,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 29
+        x: 28
         y: 70
         width: 160
         height: 30
@@ -294,7 +310,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Final/f2);
+        value: 'AudioWait(Sounds/VoiceOvers/Final/f2);
+
+          SendMessage(SaveDialogue, In this module you will be taking your final exam.,
+          );'
         type: 0
         typeString: 
       - title: Response Menu Sequence
@@ -350,7 +369,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: You will be presented with a brief overview of what has been convered
+        value: You will be presented with a brief overview of what has been covered
           and then you will take your exam.
         type: 0
         typeString: 
@@ -367,7 +386,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Final/f3);
+        value: 'AudioWait(Sounds/VoiceOvers/Final/f3);
+
+          SendMessage(SaveDialogue, You will be presented with a brief overview of
+          what has been covered and then you will take your exam., );'
         type: 0
         typeString: 
       conversationID: 1
@@ -388,7 +410,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 31
+        x: 30
         y: 170
         width: 160
         height: 30
@@ -436,7 +458,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Final/f4);
+        value: 'AudioWait(Sounds/VoiceOvers/Final/f4);
+
+          SendMessage(SaveDialogue, You must get at least 70% on the final exam to
+          earn the Certificate of Completion., );'
         type: 0
         typeString: 
       conversationID: 1
@@ -505,7 +530,14 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Final/f5);
+        value: 'AudioWait(Sounds/VoiceOvers/Final/f5);
+
+          SendMessage(SaveDialogue, If you score at least a 70% you may access your
+          certificate in the Progress page in the Main Menu., );'
+        type: 0
+        typeString: 
+      - title: Response Menu Sequence
+        value: 
         type: 0
         typeString: 
       conversationID: 1
@@ -573,7 +605,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Final/f6);
+        value: 'AudioWait(Sounds/VoiceOvers/Final/f6);
+
+          SendMessage(SaveDialogue, Let''s begin going over what has been covered.,
+          );'
         type: 0
         typeString: 
       conversationID: 1
@@ -662,7 +697,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 287
+        x: 286
         y: 330
         width: 160
         height: 30
@@ -709,7 +744,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Final/f8);
+        value: 'AudioWait(Sounds/VoiceOvers/Final/f8);
+
+          SendMessage(ShowSymbol, symbol);'
         type: 0
         typeString: 
       conversationID: 1
@@ -761,7 +798,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Which denotes oxidizers.
+        value: Which represents oxidizers.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -845,7 +882,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Final/f10);
+        value: 'AudioWait(Sounds/VoiceOvers/Final/f10);
+
+          SendMessage(ShowSymbol, symbol2);'
         type: 0
         typeString: 
       conversationID: 1
@@ -867,7 +906,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 291
-        y: 479
+        y: 480
         width: 160
         height: 30
     - id: 11
@@ -982,7 +1021,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Final/f12);
+        value: 'AudioWait(Sounds/VoiceOvers/Final/f12);
+
+          SendMessage(ShowSymbol, symbol3);'
         type: 0
         typeString: 
       conversationID: 1
@@ -1118,7 +1159,13 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Final/f14);
+        value: 'AudioWait(Sounds/VoiceOvers/Final/f14);
+
+          SendMessage(ShowSymbol, symbol4);'
+        type: 0
+        typeString: 
+      - title: Response Menu Sequence
+        value: 
         type: 0
         typeString: 
       conversationID: 1
@@ -1170,7 +1217,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Which is identifies acutely toxic or fatal substances.
+        value: Which identifies acutely toxic or fatal substances.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -1207,7 +1254,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 296
+        x: 295
         y: 732
         width: 160
         height: 30
@@ -1254,7 +1301,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Final/f16);
+        value: 'AudioWait(Sounds/VoiceOvers/Final/f16);
+
+          SendMessage(ShowSymbol, symbol5);'
         type: 0
         typeString: 
       conversationID: 1
@@ -1412,7 +1461,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 296
+        x: 295
         y: 890
         width: 160
         height: 30
@@ -1459,7 +1508,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Final/f18);
+        value: 'AudioWait(Sounds/VoiceOvers/Final/f18);
+
+          SendMessage(ShowSymbol, symbol6);'
         type: 0
         typeString: 
       conversationID: 1
@@ -1527,7 +1578,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Final/f20);
+        value: 'AudioWait(Sounds/VoiceOvers/Final/f20);
+
+          SendMessage(ShowSymbol, symbol7);'
         type: 0
         typeString: 
       conversationID: 1
@@ -1548,8 +1601,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 293
-        y: 928
+        x: 296
+        y: 925
         width: 160
         height: 30
     - id: 21
@@ -1664,7 +1717,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Final/f22);
+        value: 'AudioWait(Sounds/VoiceOvers/Final/f22);
+
+          SendMessage(ShowSymbol, symbol8);'
         type: 0
         typeString: 
       conversationID: 1
@@ -1800,7 +1855,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Final/f24);
+        value: 'AudioWait(Sounds/VoiceOvers/Final/f24);
+
+          SendMessage(ShowSymbol, symbol9);'
         type: 0
         typeString: 
       conversationID: 1
@@ -2366,7 +2423,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 574
+        x: 573
         y: 1509
         width: 160
         height: 30
@@ -2503,7 +2560,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 574
-        y: 1609
+        y: 1611
         width: 160
         height: 30
     - id: 35
@@ -2669,7 +2726,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Section 11, Toxicological information
+        value: Section 11, Toxicological information.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -2941,7 +2998,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Section 15, Regulatory information (Optional)
+        value: Section 15, Regulatory information (Optional).
         type: 0
         typeString: 
       - title: Parenthetical
@@ -3046,8 +3103,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 574
-        y: 2009
+        x: 573
+        y: 2010
         width: 160
         height: 30
     - id: 43
@@ -3093,7 +3150,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Final/f44);
+        value: 'AudioWait(Sounds/VoiceOvers/Final/f44);
+
+          SendMessage(SaveDialogue, That''s the end of the overview of information
+          presented., );'
         type: 0
         typeString: 
       conversationID: 1
@@ -3114,8 +3174,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 758
-        y: 2009
+        x: 759
+        y: 2010
         width: 160
         height: 30
     - id: 44
@@ -3161,7 +3221,13 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Final/f45);
+        value: 'SendMessage(EndReview, );
+
+          AudioWait(Sounds/VoiceOvers/Final/f45);
+
+          WaitForMessage(LaptopTableNearby);
+
+          SendMessage(SaveDialogue, Now go up to the table., );'
         type: 0
         typeString: 
       conversationID: 1
@@ -3182,8 +3248,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 758
-        y: 2060
+        x: 762
+        y: 2059
         width: 160
         height: 30
     - id: 45
@@ -3229,7 +3295,16 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Final/f46);
+        value: 'AudioWait(Sounds/VoiceOvers/Final/f46);
+
+          WaitForMessage(TestStarted);
+
+          SendMessage(SaveDialogue, Press E while looking at the laptop to start the
+          Final Exam., );'
+        type: 0
+        typeString: 
+      - title: Response Menu Sequence
+        value: 
         type: 0
         typeString: 
       conversationID: 1
@@ -3250,7 +3325,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 758
+        x: 757
         y: 2109
         width: 160
         height: 30
@@ -3298,7 +3373,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Final/f47);
+        value: 'AudioWait(Sounds/VoiceOvers/Final/f47);
+
+          SendMessage(SaveDialogue, Please answer the following questions based on
+          what you''ve learned in this game., );'
         type: 0
         typeString: 
       conversationID: 1
@@ -3366,7 +3444,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Final/f48);
+        value: 'AudioWait(Sounds/VoiceOvers/Final/f48);
+
+          WaitForMessage(Submit);
+
+          SendMessage(SaveDialogue, Press submit once you''re done., );'
         type: 0
         typeString: 
       conversationID: 1
@@ -3387,8 +3469,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 758
-        y: 2209
+        x: 757
+        y: 2211
         width: 160
         height: 30
     - id: 48
@@ -3628,7 +3710,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: You've scored a
+        value: 'This is what you scored: [var=UserTestScore] out of 40'
         type: 0
         typeString: 
       - title: Parenthetical
@@ -3718,7 +3800,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Final/f51);
+        value: 'AudioWait(Sounds/VoiceOvers/Final/f51);
+
+          SendMessage(SaveDialogue, You didn''t obtain a high enough score to earn
+          the Certificate of Completion., );'
         type: 0
         typeString: 
       conversationID: 1
@@ -3735,12 +3820,12 @@ MonoBehaviour:
         destinationDialogueID: 53
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["UserTestScore"] < 28
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 692
-        y: 2412
+        x: 641
+        y: 2405
         width: 160
         height: 30
     - id: 53
@@ -3787,7 +3872,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Final/f52);
+        value: 'AudioWait(Sounds/VoiceOvers/Final/f52);
+
+          SendMessage(SaveDialogue, If you want the Certificate of Completion you
+          may replay the earlier modules to review the content., );'
         type: 0
         typeString: 
       conversationID: 1
@@ -3808,8 +3896,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 690
-        y: 2462
+        x: 658
+        y: 2447
         width: 160
         height: 30
     - id: 54
@@ -3839,8 +3927,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Then select the Resume Current Playthrough button in the Main Menu
-          to retry the Final Exam.
+        value: Or you may select the Resume Current Playthrough button in the Main
+          Menu to retry the Final Exam.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -3856,7 +3944,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Final/f53);
+        value: 'AudioWait(Sounds/VoiceOvers/Final/f53);
+
+          SendMessage(SaveDialogue, Or you may select the Resume Current Playthrough
+          button in the Main Menu to retry the Final Exam., );'
         type: 0
         typeString: 
       conversationID: 1
@@ -3877,8 +3968,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 690
-        y: 2512
+        x: 688
+        y: 2497
         width: 160
         height: 30
     - id: 55
@@ -3924,7 +4015,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Final/f54);
+        value: 'AudioWait(Sounds/VoiceOvers/Final/f54);
+
+          SendMessage(SaveDialogue, You''ve obtained a high enough score to earn the
+          Certificate of Completion., );'
         type: 0
         typeString: 
       conversationID: 1
@@ -3941,12 +4035,12 @@ MonoBehaviour:
         destinationDialogueID: 56
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["UserTestScore"] >= 28
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 881
-        y: 2412
+        x: 880
+        y: 2413
         width: 160
         height: 30
     - id: 56
@@ -3977,7 +4071,7 @@ MonoBehaviour:
         typeString: 
       - title: Dialogue Text
         value: If you want the Certificate of Completion, select the Results button
-          in the Main Menu and then select the Get Certifcate button.
+          in the Main Menu and then select the Get Certificate button.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -3993,7 +4087,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Final/f55);
+        value: 'AudioWait(Sounds/VoiceOvers/Final/f55);
+
+          SendMessage(SaveDialogue, If you want the Certificate of Completion, select
+          the Results button in the Main Menu and then select the Get Certificate
+          button., );'
         type: 0
         typeString: 
       conversationID: 1
@@ -4062,7 +4160,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Final/f56);
+        value: 'AudioWait(Sounds/VoiceOvers/Final/f56);
+
+          SendMessage(SaveDialogue, When you select the Get Certificate button, you
+          will download the Certificate of Completion as a PDF., );'
         type: 0
         typeString: 
       conversationID: 1
@@ -4083,8 +4184,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 881
-        y: 2512
+        x: 880
+        y: 2515
         width: 160
         height: 30
     - id: 58
@@ -4131,7 +4232,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Final/f57);
+        value: 'AudioWait(Sounds/VoiceOvers/Final/f57);
+
+          SendMessage(SaveDialogue, Hello and welcome to the Final Exam Module., );'
         type: 0
         typeString: 
       conversationID: 1
@@ -4141,13 +4244,19 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 58
+        destinationConversationID: 1
+        destinationDialogueID: 60
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       canvasRect:
         serializedVersion: 2
         x: 781
-        y: 2579
+        y: 2580
         width: 160
         height: 30
     - id: 59
@@ -4193,7 +4302,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/Final/f26);
+        value: 'AudioWait(Sounds/VoiceOvers/Final/f26);
+
+          SendMessage(ShowSymbol, none);'
         type: 0
         typeString: 
       conversationID: 1
@@ -4216,6 +4327,68 @@ MonoBehaviour:
         serializedVersion: 2
         x: 287
         y: 1212
+        width: 160
+        height: 30
+    - id: 60
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: 
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: 
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: 
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: SendMessage(EndFinal, ,)
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      canvasRect:
+        serializedVersion: 2
+        x: 781
+        y: 2630
         width: 160
         height: 30
   syncInfo:

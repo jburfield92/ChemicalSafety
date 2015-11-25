@@ -96,7 +96,7 @@ public class Test : MonoBehaviour
 
             newCorrectAnswer = Convert.ToInt32(text[i])-48;
 
-            questions.Add(new Question { question = newQuestion.ToString(), answers = newAnswers, correctAnswer = newCorrectAnswer });
+            questions.Add(new Question { Image = NewImage.ToString(), question = newQuestion.ToString(), answers = newAnswers, correctAnswer = newCorrectAnswer });
 
             i++;
 		}

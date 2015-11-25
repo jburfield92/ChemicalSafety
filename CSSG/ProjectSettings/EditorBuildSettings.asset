@@ -17,3 +17,9 @@ EditorBuildSettings:
     path: Assets/Hazards.unity
   - enabled: 1
     path: Assets/SDSLoadingScreen.unity
+  - enabled: 1
+    path: Assets/SDS.unity
+  - enabled: 1
+    path: Assets/FinalExamLoadingScreen.unity
+  - enabled: 1
+    path: Assets/FinalExam.unity

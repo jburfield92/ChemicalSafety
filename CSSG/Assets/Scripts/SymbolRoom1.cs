@@ -17,6 +17,10 @@ public class SymbolRoom1 : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
+        Camera.main.GetComponent<MouseLook>().enabled = true;
+        PickupObject.canRun = true;
+        TakeLaptopTest.UsingLaptop = false;
+
         int i = 0;
         
         pointOne = false;
@@ -86,7 +90,7 @@ public class SymbolRoom1 : MonoBehaviour
             }
         }
 
-        int x = Screen.width / 2;
+      /*  int x = Screen.width / 2;
         int y = Screen.height / 2;
 
         Ray ray = Camera.main.ScreenPointToRay(new Vector3(x, y));
@@ -112,7 +116,7 @@ public class SymbolRoom1 : MonoBehaviour
                     banner = null;
                 }
             }
-        } 
+        } */
     }
 
     void PointOne()

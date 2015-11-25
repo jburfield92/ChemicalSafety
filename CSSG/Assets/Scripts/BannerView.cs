@@ -1,48 +1,51 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
-using System.Collections;
 
 public class BannerView : MonoBehaviour
 {
+	public GameObject Target;
+	public bool hit;
+   private bool playing;
+    private float time;
 
-    public GameObject Target;
-    public bool hit;
-    private GameObject MainCam;
-
-    // Use this for initialization
-    void Start()
+	// Use this for initialization
+	void Start ()
     {
-
-        hit = false;
-        MainCam = GameObject.FindWithTag("MainCamera");
-
-    }
-
-    // Update is called once per frame
-    void Update()
+        if(Target == null)
+        {
+            Target = null;
+        }
+		hit = false;
+        playing = false;
+	}
+	
+	// Update is called once per frame
+	void Update ()
     {
-        //hit = false;
-
-
+       
         if (hit)
         {
-            Target.transform.rotation = MainCam.transform.rotation;
+            time += Time.deltaTime;
+            if(Target != null)
+            Target.transform.rotation = Camera.main.transform.rotation;
         }
-
-        if (Target.GetComponent<Image>() != null)
+        else
         {
-
-            Target.GetComponent<Image>().enabled = hit;
-            foreach (Image a in Target.GetComponentsInChildren<Image>())
-            {
-                a.enabled = hit;
-
-            }
+            if (transform.GetComponent<AudioSource>() != null) {
+                time = 0.0f;
+                transform.GetComponent<AudioSource>().Stop();
+                playing = false; }
         }
+        
 
-        if (Target.GetComponent<Image>() == null)
-            Target.SetActive(hit);
 
-        hit = false;
+        if ( time >= 1.0f && playing == !true && transform.GetComponent<AudioSource>() != null)
+        {
+            playing = true;
+            transform.GetComponent<AudioSource>().Play();   
+        }
+        if(Target != null)
+		Target.SetActive(hit);
+
+		hit = false;
     }
 }

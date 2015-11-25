@@ -179,7 +179,7 @@ public class TutorialScripts : MonoBehaviour
         GameObject.Find("container").GetComponent<BoxCollider>().enabled = true;
     }
 
-	void EndGame()
+	void EndTutorial()
 	{
         SQL.SaveProgress("Tutorial", (int)(100*(float)Test.testScore/Test.maxTestScore));
         Application.LoadLevel("HazardsLoadingScreen");

@@ -27,6 +27,12 @@ public class MainMenu : MonoBehaviour
             set;
         }
 
+        public string Image
+        {
+            get;
+            set;
+        }
+
         public List<string> answers;
 
         public int correctAnswer
@@ -38,13 +44,14 @@ public class MainMenu : MonoBehaviour
         public Question()
         {
             question = null;
+            Image = null;
             answers = new List<string>();
         }
     }
 
     void Start()
     {
-        
+  
     }
 
     void Update()
@@ -56,32 +63,25 @@ public class MainMenu : MonoBehaviour
     {
         DataTable userProgress = SQL.GetProgress();
 
-        if (!string.IsNullOrEmpty(userProgress.Rows[0]["TutorialExamScore"].ToString()))
+        if (!string.IsNullOrEmpty(userProgress.Rows[0]["TutorialExamDate"].ToString()))
         {
             resultsText.text = string.Empty;
             BuildTestResults("Tutorial");
             AddTestResultsToMenu("Tutorial");
         }
 
-        if (!string.IsNullOrEmpty(userProgress.Rows[0]["HazardExamScore"].ToString()))
+        if (!string.IsNullOrEmpty(userProgress.Rows[0]["HazardExamDate"].ToString()))
         {
             resultsText.text = string.Empty;
             BuildTestResults("Hazards");
             AddTestResultsToMenu("Hazards");
         }
 
-        if (!string.IsNullOrEmpty(userProgress.Rows[0]["SDSExamScore"].ToString()))
+        if (!string.IsNullOrEmpty(userProgress.Rows[0]["SDSExamDate"].ToString()))
         {
             resultsText.text = string.Empty;
             BuildTestResults("SDS");
             AddTestResultsToMenu("SDS");
-        }
-
-        if (!string.IsNullOrEmpty(userProgress.Rows[0]["SafetyExamScore"].ToString()))
-        {
-            resultsText.text = string.Empty;
-            BuildTestResults("Safety");
-            AddTestResultsToMenu("Safety");
         }
     }
 
@@ -144,6 +144,21 @@ public class MainMenu : MonoBehaviour
 
         foreach (Question q in questions)
         {
+            if (!string.IsNullOrEmpty(q.Image))
+            {
+                GameObject imageObject = Instantiate(Resources.Load("SymbolImage/" + q.Image)) as GameObject;
+
+                imageObject.transform.SetParent(resultsPanel.transform, false);
+
+                imageObject.GetComponent<Text>().rectTransform.localPosition = new Vector3(
+                    imageObject.GetComponent<Text>().rectTransform.localPosition.x,
+                    imageObject.GetComponent<Text>().rectTransform.localPosition.y,
+                    0);
+
+                imageObject.GetComponent<Text>().rectTransform.localRotation = Quaternion.Euler(0, 0, 0);
+                imageObject.GetComponent<Text>().rectTransform.localScale = new Vector3(1, 1, 1);
+            }
+
             GameObject question = Instantiate(Resources.Load("questionText")) as GameObject;
             question.name = "Question" + questionCount;
             question.GetComponent<Text>().text = "Question " + questionCount + ": " + q.question 
@@ -187,8 +202,21 @@ public class MainMenu : MonoBehaviour
         for (int i = 0; i < text.Length; i += 2)
         {
             StringBuilder newQuestion = new StringBuilder();
+            StringBuilder NewImage = new StringBuilder();
             List<string> newAnswers = new List<string>();
             int newCorrectAnswer;
+
+            if (text[i] == '[')
+            {
+                i++;
+
+                while (text[i] != ']')
+                {
+                    NewImage.Append(text[i]);
+                    i++;
+                }
+                i++;
+            }
 
             while (text[i] != '{')
             {
@@ -224,7 +252,7 @@ public class MainMenu : MonoBehaviour
 
             newCorrectAnswer = Convert.ToInt32(text[i]) - 48;
 
-            questions.Add(new Question { question = newQuestion.ToString(), answers = newAnswers, correctAnswer = newCorrectAnswer });
+            questions.Add(new Question { Image = NewImage.ToString(), question = newQuestion.ToString(), answers = newAnswers, correctAnswer = newCorrectAnswer });
 
             i++;
         }

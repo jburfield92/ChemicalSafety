@@ -326,7 +326,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 30
-        y: 121
+        y: 122
         width: 160
         height: 30
     - id: 4
@@ -1501,7 +1501,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Using your W,A,S,D keys and your mouse or track pad, with the container
+        value: Using your W,A,S,D keys and your mouse or touch pad, with the container
           in your hands, walk up to the table on the other side of the room.
         type: 0
         typeString: 
@@ -1520,7 +1520,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'AudioWait(Sounds/VoiceOvers/Tutorial/Intro/intro33);  WaitForMessage(NearTable);
 
-          SendMessage(SaveDialogue, Using your W,A,S,D keys and your mouse or track
+          SendMessage(SaveDialogue, Using your W,A,S,D keys and your mouse or touch
           pad, with the container in your hands, walk up to the table on the other
           side of the room., );'
         type: 0
@@ -1965,7 +1965,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 424
+        x: 423
         y: 1918
         width: 160
         height: 30
@@ -3245,7 +3245,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testing/testing2);WaitForMessage(LaptopTableNearby);
+        value: AudioWait(Sounds/VoiceOvers/Tutorial/testing/testing2);WaitForMessage(LaptopTableNearby);
           SendMessage(SaveDialogue, Go up to the table., );
         type: 0
         typeString: 
@@ -3298,8 +3298,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: You have two options to complete the test. Either with a tablet or
-          a laptop.
+        value: This is the laptop you'll be using to complete your test.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -3315,9 +3314,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testing/testing3); SendMessage(SaveDialogue,
-          You have two options to complete the test. Either with a tablet or a laptop.,
-          );
+        value: AudioWait(Sounds/VoiceOvers/Tutorial/testing/testing3); SendMessage(SaveDialogue,
+          This is the laptop you'll be using to complete your test., );
         type: 0
         typeString: 
       conversationID: 3
@@ -3369,7 +3367,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Press E while looking at one of the devices to start the test.
+        value: Press E while looking at the laptop to start the test.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -3385,9 +3383,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: WaitForMessage(TestStarted); AudioWait(Sounds/VoiceOvers/testing/testing4);
-          SendMessage(SaveDialogue, Press E while looking at one of the devices to
-          start the test., );
+        value: WaitForMessage(TestStarted); AudioWait(Sounds/VoiceOvers/Tutorial/testing/testing4);
+          SendMessage(SaveDialogue, Press E while looking at the laptop to start the
+          test., );
         type: 0
         typeString: 
       conversationID: 3
@@ -3456,7 +3454,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testing/testing5); SendMessage(SaveDialogue,
+        value: AudioWait(Sounds/VoiceOvers/Tutorial/testing/testing5); SendMessage(SaveDialogue,
           Please answer the following questions based on what you have done so far.,
           );
         type: 0
@@ -3526,7 +3524,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AudioWait(Sounds/VoiceOvers/testing/testing6);
+        value: 'AudioWait(Sounds/VoiceOvers/Tutorial/testing/testing6);
 
           WaitForMessage(Submit); SendMessage(SaveDialogue, Press Submit at the bottom
           of the page once you are done., );'
@@ -3601,7 +3599,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testing/testing7); SendMessage(SaveDialogue,
+        value: AudioWait(Sounds/VoiceOvers/Tutorial/testing/testing7); SendMessage(SaveDialogue,
           Are you sure?, );
         type: 0
         typeString: 
@@ -3629,8 +3627,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 120
-        y: 369
+        x: 119
+        y: 370
         width: 160
         height: 30
     - id: 7
@@ -3830,7 +3828,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testing/testing8a); SendMessage(SaveDialogue,
+        value: AudioWait(Sounds/VoiceOvers/Tutorial/testing/testing8a); SendMessage(SaveDialogue,
           You scored a 0 out of 3., );
         type: 0
         typeString: 
@@ -3899,7 +3897,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testing/testing10); SendMessage(SaveDialogue,
+        value: AudioWait(Sounds/VoiceOvers/Tutorial/testing/testing10); SendMessage(SaveDialogue,
           That concludes the Tutorial Module., );
         type: 0
         typeString: 
@@ -3969,7 +3967,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testing/testing11); SendMessage(SaveDialogue,
+        value: AudioWait(Sounds/VoiceOvers/Tutorial/testing/testing11); SendMessage(SaveDialogue,
           You have been given credit for completing the Tutorial and you may now continue
           with the rest of the training modules., );
         type: 0
@@ -3992,7 +3990,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 296
+        x: 295
         y: 688
         width: 160
         height: 30
@@ -4039,7 +4037,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testing/testing1); SendMessage(SaveDialogue,
+        value: AudioWait(Sounds/VoiceOvers/Tutorial/testing/testing1); SendMessage(SaveDialogue,
           This is what a testing room might look like., );
         type: 0
         typeString: 
@@ -4061,7 +4059,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 122
+        x: 123
         y: 64
         width: 160
         height: 30
@@ -4108,7 +4106,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testing/testing8b); SendMessage(SaveDialogue,
+        value: AudioWait(Sounds/VoiceOvers/Tutorial/testing/testing8b); SendMessage(SaveDialogue,
           You scored a 1 out of 3., );
         type: 0
         typeString: 
@@ -4177,7 +4175,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testing/testing8c); SendMessage(SaveDialogue,
+        value: AudioWait(Sounds/VoiceOvers/Tutorial/testing/testing8c); SendMessage(SaveDialogue,
           You scored a 2 out of 3., );
         type: 0
         typeString: 
@@ -4246,7 +4244,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testing/testing8d); SendMessage(SaveDialogue,
+        value: AudioWait(Sounds/VoiceOvers/Tutorial/testing/testing8d); SendMessage(SaveDialogue,
           You scored a 3 out of 3., );
         type: 0
         typeString: 
@@ -4315,7 +4313,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SendMessage(EndGame, ,)
+        value: SendMessage(EndTutorial, ,)
         type: 0
         typeString: 
       conversationID: 3
@@ -4378,7 +4376,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/testing/testing9); SendMessage(SaveDialogue,
+        value: AudioWait(Sounds/VoiceOvers/Tutorial/testing/testing9); SendMessage(SaveDialogue,
           If at any point in the game you want to review what you got right or wrong
           on a test, go to the Results page in the Main Menu., );
         type: 0

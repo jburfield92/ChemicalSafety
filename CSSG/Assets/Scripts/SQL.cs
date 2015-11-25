@@ -4,6 +4,10 @@ using System.Data;
 using System.Data.SqlClient;
 using UnityEngine;
 using UnityEngine.UI;
+//using PdfSharp.Drawing;
+//using PdfSharp.Drawing.Layout;
+//using PdfSharp.Pdf;
+//using PdfSharp.Pdf.IO;
 
 public class SQL : MonoBehaviour 
 {
@@ -132,47 +136,16 @@ public class SQL : MonoBehaviour
                 ContinueButton.interactable = true;
             }
 
-            if (TCompleteText.text == "Yes")
-	        {
-	            TTestScoreText.text = userProgress.Rows[0]["TutorialExamScore"].ToString();
-	        }
-	        else
-	        {
-	            TTestScoreText.text = "N/A";
-	        }
-
-	        if (HSCompleteText.text == "Yes")
-	        {
-	            HSTestScoreText.text = userProgress.Rows[0]["HazardExamScore"].ToString();
-	        }
-	        else
-	        {
-	            HSTestScoreText.text = "N/A";
-	        }
-
-	        if (SDSCompleteText.text == "Yes")
-	        {
-	            SDSTestScoreText.text = userProgress.Rows[0]["SDSExamScore"].ToString();
-	        }
-	        else
-	        {
-	            SDSTestScoreText.text = "N/A";
-	        }
-
-	        if (FCompleteText.text == "Yes")
-	        {
-                FTestScoreText.text = userProgress.Rows[0]["FinalExamScore"].ToString();
-	        }
-	        else
-	        {
-                FTestScoreText.text = "N/A";
-	        }
+	        TTestScoreText.text = (string.IsNullOrEmpty(userProgress.Rows[0]["TutorialExamScore"].ToString())) ? "N/A" : userProgress.Rows[0]["TutorialExamScore"].ToString();
+	        HSTestScoreText.text = (string.IsNullOrEmpty(userProgress.Rows[0]["HazardExamScore"].ToString())) ? "N/A" : userProgress.Rows[0]["HazardExamScore"].ToString();
+            SDSTestScoreText.text = (string.IsNullOrEmpty(userProgress.Rows[0]["SDSExamScore"].ToString())) ? "N/A" : userProgress.Rows[0]["SDSExamScore"].ToString();
+            FTestScoreText.text = (string.IsNullOrEmpty(userProgress.Rows[0]["FinalExamScore"].ToString())) ? "N/A" : userProgress.Rows[0]["FinalExamScore"].ToString();
 
             if (FTestScoreText.text != "N/A")
             {
                 int score = Convert.ToInt32(FTestScoreText.text);
 
-                if (score > 70)
+                if (score >= 70)
                 {
                     GetCertificateButton.interactable = true;
                 }
@@ -507,4 +480,33 @@ public class SQL : MonoBehaviour
 	{
 		gameVolumeSliderValue.text = value.ToString ();
 	}
+
+    // untested
+    public void GetCertificate()
+    {
+        //PdfDocument pdf = PdfReader.Open("BlankCertificate.pdf");
+       // XGraphics gfx = XGraphics.FromPdfPage(pdf.Pages[0]);
+        //XFont mainFont = new XFont("Arial", 24, XFontStyle.Bold);
+
+        /*XTextFormatter xtf = new XTextFormatter(gfx);
+        xtf.Alignment = XParagraphAlignment.Center;
+        xtf.DrawString(UserName, mainFont, XBrushes.Black, new XRect(0, pdf.Pages[0].Height / 2 - 30, pdf.Pages[0].Width, 50), XStringFormats.TopLeft);
+
+        // need to get score
+        xtf.DrawString("XX", mainFont, XBrushes.Black, new XRect(0, pdf.Pages[0].Height / 2 + 85, pdf.Pages[0].Width, 50), XStringFormats.TopLeft);
+
+        XFont font = new XFont("Arial", 18, XFontStyle.Bold);
+        xtf.DrawString("Isabel Perry", font, XBrushes.Black, new XRect(100, pdf.Pages[0].Height / 2 + 140, pdf.Pages[0].Width / 3, 50), XStringFormats.TopLeft);
+
+        // need to get score
+        xtf.DrawString(DateTime.Now.ToString("MM/dd/yyyy"), font, XBrushes.Black, new XRect(pdf.Pages[0].Height / 2 - 50, pdf.Pages[0].Height / 2 + 140, 50, 50), XStringFormats.TopLeft);
+
+        // need to get certificate ID
+        xtf.DrawString("123456789", font, XBrushes.Black, new XRect(pdf.Pages[0].Height / 2 + 25, pdf.Pages[0].Height / 2 + 140, pdf.Pages[0].Width / 3, 50), XStringFormats.TopLeft);
+
+        // need to get score
+        xtf.DrawString("3251 Progress Dr., Suite 105, Orlando, FL 32826", font, XBrushes.Black, new XRect(0, pdf.Pages[0].Height / 2 + 185, pdf.Pages[0].Width, 50), XStringFormats.TopLeft);
+
+        pdf.Save(UserName + "Certfiicate.pdf");*/
+    }
 }

@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 407734}
   - 65: {fileID: 6537096}
   - 114: {fileID: 11446550}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CloseDoorArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NumberOfSecondsToWait: 3
-  clip: {fileID: 8300000, guid: c07f4e67aeec5a240b0d0dd73f1f48ae, type: 3}
+  clip: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -69,6 +69,10 @@ Prefab:
       propertyPath: clip
       value: 
       objectReference: {fileID: 8300000, guid: c07f4e67aeec5a240b0d0dd73f1f48ae, type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 105718}

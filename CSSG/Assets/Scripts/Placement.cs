@@ -97,7 +97,7 @@ public class Placement : MonoBehaviour
 			Ray ray = Camera.main.ScreenPointToRay(new Vector3(x,y));
 			RaycastHit hit;
 
-			if(Physics.Raycast(ray, out hit))
+			if(Physics.Raycast(ray, out hit, 3.0f))
 			{
 				Placing p = hit.collider.GetComponent<Placing>();
 
@@ -107,6 +107,7 @@ public class Placement : MonoBehaviour
                     if (string.Compare(p.Value, PickupObject.carriedObject.GetComponent<Pickupable>().Value) == 0)
                     {
                         p.Placed = true;
+                        p.GetComponent<Collider>().enabled = false;
                         PickupObject.carriedObject.GetComponent<Pickupable>().Check = true;
                         PickupObject.carriedObject.GetComponent<Collider>().enabled = true;
                         PickupObject.carriedObject.transform.SetParent(RandomRoom.used.transform);

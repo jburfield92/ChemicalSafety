@@ -108,7 +108,7 @@ public class RandomRoom : MonoBehaviour
         {
             case 'N':
                 newHall = (GameObject)Instantiate(Nhall, new Vector3(x, 0, z), Quaternion.identity);
-                deleteArea = (GameObject)Instantiate(CloseDoorArea, new Vector3(x, 0, z + 14), Quaternion.Euler(new Vector3(90, 0, 90)));
+                deleteArea = (GameObject)Instantiate(CloseDoorArea, new Vector3(x, 0, z + 13 * deleteRoom.transform.localScale.x), Quaternion.Euler(new Vector3(90, 0, 90)));
 
                 z = z + roomSpawnDistance;
 
@@ -120,7 +120,7 @@ public class RandomRoom : MonoBehaviour
                 break;
             case 'S':
                 newHall = (GameObject)Instantiate(Shall, new Vector3(x, 0, z), Quaternion.identity);
-                deleteArea = (GameObject)Instantiate(CloseDoorArea, new Vector3(x, 0, z - 14), Quaternion.Euler(new Vector3(90, 0, 90)));
+                deleteArea = (GameObject)Instantiate(CloseDoorArea, new Vector3(x, 0, z - 13 * deleteRoom.transform.localScale.x), Quaternion.Euler(new Vector3(90, 0, 90)));
 
                 z = z - roomSpawnDistance;
 
@@ -133,7 +133,7 @@ public class RandomRoom : MonoBehaviour
                 break;
             case 'E':
                 newHall = (GameObject)Instantiate(Ehall, new Vector3(x, 0, z), Quaternion.identity);
-                deleteArea = (GameObject)Instantiate(CloseDoorArea, new Vector3(x + 14, 0, z), Quaternion.identity);
+                deleteArea = (GameObject)Instantiate(CloseDoorArea, new Vector3(x + 13 * deleteRoom.transform.localScale.x, 0, z), Quaternion.identity);
 
                 x = x + roomSpawnDistance;
 
@@ -145,7 +145,7 @@ public class RandomRoom : MonoBehaviour
                 break;
             case 'W':
                 newHall = (GameObject)Instantiate(Whall, new Vector3(x, 0, z), Quaternion.identity);
-                deleteArea = (GameObject)Instantiate(CloseDoorArea, new Vector3(x - 14, 0, z), Quaternion.identity);
+                deleteArea = (GameObject)Instantiate(CloseDoorArea, new Vector3(x - 13 * deleteRoom.transform.localScale.x, 0, z), Quaternion.identity);
 
                 x = x - roomSpawnDistance;
 

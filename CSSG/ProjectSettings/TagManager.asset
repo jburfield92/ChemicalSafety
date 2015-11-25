@@ -25,6 +25,12 @@ TagManager:
   - ScreenImage
   - FireExtinguisher
   - Banner
+  - TabletSideButton
+  - TabletCenterButton
+  - TabletSpawn
+  - Fire
+  - extinguisherEmission
+  - TabletText
   layers:
   - Default
   - TransparentFX
@@ -38,7 +44,7 @@ TagManager:
   - GameItems
   - Banner
   - Room
-  - 
+  - Light
   - 
   - 
   - 

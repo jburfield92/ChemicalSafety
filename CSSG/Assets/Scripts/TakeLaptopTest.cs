@@ -42,6 +42,12 @@ public class TakeLaptopTest : MonoBehaviour
     /// </summary>
     void Update()
     {
+        if (uiRoot == null)
+        {
+            uiRoot = GameObject.Find("GUIRoot");
+            control = uiRoot.GetComponent<GUIControl>();
+        }
+
         if (carryingLaptop && carriedLaptop != null)
         {
             UseLaptop();

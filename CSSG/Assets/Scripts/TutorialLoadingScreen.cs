@@ -6,7 +6,6 @@ public class TutorialLoadingScreen : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1f;
-        
     }
 
     // Update is called once per frame
