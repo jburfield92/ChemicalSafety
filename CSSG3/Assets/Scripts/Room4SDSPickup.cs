@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using PixelCrushers.DialogueSystem;
+using UnityEngine.UI;
 
 
 public class Room4SDSPickup : MonoBehaviour {
@@ -125,5 +126,16 @@ public class Room4SDSPickup : MonoBehaviour {
 	public void ReadyToStore(){
 		readyToStore = true;
 	}
-	
+
+    public void ChangeIt()
+    {
+
+        if (GameObject.Find("Dropdown").GetComponent<Dropdown>().value > 0)
+        {
+            DialogueLua.SetVariable("UserQuizAnswer", GameObject.Find("Dropdown").GetComponent<Dropdown>().value);
+            DialogueManager.Instance.SendMessage("OnSequencerMessage", "SDSchose");
+            GameObject.Find("Dropdown").GetComponent<Dropdown>().value = 0;
+        }
+    }
+
 }

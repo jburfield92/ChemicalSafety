@@ -4264,7 +4264,10 @@ MonoBehaviour:
         value: 'Delay(4);
 
           SendMessage(SaveDialogue, You are currently participating in the Safety
-          Data Sheets module for this game., );'
+          Data Sheets module for this game., );
+
+
+          SendMessage(GetButtons,,Tablet);'
         type: 0
         typeString: 
       conversationID: 4
@@ -4336,7 +4339,10 @@ MonoBehaviour:
         value: 'Delay(4);
 
           SendMessage(SaveDialogue, In this section you will be familiarized with
-          the Safety Data Sheets (SDS) associated with hazardous chemicals., );'
+          the Safety Data Sheets (SDS) associated with hazardous chemicals., );
+
+
+          SendMessage(GetButtons,,SDSRoom1);'
         type: 0
         typeString: 
       conversationID: 4
@@ -4408,7 +4414,10 @@ MonoBehaviour:
         value: 'Delay(4);
 
           SendMessage(SaveDialogue, This module will consist of an educational section
-          an activities section and a testing section., );'
+          an activities section and a testing section., );
+
+
+          SendMessage(RemoveSideButtons,,Tablet);'
         type: 0
         typeString: 
       conversationID: 4
@@ -4479,7 +4488,10 @@ MonoBehaviour:
         value: 'Delay(4);
 
           SendMessage(SaveDialogue, The educational and testing sections will consist
-          of 1 room each, );'
+          of 1 room each, );
+
+
+          SendMessage(RemoveSideButtons,,Tablet);'
         type: 0
         typeString: 
       conversationID: 4
@@ -5051,7 +5063,10 @@ MonoBehaviour:
         value: 'Delay(4);
 
           SendMessage(SaveDialogue, and then you will be given a small quiz after
-          all the information is presented., );'
+          all the information is presented., );
+
+
+          SendMessage(RemoveSideButtons,,SDSRoom1);'
         type: 0
         typeString: 
       conversationID: 4
@@ -5194,16 +5209,24 @@ MonoBehaviour:
         value: 'WaitForMessage(next);
 
 
-          SendMessage(UpdateText,SDS Section 1: Identification. This section provides
-          the name of the chemical covered in the SDS. It also provides essential
-          contact information of the supplier and may include recommended uses of
-          the chemical.,Information);
+          SendMessage(UpdateText,SDS Section 1: Identification.
+
+
+          This section provides the name of the chemical covered in the SDS. It also
+          provides essential contact information of the supplier and may include recommended
+          uses of the chemical.,Information);
+
+
+          SendMessage(UpdateText,,Information2);
 
 
           SendMessage(SaveDialogue,SDS Section 1: Identification. This section provides
           the name of the chemical covered in the SDS. It also provides essential
           contact information of the supplier, and may include recommended uses of
-          the chemical., );'
+          the chemical., );
+
+
+          SendMessage(MoveDialogue,,Tablet);'
         type: 0
         typeString: 
       conversationID: 4
@@ -5224,7 +5247,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 37
+        x: 39
         y: 801
         width: 160
         height: 30
@@ -5274,16 +5297,16 @@ MonoBehaviour:
         value: 'WaitForMessage(next);
 
 
-          SendMessage(UpdateText,SDS Section 2: Hazard Idenfication. This section
-          provides the hazards associated with the chemical and warning information
-          associated with the hazards.,Information);
+          SendMessage(UpdateText,SDS Section 2: Hazard Idenfication.
+
+
+          This section provides the hazards associated with the chemical and warning
+          information associated with the hazards.,Information);
 
 
           SendMessage(SaveDialogue,SDS Section 2: Hazard Idenfication. This section
           provides the hazards associated with the chemical and warning information
-          associated with the hazards., );
-
-'
+          associated with the hazards., );'
         type: 0
         typeString: 
       conversationID: 4
@@ -5304,7 +5327,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 37
+        x: 36
         y: 851
         width: 160
         height: 30
@@ -5355,6 +5378,8 @@ MonoBehaviour:
 
 
           SendMessage(UpdateText,SDS Section 3: Composition/Information on Ingredients.
+
+
           This section provides information on the ingredients of the chemical as
           well as information on any subtances or mixtures present.,Information);
 
@@ -5430,7 +5455,7 @@ MonoBehaviour:
         typeString: 
       - title: Sequence
         value: "WaitForMessage(next);\n\nSendMessage(UpdateText,SDS Section 4: First-aid
-          Measures. This section provides information on how to deal with first-aid
+          Measures.\n\nThis section provides information on how to deal with first-aid
           as an untrained responder in the event of an individual being exposed to
           the chemical.,Information);\n\nSendMessage(SaveDialogue,SDS Section 4: First-aid
           Measures. This section provides information on how to deal with first-aid
@@ -5456,8 +5481,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 33
-        y: 954
+        x: 36
+        y: 948
         width: 160
         height: 30
     - id: 19
@@ -5531,7 +5556,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 37
+        x: 36
         y: 1000
         width: 160
         height: 30
@@ -5581,23 +5606,32 @@ MonoBehaviour:
         value: 'WaitForMessage(next);
 
 
+          SendMessage(UpdateText,,Information);
+
+
           SendMessage(UpdateText,Which section of the SDS would you consult in order
           to find information about treating an injury due to exposure to a chemical?
 
 
-          Press the button with the corrosponding section number.,Information);
+          Press the button with the corrosponding section number.,Information2);
 
 
-          SendMessage(QuizTime,,SDSRoom1);
+          SendMessage(UpdateText,Quiz,Header);
 
 
-          SendMessage(UpdateText,1,SubmitTextA);
+          SendMessage(QuizTime,,Tablet);
 
-          SendMessage(UpdateText,2,SubmitTextB);
 
-          SendMessage(UpdateText,3,SubmitTextC);
+          SendMessage(UpdateText,Section 1: Identification,SubmitTextA);
 
-          SendMessage(UpdateText,4,SubmitTextD);'
+
+          SendMessage(UpdateText,Section 2: Hazards Identification,SubmitTextB);
+
+
+          SendMessage(UpdateText,Section 3: Composition/ Information on Ingredients,SubmitTextC);
+
+
+          SendMessage(UpdateText,Section 4: First-Aid Measures,SubmitTextD);'
         type: 0
         typeString: 
       conversationID: 4
@@ -5618,8 +5652,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 37
-        y: 1051
+        x: 35
+        y: 1049
         width: 160
         height: 30
     - id: 21
@@ -5673,7 +5707,10 @@ MonoBehaviour:
           chemical.,Information);
 
 
-          SendMessage(RemoveSideButtons,,SDSRoom1);
+          SendMessage(UpdateText,,Information2);
+
+
+          SendMessage(RemoveSideButtons,,Tablet);
 
 
           SendMessage(UpdateText,OK,SubmitText);'
@@ -5697,8 +5734,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 41
-        y: 1187
+        x: 42
+        y: 1188
         width: 160
         height: 30
     - id: 22
@@ -5887,19 +5924,25 @@ MonoBehaviour:
           on the supplier of the chemical?
 
 
-          Press the button with the corrosponding section number.,Information);
+          Press the button with the corrosponding section number.,Information2);
 
 
-          SendMessage(QuizTime,,SDSRoom1);
+          SendMessage(UpdateText,,Information);
 
 
-          SendMessage(UpdateText,1,SubmitTextA);
+          SendMessage(QuizTime,,Tablet);
 
-          SendMessage(UpdateText,2,SubmitTextB);
 
-          SendMessage(UpdateText,3,SubmitTextC);
+          SendMessage(UpdateText,Section 1: Identification,SubmitTextA);
 
-          SendMessage(UpdateText,4,SubmitTextD);'
+
+          SendMessage(UpdateText,Section 2: Hazard(s) Identification,SubmitTextB);
+
+
+          SendMessage(UpdateText,Section 3: Composition/ Information on Ingredients,SubmitTextC);
+
+
+          SendMessage(UpdateText,Section 4: First-Aid Measures,SubmitTextD);'
         type: 0
         typeString: 
       conversationID: 4
@@ -6006,7 +6049,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 43
+        x: 42
         y: 1132
         width: 160
         height: 30
@@ -6282,7 +6325,10 @@ MonoBehaviour:
           information of the chemical''s supplier.,Information);
 
 
-          SendMessage(RemoveSideButtons,,SDSRoom1);
+          SendMessage(UpdateText,,Information2);
+
+
+          SendMessage(RemoveSideButtons,,Tablet);
 
 
           SendMessage(UpdateText,OK,SubmitText);'
@@ -6306,7 +6352,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 39
+        x: 42
         y: 1348
         width: 160
         height: 30
@@ -6360,10 +6406,16 @@ MonoBehaviour:
           SendMessage(UpdateText,Press "back" to start again at section 1.
 
 
-          Press "ready" to move on to section 5. ,Information);
+          Press "ready" to move on to section 5. ,Information2);
 
 
-          SendMessage(QuizTime,,SDSRoom1);
+          SendMessage(UpdateText,,Information);
+
+
+          SendMessage(UpdateText,,Header);
+
+
+          SendMessage(QuizTime,,Tablet);
 
 
           SendMessage(UpdateText,Back,SubmitTextA);
@@ -6443,7 +6495,7 @@ MonoBehaviour:
         value: 'Delay(0.2);
 
 
-          SendMessage(RemoveSideButtons,,SDSRoom1);
+          SendMessage(RemoveSideButtons,,Tablet);
 
 
           SendMessage(UpdateText,next,SubmitText);'
@@ -6603,9 +6655,14 @@ MonoBehaviour:
         value: 'WaitForMessage(next);
 
 
-          SendMessage(UpdateText,SDS Section 5: Fire-fighting measures. This section
-          provides information on how to deal with a fire caused by the chemical covered
-          by the SDS.,Information);
+          SendMessage(UpdateText,SDS Section 5: Fire-fighting measures.
+
+
+          This section provides information on how to deal with a fire caused by the
+          chemical covered by the SDS.,Information);
+
+
+          SendMessage(UpdateText,,Information2);
 
 
           SendMessage(SaveDialogue,SDS Section 5: Fire-fighting measures. This section
@@ -6613,7 +6670,7 @@ MonoBehaviour:
           by the SDS., );
 
 
-          SendMessage(RemoveSideButtons,,SDSRoom1);
+          SendMessage(RemoveSideButtons,,Tablet);
 
 
           SendMessage(UpdateText,next,SubmitText);'
@@ -6637,7 +6694,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 278
+        x: 277
         y: 1451
         width: 160
         height: 30
@@ -6705,8 +6762,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 11
-        y: 1453
+        x: 13
+        y: 1447
         width: 160
         height: 30
     - id: 35
@@ -6755,9 +6812,11 @@ MonoBehaviour:
         value: 'WaitForMessage(next);
 
 
-          SendMessage(UpdateText,SDS Section 6: Accidental Release Measures. This
-          section provides information on how to deal with an accidental release of
-          the chemical. This includes containment and cleanup practices to minimize
+          SendMessage(UpdateText,SDS Section 6: Accidental Release Measures.
+
+
+          This section provides information on how to deal with an accidental release
+          of the chemical. This includes containment and cleanup practices to minimize
           exposure.,Information);
 
 
@@ -6835,8 +6894,11 @@ MonoBehaviour:
         value: 'WaitForMessage(next);
 
 
-          SendMessage(UpdateText,SDS Section 7: Handling and Storage. This section
-          provides information on handling practices and proper storage of the chemical.,Information);
+          SendMessage(UpdateText,SDS Section 7: Handling and Storage.
+
+
+          This section provides information on handling practices and proper storage
+          of the chemical.,Information);
 
 
           SendMessage(SaveDialogue,SDS Section 7: Handling and Storage. This section
@@ -6917,6 +6979,8 @@ MonoBehaviour:
 
 
           SendMessage(UpdateText,SDS Section 8: Exposure Controls/Personal Protection.
+
+
           This section provides information on the exposure limits of the chemical
           and protective measures to minimize exposure.,Information);
 
@@ -7075,19 +7139,28 @@ MonoBehaviour:
           protective equipment to wear while working with a chemical?
 
 
-          Press the button with the corrosponding section number.,Information);
+          Press the button with the corrosponding section number.,Information2);
 
 
-          SendMessage(QuizTime,,SDSRoom1);
+          SendMessage(UpdateText,,Information);
 
 
-          SendMessage(UpdateText,5,SubmitTextA);
+          SendMessage(UpdateText,Quiz,Header);
 
-          SendMessage(UpdateText,6,SubmitTextB);
 
-          SendMessage(UpdateText,7,SubmitTextC);
+          SendMessage(QuizTime,,Tablet);
 
-          SendMessage(UpdateText,8,SubmitTextD);'
+
+          SendMessage(UpdateText,Section 5: Fire-Fighting Measures,SubmitTextA);
+
+
+          SendMessage(UpdateText,Section 6: Accidental Release Measures,SubmitTextB);
+
+
+          SendMessage(UpdateText,Section 7: Handling and Storage,SubmitTextC);
+
+
+          SendMessage(UpdateText,Section 8: Exposure Controls/Personal Protection,SubmitTextD);'
         type: 0
         typeString: 
       conversationID: 4
@@ -7385,7 +7458,10 @@ MonoBehaviour:
           while working with and handling the chemical.,Information);
 
 
-          SendMessage(RemoveSideButtons,,SDSRoom1);
+          SendMessage(UpdateText,,Information2);
+
+
+          SendMessage(RemoveSideButtons,,Tablet);
 
 
           SendMessage(UpdateText,OK,SubmitText);'
@@ -7463,19 +7539,25 @@ MonoBehaviour:
           proper storage procedures for the chemical?
 
 
-          Press the button with the corrosponding section number.,Information);
+          Press the button with the corrosponding section number.,Information2);
 
 
-          SendMessage(QuizTime,,SDSRoom1);
+          SendMessage(UpdateText,,Information);
 
 
-          SendMessage(UpdateText,5,SubmitTextA);
+          SendMessage(QuizTime,,Tablet);
 
-          SendMessage(UpdateText,6,SubmitTextB);
 
-          SendMessage(UpdateText,7,SubmitTextC);
+          SendMessage(UpdateText,Section 5: Fire-Fighting Measures,SubmitTextA);
 
-          SendMessage(UpdateText,8,SubmitTextD);'
+
+          SendMessage(UpdateText,Section 6: Accidental Release Measures,SubmitTextB);
+
+
+          SendMessage(UpdateText,Section 7: Handling and Storage,SubmitTextC);
+
+
+          SendMessage(UpdateText,Section 8: Exposure Controls/Personal Protection,SubmitTextD);'
         type: 0
         typeString: 
       conversationID: 4
@@ -7636,7 +7718,10 @@ MonoBehaviour:
           of the chemical.,Information);
 
 
-          SendMessage(RemoveSideButtons,,SDSRoom1);
+          SendMessage(UpdateText,,Information2);
+
+
+          SendMessage(RemoveSideButtons,,Tablet);
 
 
           SendMessage(UpdateText,OK,SubmitText);
@@ -7852,10 +7937,16 @@ MonoBehaviour:
           SendMessage(UpdateText,Press "back" to start again at section 5.
 
 
-          Press "ready" to move on to section 9. ,Information);
+          Press "ready" to move on to section 9. ,Information2);
 
 
-          SendMessage(QuizTime,,SDSRoom1);
+          SendMessage(UpdateText,,Information);
+
+
+          SendMessage(UpdateText,,Header);
+
+
+          SendMessage(QuizTime,,Tablet);
 
 
           SendMessage(UpdateText,Back,SubmitTextA);
@@ -7885,8 +7976,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 282
-        y: 2005
+        x: 280
+        y: 2004
         width: 160
         height: 30
     - id: 50
@@ -8160,8 +8251,13 @@ MonoBehaviour:
 
 
           SendMessage(UpdateText,SDS Section 9: Physical and Chemical Properties.
+
+
           This section provides information on the physical and chemical properties
           of the substance or mixture.,Information);
+
+
+          SendMessage(UpdateText,,Information2);
 
 
           SendMessage(SaveDialogue,SDS Section 9: Physical and Chemical Properties.
@@ -8169,7 +8265,7 @@ MonoBehaviour:
           of the substance or mixture., );
 
 
-          SendMessage(RemoveSideButtons,,SDSRoom1);
+          SendMessage(RemoveSideButtons,,Tablet);
 
 
           SendMessage(UpdateText,next,SubmitText);'
@@ -8311,9 +8407,11 @@ MonoBehaviour:
         value: 'WaitForMessage(next);
 
 
-          SendMessage(UpdateText,SDS Section 10: Stability and Reactivity. This section
-          provides information on the reactivity hazards of the chemical and information
-          on the stability of the chemical.,Information);
+          SendMessage(UpdateText,SDS Section 10: Stability and Reactivity.
+
+
+          This section provides information on the reactivity hazards of the chemical
+          and information on the stability of the chemical.,Information);
 
 
           SendMessage(SaveDialogue,SDS Section 10: Stability and Reactivity. This
@@ -8389,9 +8487,11 @@ MonoBehaviour:
         value: 'WaitForMessage(next);
 
 
-          SendMessage(UpdateText,SDS Section 11: Toxicological Information. This section
-          provides information on the toxicological properties and health effects
-          of the chemical.,Information);
+          SendMessage(UpdateText,SDS Section 11: Toxicological Information.
+
+
+          This section provides information on the toxicological properties and health
+          effects of the chemical.,Information);
 
 
           SendMessage(SaveDialogue,SDS Section 11: Toxicological Information. This
@@ -8467,9 +8567,11 @@ MonoBehaviour:
         value: 'WaitForMessage(next);
 
 
-          SendMessage(UpdateText,SDS Section 12: Ecological Information.  This section
-          provides information on the environmental impact of the chemical if it were
-          released. This section is not mandatory.,Information);
+          SendMessage(UpdateText,SDS Section 12: Ecological Information.
+
+
+          This section provides information on the environmental impact of the chemical
+          if it were released. This section is not mandatory.,Information);
 
 
           SendMessage(SaveDialogue,SDS Section 12: Ecological Information.  This section
@@ -8495,8 +8597,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 508
-        y: 2218
+        x: 504
+        y: 2216
         width: 160
         height: 30
     - id: 58
@@ -9032,19 +9134,28 @@ MonoBehaviour:
           properties of the chemical?
 
 
-          Press the button with the corrosponding section number.,Information);
+          Press the button with the corrosponding section number.,Information2);
 
 
-          SendMessage(QuizTime,,SDSRoom1);
+          SendMessage(UpdateText,,Information);
 
 
-          SendMessage(UpdateText,9,SubmitTextA);
+          SendMessage(UpdateText,Quiz,Header);
 
-          SendMessage(UpdateText,10,SubmitTextB);
 
-          SendMessage(UpdateText,11,SubmitTextC);
+          SendMessage(QuizTime,,Tablet);
 
-          SendMessage(UpdateText,12,SubmitTextD);'
+
+          SendMessage(UpdateText,Section 9: Physical and Chemical Properties,SubmitTextA);
+
+
+          SendMessage(UpdateText,Section 10: Stability and Reactivity,SubmitTextB);
+
+
+          SendMessage(UpdateText,Section 11: Toxicological Information,SubmitTextC);
+
+
+          SendMessage(UpdateText,Section 12: Ecological Information,SubmitTextD);'
         type: 0
         typeString: 
       conversationID: 4
@@ -9205,7 +9316,10 @@ MonoBehaviour:
           stability as well as stabilizers that may be required to maintain stability.,Information);
 
 
-          SendMessage(RemoveSideButtons,,SDSRoom1);
+          SendMessage(UpdateText,,Information2);
+
+
+          SendMessage(RemoveSideButtons,,Tablet);
 
 
           SendMessage(UpdateText,OK,SubmitText);'
@@ -9486,19 +9600,25 @@ MonoBehaviour:
           SendMessage(UpdateText,Which section covered so far is a non-mandatory section?
 
 
-          Press the button with the corrosponding section number.,Information);
+          Press the button with the corrosponding section number.,Information2);
 
 
-          SendMessage(QuizTime,,SDSRoom1);
+          SendMessage(UpdateText,,Information);
 
 
-          SendMessage(UpdateText,9,SubmitTextA);
+          SendMessage(QuizTime,,Tablet);
 
-          SendMessage(UpdateText,10,SubmitTextB);
 
-          SendMessage(UpdateText,11,SubmitTextC);
+          SendMessage(UpdateText,Section 9: Physical and Chemical Properties,SubmitTextA);
 
-          SendMessage(UpdateText,12,SubmitTextD);'
+
+          SendMessage(UpdateText,Section 10: Stability and Reactivity,SubmitTextB);
+
+
+          SendMessage(UpdateText,Section 11: Toxicological Information,SubmitTextC);
+
+
+          SendMessage(UpdateText,Section 12: Ecological Information,SubmitTextD);'
         type: 0
         typeString: 
       conversationID: 4
@@ -9659,7 +9779,10 @@ MonoBehaviour:
           sections included in the SDS.,Information);
 
 
-          SendMessage(RemoveSideButtons,,SDSRoom1);
+          SendMessage(UpdateText,,Information2);
+
+
+          SendMessage(RemoveSideButtons,,Tablet);
 
 
           SendMessage(UpdateText,OK,SubmitText);'
@@ -9941,10 +10064,16 @@ MonoBehaviour:
           SendMessage(UpdateText,Press "back" to start again at section 9.
 
 
-          Press "ready" to move on to section 13. ,Information);
+          Press "ready" to move on to section 13. ,Information2);
 
 
-          SendMessage(QuizTime,,SDSRoom1);
+          SendMessage(UpdateText,,Information);
+
+
+          SendMessage(UpdateText,,Header);
+
+
+          SendMessage(QuizTime,,Tablet);
 
 
           SendMessage(UpdateText,Back,SubmitTextA);
@@ -10180,10 +10309,15 @@ MonoBehaviour:
         value: 'WaitForMessage(next);
 
 
-          SendMessage(UpdateText,SDS Section 13: Disposal Considerations. This section
-          provides information on proper disposal or recycling methods of the chemical
-          and/or its container as well as safe handling practices. This section is
-          not mandatory.,Information);
+          SendMessage(UpdateText,SDS Section 13: Disposal Considerations.
+
+
+          This section provides information on proper disposal or recycling methods
+          of the chemical and/or its container as well as safe handling practices.
+          This section is not mandatory.,Information);
+
+
+          SendMessage(UpdateText,,Information2);
 
 
           SendMessage(SaveDialogueSDS Section 13: Disposal Considerations. This section
@@ -10192,7 +10326,7 @@ MonoBehaviour:
           not mandatory., );
 
 
-          SendMessage(RemoveSideButtons,,SDSRoom1);
+          SendMessage(RemoveSideButtons,,Tablet);
 
 
           SendMessage(UpdateText,next,SubmitText);'
@@ -10470,9 +10604,11 @@ MonoBehaviour:
         value: 'WaitForMessage(next);
 
 
-          SendMessage(UpdateText,SDS Section 14: Transport Information. This section
-          provides classification information for shipping or transporting the chemical.
-          This section is not mandatory.,Information);
+          SendMessage(UpdateText,SDS Section 14: Transport Information.
+
+
+          This section provides classification information for shipping or transporting
+          the chemical. This section is not mandatory.,Information);
 
 
           SendMessage(SaveDialogue,SDS Section 14: Transport Information. This section
@@ -10548,10 +10684,12 @@ MonoBehaviour:
         value: 'WaitForMessage(next);
 
 
-          SendMessage(UpdateText,SDS Section 15: Regulatory Information. This section
-          provides information related to safety/ health/ environmental regulations
-          of the chemical that were not indicated elsewhere on the SDS. This section
-          is not mandatory.,Information);
+          SendMessage(UpdateText,SDS Section 15: Regulatory Information.
+
+
+          This section provides information related to safety/ health/ environmental
+          regulations of the chemical that were not indicated elsewhere on the SDS.
+          This section is not mandatory.,Information);
 
 
           SendMessage(SaveDialogue,SDS Section 15: Regulatory Information. This section
@@ -10578,7 +10716,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 718
+        x: 720
         y: 2770
         width: 160
         height: 30
@@ -10628,9 +10766,11 @@ MonoBehaviour:
         value: 'WaitForMessage(next);
 
 
-          SendMessage(UpdateText,SDS Section 16: Other Information. This section provides
-          information on when the SDS was made or when the latest revision was made.
-          It may also include information on the revision.,Information);
+          SendMessage(UpdateText,SDS Section 16: Other Information.
+
+
+          This section provides information on when the SDS was made or when the latest
+          revision was made. It may also include information on the revision.,Information);
 
 
           SendMessage(SaveDialogue,SDS Section 16: Other Information. This section
@@ -10782,22 +10922,31 @@ MonoBehaviour:
 
 
           SendMessage(UpdateText,Which section provides the proper practices for disposing
-          or recycling a chemical?
+          of or recycling a chemical?
 
 
-          Press the button with the corrosponding section number.,Information);
+          Press the button with the corrosponding section number.,Information2);
 
 
-          SendMessage(QuizTime,,SDSRoom1);
+          SendMessage(UpdateText,,Information);
 
 
-          SendMessage(UpdateText,13,SubmitTextA);
+          SendMessage(UpdateText,Quiz,Header);
 
-          SendMessage(UpdateText,14,SubmitTextB);
 
-          SendMessage(UpdateText,15,SubmitTextC);
+          SendMessage(QuizTime,,Tablet);
 
-          SendMessage(UpdateText,16,SubmitTextD);'
+
+          SendMessage(UpdateText,Section 13: Disposal Considerations,SubmitTextA);
+
+
+          SendMessage(UpdateText,Section 14: Transport Information,SubmitTextB);
+
+
+          SendMessage(UpdateText,Section 15: Regulatory Information,SubmitTextC);
+
+
+          SendMessage(UpdateText,Section 16: Other Information,SubmitTextD);'
         type: 0
         typeString: 
       conversationID: 4
@@ -10959,7 +11108,10 @@ MonoBehaviour:
           the chemical during dispoal.,Information);
 
 
-          SendMessage(RemoveSideButtons,,SDSRoom1);
+          SendMessage(UpdateText,,Information2);
+
+
+          SendMessage(RemoveSideButtons,,Tablet);
 
 
           SendMessage(UpdateText,OK,SubmitText);'
@@ -11241,19 +11393,25 @@ MonoBehaviour:
           to the SDS
 
 
-          Press the button with the corrosponding section number.,Information);
+          Press the button with the corrosponding section number.,Information2);
 
 
-          SendMessage(QuizTime,,SDSRoom1);
+          SendMessage(UpdateText,,Information);
 
 
-          SendMessage(UpdateText,13,SubmitTextA);
+          SendMessage(QuizTime,,Tablet);
 
-          SendMessage(UpdateText,14,SubmitTextB);
 
-          SendMessage(UpdateText,15,SubmitTextC);
+          SendMessage(UpdateText,Section 13: Disposal Considerations,SubmitTextA);
 
-          SendMessage(UpdateText,16,SubmitTextD);'
+
+          SendMessage(UpdateText,Section 14: Transport Information,SubmitTextB);
+
+
+          SendMessage(UpdateText,Section 15: Regulatory Information,SubmitTextC);
+
+
+          SendMessage(UpdateText,Section 16: Other Information,SubmitTextD);'
         type: 0
         typeString: 
       conversationID: 4
@@ -11415,7 +11573,10 @@ MonoBehaviour:
           in other sections.,Information);
 
 
-          SendMessage(RemoveSideButtons,,SDSRoom1);
+          SendMessage(UpdateText,,Information2);
+
+
+          SendMessage(RemoveSideButtons,,Tablet);
 
 
           SendMessage(UpdateText,OK,SubmitText);'
@@ -11698,10 +11859,16 @@ MonoBehaviour:
           SendMessage(UpdateText,Press "back" to start again at section 13.
 
 
-          Press "ready" to move on to the Activities Section. ,Information);
+          Press "ready" to move on to the Activities Section. ,Information2);
 
 
-          SendMessage(QuizTime,,SDSRoom1);
+          SendMessage(UpdateText,,Information);
+
+
+          SendMessage(UpdateText,,Header);
+
+
+          SendMessage(QuizTime,,Tablet);
 
 
           SendMessage(UpdateText,Back,SubmitTextA);
@@ -11866,6 +12033,11 @@ MonoBehaviour:
       - title: Sequence
         value: 'Delay(4);
 
+
+          SendMessage(MoveDialogue,,Tablet);
+
+
+          SendMessage(RemoveSideButtons,,Tablet);
 
           SendMessage(ReturnTablet,,EmptyPickupObject);
 

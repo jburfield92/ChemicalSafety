@@ -2,6 +2,7 @@
 using System.Collections;
 using PixelCrushers.DialogueSystem;
 using UnityEngine.UI;
+using PixelCrushers.DialogueSystem.UnityGUI;
 
 public class EducationScriptSDS : MonoBehaviour {
 
@@ -10,10 +11,18 @@ public class EducationScriptSDS : MonoBehaviour {
 	public static GameObject[] buttons;
 	public static GameObject[] centerButton;
 
-	// Use this for initialization
-	void Start () {
+    private GameObject uiRoot;
+    private GUIControl control;
+
+    public static bool moved;
+
+    // Use this for initialization
+    void Start () {
 		answer = 0;
-	}
+
+        uiRoot = GameObject.Find("GUIRoot");
+        control = uiRoot.GetComponent<GUIControl>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -68,6 +77,27 @@ public class EducationScriptSDS : MonoBehaviour {
 	public void GetButtons() {
 		centerButton = GameObject.FindGameObjectsWithTag("TabletCenterButton");
 		buttons = GameObject.FindGameObjectsWithTag("TabletSideButton");
+        moved = false;
 
 	}
+
+    public void MoveDialogue()
+    {
+        uiRoot = GameObject.Find("GUIRoot");
+        control = uiRoot.GetComponent<GUIControl>();
+
+        if (!moved)
+        {
+            control.scaledRect.y = ScaledValue.FromNormalizedValue(-0.48f);
+            control.Refresh();
+            moved = true;
+        }
+
+        else
+        {
+            control.scaledRect.y = ScaledValue.FromNormalizedValue(0.15f);
+            control.Refresh();
+        }
+    }
+          
 }

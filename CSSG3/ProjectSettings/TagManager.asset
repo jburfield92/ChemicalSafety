@@ -33,6 +33,7 @@ TagManager:
   - TabletSideButton
   - TabletCenterButton
   - SDSContainer
+  - dropd
   layers:
   - Default
   - TransparentFX

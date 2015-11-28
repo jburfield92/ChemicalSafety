@@ -1,16 +1,16 @@
-Which SDS Section identifies the chemical covered by the SDS? { 5 | 1 | 11 | 2 } 2
-Which SDS Section identifies the hazards of the chemical covered by the SDS? { 1 | 6 | 2 | 11 } 3
-Which SDS Section lists the ingredients present? { 16 | 8 | 12 | 3 } 4
-Which SDS Section describes first-aid care to give to somebody exposed to the chemical? { 15 | 4 | 6 | 16 } 2
-Which SDS Section provides information on fighting a fire caused by the chemical? { 5 | 12 | 3 | 14 } 1
-Which SDS Section contains the appropriate response to an accidental release of the chemical? { 5 | 2 | 6 | 10 } 3
-Which SDS Section contains the proper handling procedures for the chemical? { 1 | 15 | 7 | 2 } 3
-Which SDS Section contains personal protective measures to minimize exposure? { 12 | 7 | 13 | 8 } 4
-Which SDS Section identifies the physical and chemical properties of the chemical? { 7 | 9 | 5 | 1 } 2
-Which SDS Section provides information on the stability of the chemical? { 10 | 11 | 3 | 2 } 1
-Which SDS Section identifies toxicological and health effects of the chemical? { 2 | 11 | 4 | 8 } 2
-Which SDS Section provides information regarding environmental impacts from the release of the chemical? { 11 | 16 | 12 | 4 } 3
-Which SDS Section provides guidance for proper disposal of the chemical? { 15 | 8 | 6 | 13 } 4
-Which SDS Section provides classification information for transporting the chemical? { 10 | 14 | 5 | 8 } 2
-Which SDS Section regulations specific to the chemical that were not located in other sections? { 15 | 10 | 7 | 2 } 1
-Which SDS Section contains revision/creation information of the SDS itself? { 5 | 1 | 16 | 12 } 3
+Which SDS Section identifies the chemical covered by the SDS? { Section 5: Fire-Fighting Measures | Section 1: Identification | Section 11: Toxicological Information | Section 2: Hazard(s) Identification } 2
+Which SDS Section identifies the hazards of the chemical covered by the SDS? { Section 1: Identification | Section 6: Accidental Release Measures | Section 2: Hazard(s) Identification | Section 11: Toxicological Information } 3
+Which SDS Section lists the ingredients present? { Section 16: Other Information | Section 8: Exposure Controls/Personal Protection | Section 12: Ecological Information (non-mandatory) | Section 3: Composition/Information on Ingredients } 4
+Which SDS Section describes first-aid care to give to somebody exposed to the chemical? { Section 15: Regulatory Information (non-mandatory) | Section 4: First-Aid Measures | Section 6: Accidental Release Measures | Section 16: Other Information } 2
+Which SDS Section provides information on fighting a fire caused by the chemical? { Section 5: Fire-Fighting Measures | Section 12: Ecological Information (non-mandatory) | Section 3: Composition/Information on Ingredients | Section 14: Transport Information (non-mandatory) } 1
+Which SDS Section contains the appropriate response to an accidental release of the chemical? { Section 5: Fire-Fighting Measures | Section 2: Hazard(s) Identification | Section 6: Accidental Release Measures | Section 10: Stability and Reactivity } 3
+Which SDS Section contains the proper handling procedures for the chemical? { Section 1: Identification | Section 15: Regulatory Information (non-mandatory) | Section 7: Handling and Storage | Section 2: Hazard(s) Identification } 3
+Which SDS Section contains personal protective measures to minimize exposure? { Section 12: Ecological Information (non-mandatory) | Section 7: Handling and Storage | Section 13: Disposal Considerations (non-mandatory) | Section 8: Exposure Controls/Personal Protection } 4
+Which SDS Section identifies the physical and chemical properties of the chemical? { Section 7: Handling and Storage | Section 9: Physical and Chemical Properties | Section 5: Fire-Fighting Measures | Section 1: Identification } 2
+Which SDS Section provides information on the stability of the chemical? { Section 10: Stability and Reactivity | Section 11: Toxicological Information | Section 3: Composition/Information on Ingredients | Section 2: Hazard(s) Identification } 1
+Which SDS Section identifies toxicological and health effects of the chemical? { Section 2: Hazard(s) Identification | Section 11: Toxicological Information | Section 4: First-Aid Measures | Section 8: Exposure Controls/Personal Protection } 2
+Which SDS Section provides information regarding environmental impacts from the release of the chemical? { Section 11: Toxicological Information | Section 16: Other Information | Section 12: Ecological Information (non-mandatory) | Section 4: First-Aid Measures } 3
+Which SDS Section provides guidance for proper disposal of the chemical? { Section 15: Regulatory Information (non-mandatory) | Section 8: Exposure Controls/Personal Protection | Section 6: Accidental Release Measures | Section 13: Disposal Considerations (non-mandatory) } 4
+Which SDS Section provides classification information for transporting the chemical? { Section 10: Stability and Reactivity | Section 14: Transport Information (non-mandatory) | Section 5: Fire-Fighting Measures | Section 8: Exposure Controls/Personal Protection } 2
+Which SDS Section regulations specific to the chemical that were not located in other sections? { Section 15: Regulatory Information (non-mandatory) | Section 10: Stability and Reactivity | Section 7: Handling and Storage | Section 2: Hazard(s) Identification } 1
+Which SDS Section contains revision/creation information of the SDS itself? { Section 5: Fire-Fighting Measures | Section 1: Identification | Section 16: Other Information | Section 12: Ecological Information (non-mandatory) } 3

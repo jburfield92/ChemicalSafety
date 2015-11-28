@@ -1,0 +1,16 @@
+CSSG notes
+
+Current working scene is the "sds2" scene
+
+update to scripts:
+	EducationScriptSDS - new method "MoveDialogue" added with new variables
+	Room(x)SDSPickup - new method "ChangeIt" added to each one
+
+Update to dialogue: SDSDialogueDB updated with the new function calls, and fixed text for sections
+
+SDSTestQuestions.txt file updated for full names
+
+-- In each room, the tablet was replaced with a newer version(education room), or a 
+page representing a SDS sheet. Each have new UI features. Functionality of each room remains
+the same aside from the tablets.
+	

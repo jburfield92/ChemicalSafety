@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using PixelCrushers.DialogueSystem;
-
+using UnityEngine.UI;
 
 public class Room2SDSPickup : MonoBehaviour {
 
@@ -133,5 +133,38 @@ public class Room2SDSPickup : MonoBehaviour {
 	void StorageTime(){
 		ReadyToStore = true;
 	}
+
+    public void ChangeIt()
+    {
+
+        if (GameObject.Find("Dropdown").GetComponent<Dropdown>().value > 0)
+        {
+            DialogueLua.SetVariable("UserQuizAnswer", GameObject.Find("Dropdown").GetComponent<Dropdown>().value);
+            DialogueManager.Instance.SendMessage("OnSequencerMessage", "SDSchose");
+            GameObject.Find("Dropdown").GetComponent<Dropdown>().value = 0;
+        }
+    }
+
+    public void ChangeIt2()
+    {
+
+        if (GameObject.Find("Dropdown2").GetComponent<Dropdown>().value > 0)
+        {
+            DialogueLua.SetVariable("UserQuizAnswer", GameObject.Find("Dropdown2").GetComponent<Dropdown>().value);
+            DialogueManager.Instance.SendMessage("OnSequencerMessage", "SDSchose");
+            GameObject.Find("Dropdown2").GetComponent<Dropdown>().value = 0;
+        }
+    }
+
+    public void ChangeIt3()
+    {
+
+        if (GameObject.Find("Dropdown3").GetComponent<Dropdown>().value > 0)
+        {
+            DialogueLua.SetVariable("UserQuizAnswer", GameObject.Find("Dropdown3").GetComponent<Dropdown>().value);
+            DialogueManager.Instance.SendMessage("OnSequencerMessage", "SDSchose");
+            GameObject.Find("Dropdown3").GetComponent<Dropdown>().value = 0;
+        }
+    }
 
 }
