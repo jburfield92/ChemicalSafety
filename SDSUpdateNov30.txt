@@ -1,0 +1,4 @@
+CSSG notes
+
+Updated prefabs for rooms2-5 for invisible walls to prevent pushing/dropping objects
+outside the play area.

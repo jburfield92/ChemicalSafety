@@ -1,0 +1,16 @@
+Which SDS Section identifies the chemical covered by the SDS? { 5 | 1 | 11 | 2 } 2
+Which SDS Section identifies the hazards of the chemical covered by the SDS? { 1 | 6 | 2 | 11 } 3
+Which SDS Section lists the ingredients present? { 16 | 8 | 12 | 3 } 4
+Which SDS Section describes first-aid care to give to somebody exposed to the chemical? { 15 | 4 | 6 | 16 } 2
+Which SDS Section provides information on fighting a fire caused by the chemical? { 5 | 12 | 3 | 14 } 1
+Which SDS Section contains the appropriate response to an accidental release of the chemical? { 5 | 2 | 6 | 10 } 3
+Which SDS Section contains the proper handling procedures for the chemical? { 1 | 15 | 7 | 2 } 3
+Which SDS Section contains personal protective measures to minimize exposure? { 12 | 7 | 13 | 8 } 4
+Which SDS Section identifies the physical and chemical properties of the chemical? { 7 | 9 | 5 | 1 } 2
+Which SDS Section provides information on the stability of the chemical? { 10 | 11 | 3 | 2 } 1
+Which SDS Section identifies toxicological and health effects of the chemical? { 2 | 11 | 4 | 8 } 2
+Which SDS Section provides information regarding environmental impacts from the release of the chemical? { 11 | 16 | 12 | 4 } 3
+Which SDS Section provides guidance for proper disposal of the chemical? { 15 | 8 | 6 | 13 } 4
+Which SDS Section provides classification information for transporting the chemical? { 10 | 14 | 5 | 8 } 2
+Which SDS Section regulations specific to the chemical that were not located in other sections? { 15 | 10 | 7 | 2 } 1
+Which SDS Section contains revision/creation information of the SDS itself? { 5 | 1 | 16 | 12 } 3
