@@ -43,8 +43,6 @@ public class HazardScript : MonoBehaviour
 
     void EndHazards()
     {
-        Debug.Log(Test.testScore);
-        Debug.Log(Test.maxTestScore);
         SQL.SaveProgress("Hazard", (int)(100 * (float)Test.testScore / Test.maxTestScore));
         Application.LoadLevel("SDSLoadingScreen");
     }

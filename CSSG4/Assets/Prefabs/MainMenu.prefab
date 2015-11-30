@@ -886,25 +886,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &127260
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 224: {fileID: 22410798}
-  - 222: {fileID: 22264166}
-  - 114: {fileID: 11461358}
-  - 225: {fileID: 22580050}
-  - 223: {fileID: 22351622}
-  m_Layer: 9
-  m_Name: TestResultsSubPanel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &127800
 GameObject:
   m_ObjectHideFlags: 1
@@ -1773,7 +1754,7 @@ GameObject:
   - 114: {fileID: 11410120}
   m_Layer: 5
   m_Name: Text
-  m_TagString: SmallText
+  m_TagString: MediumText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4084,7 +4065,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 17
+    m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -7228,17 +7209,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
-      - m_Target: {fileID: 11497012}
-        m_MethodName: EraseResults
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 8288848}
         m_MethodName: Play
         m_Mode: 1
@@ -7249,7 +7219,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
       - m_Target: {fileID: 11412060}
         m_MethodName: OnOff
         m_Mode: 2
@@ -7260,7 +7230,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
       - m_Target: {fileID: 11467030}
         m_MethodName: DeactivateProgressPanel
         m_Mode: 1
@@ -7271,7 +7241,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
       - m_Target: {fileID: 11467030}
         m_MethodName: DeactivateResultsPanel
         m_Mode: 1
@@ -7282,7 +7252,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &11452046
@@ -7910,33 +7880,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Move To The Left
---- !u!114 &11461358
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 127260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
 --- !u!114 &11461542
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7976,7 +7919,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 22457612}
   m_Direction: 2
   m_Value: 0
-  m_Size: .980636418
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -8809,7 +8752,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Are you sure? This will erase any current module progress and scores.
+  m_Text: Are you sure? This will erase any current module progress.
 --- !u!114 &11474920
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10397,10 +10340,9 @@ MonoBehaviour:
     they represent, as well as knowing how to read a Safety Data Sheet and what each
     of its sixteen sections may contain.\r\n\nThis game was built as a Computer Science
     Senior Design project at the University of Central Florida. We developed this
-    game using Unity3D with C# as the scripting language and SQL for the game database.\r\n\nThis
-    project's developers are: Joseph Burfield, Jacob Duckett and David Gundler.\r\n\nThe
-    sponsor of this project is Dr. Isabel Perry (isabel@thesafetydoctor.com).\r\n\nFor
-    any issues, feedback or inquiries, please contact Isabel Perry (isabel@thesafetydoctor.com).\r\n"
+    game using Unity3D.\n\nThis project's developers are: Joseph Burfield, Jacob Duckett
+    and David Gundler.\r\n\nThe sponsor of this project is Dr. Isabel Perry (isabel@thesafetydoctor.com).\r\n\nFor
+    any inquiries or feedback please contact Dr. Isabel Perry (isabel@thesafetydoctor.com).\r\n"
 --- !u!114 &11493630
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10632,39 +10574,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11412060}
-        m_MethodName: OnOff
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 181818}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
-      - m_Target: {fileID: 11412060}
-        m_MethodName: OnOff
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 106288}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
-      - m_Target: {fileID: 11467030}
-        m_MethodName: DeactivateResultsMenuHelps
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
       - m_Target: {fileID: 8288848}
         m_MethodName: Play
         m_Mode: 1
@@ -10675,7 +10584,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
+      - m_Target: {fileID: 11485658}
+        m_MethodName: GetCertificate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &11495742
@@ -10798,9 +10718,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorialTest: {fileID: 4900000, guid: aa7287ba47ed0af4dab8d065c9ceed20, type: 3}
-  hazardsTest: {fileID: 0}
-  sdsTest: {fileID: 0}
-  safetyTest: {fileID: 0}
+  hazardsTest: {fileID: 4900000, guid: c011ef4103aff8b489f1e9345fe60d82, type: 3}
+  sdsTest: {fileID: 4900000, guid: 288a1cdfcf1dc7444b2b35aef454aa3b, type: 3}
   resultsPanel: {fileID: 138416}
   resultsText: {fileID: 11437998}
 --- !u!114 &11497018
@@ -11725,12 +11644,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 173040}
---- !u!222 &22264166
-CanvasRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 127260}
 --- !u!222 &22266274
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -12097,23 +12010,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 113746}
---- !u!223 &22351622
-Canvas:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 127260}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_RenderMode: 2
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 1
-  m_OverridePixelPerfect: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 1
 --- !u!223 &22353126
 Canvas:
   m_ObjectHideFlags: 1
@@ -12616,25 +12512,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: .5, y: .5}
---- !u!224 &22410798
-RectTransform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 127260}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 22472176}
-  - {fileID: 22455870}
-  m_Father: {fileID: 22450828}
-  m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: .0500000007}
-  m_AnchorMax: {x: 1, y: .899999976}
-  m_AnchoredPosition: {x: 7.62939453e-06, y: 0}
-  m_SizeDelta: {x: -1.52587891e-05, y: 0}
-  m_Pivot: {x: .5, y: .5}
 --- !u!224 &22411112
 RectTransform:
   m_ObjectHideFlags: 1
@@ -12842,6 +12719,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 22453700}
+  - {fileID: 22455870}
   m_Father: {fileID: 22472176}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
@@ -13803,7 +13681,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 22410798}
+  - {fileID: 22472176}
   - {fileID: 22435410}
   m_Father: {fileID: 22427608}
   m_RootOrder: 1
@@ -13988,7 +13866,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: -289.833435}
+  m_SizeDelta: {x: 0, y: -224.150879}
   m_Pivot: {x: .5, y: 1}
 --- !u!224 &22453940
 RectTransform:
@@ -14052,12 +13930,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 22410798}
+  m_Father: {fileID: 22421618}
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -15.0000153}
-  m_SizeDelta: {x: 3.05175781e-05, y: -30}
+  m_AnchoredPosition: {x: 26.0523071, y: -15.0000153}
+  m_SizeDelta: {x: 122.313263, y: -30}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22456014
 RectTransform:
@@ -14673,10 +14551,10 @@ RectTransform:
   m_Children:
   - {fileID: 22421618}
   - {fileID: 22464278}
-  m_Father: {fileID: 22410798}
+  m_Father: {fileID: 22450828}
   m_RootOrder: 0
-  m_AnchorMin: {x: .0500000007, y: 0}
-  m_AnchorMax: {x: .949999988, y: 1}
+  m_AnchorMin: {x: .0500000007, y: .0500000007}
+  m_AnchorMax: {x: .949999988, y: .899999976}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: .5, y: .5}
@@ -15588,17 +15466,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: .5, y: .5}
---- !u!225 &22580050
-CanvasGroup:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 127260}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

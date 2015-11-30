@@ -439,7 +439,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Press Submit at the bottom of the page once you are done.
+        value: Press Submit when you have completed the test.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -1691,7 +1691,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SendMessage(EndHazards, ,)
+        value: SendMessage(EndHazards, ,);
         type: 0
         typeString: 
       conversationID: 3
@@ -2659,8 +2659,6 @@ MonoBehaviour:
         typeString: 
       - title: Sequence
         value: 'AudioWait(Sounds/VoiceOvers/Hazards/EducationSection/education18);
-
-          SendMessage(PointerToHazardSymbols,,BannerCheck);
 
           SendMessage(SaveDialogue,Now match the symbols with the the correct spot
           across the room with respect to the hazard lists given at the spot.,);'
@@ -3869,6 +3867,8 @@ MonoBehaviour:
         typeString: 
       - title: Sequence
         value: 'WaitForMessage(Tablet);
+
+          SendMessage(PointerToHazardSymbols,,BannerCheck);
 
           AudioWait(Sounds/VoiceOvers/Hazards/EducationSection/education23);
 

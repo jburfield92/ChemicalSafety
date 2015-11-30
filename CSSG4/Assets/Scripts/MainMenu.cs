@@ -5,12 +5,11 @@ using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MainMenu : MonoBehaviour 
+public class MainMenu : MonoBehaviour
 {
     public TextAsset tutorialTest;
     public TextAsset hazardsTest;
     public TextAsset sdsTest;
-    public TextAsset safetyTest;
 
     List<Question> questions;
 
@@ -51,7 +50,7 @@ public class MainMenu : MonoBehaviour
 
     void Start()
     {
-  
+
     }
 
     void Update()
@@ -94,30 +93,26 @@ public class MainMenu : MonoBehaviour
     }
 
     public void StartNewPlaythrough()
-	{
+    {
         SQL.EraseProgress();
-		Application.LoadLevel ("TutorialLoadingScreen");
-	}
+        Application.LoadLevel("TutorialLoadingScreen");
+    }
 
     public void ContinuePlaythrough()
     {
         DataTable userProgress = SQL.GetProgress();
 
-        if (string.IsNullOrEmpty(userProgress.Rows[0]["TutorialExamScore"].ToString()))
+        if (string.IsNullOrEmpty(userProgress.Rows[0]["TutorialExamDate"].ToString()))
         {
             Application.LoadLevel("Tutorial");
         }
-        else if (string.IsNullOrEmpty(userProgress.Rows[0]["HazardExamScore"].ToString()))
+        else if (string.IsNullOrEmpty(userProgress.Rows[0]["HazardExamDate"].ToString()))
         {
             Application.LoadLevel("Hazards");
         }
-        else if (string.IsNullOrEmpty(userProgress.Rows[0]["SDSExamScore"].ToString()))
+        else if (string.IsNullOrEmpty(userProgress.Rows[0]["SDSExamDate"].ToString()))
         {
             Application.LoadLevel("SDS");
-        }
-        else if (string.IsNullOrEmpty(userProgress.Rows[0]["SafetyExamScore"].ToString()))
-        {
-            Application.LoadLevel("WorkplaceSafety");
         }
         else
         {
@@ -130,8 +125,8 @@ public class MainMenu : MonoBehaviour
         int questionCount = 1;
 
         GameObject moduleHeader = Instantiate(Resources.Load("questionText")) as GameObject;
-        moduleHeader.name = moduleName + "\nResultsHeader\n";
-        moduleHeader.GetComponent<Text>().text = moduleName + " Module";
+        moduleHeader.name = moduleName + "ResultsHeader";
+        moduleHeader.GetComponent<Text>().text = "\n" + moduleName + " Module\n";
         moduleHeader.GetComponent<Text>().tag = "MediumText";
         moduleHeader.GetComponent<Text>().rectTransform.localPosition = new Vector3(
             moduleHeader.GetComponent<Text>().rectTransform.localPosition.x,
@@ -161,8 +156,8 @@ public class MainMenu : MonoBehaviour
 
             GameObject question = Instantiate(Resources.Load("questionText")) as GameObject;
             question.name = "Question" + questionCount;
-            question.GetComponent<Text>().text = "Question " + questionCount + ": " + q.question 
-                + "\n\t Correct answer: " + q.answers[q.correctAnswer-1] + "\n";
+            question.GetComponent<Text>().text = "Question " + questionCount + ": " + q.question
+                + "\n\t Correct answer: " + q.answers[q.correctAnswer - 1] + "\n";
             question.GetComponent<Text>().tag = "SmallText";
             question.GetComponent<Text>().rectTransform.localPosition = new Vector3(
                 question.GetComponent<Text>().rectTransform.localPosition.x,
@@ -190,10 +185,6 @@ public class MainMenu : MonoBehaviour
         else if (moduleName == "SDS")
         {
             text = sdsTest.text;
-        }
-        else if (moduleName == "Safety")
-        {
-            text = safetyTest.text;
         }
 
         questions = new List<Question>();

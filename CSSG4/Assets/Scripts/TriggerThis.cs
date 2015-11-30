@@ -7,16 +7,16 @@ public class TriggerThis : MonoBehaviour
     GameObject pickupObj;
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
-	
-	}
-	
-	// Update is called once per frame
-	void Update ()
+
+    }
+
+    // Update is called once per frame
+    void Update()
     {
-	
-	}
+
+    }
 
     void OnTriggerEnter(Collider other)
     {

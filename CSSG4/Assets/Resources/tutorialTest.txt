@@ -1,3 +1,3 @@
-How do you look around in the game? { Using your Any key | By Pressing W,A,S, or D | Using your mouse or trackpad | All of the Above } 3
+How do you look around in the game? { Using your Any key | By Pressing W,A,S, or D | Using your mouse or touchpad | All of the Above } 3
 What is the name of the game you're playing? { The Safety Game | Chemical Safety Simulation Game | The Game | Hazard Game } 2
 Which standard does this game help train you to understand? { Hazard Waste Standard | Environment Protection Standard | Standard Deviation | Hazard Communication Standard } 4

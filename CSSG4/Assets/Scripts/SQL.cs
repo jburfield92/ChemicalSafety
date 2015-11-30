@@ -4,11 +4,11 @@ using System.Data;
 using System.Data.SqlClient;
 using UnityEngine;
 using UnityEngine.UI;
-/*using PdfSharp.Drawing;
+using PdfSharp.Drawing;
 using PdfSharp.Drawing.Layout;
 using PdfSharp.Pdf;
 using PdfSharp.Pdf.IO;
-*/
+
 public class SQL : MonoBehaviour 
 {
 	/// <summary> The user that is currently playing
@@ -187,7 +187,11 @@ public class SQL : MonoBehaviour
                     @"UPDATE SaveInfo 
                     SET FinalExamScore = CASE WHEN @score > FinalExamScore 
                                                 THEN @score 
-                                                ELSE FinalExamScore END, FinalExamDate = @date
+                                                ELSE FinalExamScore END, 
+                        FinalExamDate = @date,
+                        CertificateID = CASE WHEN @score >= 80 
+                                                THEN LEFT(NEWID(), 6)
+                                                ELSE NULL END
                     FROM SaveInfo SI
                     INNER JOIN Users U
                     ON U.SaveInfoId = SI.SaveInfoId
@@ -382,10 +386,11 @@ public class SQL : MonoBehaviour
 	{
 		gameVolumeSliderValue.text = value.ToString ();
 	}
-    /*
-    // untested
+    
     public void GetCertificate()
     {
+        DataTable dt = GetProgress();
+
         PdfDocument pdf = PdfReader.Open("BlankCertificate.pdf");
         XGraphics gfx = XGraphics.FromPdfPage(pdf.Pages[0]);
         XFont mainFont = new XFont("Arial", 24, XFontStyle.Bold);
@@ -394,23 +399,19 @@ public class SQL : MonoBehaviour
         xtf.Alignment = XParagraphAlignment.Center;
         xtf.DrawString(UserName, mainFont, XBrushes.Black, new XRect(0, pdf.Pages[0].Height / 2 - 30, pdf.Pages[0].Width, 50), XStringFormats.TopLeft);
 
-        // need to get score
-        xtf.DrawString("XX", mainFont, XBrushes.Black, new XRect(0, pdf.Pages[0].Height / 2 + 85, pdf.Pages[0].Width, 50), XStringFormats.TopLeft);
+        xtf.DrawString(dt.Rows[0]["FinalExamScore"].ToString(), mainFont, XBrushes.Black, new XRect(0, pdf.Pages[0].Height / 2 + 85, pdf.Pages[0].Width, 50), XStringFormats.TopLeft);
 
         XFont font = new XFont("Arial", 18, XFontStyle.Bold);
-        xtf.DrawString("Isabel Perry", font, XBrushes.Black, new XRect(100, pdf.Pages[0].Height / 2 + 140, pdf.Pages[0].Width / 3, 50), XStringFormats.TopLeft);
+        xtf.DrawString("Dr. Isabel Perry", font, XBrushes.Black, new XRect(100, pdf.Pages[0].Height / 2 + 140, pdf.Pages[0].Width / 3, 50), XStringFormats.TopLeft);
 
-        // need to get score
-        xtf.DrawString(DateTime.Now.ToString("MM/dd/yyyy"), font, XBrushes.Black, new XRect(pdf.Pages[0].Height / 2 - 50, pdf.Pages[0].Height / 2 + 140, 50, 50), XStringFormats.TopLeft);
+        xtf.DrawString(dt.Rows[0]["FinalExamDate"].ToString(), font, XBrushes.Black, new XRect(pdf.Pages[0].Height / 2 - 50, pdf.Pages[0].Height / 2 + 140, 50, 50), XStringFormats.TopLeft);
 
-        // need to get certificate ID
-        xtf.DrawString("123456789", font, XBrushes.Black, new XRect(pdf.Pages[0].Height / 2 + 25, pdf.Pages[0].Height / 2 + 140, pdf.Pages[0].Width / 3, 50), XStringFormats.TopLeft);
+        xtf.DrawString(dt.Rows[0]["CertificateID"].ToString(), font, XBrushes.Black, new XRect(pdf.Pages[0].Height / 2 + 25, pdf.Pages[0].Height / 2 + 140, pdf.Pages[0].Width / 3, 50), XStringFormats.TopLeft);
 
-        // need to get score
         xtf.DrawString("3251 Progress Dr., Suite 105, Orlando, FL 32826", font, XBrushes.Black, new XRect(0, pdf.Pages[0].Height / 2 + 185, pdf.Pages[0].Width, 50), XStringFormats.TopLeft);
 
-        pdf.Save(UserName + "Certfiicate.pdf");
-    }*/
+        pdf.Save(UserName + "Certificate.pdf");
+    }
 
     public void RefreshSettings()
     {

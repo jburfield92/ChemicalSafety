@@ -1410,6 +1410,7 @@ GameObject:
   - 114: {fileID: 11470874}
   - 65: {fileID: 6518010}
   - 82: {fileID: 8266098}
+  - 114: {fileID: 11441626}
   m_Layer: 11
   m_Name: ConversationTrigger
   m_TagString: Untagged
@@ -14101,6 +14102,17 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &11441626
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 135678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b026d37eba1c965449ca60b3923a4dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11445760
 MonoBehaviour:
   m_ObjectHideFlags: 1

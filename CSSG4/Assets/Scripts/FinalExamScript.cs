@@ -24,6 +24,10 @@ public class FinalExamScript : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        Camera.main.GetComponent<MouseLook>().enabled = true;
+        PickupObject.canRun = true;
+        TakeLaptopTest.UsingLaptop = false;
+
         player = GameObject.FindGameObjectWithTag("Player");
         Screen.GetComponent<Image>().enabled = false;
         ((CharacterMotor)player.GetComponent("CharacterMotor")).enabled = false;
@@ -118,14 +122,14 @@ public class FinalExamScript : MonoBehaviour
             ScreenText.GetComponent<Text>().enabled = true;
             ScreenText.GetComponent<Text>().text = "Health Hazard\n\nWhich is used to denote carcinogens, respiratory sensitizers, reproductive toxins, target organ toxins, mutagens and aspiration toxins";
         }
-        else if (imageName == "symbol8")
+        else if (imageName == "symbol9")
         {
             Screen.GetComponent<Image>().sprite = symbol8;
             Screen.GetComponent<Image>().enabled = true;
             ScreenText.GetComponent<Text>().enabled = true;
             ScreenText.GetComponent<Text>().text = "Environmental\n\nWhich denotes substances that are environment toxins";
         }
-        else if (imageName == "symbol9")
+        else if (imageName == "symbol8")
         {
             Screen.GetComponent<Image>().sprite = symbol9;
             Screen.GetComponent<Image>().enabled = true;

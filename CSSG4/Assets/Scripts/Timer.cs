@@ -16,7 +16,7 @@ public class Timer : MonoBehaviour
 	/// </summary>
 	void Update () 
 	{
-		float minutes = Time.timeSinceLevelLoad / 120;
+		float minutes = Mathf.Floor(Time.timeSinceLevelLoad / 60);
 		float seconds = Time.timeSinceLevelLoad % 60;
 		timerLabel.text = string.Format ("{0:00} : {1:00}", minutes, seconds);
 	}

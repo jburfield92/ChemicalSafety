@@ -150,7 +150,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: In this module you'll be taking the final exam. The score you get after
+  m_Text: In this module you will be taking the final exam. The score you get after
     this module is used to determine if you receive the Certificate of Completion.
 --- !u!222 &100763577
 CanvasRenderer:

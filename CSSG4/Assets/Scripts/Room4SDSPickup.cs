@@ -5,34 +5,32 @@ using UnityEngine.UI;
 
 public class Room4SDSPickup : MonoBehaviour
 {
-	Vector3 currentPosition;
-	Vector3 startPosition;
-	Quaternion startRotation;
-	public static GameObject[] SDSRoom4Buttons;
-	public static bool moved2;
-	public static GameObject arrow;
-	public static GameObject arrow2;
-	public static bool readyToStore;
-
+    Vector3 currentPosition;
+    Vector3 startPosition;
+    Quaternion startRotation;
+    public static GameObject[] SDSRoom4Buttons;
+    public static bool moved2;
+    public static GameObject arrow;
+    public static GameObject arrow2;
+    public static bool readyToStore;
     public static GameObject containerBox2;
-	
-	// Use this for initialization
-	void Start ()
-    {
-		startPosition = gameObject.transform.position;
-		startRotation = gameObject.transform.rotation;
-		moved2 = false;
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-		currentPosition = gameObject.transform.position;
 
-		if (currentPosition != startPosition)
+    // Use this for initialization
+    void Start()
+    {
+        startPosition = gameObject.transform.position;
+        startRotation = gameObject.transform.rotation;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        currentPosition = gameObject.transform.position;
+
+        if (currentPosition != startPosition)
         {
-			ShowSideButtons();
-		}
+            ShowSideButtons();
+        }
 
         if (!PickupObject.UsingTablet)
         {
@@ -40,99 +38,100 @@ public class Room4SDSPickup : MonoBehaviour
         }
     }
 
-	public void returnThis()
+    public void returnThis()
     {
-		gameObject.transform.position = startPosition;
-		gameObject.transform.rotation = startRotation;
-		
-		Camera.main.GetComponent<MouseLook>().enabled = true;
+        gameObject.transform.position = startPosition;
+        gameObject.transform.rotation = startRotation;
 
-		if (GameObject.Find("Player").GetComponent<CharacterMotor>()) 
-		{
-			GameObject.Find("Player").GetComponent<CharacterMotor>().enabled = true;
-			GameObject.Find("Player").GetComponent<MouseLook>().enabled = true;
-		}
+        Camera.main.GetComponent<MouseLook>().enabled = true;
 
-		PickupObject.UsingTablet = false;
-		PickupObject.carriedObject.transform.name=" ";
-		GetButtons ();
-		RemoveSideButtons ();
-	}
-	
-	public void whichButton(int buttonNumber)
+        if (GameObject.Find("Player").GetComponent<CharacterMotor>())
+        {
+            GameObject.Find("Player").GetComponent<CharacterMotor>().enabled = true;
+            GameObject.Find("Player").GetComponent<MouseLook>().enabled = true;
+        }
+
+        PickupObject.UsingTablet = false;
+        PickupObject.carriedObject.transform.name = " ";
+        GetButtons();
+        RemoveSideButtons();
+    }
+
+    public void whichButton(int buttonNumber)
     {
-		DialogueLua.SetVariable ("UserQuizAnswer", buttonNumber);
-		DialogueManager.Instance.SendMessage("OnSequencerMessage", "SDSchose");
-	}
-	
-	public void GetButtons()
+        DialogueLua.SetVariable("UserQuizAnswer", buttonNumber);
+        DialogueManager.Instance.SendMessage("OnSequencerMessage", "SDSchose");
+    }
+
+    public void GetButtons()
     {
-		SDSRoom4Buttons = GameObject.FindGameObjectsWithTag("SDSButton");
+        SDSRoom4Buttons = GameObject.FindGameObjectsWithTag("SDSButton");
         containerBox2 = GameObject.Find("Cube4");
-	}
-	
-	
-	public void ShowSideButtons()
+        arrow = GameObject.Find("arrow4");
+    }
+
+
+    public void ShowSideButtons()
     {
-		foreach (GameObject button in SDSRoom4Buttons)
+        foreach (GameObject button in SDSRoom4Buttons)
         {
-			if(button.transform.parent.gameObject.transform.parent.gameObject.transform.parent.gameObject.transform.name == PickupObject.carriedObject.transform.name
-			   || button.transform.name == "ReturnSDS")
+            if (button.transform.parent.gameObject.transform.parent.gameObject.transform.parent.gameObject.transform.name == PickupObject.carriedObject.transform.name
+               || button.transform.name == "ReturnSDS")
             {
-				button.SetActive(true);
-			}
-		}
-	}
-	
-	
-	public void RemoveSideButtons()
-    {
-		foreach (GameObject button in SDSRoom4Buttons)
-        {
-			button.SetActive(false);
-		}	
-	}
+                button.SetActive(true);
+            }
+        }
+    }
 
-	public void MoveArrow()
-    {
-		arrow = GameObject.Find ("arrow4");
 
-		if (!moved2)
+    public void RemoveSideButtons()
+    {
+        foreach (GameObject button in SDSRoom4Buttons)
         {
-			arrow.gameObject.transform.position = new Vector3 (arrow.gameObject.transform.position.x, 2.5f, arrow.gameObject.transform.position.z);
-			moved2 = true;
-		}
+            button.SetActive(false);
+        }
+    }
+
+    public void MoveArrow()
+    {
+        // arrow = GameObject.Find("arrow4");
+
+        if (!moved2)
+        {
+            arrow.gameObject.transform.position = new Vector3(arrow.gameObject.transform.position.x, 2.5f, arrow.gameObject.transform.position.z);
+            moved2 = true;
+        }
         else if (moved2)
         {
-			arrow.gameObject.transform.position = new Vector3 (arrow.gameObject.transform.position.x, 9.5f, arrow.gameObject.transform.position.z);
-		}
-	}
-	
-	public void GetPos()
-    {
-		startPosition = gameObject.transform.position;
-		startRotation = gameObject.transform.rotation;
-		moved2 = false;
-		readyToStore = false;
-	}
+            arrow.gameObject.transform.position = new Vector3(arrow.gameObject.transform.position.x, 9.5f, arrow.gameObject.transform.position.z);
+        }
+    }
 
-	public void MoveArrowStorage()
+    public void GetPos()
+    {
+        startPosition = gameObject.transform.position;
+        startRotation = gameObject.transform.rotation;
+        moved2 = false;
+        readyToStore = false;
+    }
+
+    public void MoveArrowStorage()
     {
         containerBox2.SetActive(false);
-		arrow2 = GameObject.Find ("arrow5");
-		if (!moved2)
+        arrow2 = GameObject.Find("arrow5");
+        if (!moved2)
         {
-			arrow2.gameObject.transform.position = new Vector3 (arrow2.gameObject.transform.position.x, 3f, arrow2.gameObject.transform.position.z);
-			moved2 = true;
-		}
+            arrow2.gameObject.transform.position = new Vector3(arrow2.gameObject.transform.position.x, 3f, arrow2.gameObject.transform.position.z);
+            moved2 = true;
+        }
         else if (moved2)
         {
-			arrow2.gameObject.transform.position = new Vector3 (arrow2.gameObject.transform.position.x, 6f, arrow2.gameObject.transform.position.z);
-			moved2 = false;
-		}
-	}
+            arrow2.gameObject.transform.position = new Vector3(arrow2.gameObject.transform.position.x, 6f, arrow2.gameObject.transform.position.z);
+            moved2 = false;
+        }
+    }
 
-	void OnTriggerStay(Collider other)
+    void OnTriggerStay(Collider other)
     {
 
         if (other.gameObject.transform.name == "Player" && gameObject.transform.name == "AtStorageTrigger4" && PickupObject.carriedObject.transform.name == "container1")
@@ -140,24 +139,24 @@ public class Room4SDSPickup : MonoBehaviour
             DialogueManager.Instance.SendMessage("OnSequencerMessage", "Storage1");
         }
 
-			if(PickupObject.carriedObject == null && readyToStore && other.gameObject.transform.name == "container1")
+        if (PickupObject.carriedObject == null && readyToStore && other.gameObject.transform.name == "container1")
+        {
+            other.gameObject.SetActive(false);
+
+            if (arrow2 != null)
             {
-				other.gameObject.SetActive(false);
+                arrow2.SetActive(false);
+            }
 
-				if (arrow2 != null)
-                {
-					arrow2.SetActive(false);
-				}
+            DialogueManager.Instance.SendMessage("OnSequencerMessage", "cont");
+        }
 
-				DialogueManager.Instance.SendMessage ("OnSequencerMessage", "cont");
-			}
-		
-	}
+    }
 
-	public void ReadyToStore()
+    public void ReadyToStore()
     {
-		readyToStore = true;
-	}
+        readyToStore = true;
+    }
 
     public void ChangeIt()
     {

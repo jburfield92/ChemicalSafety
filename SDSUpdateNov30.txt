@@ -2,3 +2,6 @@ CSSG notes
 
 Updated prefabs for rooms2-5 for invisible walls to prevent pushing/dropping objects
 outside the play area.
+
+Small changes to SDSRoom2Pickup and SDSRoom4Pickup scripts to add boxes that prevent
+player from picking up containers early

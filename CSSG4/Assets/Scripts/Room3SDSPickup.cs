@@ -65,11 +65,7 @@ public class Room3SDSPickup : MonoBehaviour
     {
 		foreach (GameObject button in SDSRoom3Buttons)
         {
-			if(button.transform.parent.gameObject.transform.parent.gameObject.transform.parent.gameObject.transform.name == PickupObject.carriedObject.transform.name
-			   || button.transform.name == "ReturnSDS")
-            {
-				button.SetActive(true);
-			}
+			button.SetActive(true);
 		}
 	}
 	

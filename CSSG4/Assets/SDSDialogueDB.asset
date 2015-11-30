@@ -243,7 +243,7 @@ MonoBehaviour:
         value: 'WaitForMessage(LaptopTableNearby);
 
 
-          AudioWait(Sounds/VoiceOvers/SDS/Test/2);'
+          AudioWait(Sounds/VoiceOvers/SDS/Testing/2);'
         type: 0
         typeString: 
       conversationID: 3
@@ -264,7 +264,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 120
+        x: 119
         y: 120
         width: 160
         height: 30
@@ -295,7 +295,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: This laptop is where you will complete your tests.
+        value: This laptop is where you will complete your test.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -311,7 +311,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/SDS/Test/3);
+        value: AudioWait(Sounds/VoiceOvers/SDS/Testing/3);
         type: 0
         typeString: 
       conversationID: 3
@@ -379,7 +379,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: "WaitForMessage(TestStarted); \nAudioWait(Sounds/VoiceOvers/SDS/Test/4);"
+        value: "WaitForMessage(TestStarted); \nAudioWait(Sounds/VoiceOvers/SDS/Testing/4);"
         type: 0
         typeString: 
       conversationID: 3
@@ -448,7 +448,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/SDS/Test/5);
+        value: AudioWait(Sounds/VoiceOvers/SDS/Testing/5);
         type: 0
         typeString: 
       conversationID: 3
@@ -500,7 +500,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Press submit when you have completed the test.
+        value: Press Submit when you have completed the test.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -516,7 +516,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/SDS/Test/6);
+        value: 'AudioWait(Sounds/VoiceOvers/SDS/Testing/6);
+
+          WaitForMessage(Submit);'
         type: 0
         typeString: 
       - title: Response Menu Sequence
@@ -588,7 +590,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: "WaitForMessage(Submit); \nAudioWait(Sounds/VoiceOvers/SDS/Test/7);"
+        value: AudioWait(Sounds/VoiceOvers/SDS/Testing/7);
         type: 0
         typeString: 
       conversationID: 3
@@ -615,7 +617,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 120
+        x: 119
         y: 370
         width: 160
         height: 30
@@ -798,7 +800,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/SDS/Test/8);
+        value: AudioWait(Sounds/VoiceOvers/SDS/Testing/8);
         type: 0
         typeString: 
       conversationID: 3
@@ -819,7 +821,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 256
+        x: 255
         y: 465
         width: 160
         height: 30
@@ -866,7 +868,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/SDS/Test/9);
+        value: AudioWait(Sounds/VoiceOvers/SDS/Testing/9);
         type: 0
         typeString: 
       conversationID: 3
@@ -935,7 +937,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: AudioWait(Sounds/VoiceOvers/SDS/Test/10);
+        value: AudioWait(Sounds/VoiceOvers/SDS/Testing/10);
         type: 0
         typeString: 
       conversationID: 3
@@ -987,7 +989,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: This is what a testing room might look like.
+        value: Welcome to the testing room.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -1006,7 +1008,7 @@ MonoBehaviour:
         value: 'SetVariable(UserTestScore,0);
 
 
-          AudioWait(Sounds/VoiceOvers/SDS/Test/1);'
+          AudioWait(Sounds/VoiceOvers/SDS/Testing/1);'
         type: 0
         typeString: 
       - title: Response Menu Sequence
@@ -1031,7 +1033,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 120
+        x: 118
         y: 70
         width: 160
         height: 30
@@ -1078,7 +1080,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SendMessage(EndSDS, ,)
+        value: SendMessage(EndSDS,,);
         type: 0
         typeString: 
       conversationID: 3
@@ -1093,8 +1095,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 264
-        y: 613
+        x: 265
+        y: 614
         width: 160
         height: 30
   - id: 4
@@ -1233,9 +1235,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(PauseMovement,,SDSRoom1);
-
-          AudioWait(Sounds/VoiceOvers/SDS/room1/1);
+        value: 'AudioWait(Sounds/VoiceOvers/SDS/room1/1);
 
           SendMessage(SaveDialogue, Welcome to the Safety Data Sheets module of the
           Chemical Safety Simulation Game., );'
@@ -1601,9 +1601,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(EnableMovement,,SDSRoom1);
-
-          WaitForMessage(tablet);
+        value: 'WaitForMessage(tablet);
 
           AudioWait(Sounds/VoiceOvers/SDS/room1/6);
 
@@ -7614,7 +7612,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'WaitForMessage(next);
+        value: 'SendMessage(UpdateText, ,Header);
+
+
+          WaitForMessage(next);
 
 
           SendMessage(UpdateText,You will now take a small quiz related to the information
@@ -7650,7 +7651,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 726
+        x: 725
         y: 3448
         width: 160
         height: 30
@@ -10493,9 +10494,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'Delay(4);
-
-          AudioWait(Sounds/VoiceOvers/SDS/room2/1);
+        value: 'AudioWait(Sounds/VoiceOvers/SDS/room2/1);
 
 
           SendMessage(SaveDialogue, Welcome to the Activities Section of the Safety
@@ -10571,11 +10570,6 @@ MonoBehaviour:
         value: 'WaitForMessage(tablet);
 
 
-          SendMessage(GetButtons,,SDSTablet1);
-
-          SendMessage(RemoveSideButtons,,SDSTablet1);
-
-
           AudioWait(Sounds/VoiceOvers/SDS/room2/2);
 
 
@@ -10649,7 +10643,12 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'AudioWait(Sounds/VoiceOvers/SDS/room2/3);
+        value: 'SendMessage(GetButtons,,SDSTablet1);
+
+          SendMessage(RemoveSideButtons,,SDSTablet1);
+
+
+          AudioWait(Sounds/VoiceOvers/SDS/room2/3);
 
 
           SendMessage(SaveDialogue, There are 3 Safety Data Sheets on the table. Each
@@ -10674,7 +10673,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 40
+        x: 39
         y: 171
         width: 160
         height: 30
@@ -10706,7 +10705,7 @@ MonoBehaviour:
         typeString: 
       - title: Dialogue Text
         value: Your first task is to match each Safety Data Sheet with the appropriate
-          chemical. Pick up a Safety Data Sheet to begin.
+          chemical. Press E while looking at a Safety Data Sheet to begin.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -10732,7 +10731,8 @@ MonoBehaviour:
 
 
           SendMessage(SaveDialogue, Your first task is to match each Safety Data Sheet
-          with the appropriate chemical. Pick up a Safety Data Sheet to begin., );'
+          with the appropriate chemical. Press E while looking at a Safety Data Sheet
+          to begin., );'
         type: 0
         typeString: 
       conversationID: 5
@@ -10754,7 +10754,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 38
-        y: 229
+        y: 230
         width: 160
         height: 30
     - id: 6
@@ -10802,9 +10802,6 @@ MonoBehaviour:
         typeString: 
       - title: Sequence
         value: 'WaitForMessage(SDSchose);
-
-
-          SendMessage(ShowSideButtons,,SDSTablet1);
 
 
           AudioWait(Sounds/VoiceOvers/SDS/room2/5);
@@ -11046,8 +11043,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 249
-        y: 326
+        x: 251
+        y: 325
         width: 160
         height: 30
     - id: 10
@@ -11273,7 +11270,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 39
+        x: 38
         y: 528
         width: 160
         height: 30
@@ -11463,6 +11460,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'AudioWait(Sounds/VoiceOvers/SDS/room2/11);
 
+          SendMessage(RemoveSideButtons,,SDSTablet1);
 
           SendMessage(SaveDialogue,Now that you know the identity of each chemical
           and its storage requirements, );'
@@ -11592,8 +11590,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Pick up one of the chemical containers on the table using the E button
-          and carry it to the storage container on the other side of the room.
+        value: Pick up each of the chemical containers on the table using the E button
+          and carry them to the storage container on the other side of the room.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -11612,9 +11610,9 @@ MonoBehaviour:
         value: 'AudioWait(Sounds/VoiceOvers/SDS/room2/13);
 
 
-          SendMessage(SaveDialogue,Pick up one of the chemical containers on the table
-          using the E button and carry it to the storage container on the other side
-          of the room.,, );
+          SendMessage(SaveDialogue,Pick up each of the chemical containers on the
+          table using the E button and carry them to the storage container on the
+          other side of the room.,, );
 
 
           SendMessage(StorageTime,,AtStorageTrigger1);'
@@ -12186,7 +12184,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'WaitForMessage(SDSReturn);
+        value: 'SendMessage(ShowSideButtons,,SDSTablet1);
+
+          WaitForMessage(SDSReturn);
 
           AudioWait(Sounds/VoiceOvers/SDS/room5/21);'
         type: 0
@@ -12332,7 +12332,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Welcome to the Activites Section of the Safety Data Sheets module.
+        value: Welcome to the Activities Section of the Safety Data Sheets module.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -12348,14 +12348,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(GetPos,,SDSTablet4);
-
-          Delay(4);
-
-          AudioWait(Sounds/VoiceOvers/SDS/room3/1);
+        value: 'AudioWait(Sounds/VoiceOvers/SDS/room3/1);
 
 
-          SendMessage(SaveDialogue, Welcome to the Activites Section of the Safety
+          SendMessage(SaveDialogue, Welcome to the Activities Section of the Safety
           Data Sheets module., );'
         type: 0
         typeString: 
@@ -12378,7 +12374,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 30
-        y: 80
+        y: 79
         width: 160
         height: 30
     - id: 2
@@ -12408,7 +12404,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Please proceed to the storage container with an Safety Data Sheet on
+        value: Please proceed to the storage cabinet with an Safety Data Sheet on
           the front of it to learn about this room's activity.
         type: 0
         typeString: 
@@ -12430,10 +12426,6 @@ MonoBehaviour:
 
           SendMessage(MoveArrow,,SDSTablet4);
 
-          SendMessage(GetButtons,,SDSTablet4);
-
-          SendMessage(RemoveSideButtons,,SDSTablet4);
-
 
           AudioWait(Sounds/VoiceOvers/SDS/room3/2);
 
@@ -12441,10 +12433,6 @@ MonoBehaviour:
           SendMessage(SaveDialogue, Please proceed to the storage cabinet with an
           Safety Data Sheet on the front of it to learn about this room''s activity.,
           );'
-        type: 0
-        typeString: 
-      - title: Response Menu Sequence
-        value: 
         type: 0
         typeString: 
       conversationID: 6
@@ -12514,7 +12502,14 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(MoveArrow,,SDSTablet4);
+        value: 'SendMessage(GetButtons,,SDSTablet4);
+
+          SendMessage(RemoveSideButtons,,SDSTablet4);
+
+          SendMessage(GetPos,,SDSTablet4);
+
+
+          SendMessage(MoveArrow,,SDSTablet4);
 
 
           AudioWait(Sounds/VoiceOvers/SDS/room3/3);
@@ -12544,7 +12539,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 31
-        y: 192
+        y: 193
         width: 160
         height: 30
     - id: 5
@@ -12575,7 +12570,7 @@ MonoBehaviour:
         typeString: 
       - title: Dialogue Text
         value: A person has been exposed to the chemical covered by the SDS in front
-          of you. Please pick up the SDS.
+          of you. Press E while looking at the SDS to begin.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -12622,8 +12617,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 32
-        y: 248
+        x: 39
+        y: 249
         width: 160
         height: 30
     - id: 6
@@ -12670,10 +12665,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(ShowSideButtons,,SDSTablet4);
-
-
-          WaitForMessage(SDSchose);
+        value: 'WaitForMessage(SDSchose);
 
 
           AudioWait(Sounds/VoiceOvers/SDS/room3/5);
@@ -12775,8 +12767,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 379
+        x: 23
+        y: 376
         width: 160
         height: 30
     - id: 8
@@ -13067,7 +13059,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 29
-        y: 547
+        y: 548
         width: 160
         height: 30
     - id: 13
@@ -13171,7 +13163,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'Correct! Section 8: Exposure Controls/Personnal Protection contains
+        value: 'Correct! Section 8: Exposure Controls/Personal Protection contains
           protective measures to minimize worker exposure.'
         type: 0
         typeString: 
@@ -13191,7 +13183,7 @@ MonoBehaviour:
         value: 'AudioWait(Sounds/VoiceOvers/SDS/room3/10);
 
 
-          SendMessage(SaveDialogue,Correct! Section 8: Exposure Controls/Personnal
+          SendMessage(SaveDialogue,Correct! Section 8: Exposure Controls/Personal
           Protection contains protective measures to minimize worker exposure., );'
         type: 0
         typeString: 
@@ -13330,6 +13322,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'AudioWait(Sounds/VoiceOvers/SDS/room3/11);
 
+          SendMessage(RemoveSideButtons,,SDSTablet4);
 
           SendMessage(SaveDialogue,Well Done! That concludes the activity for this
           room., );'
@@ -13401,7 +13394,6 @@ MonoBehaviour:
         typeString: 
       - title: Sequence
         value: 'AudioWait(Sounds/VoiceOvers/SDS/room3/12);
-
 
           SendMessage(NextRoom,,EmptyRoomObject);'
         type: 0
@@ -13517,7 +13509,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Press the "Return SDS To Table" button to continue.
+        value: Press the "Return SDS" button to continue.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -13533,9 +13525,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'WaitForMessage(SDSReturn);
+        value: 'SendMessage(ShowSideButtons,,SDSTablet4);
 
-          AudioWait(Sounds/VoiceOvers/SDS/room5/21);'
+          WaitForMessage(SDSReturn);
+
+          AudioWait(Sounds/VoiceOvers/SDS/room3/13);'
         type: 0
         typeString: 
       conversationID: 6
@@ -13556,7 +13550,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 40
+        x: 37
         y: 692
         width: 160
         height: 30
@@ -13679,7 +13673,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Welcome to the Activites Section of the Safety Data Sheets module.
+        value: Welcome to the Activities Section of the Safety Data Sheets module.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -13695,14 +13689,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(GetPos,,SDSTablet5);
-
-          Delay(4);
-
-          AudioWait(Sounds/VoiceOvers/SDS/room4/1);
+        value: 'AudioWait(Sounds/VoiceOvers/SDS/room4/1);
 
 
-          SendMessage(SaveDialogue, Welcome to the Activites Section of the Safety
+          SendMessage(SaveDialogue, Welcome to the Activities Section of the Safety
           Data Sheets module., );'
         type: 0
         typeString: 
@@ -13774,10 +13764,12 @@ MonoBehaviour:
       - title: Sequence
         value: 'WaitForMessage(tablet);
 
+
           SendMessage(GetButtons,,SDSTablet5);
 
           SendMessage(RemoveSideButtons,,SDSTablet5);
 
+          SendMessage(GetPos,,SDSTablet5);
 
           SendMessage(MoveArrow,,Table2);
 
@@ -13807,7 +13799,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 22
+        x: 21
         y: 132
         width: 160
         height: 30
@@ -13883,8 +13875,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 20
-        y: 184
+        x: 19
+        y: 186
         width: 160
         height: 30
     - id: 4
@@ -13914,7 +13906,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Pick up the SDS on the table in front of you to begin.
+        value: Press E while looking at the SDS to begin.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -13961,7 +13953,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 20
+        x: 19
         y: 233
         width: 160
         height: 30
@@ -14012,9 +14004,6 @@ MonoBehaviour:
         value: 'WaitForMessage(SDSchose);
 
 
-          SendMessage(ShowSideButtons,,SDSTablet5);
-
-
           AudioWait(Sounds/VoiceOvers/SDS/room4/5);
 
 
@@ -14040,7 +14029,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 24
+        x: 23
         y: 283
         width: 160
         height: 30
@@ -14596,6 +14585,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'WaitForMessage(dropped);
 
+
           SendMessage(ActivateTrigger,,RoomTrigger);
 
           SendMessage(MoveArrowStorage,,Table2);
@@ -14631,8 +14621,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 19
-        y: 617
+        x: 15
+        y: 620
         width: 160
         height: 30
     - id: 15
@@ -14663,7 +14653,7 @@ MonoBehaviour:
         typeString: 
       - title: Dialogue Text
         value: You dropped the chemical! Go back to the SDS to find out how to deal
-          with this incident. Pick up the SDS.
+          with this incident and pick it up using the E key.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -14689,7 +14679,8 @@ MonoBehaviour:
 
 
           SendMessage(SaveDialogue,You dropped the chemical! Go back to the SDS to
-          find out how to deal with this incident. Pick up the SDS.., );'
+          find out how to deal with this incident and pick it up using the E key.,
+          );'
         type: 0
         typeString: 
       conversationID: 7
@@ -15051,6 +15042,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'AudioWait(Sounds/VoiceOvers/SDS/room4/14);
 
+          SendMessage(RemoveSideButtons,,SDSTablet5);
 
           SendMessage(SaveDialogue,Luckily this chemical is not particularly dangerous
           when spilled and the janitor will handle clean up., );'
@@ -15105,8 +15097,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Go pick up the chemical again and place it in the storage container
-          marked by the green arrow.
+        value: Go pick up the chemical again using your E key and place it in the
+          storage container marked by the green arrow.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -15153,7 +15145,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 20
+        x: 19
         y: 946
         width: 160
         height: 30
@@ -15227,8 +15219,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 20
-        y: 982
+        x: 11
+        y: 994
         width: 160
         height: 30
     - id: 23
@@ -15299,8 +15291,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 20
-        y: 1033
+        x: 23
+        y: 1034
         width: 160
         height: 30
     - id: 24
@@ -15479,7 +15471,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'WaitForMessage(SDSReturn);
+        value: 'SendMessage(ShowSideButtons,,SDSTablet5);
+
+          WaitForMessage(SDSReturn);
 
           AudioWait(Sounds/VoiceOvers/SDS/room5/21);'
         type: 0
@@ -15502,7 +15496,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 20
+        x: 19
         y: 572
         width: 160
         height: 30
@@ -15695,7 +15689,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Welcome to the Activites Section of the Safety Data Sheets module.
+        value: Welcome to the Activities Section of the Safety Data Sheets module.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -15711,14 +15705,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'SendMessage(GetPos,,SDSTablet6);
-
-          Delay(4);
-
-          AudioWait(Sounds/VoiceOvers/SDS/room5/1);
+        value: 'AudioWait(Sounds/VoiceOvers/SDS/room5/1);
 
 
-          SendMessage(SaveDialogue, Welcome to the Activites Section of the Safety
+          SendMessage(SaveDialogue, Welcome to the Activities Section of the Safety
           Data Sheets module., );'
         type: 0
         typeString: 
@@ -15790,10 +15780,12 @@ MonoBehaviour:
       - title: Sequence
         value: 'WaitForMessage(tablet);
 
+
           SendMessage(GetButtons,,SDSTablet6);
 
           SendMessage(RemoveSideButtons,,SDSTablet6);
 
+          SendMessage(GetPos,,SDSTablet6);
 
           SendMessage(MoveArrow,,Table5);
 
@@ -15823,8 +15815,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 23
-        y: 120
+        x: 22
+        y: 122
         width: 160
         height: 30
     - id: 3
@@ -15900,8 +15892,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 23
-        y: 170
+        x: 22
+        y: 169
         width: 160
         height: 30
     - id: 4
@@ -16004,7 +15996,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Pick up the SDS on the table in front of you to begin.
+        value: Press E while looking at the SDS to begin.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -16029,8 +16021,7 @@ MonoBehaviour:
           AudioWait(Sounds/VoiceOvers/SDS/room5/5);
 
 
-          SendMessage(SaveDialogue, Pick up the SDS on the table in front of you to
-          begin., );'
+          SendMessage(SaveDialogue, Press E while looking at the SDS to begin., );'
         type: 0
         typeString: 
       conversationID: 8
@@ -16052,7 +16043,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 26
-        y: 269
+        y: 268
         width: 160
         height: 30
     - id: 6
@@ -16100,9 +16091,6 @@ MonoBehaviour:
         typeString: 
       - title: Sequence
         value: 'WaitForMessage(SDSchose);
-
-
-          SendMessage(ShowSideButtons,,SDSTablet6);
 
 
           AudioWait(Sounds/VoiceOvers/SDS/room5/6);
@@ -16421,7 +16409,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 26
-        y: 470
+        y: 469
         width: 160
         height: 30
     - id: 12
@@ -17325,7 +17313,7 @@ MonoBehaviour:
         typeString: 
       - title: Dialogue Text
         value: Now that you know what kind of equipment you need, you need to store
-          the proper equipment next to the chemical storage container.
+          the proper equipment in the chemical storage container.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -17344,7 +17332,8 @@ MonoBehaviour:
         value: 'AudioWait(Sounds/VoiceOvers/SDS/room5/16);
 
 
-          SendMessage(SaveDialogue,Now that you know what kind of equipment you need,,
+          SendMessage(SaveDialogue,Now that you know what kind of equipment you need,
+          you need to store the proper equipment in the chemical storage container.,,
           );'
         type: 0
         typeString: 
@@ -17366,8 +17355,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 24
-        y: 1023
+        x: 23
+        y: 1022
         width: 160
         height: 30
     - id: 26
@@ -17398,7 +17387,7 @@ MonoBehaviour:
         typeString: 
       - title: Dialogue Text
         value: Pick up the box of equipment that is now on the table in front of you
-          with the E button and place it in the storage container marked by the green
+          with the E key and place it in the storage container marked by the green
           arrow.
         type: 0
         typeString: 
@@ -17419,6 +17408,7 @@ MonoBehaviour:
 
           SendMessage(MoveBox,,Table5);
 
+          SendMessage(RemoveSideButtons,,SDSTablet6);
 
           WaitForMessage(Storage1);
 
@@ -17427,8 +17417,8 @@ MonoBehaviour:
 
 
           SendMessage(SaveDialogue,Pick up the box of equipment that is now on the
-          table in front of you with the ''E'' button and place it in the storage
-          container marked by the green arrow.,, );'
+          table in front of you with the E key and place it in the storage container
+          marked by the green arrow.,, );'
         type: 0
         typeString: 
       conversationID: 8
@@ -17449,7 +17439,7 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 28
+        x: 27
         y: 1129
         width: 160
         height: 30
@@ -17480,7 +17470,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Press E to store the supplies.
+        value: Press E to store the box.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -17524,7 +17514,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 30
-        y: 1173
+        y: 1172
         width: 160
         height: 30
     - id: 29
@@ -17595,8 +17585,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 26
-        y: 1244
+        x: 35
+        y: 1222
         width: 160
         height: 30
     - id: 30
@@ -17666,8 +17656,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 26
-        y: 1320
+        x: 31
+        y: 1272
         width: 160
         height: 30
     - id: 31
@@ -17728,8 +17718,8 @@ MonoBehaviour:
       userScript: 
       canvasRect:
         serializedVersion: 2
-        x: 25
-        y: 1369
+        x: 36
+        y: 1334
         width: 160
         height: 30
     - id: 32
@@ -17775,7 +17765,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 'WaitForMessage(SDSReturn);
+        value: 'SendMessage(ShowSideButtons,,SDSTablet6);
+
+          WaitForMessage(SDSReturn);
 
           AudioWait(Sounds/VoiceOvers/SDS/room5/21);'
         type: 0

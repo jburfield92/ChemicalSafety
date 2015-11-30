@@ -150,8 +150,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "In this module you'll learn the basic controls and layout of the \nChemical
-    Safety Simulation Game."
+  m_Text: In this module you will learn the basic controls and layout of the Chemical
+    Safety Simulation Game.
 --- !u!222 &100763577
 CanvasRenderer:
   m_ObjectHideFlags: 0

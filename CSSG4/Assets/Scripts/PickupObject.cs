@@ -88,8 +88,6 @@ public class PickupObject : MonoBehaviour
 			
 			Ray ray = Camera.main.GetComponent<Camera>().ScreenPointToRay(new Vector3(x,y));
 			RaycastHit hit;
-            //int layerMask = 1 << 10;
-            //layerMask = ~layerMask;
 
             if (Physics.Raycast(ray, out hit, 3.0f, layerMask))
             {

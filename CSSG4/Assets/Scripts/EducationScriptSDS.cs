@@ -15,16 +15,13 @@ public class EducationScriptSDS : MonoBehaviour
     public static bool moved;
 
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
+        Camera.main.GetComponent<MouseLook>().enabled = true;
+        PickupObject.canRun = true;
+        TakeLaptopTest.UsingLaptop = false;
+
         answer = 0;
-
-        uiRoot = GameObject.Find("GUIRoot");
-        control = uiRoot.GetComponent<GUIControl>();
-
-        player = GameObject.FindGameObjectWithTag("Player");
-        ((CharacterMotor)player.GetComponent("CharacterMotor")).enabled = false;
-        ((MouseLook)player.GetComponent("MouseLook")).enabled = false;
-        ((MouseLook)Camera.main.GetComponent("MouseLook")).enabled = false;
     }
 	
 	// Update is called once per frame
@@ -101,19 +98,5 @@ public class EducationScriptSDS : MonoBehaviour
             control.scaledRect.y = ScaledValue.FromNormalizedValue(0.15f);
             control.Refresh();
         }
-    }
-
-    public void EnableMovement()
-    {
-        ((CharacterMotor)player.GetComponent("CharacterMotor")).enabled = true;
-        ((MouseLook)player.GetComponent("MouseLook")).enabled = true;
-        ((MouseLook)Camera.main.GetComponent("MouseLook")).enabled = true;
-    }
-
-    public void PauseMovement()
-    {
-        ((CharacterMotor)player.GetComponent("CharacterMotor")).enabled = false;
-        ((MouseLook)player.GetComponent("MouseLook")).enabled = false;
-        ((MouseLook)Camera.main.GetComponent("MouseLook")).enabled = false;
     }
 }

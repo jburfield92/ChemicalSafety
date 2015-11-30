@@ -3513,7 +3513,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Press submit when you have completed the test.
+        value: Press Submit when you have completed the test.
         type: 0
         typeString: 
       - title: Parenthetical
